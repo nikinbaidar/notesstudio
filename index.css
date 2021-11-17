@@ -1,20 +1,31 @@
 body {
     background-color: white;
-    color: black;
-    font-size:16px;
     padding: 0px;
     margin: 0px;
+}
+
+#head {
+  /* 5381ac e5e9f0 */
+  height: 60px;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #fff;
+  background-color: #5381ac;
+  margin: auto;
+  padding: 0.25em 1em;
 }
 
 nav {
     display: inline-flex;
     box-sizing: border-box;
     width:100%;
-    height: 50px;
+    height: 2.7em;
     margin: 0px;
     padding: 0px;
-    background: #f2f2f3;
+    background-color: #eceff4;
     overflow:hidden;
+    border: 1px #e5e9f0 solid ;
 }
 
 ul.nav_items {
@@ -33,7 +44,7 @@ ul.nav_items li {
 
 ul.nav_items a:link, ul.nav_items li a:visited, u.nav_itmes li a:active {
     text-decoration: none;
-    color: black;
+    color: grey;
 }
 
 #main {
