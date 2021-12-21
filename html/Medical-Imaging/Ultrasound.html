@@ -281,7 +281,7 @@
         reflection, scattering, refraction, absorption and attenuation. Here's
         a diagrammatic representation of how these look: </p> 
 
-
+        <h5>Reflection</h5>
         <p> The US image is produced by the reflected portion of the originally
         transmitted beam. There are two factors the influence reflection:
         <ul>
@@ -301,18 +301,21 @@
         reflectors and the phenomenon is called diffuse reflection.
         </p> 
 
+        <h5>Refraction</h5>
         <p> Refraction occurs when sound passes through a tissue with one
         acoustic propagation velocity to another tissue with a different
         acoustic propagation velocity. Knowing the refraction index allows
         operators to adjust the beam angle so that it is perpendicular to the
         interface, which inturn minimizes the artifacts seen on the image. </p> 
 
+        <h5>Absorption</h5>
         <p> Another way that an US beam interacts with matter is absorption.
         The intensity of the ultrasound beam falls off rapidly as it propagates
         through soft tissues. This is the most dominant cause of energy loss,
         especially in soft tissues. The frequency of sound and the viscosity of
         the medium determine the amount of absorption. </p> 
 
+        <h5>Scattering</h5>
         <p> Scattering occurs, as suggested above, when the sound strikes a
         rough surface. The amount of scatter depends on the dimensions of the
         individual structures present on the surface. The US beam does not
@@ -321,6 +324,7 @@
         target is redirected in almost all directions. For instance, US beams
         encountering blood are scattered in all directions. </p> 
 
+        <h5>Attenuation</h5>
         <p> Attenuation isn't exactly interaction of sound with matter, rather
         it is the result of other interactions. A sound passes through the
         tissues, it loses energy through transfer of energy to tissue by
@@ -329,17 +333,34 @@
         is determined by 
 
         <ul>
-          <li>The resonating frequency: attenuation increases in proportion to
+          <li>The resonating (or insonation) frequency: attenuation increases in proportion to
             resonating frequency, resulting in less penetration at higher
             frequencies. (Isn't this in contrast with the Fresnel zone logic??)
           </li>
-          <li>The nature of the attenuation medium: Attentuation values for
+          <li>The nature of the attenuation medium: Attenuation values for
             normal tissues have considerable deviations. For example,
-            attenutation value for water 0.00 and for air, it is 10. </li>
+            attenuation value for water 0.00 and for air, it is 10. </li>
         </ul>
         </p> 
 
       <h3>Doppler Ultrasound</h3>
+
+      <p> Doppler ultrasound is a non-invasive test that can be used to
+      investigate movement and particularly evaluate blood flow in arteries and
+      veins. Some of the application of doppler ultrasound in diagnosis
+      particularly are listed below:
+
+      <ul>
+        <li> Diagnose heart valve defects and congenital (existing from birth)
+          heart disease.  </li>
+        <li> Blocked arteries </li>
+        <li> Narrowing of arteries </li>
+        <li> Visualizing thrombus formations </li>
+        <li> Arteriovenous malformations </li>
+        <li> Visualizing movement of cardiac walls </li>
+      </ul>
+
+      </p> 
 
       <h4>Principle</h4>
 
@@ -347,11 +368,119 @@
       The doppler effect is the change in perceived frequency of sound emitted
       by a moving source. </p> 
 
+      <p> The transducer acts as both a transmitter and a receiver of doppler
+      ultrasound. When using doppler to investigate blood flow in the body, the
+      returning backscattered echoes from blood are detected by the transducer.
+      These backscattered signals \(F_r\) are then processed by the machine to
+      detect any frequency shifts by comparing these signals to the transmitted
+      doppler signals \( F_t\). The frequency shift detected depends on the
+      magnitude and the direction of the blood flow. </p> 
+
+      <img class="center" src="../../images/med-imaging/doppler-ultrasound.png"
+         alt="blood flow direction visualization with doppler US" />
+      <figure>
+        <figcaption>Blood flow direction visualization with doppler US</figcaption>
+      </figure>
+
+      <p> Blood flow moving towards the transducer produces a positive doppler
+      shift and conversely blood flow moving away from the transducer produces
+      a negative doppler shift. The following equation can be used to determine
+      the velocity of blood flow:</p> 
+
+      \[ F_d = \frac{2F_tV cos(\theta)}{c} \]
+
+      <p> Clearly, the blood flow velocity is proportional to the doppler
+      frequency. \( \theta\) is the angle of insonation, it is the angle
+      between the doppler beam and the direction of blood flow in vessels.  </p> 
+
+      <h4>Types of Doppler Instrumentation:</h4>
+
+      <p> There are different types of doppler ultrasound modalities
+      characterized as either being imaging or non-imaging. Non-imaging
+      techniques typically use small handheld units, and the main purpose of
+      non-imaging doppler ultrasound is to monitor blood flows. </p> 
+
+      <ol>
+        <li>Continuous wave Doppler
+          <p> Continuous wave doppler is the simplest doppler ultrasound that
+          continuously transmits and receives ultrasound signals. The
+          doppler shift is given by </p>
+          <span class="equation"> \[ \Delta v = \frac{2vS cos \theta}{c}\] </span> 
+
+          <p>The instrumentation for CWD US is fairly simple. It consist of a
+          transducer with two separate piezoelectric elements for transmitting
+          and receiving signals. These elements are arranged in such an angles
+          such that the transmitting and receiving signals overlap each other
+          and the doppler shift can only be detected in this overlapped
+          region.</p> 
+
+          <p> CWD US is usually confined to examination of more superficial
+          structures such as arteries. It is also used in obstetrics for foetal
+          heart monitoring. The disadvantage of CWD US is that it has no depth
+          resolution and is sensitive to weak signals.</p> 
+
+        </li>
+
+        <li>Spectral Pulsed wave Doppler
+          <p> This is an imaging type doppler US. It is used to control the
+          depth within the tissue from which the doppler signal is received.
+          This is achieved by pulsating the ultrasound and only accepting
+          echoes whose time of flights correspond the depths of interest.
+          Unlike CWD US, PWD US provides information about both direction and
+          velocity of blood flow. The pulse time period must be at least 13
+          seconds per cm of the tissue and the maximum pulse repetition
+          frequency of PWD US is 8 to 15 \( kHz\) depending up on the federal
+          laws. </p> 
+        </li>
+
+        <li>Color Doppler
+          <p>In CD US, the area of blood flow can be represented as colors with
+          the image. The main advantage of color doppler is the ease with which
+          blood vessels can be detected. It also permits the detection of very
+          small vessels and the number of vessels supplying a particular
+          tissue. Color doppler is able to analyze the phase information,
+          frequency and amp of returning echoes. </p> 
+        </li>
+        <li><p>Power Doppler Power doppler estimates the power or the strength
+            of the doppler signal rather than the man frequency shift. The
+            doppler information used in power doppler is the same as for color
+            doppler but the velocity and the direction information is
+            discarded.</p></li>
+        <li>Duplex Scanner
+        <p> Duplex scanner combine pulsed echo B mode US with doppler
+        equipment. When used in the duplex mode, the B-scan image is used
+        primarily to guide the doppler beam and to place the doppler sample
+        volume at a known anatomical site. </p> </li>
+      </ol>
+
+      <h3>Medical Application of US</h3>
+
+      <ul>
+          <li> <p>Anaesthesiology- To guide injecting needles when
+              administering local anaesthetic agents to nerves..</p> </li>
+          <li> <p>Cardiology- To diagnose dilation of parts of the heart, to
+              monitor the functioning of heart valves. </p> </li>
+          <li><p>CV - To asses obstruction of arteries, and determine the
+              extent and severity of blood vessel insufficiency.</p></li>
+          <li><p>Gastroenterology- In abdominal sonography, but limited
+              applications in this area. </p></li>
+          <li><p>Neurology- For assessing blood flow and stenosis (narrowing of
+              spine). Also for the basic assessment of intra cerebral
+              structural abnormalities.</p></li>
+          <li><p>Obstetrics- For foetal heart monitoring. </p></li>
+          <li><p>Urology- To visualize organs of the pelvic region which
+              normally includes uterus and ovaries in female and prostate in
+              male. Urinary bladder of both male and female.</p></li>
+          <li>Emergency Medicine- Point of care US has many application in the
+          emergency department. For quickly visualizing the depth of trauma. </li>
+
+      </ul>
       <h3>Reasons why Ultrasonography is popular in Medical Applications</h3>
 
       <ul>
         <li>No ionizing radiation</li>
-        <li>Opts for real time imaging using doppler ultrasound</li>
+        <li>Opts for real time imaging of moving objects using doppler
+          ultrasound</li>
         <li>Can be done in almost all type of patients</li>
         <li>Lower cost</li>
         <li>Lower time</li>
