@@ -1209,6 +1209,134 @@
 
         <h3>Pulse Sequence</h3>
 
+        <h3>MRI Artifacts</h3>
+
+        MRI is extremely sensitive to temporal and spatial differences in the sample
+        induced magnetic field, which gives rise to a variety of artifacts.
+
+        <ul>
+          <li><p>Motion related artifacts: Ghosting and Smearing. When motion
+            is periodic the result is complete or incomplete replication of the
+            moving tissue which is referred to as ghosting, and is observed
+            along the phase encoding direction of the image.  The causes of
+            motion artifacts are as follows: </p> 
+            <ul>
+              <li> Esophageal contraction </li>
+              <li> Respiration </li>
+              <li> Cardiac activity </li>
+              <li> Bowel peristalsis </li>
+              <li> Other voluntary motions </li>
+            </ul>
+
+            <p>A wide variety of techniques can be employed to minimize motion
+            artifacts. Swapping the phase and the frequency encoding direction
+            is a common measure. Some other remedies are ECG gating, pre
+            saturation, gradient moment nulling, fat suppression, and multiple
+            signal averaging. </p> 
+          </li>
+
+          <li><p>Susceptibility artifacts: These arise due to the differences
+            in magnetic susceptibility of tissues and are usually seen around
+            metal implants, and at air-tissue and air-bone interfaces.
+            Susceptibility artifacts get worse with long TE and gradient echo
+            pulse sequences.</p> 
+
+            <p>Susceptibility artifacts can be reduced by performing the
+            imaging at low magnetic field strengths, using smaller voxels,
+          decreasing the TE time period and increasing the receiver bandwidth.
+            </p> </li>
+
+            <li>
+              <p>Wrap around artifact is another type of artifact seen in MRI
+              imaging. It occurs when the dimensions of a part of the imaged
+              anatomy in phase encoding direction  (vertical axis) exceeds the
+              FOV.</p>
+            </li>
+
+            <li>
+              <p>Truncation or Gibbs artifact are bright or dark lines seen
+              parallel and adjacent to borders of abrupt intensity change. It
+              is caused by incomplete digitization of the echo or insufficient
+              samples of data.</p>
+            </li>
+
+            <li><p>Zipper artifact resulting from the contamination of the MR
+              scanner environment by spurious RF signal.</p></li>
+
+            <li><p>Cross talk or Cross contamination artifact caused due to the
+              interference between slices due to imperfect slice profiles.</p></li>
+
+            <li><p>Clipping artifact</p></li>
+            <li><p>Chemical shift artifact</p></li>
+
+        </ul>
+
+        <h3>Some definitions to remember</h3>
+
+        <ol>
+          <li>
+            <p>Flip angle:</p>
+
+            <p>FA is the degree of rotation of the net magnetization towards the
+            transverse plane. In gradient-echo pulse sequences, the FA ranges from
+            1 to 90\(^o\) and in  spin echo pulse sequences, the FA is greater than
+            90\(^o\) </p> 
+          </li>
+
+          <li>
+            <p>Inversion Time</p>
+
+            <p>It is the duration of time between the inversion pulse and the
+            excitation pulse. The inversion time is responsible for selective
+            suppression of signals.</p> 
+          </li>
+
+          <li>
+            <p>Number of Acquisition (NA)</p>
+
+            <p>NA is also know as the number of excitation or number of signal
+            averaging. It determines how many times a scan is repeated. Higher NAs
+            has less noise and therefore high SNR, fewer artifacts but the scan
+            time increases as NAs is increased.</p> 
+          </li>
+
+          <li>
+            <p>Matrix Size</p>
+
+            <p>Matrix size determines the spatial resolution of the image. It has
+            two side MX\(_{PE}\) and MX\(_{RO}\). The matrix size can be increased
+            or decreased in steps of 32.</p> 
+          </li>
+
+          <li>
+            <p>Field of View (FOV)</p>
+
+            <p>FOV determines how much of the anatomical region will be imaged.
+            Increasing the FOV will result in lower spatial resolution.</p> 
+          </li>
+
+          <li>
+            <p>Slice Gap</p>
+
+            <p>Slice gap is the amount of space between slices and is expressed
+            in percentage of the slice thickness. In contiguous slices, there is
+            overlapping of signals which is referred to as crosstalk. Slice gap of
+            10-20% is usually used to reduce crosstalk. </p> 
+          </li>
+
+          <li><p>Resolution, Spatial Resolution and Temporal Resolution</p>
+
+            <p> Resolution is the PPI in an image</p> 
+
+            <p> and spatial resolution is the ability of an imaging modality to
+            differentiate two adjacent structures as being distinct from one
+            another. </p>
+
+            <p>Temporal resolution refers to the duration of time for
+            acquisition of a single frame of image.</p> 
+          </li>
+        </ol>
+
         <hr class="ctabelow">
 
         <div id="cta">
@@ -1217,7 +1345,7 @@
         </div>
         <hr>
 
-        </div>
+      </div> <!-- main -->
 
       </div>
 

@@ -47,7 +47,7 @@
           <li>Faults in the film requires the examination to repeated.</li>
           <li>Delay in viewing the image.</li>
           <li>The dynamic range of the X-ray film is limited.</li>
-          <li>Difficult to visualize widely varying tissue denstities</li>
+          <li>Difficult to visualize widely varying tissue densities</li>
           <li>Storage and retrieval costs</li>
           <li>Copied radiographs are of inferior quality compared to the
             original</li>
@@ -110,6 +110,23 @@
 
         <h3>Computed Radiography</h3>
 
+        <p>As mentioned earlier, CR is not a pure digital radiographic system.
+        It uses photo stimulable phosphor (PSP) plates as the detector. These
+        use Eu:BaFX. During exposure, x-ray energy is absorbed temporarily in
+        the PSP crystal by exciting electrons to higher energy levels. A
+        separate readout process is employed to convert the acquired image
+        into a digital image.</p> 
+
+        <h4>PSP Readout</h4>
+
+        <p>The exposed cassette is moved onto a reader unit where the IP is
+        mechanically removed from the cassette and scanned pixel by pixel by a
+        laser beam. The laser light stimulates emission of trapped energy in
+        the imaging plate and a visible light is emitted from the imaging
+        plate. The released light is collected by a fiber optics cable that
+        guides light to a PMT (Photomultiplier tube) where it is converted into
+        an electronic signal.</p> 
+
         <h3>Direct Radiography</h3>
 
         <p> Direct radiography is a system in which no cassettes are used,
@@ -132,11 +149,22 @@
             converted into electrical signals. Indirect DR can be further
             divided into two types based on the detectors used as CCD panel
             based indirect DR and Flat panel based indirect DR.</p>
-          </li>
+
+            <p>Both types of indirect DRs use CsI of GdOS scintillator
+            detectors, although nowadays GdOS are used extensively. CsI
+            phosphors used in indirect DRs have high detector quantum
+            efficiency (DQE) which opts for lower patient dosage.  <span
+              class="equation"> \[ DQE = \% \text{of X-ray absorbed by the
+              phosphors}\] </span> </p> </li>
           <li>
+
             <p>Direct (Direct Radiography): In direct DR, a photoconductor,
             selenium directly converts the x-ray photons into electrical
             signal. It used flat panel detectors. </p>
+
+            <p>DDR uses a-Se only which eliminates spreading of light in the
+            phosphor which opts for better spatial resolution.</p> 
+
           </li>
         </ol>
 
@@ -162,8 +190,46 @@
         <p>The technology employed in flat panel detectors is quite analogous
         to that used in laptop computer displays; a series of horizontal and
         vertical electrical lines are used which when combined with appropriate
-        readout logic can address each individual display element.</p> 
+        readout logic can address each individual display element. With this
+        approach only 2,000 connections between the detector panel and the
+        readout electronics are required for a \( 1000x1000\) display instead
+        of 1,000,000 individual connections. </p> 
 
+        <p>In FPD based indirect DR, a CsI or \( Gd_2O_2S\) scintillation
+        phosphor is coated over an active matrix array (AMA) of a-Si TFTs. The
+        DR image receptor is fabricated into individual pixels and each pixel
+        has a light sensitive face of a-Si, a capacitor and a TFT embedded into
+        it.</p> 
+
+        <h4>Thin Film Transistors (TFTs)</h4>
+
+        <p>TFT arrays are used as the active electronic element in both direct
+        and indirect DRs based of FPDs. TFT arrays are typically deposited onto
+        a glass substrate in multiple layers, beginning with readout
+        electronics at the lower levels and followed by charge collector arrays
+        at higher levels. X-ray elements, light sensitive elements or both are
+        deposited to form the topmost layer of this electronic sandwich. The
+        entire assembly is encased in a protective enclosure with the external
+        cabling for computer connection.</p> 
+
+        <h4>Readout Process of TFTs</h4>
+
+        TFTs can be read either directly or indirectly. In FPD based DDR, the
+        image forming x-rays directly interacts with a thing layer of a-Se
+        creating an electron-hole pair. a-Se of about \( 200 \mu m\) is
+        sandwiched between charged electrodes. The electron hole-pair is the
+        signal that charges the AMA of TFTs.
+
+        <h3>Advantages and Disadvantages of different forms of Direct
+          Radiography</h3>
+
+        <hr class="ctabelow">
+
+        <div id="cta">
+          <button id="prev">&lt;&lt; Previous</button>
+          <button id="next">Next &gt;&gt;</button>
+        </div>
+        <hr>
       </div> <!-- main -->
 
 
