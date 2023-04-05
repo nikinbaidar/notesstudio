@@ -1,0 +1,333 @@
+{
+   "navBarItems": [
+        {
+            "name": "Home",
+            "link": "/",
+            "isActive": true
+        },
+        {
+            "name": "Projects",
+            "link": "/projects",
+            "isActive": false
+        },
+        {
+            "name": "Forums",
+            "link": "/forums",
+            "isActive": false
+        },
+        {
+            "name": "Wiki",
+            "link": "/wiki",
+            "isActive": false
+        },
+        {
+            "name": "Blog",
+            "link": "/blog",
+            "isActive": false
+        },
+        {
+            "name": "Support",
+            "link": "/support",
+            "isActive": false
+        },
+        {
+            "name": "Log In",
+            "link": "/login",
+            "isActive": false
+        }
+    ],
+    "curriculum": [
+        {
+            "semester": "First",
+            "subjects": [
+                {
+                    "name": 1,
+                    "link": "this"
+                },
+                {
+                    "name": 2,
+                    "link": "2"
+                },
+                {
+                    "name": 3,
+                    "link": "3"
+                },
+                {
+                    "name": 4,
+                    "link": "4"
+                },
+                {
+                    "name": 5,
+                    "link": "5"
+                },
+                {
+                    "name": 6,
+                    "link": "6"
+                }
+            ]
+        },
+        {
+            "semester": "Second",
+            "subjects": [
+                {
+                    "name": 7,
+                    "link": "7"
+                },
+                {
+                    "name": 8,
+                    "link": "8"
+                },
+                {
+                    "name": 9,
+                    "link": "9"
+                },
+                {
+                    "name": 10,
+                    "link": "10"
+                },
+                {
+                    "name": 11,
+                    "link": "11"
+                },
+                {
+                    "name": 12,
+                    "link": "12"
+                } 
+            ]
+        },
+        {
+            "semester": "Third",
+            "subjects": [
+                {
+                    "name": 13,
+                    "link": "13"
+                },
+                {
+                    "name": 14,
+                    "link": "14"
+                },
+                {
+                    "name": 15,
+                    "link": "15"
+                },
+                {
+                    "name": 16,
+                    "link": "16"
+                },
+                {
+                    "name": 17,
+                    "link": "17"
+                },
+                {
+                    "name": 18,
+                    "link": "18"
+                } 
+            ]
+        },
+        {
+            "semester": "Fourth",
+            "subjects": [
+                {
+                    "name": 19,
+                    "link": "19"
+                },
+                {
+                    "name": 20,
+                    "link": "20"
+                },
+                {
+                    "name": 21,
+                    "link": "21"
+                },
+                {
+                    "name": 22,
+                    "link": "22"
+                },
+                {
+                    "name": 23,
+                    "link": "23"
+                },
+                {
+                    "name": 24,
+                    "link": "24"
+                } 
+            ]
+        },
+        {
+            "semester": "Fifth",
+            "subjects": [
+                {
+                    "name": 25,
+                    "link": "25"
+                },
+                {
+                    "name": 26,
+                    "link": "26"
+                },
+                {
+                    "name": 27,
+                    "link": "27"
+                },
+                {
+                    "name": 28,
+                    "link": "28"
+                },
+                {
+                    "name": 29,
+                    "link": "29"
+                },
+                {
+                    "name": 30,
+                    "link": "30"
+                } 
+            ]
+        },
+        {
+            "semester": "Sixth",
+            "subjects": [
+                {
+                    "name": 31,
+                    "link": "31"
+                },
+                {
+                    "name": 32,
+                    "link": "32"
+                },
+                {
+                    "name": 33,
+                    "link": "33"
+                },
+                {
+                    "name": 34,
+                    "link": "34"
+                },
+                {
+                    "name": 35,
+                    "link": "35"
+                },
+                {
+                    "name": 36,
+                    "link": "36"
+                } 
+            ]
+        },
+        {
+            "semester": "Seventh",
+            "subjects": [
+                {
+                    "name": 37,
+                    "link": "37"
+                },
+                {
+                    "name": 38,
+                    "link": "38"
+                },
+                {
+                    "name": 39,
+                    "link": "39"
+                },
+                {
+                    "name": 40,
+                    "link": "40"
+                },
+                {
+                    "name": 41,
+                    "link": "41"
+                },
+                {
+                    "name": 42,
+                    "link": "42"
+                } 
+            ]
+        },
+        {
+            "semester": "Eighth",
+            "subjects": [
+                {
+                    "name": 43,
+                    "link": "43"
+                },
+                {
+                    "name": 44,
+                    "link": "44"
+                },
+                {
+                    "name": 45,
+                    "link": "45"
+                },
+                {
+                    "name": 46,
+                    "link": "46"
+                },
+                {
+                    "name": 47,
+                    "link": "47"
+                },
+                {
+                    "name": 48,
+                    "link": "48"
+                } 
+            ]
+        }
+    ],
+    "sideBarItems": [
+        {
+            "chapter": "Cirriculum",
+            "lessons" : [
+                {
+                    "title": "Semesters",
+                    "link": "link"
+                },
+                { 
+                    "title": "Item 2",
+                    "link": "link"
+                }
+            ]
+        },
+        {
+            "chapter": "How To",
+            "lessons" : [
+                {
+                    "title": "Arduino",
+                    "link": "ESP32"
+                },
+                {
+                    "title": "ESP32",
+                    "link": "ESP32"
+                },
+                { 
+                    "title": "Rasperry Pi",
+                    "link": "link"
+                }
+            ]
+        },
+        {
+            "chapter": "Nerding Out",
+            "lessons" : [
+                {
+                    "title": "Beizer Curves",
+                    "link": "ESP32"
+                }
+            ]
+        },
+        {
+            "chapter": "NEC License Prep",
+            "lessons" : [
+                {
+                    "title": "2079 Exam",
+                    "link": "ESP32"
+                }
+            ]
+        }
+    ],
+
+    "questions" : [
+        {
+            "question": "How are you?",
+            "category": "A",
+            "options": ["1", "2", "3", "4"],
+            "answer": 2
+        }
+    ]
+
+}

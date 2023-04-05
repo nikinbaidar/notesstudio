@@ -1,0 +1,56 @@
+@media(max-width: 768px) 
+{
+
+  html {
+    font-size: 1.70vw;
+  }
+
+  nav {
+    height: 4rem;
+    justify-content: center;
+    align-item: center
+  }
+
+  nav img {
+    max-width: 40%;
+    object-fit: cover;
+  }
+
+  /* Show a hamburger menu with the navigation items */
+
+  nav ul {
+    display: none;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section #leftsidebar {
+    display: none;
+  }
+
+  #main {
+    padding-top: 8rem;
+  }
+
+  #ads {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 7.5rem; */
+  }
+
+  div.coffee{
+    width: 20%;
+    margin: 1rem;
+    margin: 1rem auto;
+  }
+
+  div.coffee p {
+    display: none;
+  }
+
+}
+
