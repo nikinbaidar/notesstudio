@@ -1,6 +1,8 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 import { loadSideBar } from '../dataLoader';
+
 
 class Sidebar extends React.Component {
 
@@ -13,7 +15,11 @@ class Sidebar extends React.Component {
                     const lessonId = crypto.randomUUID();
                     return (
                         <li key={lessonId}>
-                        <a href={lesson.path}> {lesson.title}</a>
+                        {/* <a href={lesson.path}> {lesson.title}</a> */}
+                        <NavLink to="{lesson.path}" style={({ isActive }) => ({
+                            color: isActive ? 'red' : 'black' })}>
+                            {lesson.title}
+                        </NavLink>
                         </li>
                     );
                 })
