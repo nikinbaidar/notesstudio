@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 import { loadSideBar } from '../dataLoader';
 
-
 class Sidebar extends React.Component {
 
     render() {
