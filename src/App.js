@@ -1,9 +1,9 @@
 import React from 'react';
-
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 
 function Main() {
     return(
@@ -35,11 +35,11 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-      <>
+    <React.Fragment>
       <h1>Test</h1>
       <Main/>
       <RouterProvider router={router} />
-      </>
+    </React.Fragment>
   );
 };
 
