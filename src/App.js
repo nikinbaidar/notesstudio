@@ -1,46 +1,53 @@
+// Dependencies
 import React from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
+// Local Imports
+import Navigation from './Components/NavigationBar';
+import Sidebar from './Components/Sidebar';
+import Advertisements  from './Components/Ads';
+import Copyright from './Components/Copyright.js';
+import {
+    Semesters,
+    Quiz,
+    CreateComponent,
+} from './Components/Main';
 
-function Main() {
-    return(
-        <div>
-            <ul>
-                <li><a href={`/`}>Home</a></li>
-                <li><a href={`/about`}>About</a></li>
-                <li><a href={`/support`}>Support</a></li>
-            </ul>
-        </div>
-    );
+// CSS Imports
+import './App.css';
+import './Queries.css';
+
+class App extends React.Component {
+
+    router = createBrowserRouter([
+        {
+            path: "/",
+            element: <Semesters/>
+        },
+        {
+            path: "/quiz",
+            element: <Quiz/>
+        },
+    ])
+
+    render() {
+        return (
+            <>
+            <Navigation/>
+            <section>
+                <Sidebar/>
+                <div id="main"> 
+                    <RouterProvider router={this.router} />
+                </div>
+                <Advertisements/>
+            </section>
+            <Copyright/>
+            </>
+        )
+    }; 
 }
-
-
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <h1>Home</h1>
-    },
-    {
-        path: "/about",
-        element: <h1>About</h1>
-    },
-    {
-        path: "/support",
-        element: <h1>Support</h1>
-    },
-])
-
-const App = () => {
-  return (
-    <React.Fragment>
-      <h1>Test</h1>
-      <Main/>
-      <RouterProvider router={router} />
-    </React.Fragment>
-  );
-};
 
 export default App;

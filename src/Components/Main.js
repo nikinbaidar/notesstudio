@@ -2,7 +2,7 @@ import  React from 'react';
 
 import { loadCurriculum } from '../dataLoader'
 
-export class Home extends React.Component {
+export class Semesters extends React.Component {
     semesterSubjects = loadCurriculum().map(({semester, subjects}) => {
         return subjects.map(({name}) => name);
     });

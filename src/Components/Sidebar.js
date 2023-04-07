@@ -21,17 +21,18 @@ class Sidebar extends React.Component {
             label: item.chapter,
             lessons: item.lessons.map((lesson) => {
                 const lessonId = crypto.randomUUID();
+                
                 return (
                     <li key={lessonId} onClick={
                         (event) => this.handleClick(event, lesson.title)
-                    }>{lesson.title}</li>
+                    }><a href={lesson.path}>{lesson.title}</a></li>
                 );
             })
         };
         return (
             <React.Fragment key={elem.id}>
-            <li className="topics">{elem.label}</li>
-            <ul className="subtopics">{elem.lessons}</ul>
+                <li className="topics">{elem.label}</li>
+                <ul className="subtopics">{elem.lessons}</ul>
             </React.Fragment>
         )
     });
