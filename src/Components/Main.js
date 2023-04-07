@@ -1,4 +1,5 @@
 import  React from 'react';
+import { SEO } from './seo';
 
 import { loadCurriculum } from '../dataLoader'
 
@@ -53,6 +54,8 @@ export class Semesters extends React.Component {
     render() {
         return(
             <>
+            <SEO title="Semesters" description="Biomedical Engineering"
+                name="Biomedical Engineering" type="article"/>
             <div className="dropdown">{this.selectSem}</div>
             <div className="grid-container">{this.subjectsGrid}</div>
             </>
@@ -63,15 +66,12 @@ export class Semesters extends React.Component {
 export class Quiz extends React.Component {
     render() {
         return (
+            <>
+            <SEO title="NEC Exam 2079" name="Biomedical License"
+            description="Nepal Engineering Council Exam for Biomedical
+            Engineering 2079" type="article" />
             <h1>Welcome to the Quiz!</h1>
+            </>
         )
-    };
-}
-
-export class CreateComponent extends React.Component {
-    render() {
-        return (
-            <h1>You've not created this component yet!</h1>
-        );
     };
 }

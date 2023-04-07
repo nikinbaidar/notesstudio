@@ -1,6 +1,7 @@
 // Dependencies
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Local Imports
 import Navigation from './Components/NavigationBar';
@@ -19,9 +20,11 @@ import './Queries.css';
 
 class App extends React.Component {
 
+    helmetContext = {};
+
     render() {
         return (
-            <>
+            <HelmetProvider context={this.helmetContext}>
             <Navigation/>
             <section>
             <BrowserRouter>
@@ -36,7 +39,7 @@ class App extends React.Component {
             <Advertisements/>
             </section>
             <Copyright/>
-            </>
+            </HelmetProvider>
         )
     }; 
 }
