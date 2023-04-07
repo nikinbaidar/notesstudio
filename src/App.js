@@ -13,7 +13,6 @@ import Copyright from './Components/Copyright.js';
 import {
     Semesters,
     Quiz,
-    CreateComponent,
 } from './Components/Main';
 
 // CSS Imports
