@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,10 +19,6 @@ function Main() {
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <Main/>
-    },
-    {
         path: "/home",
         element: <h1>Home</h1>
     },
@@ -37,11 +32,13 @@ const router = createBrowserRouter([
     },
 ])
 
-
-
 const App = () => {
   return (
+      <>
+      <h1>Test</h1>
+      <Main/>
       <RouterProvider router={router} />
+      </>
   );
 };
 
