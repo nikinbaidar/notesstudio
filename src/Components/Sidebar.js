@@ -15,10 +15,9 @@ class Sidebar extends React.Component {
                     const lessonId = crypto.randomUUID();
                     return (
                         <li key={lessonId}>
-                        {/* <a href={lesson.path}> {lesson.title}</a> */}
-                        <NavLink to="{lesson.path}" style={({ isActive }) => ({
-                            color: isActive ? 'red' : 'black' })}>
-                            {lesson.title}
+                        <NavLink to={lesson.path} style={({ isActive }) => ({
+                        textDecoration: isActive ? 'underline' : 'none' })}>
+                        {lesson.title}
                         </NavLink>
                         </li>
                     );
