@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 export function SEO({title, description, name, type}) {
     return(
         <Helmet>
-        <title>{title}</title>
+         <title>{title} - Notes Studio</title>
         <meta name='description' content={description}/>
         <meta property="og:type" content={type}/>
         <meta property="og:title" content={title}/>
