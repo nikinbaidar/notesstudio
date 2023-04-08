@@ -226,3 +226,25 @@ div.coffee img {
   color: var(--gray);
 }
 
+/* Quiz */
+
+li.questions { 
+  margin-top: 2rem;
+}
+
+.choices {
+  margin: 5px;
+  list-style-type: lower-alpha;
+}
+
+.choices li {
+  position: relative;
+  padding: 3px;
+}
+
+input[type="radio"] {
+  position: absolute; 
+  top: 40%; 
+  transform: translateY(-50%); 
+  left: -40px; 
+}

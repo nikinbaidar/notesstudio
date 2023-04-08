@@ -1,7 +1,7 @@
 import  React from 'react';
 import { SEO } from './seo';
 
-import { loadCurriculum } from '../dataLoader'
+import { loadCurriculum, loadQuiz } from '../dataLoader'
 
 export class Semesters extends React.Component {
     semesterSubjects = loadCurriculum().map(({semester, subjects}) => {
@@ -65,12 +65,40 @@ export class Semesters extends React.Component {
 
 export class Quiz extends React.Component {
     render() {
+
+        const questions = loadQuiz().map((item) => {
+            const elem = {
+                id: crypto.randomUUID(),
+                question: item.question,
+                options: item.options.map((choice) => {
+                    const choiceId = crypto.randomUUID();
+                    return (
+                        <li key={choiceId}>
+                        <input type="radio" name={item.question} id={choice}/>
+                        <label htmlFor={item.question}>{choice}</label>
+                        </li>
+                    )
+                })
+            };
+
+            return (
+                <React.Fragment key={elem.id}>
+                    <li className="questions">{elem.question}</li>
+                    <form>
+                    <ol className="choices">
+                    {elem.options}
+                    </ol>
+                    </form>
+                </React.Fragment>
+            );
+        })
         return (
             <>
             <SEO title="NEC Exam 2079" name="Biomedical License"
             description="Nepal Engineering Council Exam for Biomedical
             Engineering 2079" type="article" />
             <h1>Welcome to the Quiz!</h1>
+            <ol>{questions}</ol>
             </>
         )
     };

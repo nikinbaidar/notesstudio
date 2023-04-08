@@ -26,54 +26,51 @@
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
 !_TAG_PARSER_VERSION!JavaScript	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/nikin/repos/react_apps/webo_frontend_nikinbaidar_test/src/Components/	//
+!_TAG_PROC_CWD	/home/nikin/repos/notesstudio/src/Components/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	6.0.0	/p6.0.20221218.0/
 Advertisements	./Ads.js	/^class Advertisements extends React.Component {$/;"	c
 Copyright	./Copyright.js	/^class Copyright extends React.Component {$/;"	c
-CreateComponent	./Main.js	/^export class CreateComponent extends React.Component {$/;"	c
-Home	./Main.js	/^export class Home extends React.Component {$/;"	c
 Navigation	./NavigationBar.js	/^class Navigation extends React.Component {$/;"	c
 Quiz	./Main.js	/^export class Quiz extends React.Component {$/;"	c
+SEO	./seo.js	/^export function SEO({title, description, name, type}) {$/;"	c
+Semesters	./Main.js	/^export class Semesters extends React.Component {$/;"	c
 Sidebar	./Sidebar.js	/^class Sidebar extends React.Component {$/;"	c
-chapter	./Sidebar.js	/^        const chapter = event.target.parentNode.previousSibling;$/;"	C	class:Sidebar
-chapters	./Sidebar.js	/^    chapters = loadSideBar().map((item) => {$/;"	M	class:Sidebar
-currentSemester	./Main.js	/^        let currentSemester = event.target.value;$/;"	v	class:Home
+anonymousObject4aff85870205	./Sidebar.js	/^                        <NavLink to={lesson.path} style={({ isActive }) => ({$/;"	v	variable:Sidebar.render.elem
+currentSemester	./Main.js	/^        let currentSemester = event.target.value;$/;"	v	class:Semesters
 elem	./Main.js	/^        const elem = {$/;"	v
 elem	./Main.js	/^        return <option key={elem.id} value={index}>{elem.label}<\/option>;$/;"	M
 elem	./NavigationBar.js	/^        const elem = {$/;"	v
 elem	./NavigationBar.js	/^        return <li className={elem.class} key={elem.id}>{elem.label}<\/li>;$/;"	M
-elem	./Sidebar.js	/^            <React.Fragment key={elem.id}>$/;"	M
-elem	./Sidebar.js	/^        const elem = {$/;"	v
-gridItems	./Main.js	/^        let gridItems = document.querySelectorAll('.options p'); $/;"	v	class:Home
-handleClick	./Main.js	/^    handleClick = (event) => {$/;"	M	class:Home
+elem	./Sidebar.js	/^                <React.Fragment key={elem.id}>$/;"	M
+elem	./Sidebar.js	/^            const elem = {$/;"	v	method:Sidebar.render
+gridItems	./Main.js	/^        let gridItems = document.querySelectorAll('.options p'); $/;"	v	class:Semesters
+handleClick	./Main.js	/^    handleClick = (event) => {$/;"	M	class:Semesters
 handleClick	./NavigationBar.js	/^    handleClick(event) {$/;"	m	class:Navigation
-handleClick	./Sidebar.js	/^    handleClick = (event, item) => {$/;"	M	class:Sidebar
-handleSelection	./Main.js	/^    handleSelection = (event) => {$/;"	M	class:Home
+handleSelection	./Main.js	/^    handleSelection = (event) => {$/;"	M	class:Semesters
 id	./Main.js	/^            id: crypto.randomUUID(),$/;"	p	variable:elem
 id	./Main.js	/^            id: crypto.randomUUID(),$/;"	p	variable:props
 id	./NavigationBar.js	/^            id: crypto.randomUUID(),$/;"	p	variable:elem
-id	./Sidebar.js	/^            id: crypto.randomUUID(),$/;"	p	variable:elem
+id	./Sidebar.js	/^                id: crypto.randomUUID(),$/;"	p	variable:Sidebar.render.elem
 label	./Main.js	/^            label: item,$/;"	p	variable:props
 label	./Main.js	/^            label: item.semester$/;"	p	variable:elem
 label	./NavigationBar.js	/^            label: item.name,$/;"	p	variable:elem
-label	./Sidebar.js	/^            label: item.chapter,$/;"	p	variable:elem
-lessonId	./Sidebar.js	/^                    <li key={lessonId} onClick={$/;"	M
-lessonId	./Sidebar.js	/^                const lessonId = crypto.randomUUID();$/;"	C	variable:elem
-lessons	./Sidebar.js	/^            lessons: item.lessons.map((lesson) => {$/;"	p	variable:elem
+label	./Sidebar.js	/^                label: item.chapter,$/;"	p	variable:Sidebar.render.elem
+lessonId	./Sidebar.js	/^                        <li key={lessonId}>$/;"	M
+lessons	./Sidebar.js	/^                lessons: item.lessons.map((lesson) => {$/;"	p	variable:Sidebar.render.elem
 name	./Main.js	/^        return subjects.map(({name}) => name);$/;"	M	variable:
 navBar	./NavigationBar.js	/^    navBar = loadNavigationBar().map((item, index) => {$/;"	M	class:Navigation
-previousChapter	./Sidebar.js	/^let previousChapter;$/;"	v
 props	./Main.js	/^        const props = {$/;"	v
 render	./Ads.js	/^    render() {$/;"	m	class:Advertisements
 render	./Copyright.js	/^    render() {$/;"	m	class:Copyright
-render	./Main.js	/^    render() {$/;"	m	class:CreateComponent
 render	./Main.js	/^    render() {$/;"	m	class:Quiz
 render	./NavigationBar.js	/^    render() {$/;"	m	class:Navigation
 render	./Sidebar.js	/^    render() {$/;"	m	class:Sidebar
 semester	./Main.js	/^    semesterSubjects = loadCurriculum().map(({semester, subjects}) => {$/;"	M	variable:
-semesterSubjects	./Main.js	/^    semesterSubjects = loadCurriculum().map(({semester, subjects}) => {$/;"	M	class:Home
-semesters	./Main.js	/^    semesters = loadCurriculum().map((item, index) => {$/;"	M	class:Home
-subjectsGrid	./Main.js	/^    subjectsGrid = this.semesterSubjects[0].map((item, index) => {$/;"	M	class:Home
+semesterSubjects	./Main.js	/^    semesterSubjects = loadCurriculum().map(({semester, subjects}) => {$/;"	M	class:Semesters
+semesters	./Main.js	/^    semesters = loadCurriculum().map((item, index) => {$/;"	M	class:Semesters
+subjectsGrid	./Main.js	/^    subjectsGrid = this.semesterSubjects[0].map((item, index) => {$/;"	M	class:Semesters
+textDecoration	./Sidebar.js	/^                        textDecoration: isActive ? 'underline' : 'none' })}>$/;"	p	variable:Sidebar.render.elem.anonymousObject4aff85870205
+title	./seo.js	/^export function SEO({title, description, name, type}) {$/;"	M	variable:
