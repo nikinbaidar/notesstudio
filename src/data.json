@@ -326,7 +326,13 @@
             "question": "How are you?",
             "category": "A",
             "options": ["1", "2", "3", "4"],
-            "answer": 2
+            "correctAnswerIndex": 2
+        },
+        {
+            "question": "Are you fine?",
+            "category": "A",
+            "options": ["1", "2", "3", "4"],
+            "correctAnswerIndex": 0
         }
     ]
 

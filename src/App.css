@@ -1,5 +1,5 @@
 :root {
-  --background: #FDFDF6;
+  --background: #FDFDF7;
   --foreground: #0F111B;
   --nav-heading: #777DA4;
   --current-page: #C1C3CC;
@@ -224,5 +224,108 @@ div.coffee img {
   padding: 0.25rem 1.25rem;
   background-color: var(--dark-blue);
   color: var(--gray);
+}
+
+/* Quiz */
+
+li.questions, .choices { 
+  font-size: 1.1rem;
+}
+
+li.questions { 
+  margin-top: 2rem;
+}
+
+.choices {
+  margin: 5px;
+  list-style-type: lower-alpha;
+}
+
+.choices li {
+  position: relative;
+  padding: 3px;
+}
+
+input[type="radio"] {
+  position: absolute; 
+  top: 40%; 
+  transform: translateY(-50%); 
+  left: -40px; 
+}
+
+button#quiz2079{
+  margin: 1rem;
+  width: 10%;
+}
+
+
+.tick {
+  color: green;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-left: 5px;
+}
+
+.cross {
+  color: var(--red);
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-left: 5px;
+}
+
+@media(max-width: 768px) 
+{
+
+  html {
+    font-size: 1.75vw;
+  }
+
+  nav {
+    height: 4rem;
+    justify-content: center;
+    align-item: center
+  }
+
+  nav img {
+    max-width: 40%;
+    object-fit: cover;
+  }
+
+  /* Show a hamburger menu with the navigation items */
+
+  nav ul {
+    display: none;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section #leftsidebar {
+    display: none;
+  }
+
+  #main {
+    width: 95%;
+  }
+
+  #ads {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 7.5rem; */
+  }
+
+  div.coffee{
+    width: 20%;
+    margin: 1rem;
+    margin: 1rem auto;
+  }
+
+  div.coffee p {
+    display: none;
+  }
+
 }
 
