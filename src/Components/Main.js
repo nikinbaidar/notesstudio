@@ -4,6 +4,7 @@ import { SEO } from './seo';
 import { loadCurriculum, loadQuiz } from '../dataLoader'
 
 export class Semesters extends React.Component {
+
     semesterSubjects = loadCurriculum().map(({semester, subjects}) => {
         return subjects.map(({name}) => name);
     });
@@ -54,8 +55,8 @@ export class Semesters extends React.Component {
     render() {
         return(
             <>
-            <SEO title="Semesters" description="Biomedical Engineering"
-                name="Biomedical Engineering" type="article"/>
+            <SEO title="Semesters" name="Biomedical Engineering" type="article"
+            description="biomedical engineering, nepal engineering council" />
             <div className="dropdown">{this.selectSem}</div>
             <div className="grid-container">{this.subjectsGrid}</div>
             </>
@@ -65,45 +66,71 @@ export class Semesters extends React.Component {
 
 export class Quiz extends React.Component {
 
-    submitAllForms() {
-        const allForms = document.getElementsByClassName("myForms");
-        const selectedValues = [];
-        console.log(allForms.length, typeof(allForms));
-        console.log(allForms);
-        for(let i = 0 ; i < allForms.length; i++) {
-            const selected = allForms[i].querySelector("input[type='radio']:checked");
-				if (selected) {
-					selectedValues.push(selected.value);
-				} else {
-					selectedValues.push(null);
-				}
-            allForms[i].submit()
-        }
-        console.log(selectedValues);
-
+    constructor(props) {
+        super(props);
+        this.correctValues = [];
+        this.quizData = loadQuiz();
     }
 
-    handleSubmit() {
-        console.log("This has been submitted!");
+    componentDidMount() {
+        this.quizData.forEach((item) => {
+            const correctAnswer = item.options[item.correctAnswerIndex];
+            this.correctValues.push(correctAnswer);
+        });
+    }
+
+    componentWillUnmount() {
+        this.correctValues.length = 0;
+    }; 
+
+    submitAllForms = () => {
+        const tick = `&#x2714;`; const cross = `&#x2716;`;
+        const allForms = document.getElementsByClassName("optionGroup");
+
+        for(let i = 0 ; i < allForms.length; i++) {
+            const selected = allForms[i].querySelector(
+                "input[type='radio']:checked"
+            );
+            if (selected) {
+                if(selected.value === this.correctValues[i]) {
+                    selected.parentNode.innerHTML +=
+                        '<span class="tick">' + tick + '</span>';
+                }
+                else {
+                    selected.parentNode.innerHTML +=
+                        '<span class="cross">' + cross + '</span>';
+                }
+            } 
+        }
+
+        document.querySelectorAll('li.correct').forEach(answer => {
+            answer.style.color = "blue";
+            answer.style.fontWeight = "bold";
+        });
+
     }
 
     render() {
 
-        const questions = loadQuiz().map((item) => {
+        const questions = this.quizData.map((item) => {
+
             const elem = {
                 id: crypto.randomUUID(),
                 question: item.question,
                 options: item.options.map((choice) => {
                     const choiceId = crypto.randomUUID();
+                    const correctAnswer = item.options[item.correctAnswerIndex];
+                    const isCorrect = (choice === correctAnswer);
+                    const className =  isCorrect ? "correct" : "";
                     return (
-                        <li key={choiceId}>
+                        <li key={choiceId} className={className}>
                         <input 
                             type="radio" 
                             name={item.question} 
-                            id={choice}
+                            id={choiceId}
                             value={choice}
                         />
-                        <label htmlFor={choice}>{choice}</label>
+                        <label htmlFor={choiceId}><span>{choice}</span></label>
                         </li>
                     )
                 })
@@ -111,10 +138,10 @@ export class Quiz extends React.Component {
 
             return (
                 <React.Fragment key={elem.id}>
-                    <li className="questions">{elem.question}</li>
-                    <form className="myForms">
-                    <ol className="choices">{elem.options}</ol>
-                    </form>
+                <li className="questions">{elem.question}</li>
+                <form className="optionGroup">
+                <ol className="choices">{elem.options}</ol>
+                </form>
                 </React.Fragment>
             );
         })
@@ -123,9 +150,12 @@ export class Quiz extends React.Component {
             <SEO title="NEC Exam 2079" name="Biomedical License"
             description="Nepal Engineering Council Exam for Biomedical
             Engineering 2079" type="article" />
+
             <h1>Welcome to the Quiz!</h1>
             <ol>{questions}</ol>
-            <button type="submit" onClick={this.submitAllForms}>Submit</button>
+            <button id="quiz2079" type="submit" onClick={this.submitAllForms}>
+            Submit
+            </button>
             </>
         )
     };

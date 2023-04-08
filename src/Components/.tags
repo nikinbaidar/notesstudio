@@ -38,8 +38,19 @@ Quiz	./Main.js	/^export class Quiz extends React.Component {$/;"	c
 SEO	./seo.js	/^export function SEO({title, description, name, type}) {$/;"	c
 Semesters	./Main.js	/^export class Semesters extends React.Component {$/;"	c
 Sidebar	./Sidebar.js	/^class Sidebar extends React.Component {$/;"	c
+allForms	./Main.js	/^        const allForms = document.getElementsByClassName("optionGroup");$/;"	C	class:Quiz
 anonymousObject4aff85870205	./Sidebar.js	/^                        <NavLink to={lesson.path} style={({ isActive }) => ({$/;"	v	variable:Sidebar.render.elem
+choice	./Main.js	/^                        id={choice}$/;"	M
+choice	./Main.js	/^                        value={choice}$/;"	M
+choiceId	./Main.js	/^                        <li key={choiceId} className={className}>$/;"	M
+componentDidMount	./Main.js	/^    componentDidMount() {$/;"	m	class:Quiz
+componentWillUnmount	./Main.js	/^    componentWillUnmount() {$/;"	m	class:Quiz
+constructor	./Main.js	/^    constructor(props) {$/;"	m	class:Quiz
+correctValues	./Main.js	/^        this.correctValues = [];$/;"	p	method:Quiz.constructor
+cross	./Main.js	/^        const tick = `&#x2714;`; const cross = `&#x2716;`;$/;"	C	class:Quiz
 currentSemester	./Main.js	/^        let currentSemester = event.target.value;$/;"	v	class:Semesters
+elem	./Main.js	/^                <React.Fragment key={elem.id}>$/;"	M
+elem	./Main.js	/^            const elem = {$/;"	v	method:Quiz.render
 elem	./Main.js	/^        const elem = {$/;"	v
 elem	./Main.js	/^        return <option key={elem.id} value={index}>{elem.label}<\/option>;$/;"	M
 elem	./NavigationBar.js	/^        const elem = {$/;"	v
@@ -50,10 +61,12 @@ gridItems	./Main.js	/^        let gridItems = document.querySelectorAll('.option
 handleClick	./Main.js	/^    handleClick = (event) => {$/;"	M	class:Semesters
 handleClick	./NavigationBar.js	/^    handleClick(event) {$/;"	m	class:Navigation
 handleSelection	./Main.js	/^    handleSelection = (event) => {$/;"	M	class:Semesters
+id	./Main.js	/^                id: crypto.randomUUID(),$/;"	p	variable:Quiz.render.elem
 id	./Main.js	/^            id: crypto.randomUUID(),$/;"	p	variable:elem
 id	./Main.js	/^            id: crypto.randomUUID(),$/;"	p	variable:props
 id	./NavigationBar.js	/^            id: crypto.randomUUID(),$/;"	p	variable:elem
 id	./Sidebar.js	/^                id: crypto.randomUUID(),$/;"	p	variable:Sidebar.render.elem
+item	./Main.js	/^                        name={item.question} $/;"	M
 label	./Main.js	/^            label: item,$/;"	p	variable:props
 label	./Main.js	/^            label: item.semester$/;"	p	variable:elem
 label	./NavigationBar.js	/^            label: item.name,$/;"	p	variable:elem
@@ -62,15 +75,20 @@ lessonId	./Sidebar.js	/^                        <li key={lessonId}>$/;"	M
 lessons	./Sidebar.js	/^                lessons: item.lessons.map((lesson) => {$/;"	p	variable:Sidebar.render.elem
 name	./Main.js	/^        return subjects.map(({name}) => name);$/;"	M	variable:
 navBar	./NavigationBar.js	/^    navBar = loadNavigationBar().map((item, index) => {$/;"	M	class:Navigation
+options	./Main.js	/^                options: item.options.map((choice) => {$/;"	p	variable:Quiz.render.elem
 props	./Main.js	/^        const props = {$/;"	v
+question	./Main.js	/^                question: item.question,$/;"	p	variable:Quiz.render.elem
 render	./Ads.js	/^    render() {$/;"	m	class:Advertisements
 render	./Copyright.js	/^    render() {$/;"	m	class:Copyright
 render	./Main.js	/^    render() {$/;"	m	class:Quiz
 render	./NavigationBar.js	/^    render() {$/;"	m	class:Navigation
 render	./Sidebar.js	/^    render() {$/;"	m	class:Sidebar
+selected	./Main.js	/^            const selected = allForms[i].querySelector($/;"	C	class:Quiz
 semester	./Main.js	/^    semesterSubjects = loadCurriculum().map(({semester, subjects}) => {$/;"	M	variable:
 semesterSubjects	./Main.js	/^    semesterSubjects = loadCurriculum().map(({semester, subjects}) => {$/;"	M	class:Semesters
 semesters	./Main.js	/^    semesters = loadCurriculum().map((item, index) => {$/;"	M	class:Semesters
 subjectsGrid	./Main.js	/^    subjectsGrid = this.semesterSubjects[0].map((item, index) => {$/;"	M	class:Semesters
+submitAllForms	./Main.js	/^    submitAllForms = () => {$/;"	M	class:Quiz
 textDecoration	./Sidebar.js	/^                        textDecoration: isActive ? 'underline' : 'none' })}>$/;"	p	variable:Sidebar.render.elem.anonymousObject4aff85870205
+tick	./Main.js	/^        const tick = `&#x2714;`; const cross = `&#x2716;`;$/;"	C	class:Quiz
 title	./seo.js	/^export function SEO({title, description, name, type}) {$/;"	M	variable:

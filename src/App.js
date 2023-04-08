@@ -16,7 +16,6 @@ import {
 
 // CSS Imports
 import './App.css';
-import './Queries.css';
 
 class App extends React.Component {
 
