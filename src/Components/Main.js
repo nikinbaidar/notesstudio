@@ -64,6 +64,29 @@ export class Semesters extends React.Component {
 }
 
 export class Quiz extends React.Component {
+
+    submitAllForms() {
+        const allForms = document.getElementsByClassName("myForms");
+        const selectedValues = [];
+        console.log(allForms.length, typeof(allForms));
+        console.log(allForms);
+        for(let i = 0 ; i < allForms.length; i++) {
+            const selected = allForms[i].querySelector("input[type='radio']:checked");
+				if (selected) {
+					selectedValues.push(selected.value);
+				} else {
+					selectedValues.push(null);
+				}
+            allForms[i].submit()
+        }
+        console.log(selectedValues);
+
+    }
+
+    handleSubmit() {
+        console.log("This has been submitted!");
+    }
+
     render() {
 
         const questions = loadQuiz().map((item) => {
@@ -74,8 +97,13 @@ export class Quiz extends React.Component {
                     const choiceId = crypto.randomUUID();
                     return (
                         <li key={choiceId}>
-                        <input type="radio" name={item.question} id={choice}/>
-                        <label htmlFor={item.question}>{choice}</label>
+                        <input 
+                            type="radio" 
+                            name={item.question} 
+                            id={choice}
+                            value={choice}
+                        />
+                        <label htmlFor={choice}>{choice}</label>
                         </li>
                     )
                 })
@@ -84,10 +112,8 @@ export class Quiz extends React.Component {
             return (
                 <React.Fragment key={elem.id}>
                     <li className="questions">{elem.question}</li>
-                    <form>
-                    <ol className="choices">
-                    {elem.options}
-                    </ol>
+                    <form className="myForms">
+                    <ol className="choices">{elem.options}</ol>
                     </form>
                 </React.Fragment>
             );
@@ -99,6 +125,7 @@ export class Quiz extends React.Component {
             Engineering 2079" type="article" />
             <h1>Welcome to the Quiz!</h1>
             <ol>{questions}</ol>
+            <button type="submit" onClick={this.submitAllForms}>Submit</button>
             </>
         )
     };
