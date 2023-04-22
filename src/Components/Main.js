@@ -5,6 +5,16 @@ import { loadCurriculum, loadQuiz } from '../dataLoader'
 
 export class Semesters extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = { x: '0' };
+        this.handleSelection = this.handleSelection.bind(this);
+    }
+
+    componentDidMount() {
+        console.log(this.state.x);
+    }; 
+
     semesterSubjects = loadCurriculum().map(({semester, subjects}) => {
         return subjects.map(({name}) => name);
     });
@@ -16,6 +26,7 @@ export class Semesters extends React.Component {
     handleSelection = (event) => {
         let gridItems = document.querySelectorAll('.options p'); 
         let currentSemester = event.target.value;
+        console.log(this.state.x);
         for (let i=0; i<gridItems.length; i++)
             gridItems[i].innerHTML = "Subject: " 
                 + this.semesterSubjects[currentSemester][i];
@@ -70,6 +81,12 @@ export class Quiz extends React.Component {
         super(props);
         this.correctValues = [];
         this.quizData = loadQuiz();
+        this.numberOfQuestionsPerPage = 5;
+        this.state = {
+            currentPage: -1,
+            start: 0,
+            end: 0
+        }
     }
 
     componentDidMount() {
@@ -77,11 +94,39 @@ export class Quiz extends React.Component {
             const correctAnswer = item.options[item.correctAnswerIndex];
             this.correctValues.push(correctAnswer);
         });
+        this.displayNext();
+
     }
 
     componentWillUnmount() {
         this.correctValues.length = 0;
     }; 
+
+    displayNext = () => {
+        if(this.state.currentPage < 1) {
+            this.setState({
+                currentPage: this.state.currentPage + 1,
+                start: this.state.end,
+                end: this.state.start + this.state.end + this.numberOfQuestionsPerPage,
+            })
+        }
+        else {
+            alert("EON");
+        }
+    }
+
+    displayPrevious= () => {
+        if(this.state.currentPage > 0) {
+            this.setState({
+                currentPage: this.state.currentPage - 1,
+                start: this.state.start - this.numberOfQuestionsPerPage,
+                end: this.state.start,
+            })
+        }
+        else {
+            alert("EOP")
+        }
+    }
 
     submitAllForms = () => {
         const tick = `&#x2714;`; const cross = `&#x2716;`;
@@ -112,7 +157,8 @@ export class Quiz extends React.Component {
 
     render() {
 
-        const questions = this.quizData.map((item) => {
+        const questions = this.quizData.slice(this.state.start,
+            this.state.end).map((item) => {
 
             const elem = {
                 id: crypto.randomUUID(),
@@ -152,10 +198,20 @@ export class Quiz extends React.Component {
             Engineering 2079" type="article" />
 
             <h1>Welcome to the Quiz!</h1>
-            <ol>{questions}</ol>
-            <button id="quiz2079" type="submit" onClick={this.submitAllForms}>
+
+            <ol start={this.state.start + 1}>{questions}</ol>
+
+            <div id="buttons">
+            <button id="previous" type="submit" onClick={this.displayPrevious}>
+            Previous
+            </button>
+            <button id="next" type="submit" onClick={this.displayNext}>
+            Next
+            </button>
+            <button id="submit" type="submit" onClick={this.submitAllForms}>
             Submit
             </button>
+            </div>
             </>
         )
     };
