@@ -18,7 +18,9 @@ export class Quiz extends React.Component {
             start: 0,
             end: 0,
             selectedOptions: selectedOptions,
-            answered: 0,
+            totalQuestions: totalQuestions,
+            totalAnswered: 0,
+
         }
     }
 
@@ -28,12 +30,48 @@ export class Quiz extends React.Component {
             this.correctValues.push(correctAnswer);
         });
         this.displayNext();
-        // console.log(this.state.selectedValues);
     }
 
     componentWillUnmount() {
         this.correctValues.length = 0;
     }; 
+
+    handleRadioChange = (event, question) => {
+        const selectedValue = event.target.id;
+        // console.log(selectedValue);
+        const updateSelectedOptions = {
+            ...this.state.selectedOptions,
+            [question]: selectedValue
+        };
+        this.setState({
+            selectedOptions: updateSelectedOptions,
+        });
+        if (this.state.selectedOptions[question] === undefined) {
+            this.setState({
+                answered: this.state.answered + 1,
+            });
+        }
+        localStorage.setItem(`myRadioValue-${question}`, selectedValue);
+    };
+
+
+    // handleRadioChange = (event, question) => {
+    //     const selectedValue = event.target.id;
+    //     const { selectedOptions, totalAnswered } = this.state;
+    //     const updateSelectedOptions = {
+    //         ...selectedOptions,
+    //         [question]: selectedValue
+    //     };
+    //     const isAnswered = selectedOptions[question] !== undefined;
+    //     const updatedAnsweredCount = isAnswered ? totalAnswered : totalAnswered + 1;
+    //
+    //     this.setState({
+    //         selectedOptions: updateSelectedOptions,
+    //         totalAnswered: updatedAnsweredCount
+    //     });
+    //
+    //     localStorage.setItem(`myRadioValue-${question}`, selectedValue);
+    // };
 
     displayNext = () => {
         if(this.state.currentPage < 1) {
@@ -88,19 +126,6 @@ export class Quiz extends React.Component {
             answer.style.fontWeight = "bold";
         });
     }
-
-    handleRadioChange = (event, question) => {
-        const selectedValue = event.target.id;
-        console.log(selectedValue);
-        const updateSelectedOptions = {
-            ...this.state.selectedOptions,
-            [question]: selectedValue
-        };
-        this.setState({
-            selectedOptions: updateSelectedOptions
-        });
-        localStorage.setItem(`myRadioValue-${question}`, selectedValue);
-    };
 
     render() {
 
@@ -157,6 +182,7 @@ export class Quiz extends React.Component {
                 <button id="submit" type="submit" 
                 onClick={this.handleSubmission}>Submit</button>
             </div>
+            <h4>Answered: {this.state.totalAnswered} / {this.state.totalQuestions}</h4>
             </>
         )
     };
