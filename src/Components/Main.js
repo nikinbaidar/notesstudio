@@ -10,7 +10,9 @@ export class Quiz extends React.Component {
         const totalQuestions = 10;
         const selectedOptions = Array.from({totalQuestions}, (_, i) => 
             `question${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
-        this.correctValues = [];
+        // Work from here
+        const correctOptions = [];
+        this.correctValues = correctOptions;
         this.quizData = loadQuiz();
         this.numberOfQuestionsPerPage = 5;
         this.state = {
@@ -20,7 +22,7 @@ export class Quiz extends React.Component {
             selectedOptions: selectedOptions,
             totalQuestions: totalQuestions,
             totalAnswered: 0,
-
+            submitted: false,
         }
     }
 
@@ -32,9 +34,9 @@ export class Quiz extends React.Component {
         this.displayNext();
     }
 
-    componentWillUnmount() {
-        this.correctValues.length = 0;
-    }; 
+    // componentWillUnmount() {
+    //     this.correctValues.length = 0;
+    // }; 
 
     handleRadioChange = (event, question) => {
         const selectedValue = event.target.id;
@@ -65,63 +67,70 @@ export class Quiz extends React.Component {
         else {
             alert("EON");
         }
-    }
+    };
 
-    displayPrevious= () => {
+    displayPrevious = () => {
         if(this.state.currentPage > 0) {
             this.setState({
                 currentPage: this.state.currentPage - 1,
                 start: this.state.start - this.numberOfQuestionsPerPage,
                 end: this.state.start,
-            })
+            });
         }
         else {
-            alert("EOP")
+            alert("EOP");
         }
-    }
+    };
+
+    // displayAnswers = () => {
+    //     console.log("Dipslay answers");
+    //     const correctAnswers = this.correctValues;
+    //     const allQuestions = document.querySelectorAll('.optionGroup');
+    //     let i = 0;
+    //
+    //     for (const form of allQuestions) {
+    //         const selected = form.querySelector('input[type="radio"]:checked');
+    //         if (selected) {
+    //             const feedbackElement = document.createElement('span');
+    //             const isCorrectAns = selected.value === correctAnswers[i];
+    //             feedbackElement.className = isCorrectAns ? 'tick' : 'cross';
+    //             feedbackElement.textContent = isCorrectAns ? tick : cross;
+    //             selected.parentNode.appendChild(feedbackElement);
+    //             i++;
+    //         }
+    //     }
+    //
+    //     document.querySelectorAll('li.correct').forEach((correctOption) => {
+    //         correctOption.style.color = 'blue';
+    //         correctOption.style.fontWeight = 'bold';
+    //     });
+    // }
 
     handleSubmission = () => {
-        const tick = `&#x2714;`; const cross = `&#x2716;`;
-        const allForms = document.getElementsByClassName("optionGroup");
-
-        for(let i = 0 ; i < allForms.length; i++) {
-            const selected = allForms[i].querySelector(
-                "input[type='radio']:checked"
-            );
-            if (selected) {
-                const feedbackElement = document.createElement("span");
-                if(selected.value === this.correctValues[i]) {
-                    feedbackElement.className = "tick";
-                    feedbackElement.innerHTML = tick;
-                }
-                else {
-                    feedbackElement.className = "cross";
-                    feedbackElement.innerHTML = cross;
-                }
-                selected.parentNode.appendChild(feedbackElement);
-            } 
-        }
-
-        document.querySelectorAll('li.correct').forEach(answer => {
-            answer.style.color = "blue";
-            answer.style.fontWeight = "bold";
-        });
-    }
+        this.setState({submitted: true});
+    };
 
     render() {
-
+        const tick = '\u2714';
+        const cross = '\u2716';
         const questions = this.quizData.slice(this.state.start,
             this.state.end).map((item, qindex) => {
                 const elem = {
                     id: crypto.randomUUID(),
                     question: item.question,
                     options: item.options.map((choice, aindex) => {
-                        const choiceId = (this.state.currentPage).toString() + (qindex).toString() + aindex.toString();
-                        const correctAnswer = item.options[item.correctAnswerIndex];
-                        const isCorrect = (choice === correctAnswer);
-                        const className =  isCorrect ? "correct" : "";
                         const qtag = "question" + (1 + (this.state.currentPage
-                                * this.numberOfQuestionsPerPage) + qindex)
+                             * this.numberOfQuestionsPerPage) + qindex)
+                        const choiceId = (this.state.currentPage).toString()
+                             + (qindex).toString() + aindex.toString();
+                        const correctAnswer = item.options[item.correctAnswerIndex];
+                        const isChecked = this.state.selectedOptions[qtag] === choiceId;
+                        const isCorrectAns = (choice === correctAnswer);
+                        const className =  isCorrectAns ? "correct" : null;
+                        const feedback = (
+                            <span className={isCorrectAns ? 'tick' : 'cross'}>
+                                {isCorrectAns ? tick : cross}</span>
+                        );
                         return (
                             <li key={choiceId} className={className}>
                             <input 
@@ -129,12 +138,16 @@ export class Quiz extends React.Component {
                                 name={item.question} 
                                 id={choiceId}
                                 value={choice}
-                                checked={this.state.selectedOptions[qtag] === choiceId}
-                                onChange={ 
-                                    (event) => this.handleRadioChange(event, qtag) }
+                                checked={isChecked}
+                                onChange={(event) => this.handleRadioChange(event, qtag)}
+                                disabled={this.state.submitted}
                             />
                             <label htmlFor={choiceId}>
-                            <span>{choice}</span></label>
+                            <span>{choice}</span>
+                            {this.state.submitted && isChecked && 
+                                feedback
+                            }
+                            </label>
                             </li>
                         )
                     })
