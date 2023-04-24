@@ -38,40 +38,21 @@ export class Quiz extends React.Component {
 
     handleRadioChange = (event, question) => {
         const selectedValue = event.target.id;
-        // console.log(selectedValue);
+        const { selectedOptions, totalAnswered } = this.state;
         const updateSelectedOptions = {
-            ...this.state.selectedOptions,
+            ...selectedOptions,
             [question]: selectedValue
         };
+        const isAnswered = selectedOptions[question] !== undefined;
+        const updatedAnsweredCount = isAnswered ? totalAnswered : totalAnswered + 1;
+
         this.setState({
             selectedOptions: updateSelectedOptions,
+            totalAnswered: updatedAnsweredCount
         });
-        if (this.state.selectedOptions[question] === undefined) {
-            this.setState({
-                answered: this.state.answered + 1,
-            });
-        }
+
         localStorage.setItem(`myRadioValue-${question}`, selectedValue);
     };
-
-
-    // handleRadioChange = (event, question) => {
-    //     const selectedValue = event.target.id;
-    //     const { selectedOptions, totalAnswered } = this.state;
-    //     const updateSelectedOptions = {
-    //         ...selectedOptions,
-    //         [question]: selectedValue
-    //     };
-    //     const isAnswered = selectedOptions[question] !== undefined;
-    //     const updatedAnsweredCount = isAnswered ? totalAnswered : totalAnswered + 1;
-    //
-    //     this.setState({
-    //         selectedOptions: updateSelectedOptions,
-    //         totalAnswered: updatedAnsweredCount
-    //     });
-    //
-    //     localStorage.setItem(`myRadioValue-${question}`, selectedValue);
-    // };
 
     displayNext = () => {
         if(this.state.currentPage < 1) {
@@ -139,7 +120,8 @@ export class Quiz extends React.Component {
                         const correctAnswer = item.options[item.correctAnswerIndex];
                         const isCorrect = (choice === correctAnswer);
                         const className =  isCorrect ? "correct" : "";
-                        const qtag = "question" + (qindex + 1)
+                        const qtag = "question" + (1 + (this.state.currentPage
+                                * this.numberOfQuestionsPerPage) + qindex)
                         return (
                             <li key={choiceId} className={className}>
                             <input 
