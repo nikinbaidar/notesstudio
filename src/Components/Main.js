@@ -5,21 +5,22 @@ import { loadCurriculum, loadQuiz } from '../dataLoader'
 
 export class Quiz extends React.Component {
 
-    constructor(props) {
-        super(props);
-        const totalQuestions = 10;
+    constructor() {
+        super();
+        const quizData = loadQuiz();
+        const totalQuestions = quizData.length;
+        const totalPages = 5;
         const selectedOptions = Array.from({totalQuestions}, (_, i) => 
-            `question${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
-        // Work from here
-        const correctOptions = [];
-        this.correctValues = correctOptions;
-        this.quizData = loadQuiz();
-        this.numberOfQuestionsPerPage = 5;
+            `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
+        this.quizData = quizData;
+        this.totalPages = totalPages - 1;
+        this.questionsPerPage = totalQuestions/totalPages;
+        console.log(this.questionsPerPage);
         this.state = {
             currentPage: -1,
             start: 0,
             end: 0,
-            selectedOptions: selectedOptions,
+            selOpts: selectedOptions,
             totalQuestions: totalQuestions,
             totalAnswered: 0,
             submitted: false,
@@ -27,41 +28,34 @@ export class Quiz extends React.Component {
     }
 
     componentDidMount() {
-        this.quizData.forEach((item) => {
-            const correctAnswer = item.options[item.correctAnswerIndex];
-            this.correctValues.push(correctAnswer);
-        });
         this.displayNext();
     }
 
-    // componentWillUnmount() {
-    //     this.correctValues.length = 0;
-    // }; 
-
-    handleRadioChange = (event, question) => {
+    handleRadioChange = (event, questionKey) => {
         const selectedValue = event.target.id;
-        const { selectedOptions, totalAnswered } = this.state;
+        const { selOpts, totalAnswered } = this.state;
         const updateSelectedOptions = {
-            ...selectedOptions,
-            [question]: selectedValue
+            ...selOpts,
+            [questionKey]: selectedValue
         };
-        const isAnswered = selectedOptions[question] !== undefined;
+        const isAnswered = selOpts[questionKey] !== undefined;
         const updatedAnsweredCount = isAnswered ? totalAnswered : totalAnswered + 1;
 
         this.setState({
-            selectedOptions: updateSelectedOptions,
+            selOpts: updateSelectedOptions,
             totalAnswered: updatedAnsweredCount
         });
 
-        localStorage.setItem(`myRadioValue-${question}`, selectedValue);
+        localStorage.setItem(`myRadioValue-${questionKey}`, selectedValue);
     };
 
     displayNext = () => {
-        if(this.state.currentPage < 1) {
+        const { currentPage, end } = this.state;
+        if (currentPage < this.totalPages) {
             this.setState({
-                currentPage: this.state.currentPage + 1,
-                start: this.state.end,
-                end: this.state.start + this.state.end + this.numberOfQuestionsPerPage,
+                currentPage: currentPage + 1,
+                start: end,
+                end: end + this.questionsPerPage,
             })
         }
         else {
@@ -70,11 +64,12 @@ export class Quiz extends React.Component {
     };
 
     displayPrevious = () => {
-        if(this.state.currentPage > 0) {
+        const { currentPage, start } = this.state;
+        if (currentPage > 0) {
             this.setState({
-                currentPage: this.state.currentPage - 1,
-                start: this.state.start - this.numberOfQuestionsPerPage,
-                end: this.state.start,
+                currentPage: currentPage - 1,
+                start: start - this.questionsPerPage,
+                end: start,
             });
         }
         else {
@@ -82,124 +77,94 @@ export class Quiz extends React.Component {
         }
     };
 
-    // displayAnswers = () => {
-    //     console.log("Dipslay answers");
-    //     const correctAnswers = this.correctValues;
-    //     const allQuestions = document.querySelectorAll('.optionGroup');
-    //     let i = 0;
-    //
-    //     for (const form of allQuestions) {
-    //         const selected = form.querySelector('input[type="radio"]:checked');
-    //         if (selected) {
-    //             const feedbackElement = document.createElement('span');
-    //             const isCorrectAns = selected.value === correctAnswers[i];
-    //             feedbackElement.className = isCorrectAns ? 'tick' : 'cross';
-    //             feedbackElement.textContent = isCorrectAns ? tick : cross;
-    //             selected.parentNode.appendChild(feedbackElement);
-    //             i++;
-    //         }
-    //     }
-    //
-    //     document.querySelectorAll('li.correct').forEach((correctOption) => {
-    //         correctOption.style.color = 'blue';
-    //         correctOption.style.fontWeight = 'bold';
-    //     });
-    // }
-
     handleSubmission = () => {
+        // if (window.confirm("Do you really want to submit?")) {
+        //     this.setState({submitted: true});
+        // }
         this.setState({submitted: true});
+
+    };
+
+    renderQuestion = (question, questionNumber) => {
+        const { currentPage, submitted, selOpts } = this.state;
+        const questionKey = (questionNumber + 1) 
+            + (currentPage * this.questionsPerPage);
+
+        return (
+            <React.Fragment key={questionKey}>
+                <li className="questions">{question.name}</li>
+                <form className="optionGroup">
+                <ol className="choices">
+                {question.options.map((choice, index) => {
+                    const choiceId = `${currentPage}${questionNumber}${index}`;
+                    const isChecked = selOpts[questionKey] === choiceId;
+                    const isCorrect = choice === question.options[question.ansKey];
+                    const Feedback = () => {
+                        const tick = '\u2714';
+                        const cross = '\u2716';
+                        const { feedback, feedbackSymbol } = isCorrect
+                            ? { feedback: 'correct', feedbackSymbol: tick }
+                            : { feedback: 'incorrect', feedbackSymbol: cross };
+                        return (
+                            <span className={`feedback ${feedback}`}>
+                                {feedbackSymbol}</span>
+                        );
+                    }; 
+                    return (
+                        <li key={choiceId} className={(isCorrect && submitted) 
+                            ? "submitted correct" : null}>
+                        <input 
+                            type="radio" 
+                            name={question.name} 
+                            id={choiceId}
+                            value={choice}
+                            checked={isChecked}
+                            onChange={(event) => this.handleRadioChange(event, questionKey)}
+                            disabled={submitted}
+                        />
+                        <label htmlFor={choiceId}><span>{choice}</span>
+                            {submitted && isChecked && <Feedback />}</label>
+                        </li>
+                    );
+                })}
+                </ol>
+                </form>
+            </React.Fragment>
+        );
     };
 
     render() {
-        const tick = '\u2714';
-        const cross = '\u2716';
-        const questions = this.quizData.slice(this.state.start,
-            this.state.end).map((item, qindex) => {
-                const elem = {
-                    id: crypto.randomUUID(),
-                    question: item.question,
-                    options: item.options.map((choice, aindex) => {
-                        const qtag = "question" + (1 + (this.state.currentPage
-                             * this.numberOfQuestionsPerPage) + qindex)
-                        const choiceId = (this.state.currentPage).toString()
-                             + (qindex).toString() + aindex.toString();
-                        const correctAnswer = item.options[item.correctAnswerIndex];
-                        const isChecked = this.state.selectedOptions[qtag] === choiceId;
-                        const isCorrectAns = (choice === correctAnswer);
-                        const className =  isCorrectAns ? "correct" : null;
-                        const feedback = (
-                            <span className={isCorrectAns ? 'tick' : 'cross'}>
-                                {isCorrectAns ? tick : cross}</span>
-                        );
-                        return (
-                            <li key={choiceId} className={className}>
-                            <input 
-                                type="radio" 
-                                name={item.question} 
-                                id={choiceId}
-                                value={choice}
-                                checked={isChecked}
-                                onChange={(event) => this.handleRadioChange(event, qtag)}
-                                disabled={this.state.submitted}
-                            />
-                            <label htmlFor={choiceId}>
-                            <span>{choice}</span>
-                            {this.state.submitted && isChecked && 
-                                feedback
-                            }
-                            </label>
-                            </li>
-                        )
-                    })
-                };
+        const {start, end, totalAnswered, totalQuestions } = this.state;
+        const questions = this.quizData.slice(start, end).map(this.renderQuestion);
 
-                return (
-                    <React.Fragment key={elem.id}>
-                    <li className="questions">{elem.question}</li>
-                    <form className="optionGroup">
-                    <ol className="choices">{elem.options}</ol>
-                    </form>
-                    </React.Fragment>
-                );
-            })
         return (
             <>
-            <SEO title="NEC Exam 2079" name="Biomedical License"
-            description="Nepal Engineering Council Exam for Biomedical
-            Engineering 2079" type="article" />
+            <SEO 
+            title="NEC Exam 2079" 
+            name="Biomedical License"
+            description="Nepal Engineering Council Exam for Biomedical Engineering 2079" 
+            type="article" 
+            />
             <h1>Welcome to the Quiz!</h1>
-            <ol start={this.state.start + 1}>{questions}</ol>
+            <ol start={start + 1}>{questions}</ol>
             <div id="buttons">
-                <button id="previous" type="submit" 
-                onClick={this.displayPrevious}>Previous</button>
-                <button id="next" type="submit" 
-                onClick={this.displayNext}>Next</button>
-                <button id="submit" type="submit" 
-                onClick={this.handleSubmission}>Submit</button>
+            <button id="previous" type="submit" onClick={this.displayPrevious}>Previous</button>
+            <button id="next" type="submit" onClick={this.displayNext}>Next</button>
+            <button id="submit" type="submit" onClick={this.handleSubmission}>Submit</button>
             </div>
-            <h4>Answered: {this.state.totalAnswered} / {this.state.totalQuestions}</h4>
+            <h4>Answered: {totalAnswered} / {totalQuestions}</h4>
             </>
-        )
+        );
     };
-}
-
-
-
-
-
+};
 
 
 export class Semesters extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = { x: '0' };
+    constructor() {
+        super()
         this.handleSelection = this.handleSelection.bind(this);
     }
-
-    componentDidMount() {
-        console.log(this.state.x);
-    }; 
 
     semesterSubjects = loadCurriculum().map(({semester, subjects}) => {
         return subjects.map(({name}) => name);

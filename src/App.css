@@ -274,19 +274,23 @@ button#submit{
   margin-left: auto;
 }
 
-
-.tick {
-  color: green;
+.feedback {
   font-weight: bold;
   font-size: 1.3rem;
   padding-left: 5px;
 }
 
-.cross {
+.feedback.correct{
+  color: green;
+}
+
+.feedback.incorrect {
   color: var(--red);
+}
+
+.submitted.correct {
+  color: blue;
   font-weight: bold;
-  font-size: 1.3rem;
-  padding-left: 5px;
 }
 
 @media(max-width: 768px) 
