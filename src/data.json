@@ -1,5 +1,6 @@
 {
 
+
    "navBarItems": [
         {
             "name": "Home",
@@ -322,6 +323,7 @@
         }
     ],
     "2079pastQuestions" : [
+
         {
             "name": "Which of the following statements regarding PROM is true?",
             "category": "A",
@@ -351,7 +353,8 @@
                 "200 mA",
                 "50 A",
                 "200 A",
-                "50 mA"],
+                "50 mA"
+            ],
             "ansKey": 2
         },
         {
@@ -361,7 +364,8 @@
                 "Small DC loads",
                 "Both AC and DC",
                 "Large DC loads",
-                "Small AC loads"],
+                "Small AC loads"
+            ],
             "ansKey": 2
         },
         {
@@ -371,7 +375,8 @@
                 "Bidirectional",
                 "Unidirectional",
                 "Omnidirectional",
-                "Reflective"],
+                "Reflective"
+            ],
             "ansKey": 2
         },
         {
@@ -381,7 +386,8 @@
                 "Satellite Cell",
                 "Merkel Cell",
                 "Schwann's Cell",
-                "Oligodendrocytes"],
+                "Oligodendrocytes"
+            ],
             "ansKey": 2
         },
         {
@@ -391,7 +397,8 @@
                 "Stroke Volume * Heart Rate",
                 "Stoke Volume / Heart Rate",
                 "(Heart Rate + Stroke Volume) / BPM",
-                "(Heart Rate + Stroke Volume) * BPM"],
+                "(Heart Rate + Stroke Volume) * BPM"
+            ],
             "ansKey": 2
         },
         {
@@ -401,7 +408,8 @@
                 "7L",
                 "8L",
                 "6.5L",
-                "10L"],
+                "10L"
+            ],
             "ansKey": 2
         },
         {
@@ -411,7 +419,8 @@
                 "Sampling",
                 "Filtering",
                 "Qunatization",
-                "Endcoding"],
+                "Endcoding"
+            ],
             "ansKey": 2
         },
         {
@@ -421,7 +430,8 @@
                 "Complement activation",
                 "Opsonization",
                 "Chemotaxis",
-                "Capsulization"],
+                "Capsulization"
+            ],
             "ansKey": 2
         },
         {
@@ -431,7 +441,8 @@
                 "Gradient strength",
                 "Repetition time",
                 "Flip angle",
-                "Echo time"],
+                "Echo time"
+            ],
             "ansKey": 2
         },
         {
@@ -441,7 +452,8 @@
                 "2 years",
                 "3 years",
                 "4 years",
-                "5 years"],
+                "5 years"
+            ],
             "ansKey": 2
         },
         {
@@ -451,7 +463,8 @@
                 "Modular",
                 "Fixed",
                 "Integrated",
-                "Flexible"],
+                "Flexible"
+            ],
             "ansKey": 2
         },
         {
@@ -461,7 +474,8 @@
                 "Chest movement",
                 "Heart rate",
                 "Body temperature",
-                "Respiration rate"],
+                "Respiration rate"
+            ],
             "ansKey": 2
         },
         {
@@ -471,7 +485,8 @@
                 "7 lt",
                 "5.25 lt",
                 "6.5 lt",
-                "6 lt"],
+                "6 lt"
+            ],
             "ansKey": 2
         },
         {
@@ -481,7 +496,8 @@
                 "1",
                 "2",
                 "3",
-                "4"],
+                "4"
+            ],
             "ansKey": 2
         },
         {
@@ -491,7 +507,8 @@
                 "1",
                 "2",
                 "3",
-                "4"],
+                "4"
+            ],
             "ansKey": 2
         },
         {
@@ -501,7 +518,8 @@
                 "1",
                 "2",
                 "3",
-                "4"],
+                "4"
+            ],
             "ansKey": 2
         },
         {
@@ -511,14 +529,12 @@
                 "1",
                 "2",
                 "3",
-                "4"],
+                "4"
+            ],
             "ansKey": 2
         }
+
     ]
-
-
-
-
 
 
 }
