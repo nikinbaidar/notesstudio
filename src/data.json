@@ -321,19 +321,204 @@
             ]
         }
     ],
-    "questions" : [
+    "2079pastQuestions" : [
         {
-            "question": "How are you?",
+            "name": "Which of the following statements regarding PROM is true?",
             "category": "A",
-            "options": ["1", "2", "3", "4"],
-            "correctAnswerIndex": 2
+            "options": [
+                "PROM can be programmed unlimited number of times.",
+                "Programming a PROM requires specialized UV rays.",
+                "PROM can only be programmed by the user once.",
+                "PROM  a type"
+            ],
+            "ansKey": 2
         },
         {
-            "question": "Are you fine?",
+            "name": "What will be the affect of increasing the number of electrons emitted from the cathode to the anode in an X-ray tube?",
             "category": "A",
-            "options": ["1", "2", "3", "4"],
-            "correctAnswerIndex": 0
+            "options": [
+                "The wavelength of the X-rays produced will decrease.",
+                "The intensity of the X-rays produced will increase.",
+                "The duration of X-ray exposure will decrease.",
+                "The penetration power of the X-ray produced will increase"
+            ],
+            "ansKey": 2
+        },
+        {
+            "name": "If a 100 C charge flows through a conductor for 2 secs, the current produced is",
+            "category": "A",
+            "options": [
+                "200 mA",
+                "50 A",
+                "200 A",
+                "50 mA"],
+            "ansKey": 2
+        },
+        {
+            "name": "Two generators are connected in parellel for",
+            "category": "A",
+            "options": [
+                "Small DC loads",
+                "Both AC and DC",
+                "Large DC loads",
+                "Small AC loads"],
+            "ansKey": 2
+        },
+        {
+            "name": "A parabolic antenna's transmission line is",
+            "category": "A",
+            "options": [
+                "Bidirectional",
+                "Unidirectional",
+                "Omnidirectional",
+                "Reflective"],
+            "ansKey": 2
+        },
+        {
+            "name": "Which of the following is not a neurological cell?",
+            "category": "A",
+            "options": [
+                "Satellite Cell",
+                "Merkel Cell",
+                "Schwann's Cell",
+                "Oligodendrocytes"],
+            "ansKey": 2
+        },
+        {
+            "name": "The cardiac output is given by",
+            "category": "A",
+            "options": [
+                "Stroke Volume * Heart Rate",
+                "Stoke Volume / Heart Rate",
+                "(Heart Rate + Stroke Volume) / BPM",
+                "(Heart Rate + Stroke Volume) * BPM"],
+            "ansKey": 2
+        },
+        {
+            "name": "If total oxygen content in artery is 150 ml/L and mixed vessel concentration of oxygen is 110 ml/L and the amount of absorbed oxygen in 280 ml/min, what is the cardiac output?",
+            "category": "A",
+            "options": [
+                "7L",
+                "8L",
+                "6.5L",
+                "10L"],
+            "ansKey": 2
+        },
+        {
+            "name": "Which of the following transforms a continous time signal into a discrete time signal?",
+            "category": "A",
+            "options": [
+                "Sampling",
+                "Filtering",
+                "Qunatization",
+                "Endcoding"],
+            "ansKey": 2
+        },
+        {
+            "name": "In the statement \"Phagocytes won't eat the pathogens unless the pathogens are nicely buttered for them\",  the term 'buttered' concerns with which of the following",
+            "category": "A",
+            "options": [
+                "Complement activation",
+                "Opsonization",
+                "Chemotaxis",
+                "Capsulization"],
+            "ansKey": 2
+        },
+        {
+            "name": "SNR can be increased in MRI by increasing",
+            "category": "A",
+            "options": [
+                "Gradient strength",
+                "Repetition time",
+                "Flip angle",
+                "Echo time"],
+            "ansKey": 2
+        },
+        {
+            "name": "The tenure of memebers of Nepal Engineering Council is",
+            "category": "A",
+            "options": [
+                "2 years",
+                "3 years",
+                "4 years",
+                "5 years"],
+            "ansKey": 2
+        },
+        {
+            "name": "Modern total hip replacement implants are",
+            "category": "A",
+            "options": [
+                "Modular",
+                "Fixed",
+                "Integrated",
+                "Flexible"],
+            "ansKey": 2
+        },
+        {
+            "name": "Which of the following physiological variables can be determined with thermistors?",
+            "category": "A",
+            "options": [
+                "Chest movement",
+                "Heart rate",
+                "Body temperature",
+                "Respiration rate"],
+            "ansKey": 2
+        },
+        {
+            "name": "If tidal volume is 500ml and anatomical dead space is 150ml, and respiration rate is 12 cycles/min, then the aerobic ventillation must be",
+            "category": "A",
+            "options": [
+                "7 lt",
+                "5.25 lt",
+                "6.5 lt",
+                "6 lt"],
+            "ansKey": 2
+        },
+        {
+            "name": "What is the maximum take of engi",
+            "category": "A",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"],
+            "ansKey": 2
+        },
+        {
+            "name": "Which of the following statements regarding PROM is true?",
+            "category": "A",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"],
+            "ansKey": 2
+        },
+        {
+            "name": "Which of the following statements regarding PROM is true?",
+            "category": "A",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"],
+            "ansKey": 2
+        },
+        {
+            "name": "Which of the following statements regarding PROM is true?",
+            "category": "A",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"],
+            "ansKey": 2
         }
     ]
+
+
+
+
+
 
 }
