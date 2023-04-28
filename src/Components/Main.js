@@ -3,18 +3,13 @@ import { SEO } from './seo';
 
 import { loadCurriculum, loadQuiz } from '../dataLoader'
 
-/* function shuffle(array) {
-    array.sort(() => Math.random() - 0.5);
-    return array;
-} */
-
 export class Quiz extends React.Component {
 
     constructor(props) {
         super(props);
         const quizData = loadQuiz(props.name);
         const totalQuestions = quizData.length;
-        const questionsPerPage = 20;
+        const questionsPerPage = 2;
         const selectedOptions = Array.from({totalQuestions}, (_, i) => 
             `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
         this.quizData = quizData;
