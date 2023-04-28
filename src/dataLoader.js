@@ -12,6 +12,6 @@ export function loadCurriculum() {
   return data.curriculum;
 }
 
-export function loadQuiz() {
-  return data.questions;
+export function loadQuiz(questionSet) {
+  return data[questionSet];
 }

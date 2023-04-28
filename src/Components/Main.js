@@ -3,18 +3,23 @@ import { SEO } from './seo';
 
 import { loadCurriculum, loadQuiz } from '../dataLoader'
 
+/* function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+    return array;
+} */
+
 export class Quiz extends React.Component {
 
-    constructor() {
-        super();
-        const quizData = loadQuiz();
+    constructor(props) {
+        super(props);
+        const quizData = loadQuiz(props.name);
         const totalQuestions = quizData.length;
-        const totalPages = 5;
+        const questionsPerPage = 20;
         const selectedOptions = Array.from({totalQuestions}, (_, i) => 
             `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
         this.quizData = quizData;
-        this.totalPages = totalPages - 1;
-        this.questionsPerPage = totalQuestions/totalPages;
+        this.totalPages = (totalQuestions / questionsPerPage) - 1;
+        this.questionsPerPage = questionsPerPage;
         console.log(this.questionsPerPage);
         this.state = {
             currentPage: -1,
@@ -145,7 +150,7 @@ export class Quiz extends React.Component {
             description="Nepal Engineering Council Exam for Biomedical Engineering 2079" 
             type="article" 
             />
-            <h1>Welcome to the Quiz!</h1>
+            <h1>Nepal Enginnering Coucil License Exam {parseInt(this.props.name)}</h1>
             <ol start={start + 1}>{questions}</ol>
             <div id="buttons">
             <button id="previous" type="submit" onClick={this.displayPrevious}>Previous</button>
