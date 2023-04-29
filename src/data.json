@@ -490,10 +490,21 @@
             "ansKey": 2
         },
         {
-            "name": "What is the maximum take of engi",
+            "name": "What is the maximum intake of engineering colleges in Nepal as per NEC Act 2078?",
             "category": "A",
             "options": [
-                "1",
+                "10,000",
+                "11,000",
+                "12,000",
+                "13,000"
+            ],
+            "ansKey": 2
+        },
+        {
+            "name": "An engineer can be defined as",
+            "category": "A",
+            "options": [
+                "Skilled engineer with technical skill and knowledge of a subject.",
                 "2",
                 "3",
                 "4"
@@ -501,39 +512,566 @@
             "ansKey": 2
         },
         {
-            "name": "Which of the following statements regarding PROM is true?",
+            "name": "3-phase 4 wire system is used for which of the following?",
             "category": "A",
             "options": [
-                "1",
-                "2",
-                "3",
-                "4"
+                "Primary transmission",
+                "Seconday transmission",
+                "Primary distribution",
+                "Secondary distribution"
             ],
             "ansKey": 2
         },
         {
-            "name": "Which of the following statements regarding PROM is true?",
-            "category": "A",
+            "name" : "The XOR gate can be realized using",
+            "category" : "A",
             "options": [
-                "1",
-                "2",
-                "3",
-                "4"
+                "OR gates only",
+                "AND and OR gates",
+                "AND, OR and NOT gates",
+                "AND gates only"
             ],
-            "ansKey": 2
+            "anskey" : 2 
         },
         {
-            "name": "Which of the following statements regarding PROM is true?",
-            "category": "A",
+            "name" : "Which of the following logic gates is a universal gate?",
+            "category" : "A",
             "options": [
-                "1",
+                "AND",
+                "NAND",
+                "OR",
+                "XOR"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "If the annual worth of a project is 9000 at 10%, what will be it's capitalized value?",
+            "category" : "A",
+            "options": [
+                "97,500",
+                "90,00",
+                "91,500",
+                "92,300"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following radio isotopes does not emit positron",
+            "category" : "A",
+            "options": [
+                "92 Rb",
+                "12 C",
+                "18 F",
+                "15 O"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following elements is used in heat vulcanizing rubber?",
+            "category" : "A",
+            "options": [
+                "S",
+                "Al",
+                "Al2O3",
+                "Zn"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following is used for cranio-maxillary implants",
+            "category" : "A",
+            "options": [
+                "Silicone",
+                "Natural polymer",
+                "Heat vulcanizing rubber",
+                "Ceramics"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "If an object is suddenly subjected to constant stress, which of the following occurs?",
+            "category" : "A",
+            "options": [
+                "Hysteresis",
+                "Creep",
+                "Stress relaxation",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Artifical liver manufacturing is challenging to replicate",
+            "category" : "A",
+            "options": [
+                "Mass of hepatocytes",
+                "Number of hepatocytes",
+                "Density of hepatocytes",
+                "Volume of hepatocytes"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following kind of membranes does modern dialyzers use?",
+            "category" : "A",
+            "options": [
+                "Hollow plate",
+                "Hollow fiber",
+                "Parallel plate",
+                "Coiled tube"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "In case of oxygen failure in an anesthesia machine, the oxygen valve is blocked to prevent the back flow of, which of the following?",
+            "category" : "A",
+            "options": [
+                "Oxygen",
+                "Nitrous oxide",
+                "Medical Air",
+                "Vacuum"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following is a feature of second generation CT scanners?",
+            "category" : "A",
+            "options": [
+                "Can image only head",
+                "Can image head and body",
+                "5 mins of scan time",
+                "Pencil beam"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following is not a biological effect of ultrasound?",
+            "category" : "A",
+            "options": [
+                "Cavitation",
+                "Electromagnetic radiation",
+                "Physical and chemical properties",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Natural polymers cannot produce which of the following aspects of synthetic polymers?",
+            "category" : "A",
+            "options": [
+                "Strength",
+                "Host rejection",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Paracrine enzymes are used for",
+            "category" : "A",
+            "options": [
+                "Gap communication between cells",
+                "Short communication between cells",
+                "Long communication between celss",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "If pig skin is used to heal burns, it is classified as which of the following?",
+            "category" : "A",
+            "options": [
+                "Autograft",
+                "Isograft",
+                "Allograft",
+                "Xenograft"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The 40nm gap when a new bone is being formed is filled with",
+            "category" : "A",
+            "options": [
+                "Ca ion",
+                "Fe ion",
+                "H20",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The surface where an enzyme is immobilized in a matrix is called",
+            "category" : "A",
+            "options": [
+                "Immobilization matrix",
+                "Enzyme immobilization",
+                "Adsorption",
+                "Entrapment"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following compounds absorbs maximum CO2 laser?",
+            "category" : "A",
+            "options": [
+                "Blood",
+                "Melanin",
+                "Water",
+                "Bone"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "What is the frequency range used in pure tone audio meters?",
+            "category" : "A",
+            "options": [
+                "0 dB to 100 dB",
+                "-100 dB to 100 dB",
+                "-10 dB to 100 dB",
+                "10 dB to 100 dB"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following is used to guide a catheter for minimally invasive surgeries?",
+            "category" : "A",
+            "options": [
+                "Guide wire",
+                "B",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Ornithine cycle is recognized for formation of which of the following compounds?",
+            "category" : "A",
+            "options": [
+                "A",
+                "Urea",
+                "Ammonia",
+                "H2O"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "A tilting heart valve has ... and ...",
+            "category" : "A",
+            "options": [
+                "Triangular, metal",
+                "Circular, metal",
+                "Triangular, polymer",
+                "Circular, polymer"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following is able to heat the greatest surface area of tissues?",
+            "category" : "A",
+            "options": [
+                "Shortwave diathermy",
+                "Plug in heat pack",
+                "Thermal ultrasound",
+                "Microwave diatherymy"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following is a feature of PET and SPECT?",
+            "category" : "A",
+            "options": [
+                "They do not require imaging dyes",
+                "Can image metabolic functions",
+                "Do not use radiation",
+                "Images are more detailed"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The number of gray shades that appear in a radiograph is called",
+            "category" : "A",
+            "options": [
+                "Spatial resolution",
+                "Contrast",
+                "Spatial frequency",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Monitor which is placed at the bedside for monitoring cardiac functions of a patient is known as",
+            "category" : "A",
+            "options": [
+                "Patient monitor",
+                "Cardiac monitor",
+                "Dynamic monitor",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Cardioverter differs from pacemakers in which of the following aspects?",
+            "category" : "A",
+            "options": [
+                "They are larger an pacemaker",
+                "They provide high energy impulse",
+                "They provide low energy impulse",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "A pacemaker and a cell phone may communicate via.",
+            "category" : "A",
+            "options": [
+                "WiFi",
+                "Satellite",
+                "Bluetooth",
+                "IR"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "A transmission without a start bit, a stop bit or a parity bit in serial communication is",
+            "category" : "A",
+            "options": [
+                "Synchronous",
+                "Asynchronous",
+                "Virtual",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "How many select lines are there in an 8 to 1 MUX?",
+            "category" : "A",
+            "options": [
+                "8",
                 "2",
                 "3",
-                "4"
+                "1"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following safety measures can be taken for patient safety regarding leakage current?",
+            "category" : "A",
+            "options": [
+                "Grounding",
+                "Insulation",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "In a parallel RLC circuit, the electrical voltage (E) is analogous to which of the following component in a mechanical system?",
+            "category" : "A",
+            "options": [
+                "Force",
+                "Displacement",
+                "Friction",
+                "Velocity"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "What is a JK flip flop used to realize when J=K",
+            "category" : "A",
+            "options": [
+                "D flip-flop",
+                "JK flip-flop",
+                "T flip-flop",
+                "SR flip-flop"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following in an enlarging scale?",
+            "category" : "A",
+            "options": [
+                "1:10",
+                "1:100",
+                "5:1",
+                "1:5"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "A band stop filter is sometimes also called",
+            "category" : "A",
+            "options": [
+                "Notch filter",
+                "Snubber",
+                "Band select filter",
+                "Low pass filter"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The centrifugal force of a centrifuge depends upon angular velocity and which of the following?",
+            "category" : "A",
+            "options": [
+                "Head radius",
+                "Diameter of centrifuge tueb",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "If the AV node fails to produce impulses, which of the following widens in an ECG reading?",
+            "category" : "A",
+            "options": [
+                "P wave",
+                "QRS wave",
+                "ST wave",
+                "T wave"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The maximum efficiency of an AM wave is",
+            "category" : "A",
+            "options": [
+                "33.33%",
+                "66.66%",
+                "100%",
+                "83%"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "A zener diode is commonly used as a",
+            "category" : "A",
+            "options": [
+                "Rectifier",
+                "Filter",
+                "Amplifier",
+                "Voltage regulator"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "What is the measurement range of an EMG wave?",
+            "category" : "A",
+            "options": [
+                "0.2u - 5u",
+                "2u - 5mV",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The SA node is called the natural pacemaker of the heart because",
+            "category" : "A",
+            "options": [
+                "it has very low something",
+                "it has very high sympathetic innervations",
+                "it can transfer impulses at a very high rate",
+                "it can generate electrical impulses"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The contact angle associated with water for a hydrophobic material is",
+            "category" : "A",
+            "options": [
+                "0",
+                "120",
+                "90",
+                "45"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "If a tissue is able to repair itself, then such approach is known as",
+            "category" : "A",
+            "options": [
+                "Analytical approach",
+                "Reconstructive approach",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The resistivity of a dynamic diode is dependent on",
+            "category" : "A",
+            "options": [
+                "Temperature",
+                "Current",
+                "Both current and temperature",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "The knee voltage of a germanium diode is",
+            "category" : "A",
+            "options": [
+                "0.1",
+                "0.7",
+                "0.3",
+                "1.0"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "A chart showing the key events within the duration of a project is called",
+            "category" : "A",
+            "options": [
+                "Graph chart",
+                "Milestone chart",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Control system nature of poles",
+            "category" : "A",
+            "options": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following risks is uncontrollable by firm",
+            "category" : "A",
+            "options": [
+                "Production risks",
+                "Operational risks",
+                "Market risks",
+                "Material risks"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name" : "Which of the following amino acids does not have an R group?",
+            "category" : "A",
+            "options": [
+                "Glycin",
+                "B",
+                "C",
+                "D"
+            ],
+            "anskey" : 2 
+        },
+        {
+            "name": "Which of the following biomaterials is used in IOL?",
+            "category": "A",
+            "options": [
+                "PMMA",
+                "PHEMA",
+                "Natural Polymer",
+                "Glass"
             ],
             "ansKey": 2
         }
-
     ]
 
 
