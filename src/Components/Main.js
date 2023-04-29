@@ -27,7 +27,7 @@ export class Quiz extends React.Component {
             selOpts: selectedOptions,
             totalQuestions: totalQuestions,
             totalAnswered: 0,
-            submitted: true,
+            submitted: false,
         }
     }
 

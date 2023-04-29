@@ -531,7 +531,7 @@
                 "AND, OR and NOT gates",
                 "AND gates only"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following logic gates is a universal gate?",
@@ -542,7 +542,7 @@
                 "OR",
                 "XOR"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "If the annual worth of a project is 9000 at 10%, what will be it's capitalized value?",
@@ -553,7 +553,7 @@
                 "91,500",
                 "92,300"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following radio isotopes does not emit positron",
@@ -564,7 +564,7 @@
                 "18 F",
                 "15 O"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following elements is used in heat vulcanizing rubber?",
@@ -575,7 +575,7 @@
                 "Al2O3",
                 "Zn"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following is used for cranio-maxillary implants",
@@ -586,7 +586,7 @@
                 "Heat vulcanizing rubber",
                 "Ceramics"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "If an object is suddenly subjected to constant stress, which of the following occurs?",
@@ -597,7 +597,7 @@
                 "Stress relaxation",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Artifical liver manufacturing is challenging to replicate",
@@ -608,7 +608,7 @@
                 "Density of hepatocytes",
                 "Volume of hepatocytes"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following kind of membranes does modern dialyzers use?",
@@ -619,7 +619,7 @@
                 "Parallel plate",
                 "Coiled tube"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "In case of oxygen failure in an anesthesia machine, the oxygen valve is blocked to prevent the back flow of, which of the following?",
@@ -630,7 +630,7 @@
                 "Medical Air",
                 "Vacuum"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following is a feature of second generation CT scanners?",
@@ -641,7 +641,7 @@
                 "5 mins of scan time",
                 "Pencil beam"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following is not a biological effect of ultrasound?",
@@ -652,7 +652,7 @@
                 "Physical and chemical properties",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Natural polymers cannot produce which of the following aspects of synthetic polymers?",
@@ -663,7 +663,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Paracrine enzymes are used for",
@@ -674,7 +674,7 @@
                 "Long communication between celss",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "If pig skin is used to heal burns, it is classified as which of the following?",
@@ -685,7 +685,7 @@
                 "Allograft",
                 "Xenograft"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The 40nm gap when a new bone is being formed is filled with",
@@ -696,7 +696,7 @@
                 "H20",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The surface where an enzyme is immobilized in a matrix is called",
@@ -707,7 +707,7 @@
                 "Adsorption",
                 "Entrapment"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following compounds absorbs maximum CO2 laser?",
@@ -718,7 +718,7 @@
                 "Water",
                 "Bone"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "What is the frequency range used in pure tone audio meters?",
@@ -729,7 +729,7 @@
                 "-10 dB to 100 dB",
                 "10 dB to 100 dB"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following is used to guide a catheter for minimally invasive surgeries?",
@@ -740,7 +740,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Ornithine cycle is recognized for formation of which of the following compounds?",
@@ -751,7 +751,7 @@
                 "Ammonia",
                 "H2O"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "A tilting heart valve has ... and ...",
@@ -762,7 +762,7 @@
                 "Triangular, polymer",
                 "Circular, polymer"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following is able to heat the greatest surface area of tissues?",
@@ -773,7 +773,7 @@
                 "Thermal ultrasound",
                 "Microwave diatherymy"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following is a feature of PET and SPECT?",
@@ -784,7 +784,7 @@
                 "Do not use radiation",
                 "Images are more detailed"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The number of gray shades that appear in a radiograph is called",
@@ -795,7 +795,7 @@
                 "Spatial frequency",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Monitor which is placed at the bedside for monitoring cardiac functions of a patient is known as",
@@ -806,7 +806,7 @@
                 "Dynamic monitor",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Cardioverter differs from pacemakers in which of the following aspects?",
@@ -817,7 +817,7 @@
                 "They provide low energy impulse",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "A pacemaker and a cell phone may communicate via.",
@@ -828,7 +828,7 @@
                 "Bluetooth",
                 "IR"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "A transmission without a start bit, a stop bit or a parity bit in serial communication is",
@@ -839,7 +839,7 @@
                 "Virtual",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "How many select lines are there in an 8 to 1 MUX?",
@@ -850,7 +850,7 @@
                 "3",
                 "1"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following safety measures can be taken for patient safety regarding leakage current?",
@@ -861,7 +861,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "In a parallel RLC circuit, the electrical voltage (E) is analogous to which of the following component in a mechanical system?",
@@ -872,7 +872,7 @@
                 "Friction",
                 "Velocity"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "What is a JK flip flop used to realize when J=K",
@@ -883,7 +883,7 @@
                 "T flip-flop",
                 "SR flip-flop"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following in an enlarging scale?",
@@ -894,7 +894,7 @@
                 "5:1",
                 "1:5"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "A band stop filter is sometimes also called",
@@ -905,7 +905,7 @@
                 "Band select filter",
                 "Low pass filter"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The centrifugal force of a centrifuge depends upon angular velocity and which of the following?",
@@ -916,7 +916,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "If the AV node fails to produce impulses, which of the following widens in an ECG reading?",
@@ -927,7 +927,7 @@
                 "ST wave",
                 "T wave"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The maximum efficiency of an AM wave is",
@@ -938,7 +938,7 @@
                 "100%",
                 "83%"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "A zener diode is commonly used as a",
@@ -949,7 +949,7 @@
                 "Amplifier",
                 "Voltage regulator"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "What is the measurement range of an EMG wave?",
@@ -960,7 +960,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The SA node is called the natural pacemaker of the heart because",
@@ -971,7 +971,7 @@
                 "it can transfer impulses at a very high rate",
                 "it can generate electrical impulses"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The contact angle associated with water for a hydrophobic material is",
@@ -982,7 +982,7 @@
                 "90",
                 "45"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "If a tissue is able to repair itself, then such approach is known as",
@@ -993,7 +993,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The resistivity of a dynamic diode is dependent on",
@@ -1004,7 +1004,7 @@
                 "Both current and temperature",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "The knee voltage of a germanium diode is",
@@ -1015,7 +1015,7 @@
                 "0.3",
                 "1.0"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "A chart showing the key events within the duration of a project is called",
@@ -1026,7 +1026,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Control system nature of poles",
@@ -1037,7 +1037,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following risks is uncontrollable by firm",
@@ -1048,7 +1048,7 @@
                 "Market risks",
                 "Material risks"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name" : "Which of the following amino acids does not have an R group?",
@@ -1059,7 +1059,7 @@
                 "C",
                 "D"
             ],
-            "anskey" : 2 
+            "ansKey" : 2 
         },
         {
             "name": "Which of the following biomaterials is used in IOL?",
