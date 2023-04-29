@@ -2,6 +2,7 @@ import  React from 'react';
 import { SEO } from './seo';
 
 import { loadCurriculum, loadQuiz } from '../dataLoader'
+import Images from './Images.js';
 
 export class Quiz extends React.Component {
 
@@ -15,7 +16,6 @@ export class Quiz extends React.Component {
         this.quizData = quizData;
         this.totalPages = (totalQuestions / questionsPerPage) - 1;
         this.questionsPerPage = questionsPerPage;
-        console.log(this.questionsPerPage);
         this.state = {
             currentPage: -1,
             start: 0,
@@ -93,6 +93,8 @@ export class Quiz extends React.Component {
         return (
             <React.Fragment key={questionKey}>
                 <li className="questions">{question.name}</li>
+                { question.figure && <img src={Images[question.figure]} 
+                    alt={question.figure} /> }
                 <form className="optionGroup">
                 <ol className="choices">
                 {question.options.map((choice, index) => {

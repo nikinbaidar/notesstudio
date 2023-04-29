@@ -323,7 +323,7 @@
     ],
     "questions" : [
         {
-            "name": "Question 10",
+            "name": "Question 1",
             "category": "A",
             "options": [
                 "1",
@@ -334,7 +334,19 @@
             "ansKey": 2
         },
         {
-            "name": "Question 10",
+            "name": "Question 2",
+            "category": "A",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "ansKey": 2
+        },
+        { 
+            "name": "Question 3",
+            "figure": "Ladder",
             "category": "A",
             "options": [
                 "1",
@@ -345,7 +357,7 @@
             "ansKey": 2
         },
         {
-            "name": "Question 10",
+            "name": "Question 4",
             "category": "A",
             "options": [
                 "1",
@@ -356,7 +368,7 @@
             "ansKey": 2
         },
         {
-            "name": "Question 10",
+            "name": "Question 5",
             "category": "A",
             "options": [
                 "1",
@@ -367,7 +379,7 @@
             "ansKey": 2
         },
         {
-            "name": "Question 10",
+            "name": "Question 6",
             "category": "A",
             "options": [
                 "1",
@@ -378,7 +390,7 @@
             "ansKey": 2
         },
         {
-            "name": "Question 10",
+            "name": "Question 7",
             "category": "A",
             "options": [
                 "1",
@@ -389,7 +401,7 @@
             "ansKey": 2
         },
         {
-            "name": "Question 10",
+            "name": "Question 8",
             "category": "A",
             "options": [
                 "1",
@@ -400,18 +412,7 @@
             "ansKey": 2
         },
         {
-            "name": "Question 10",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 10",
+            "name": "Question 9",
             "category": "A",
             "options": [
                 "1",
