@@ -3,16 +3,16 @@ import { SEO } from './seo';
 
 import { loadCurriculum, loadQuiz } from '../dataLoader'
 
-/* function shuffle(array) {
+function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
     return array;
-} */
+}
 
 export class Quiz extends React.Component {
 
     constructor(props) {
         super(props);
-        const quizData = loadQuiz(props.name);
+        const quizData = shuffle(loadQuiz(props.name));
         const totalQuestions = quizData.length;
         const questionsPerPage = 20;
         const selectedOptions = Array.from({totalQuestions}, (_, i) => 
@@ -20,7 +20,6 @@ export class Quiz extends React.Component {
         this.quizData = quizData;
         this.totalPages = (totalQuestions / questionsPerPage) - 1;
         this.questionsPerPage = questionsPerPage;
-        console.log(this.questionsPerPage);
         this.state = {
             currentPage: -1,
             start: 0,
@@ -28,7 +27,7 @@ export class Quiz extends React.Component {
             selOpts: selectedOptions,
             totalQuestions: totalQuestions,
             totalAnswered: 0,
-            submitted: false,
+            submitted: true,
         }
     }
 
