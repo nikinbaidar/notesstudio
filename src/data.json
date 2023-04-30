@@ -335,6 +335,18 @@
             ],
             "ansKey": 2
         },
+        { 
+            "name": "Question 3",
+            "figure": "Ladder",
+            "category": "A",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "ansKey": 2
+        },
         {
             "name": "What will be the affect of increasing the number of electrons emitted from the cathode to the anode in an X-ray tube?",
             "category": "A",
