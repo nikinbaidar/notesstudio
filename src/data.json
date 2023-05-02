@@ -327,6 +327,33 @@
         {
             "name": "Which of the following statements regarding PROM is true?",
             "figure": "Ladder",
+            "name": "Question 1 \\( \\alpha \\)",
+            "eqn" : "e^2",
+            "category": "A",
+            "options": [
+                "\\(\\alpha\\)",
+                "2",
+                "3",
+                "4"
+            ],
+            "ansKey": 2
+        },
+        {
+            "name": "Question 2 \\( \\omega \\)",
+            "eqn" : "e^2",
+            "category": "A",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "ansKey": 2
+        },
+        { 
+            "name": "Question 3 \\( \\alpha \\)",
+            "eqn" : "e^2",
+            "fig": "Ladder",
             "category": "A",
             "options": [
                 "PROM can be programmed unlimited number of times.",
