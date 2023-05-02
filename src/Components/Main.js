@@ -84,11 +84,10 @@ export class Quiz extends React.Component {
     };
 
     handleSubmission = () => {
-        // if (window.confirm("Do you really want to submit?")) {
-        //     this.setState({submitted: true});
-        // }
-        this.setState({submitted: true});
-
+        if (window.confirm("You cannot change your answers once you submit. "
+            + "Do you wish to proceed?")) {
+            this.setState({submitted: true});
+        }
     };
 
     renderQuestion = (question, questionNumber) => {

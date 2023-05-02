@@ -31,7 +31,7 @@ class App extends React.Component {
             <div id="main">
             <Routes>
                 <Route path="/" element={<Semesters/>} />
-                <Route path="/quiz" element={<Quiz name="questions"/>} />
+                <Route path="/quiz" element={<Quiz name="2079pastQuestions"/>} />
             </Routes>
             </div>
             </BrowserRouter>
