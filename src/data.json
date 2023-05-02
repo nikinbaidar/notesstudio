@@ -323,7 +323,8 @@
     ],
     "questions" : [
         {
-            "name": "Question 1",
+            "name": "Question 1 <MathComponent tex=\"hello\" display=\"false\" />",
+            "tex" : "\\omega ",
             "category": "A",
             "options": [
                 "1",
@@ -346,7 +347,7 @@
         },
         { 
             "name": "Question 3",
-            "figure": "Ladder",
+            "fig": "Ladder",
             "category": "A",
             "options": [
                 "1",

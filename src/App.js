@@ -9,17 +9,17 @@ import Sidebar from './Components/Sidebar';
 import Advertisements  from './Components/Ads';
 import Copyright from './Components/Copyright.js';
 
-import {
-    Semesters,
-    Quiz,
-} from './Components/Main';
+import Main from './Components/Main';
 
 // CSS Imports
 import './App.css';
 
 class App extends React.Component {
 
-    helmetContext = {};
+    constructor() {
+        super();
+        this.helmetContext = {};
+    }
 
     render() {
         return (
@@ -30,8 +30,8 @@ class App extends React.Component {
             <Sidebar/>
             <div id="main">
             <Routes>
-                <Route path="/" element={<Semesters/>} />
-                <Route path="/quiz" element={<Quiz name="questions"/>} />
+                <Route path="/" element={<Main.Semesters/>} />
+                <Route path="/quiz" element={<Main.Quiz name="questions"/>} />
             </Routes>
             </div>
             </BrowserRouter>
