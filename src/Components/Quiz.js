@@ -6,11 +6,16 @@ import { loadQuiz } from '../dataLoader'
 
 import Images from './Images';
 
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+    return array;
+}
+
 class Quiz extends React.Component {
 
     constructor(props) {
         super(props);
-        const quizData = loadQuiz(props.name);
+        const quizData = shuffle(loadQuiz(props.name));
         const totalQuestions = quizData.length;
         const questionsPerPage = 20;
         const selectedOptions = Array.from({totalQuestions}, (_, i) => 
