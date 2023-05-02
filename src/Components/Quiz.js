@@ -6,8 +6,6 @@ import { loadQuiz } from '../dataLoader'
 
 import Images from './Images';
 
-import { MathComponent } from "mathjax-react";
-
 class Quiz extends React.Component {
 
     constructor(props) {
@@ -32,8 +30,17 @@ class Quiz extends React.Component {
     }
 
     componentDidMount() {
-        this.displayNext();
-    }
+        this.setState({
+            currentPage: 1,
+            start: 0,
+            end: this.questionsPerPage,
+        });
+        console.log("Component did mount");
+    }; 
+
+    componentDidUpdate() {
+        window.MathJax.typeset();
+    }; 
 
     handleRadioChange = (event, questionKey) => {
         const selectedValue = event.target.id;
@@ -82,25 +89,21 @@ class Quiz extends React.Component {
     };
 
     handleSubmission = () => {
-        // if (window.confirm("Do you really want to submit?")) {
-        //     this.setState({submitted: true});
-        // }
         this.setState({submitted: true});
 
     };
 
     renderQuestion = (question, questionNumber) => {
+
         const { currentPage, submitted, selOpts } = this.state;
         const questionKey = (questionNumber + 1) 
             + (currentPage * this.questionsPerPage);
         const hasFigure = (question.fig !== undefined);
-        const hasEqn = (question.eqn !== undefined);
 
         return (
             <React.Fragment key={questionKey}>
                 <li className="questions"> {question.name} </li>
                 { hasFigure && <img src={Images[question.fig]} alt={question.fig}/> }
-                { hasEqn && <MathComponent tex={question.eqn}/> }
                 <form className="optionGroup">
                 <ol className="choices">
                 {question.options.map((choice, index) => {
@@ -144,7 +147,6 @@ class Quiz extends React.Component {
     render() {
         const {start, end, totalAnswered, totalQuestions } = this.state;
         const questions = this.quizData.slice(start, end).map(this.renderQuestion);
-
         return (
             <>
             <SEO 
@@ -161,7 +163,6 @@ class Quiz extends React.Component {
             <button id="submit" type="submit" onClick={this.handleSubmission}>Submit</button>
             </div>
             <h4>Answered: {totalAnswered} / {totalQuestions}</h4>
-            <MathComponent tex={String.raw`\int_0^1 x^2\ dx`} />
             </>
         );
     };
