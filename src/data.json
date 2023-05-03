@@ -307,7 +307,7 @@
             "ansKey": 2
         },
         {
-            "name": "If a 100 Coulombs charge flows through a conductor for 2 seconds, the current produced is",
+            "name": "If a 100 Coulombs charge flows through a conductor for 2 seconds, then the magnitue of current produced in the coductor is equal to",
             "category": "A",
             "options": [
                 "200 mA",
@@ -329,7 +329,7 @@
             "ansKey": 3
         },
         {
-            "name": "A parabolic antenna's transmission line is",
+            "name": "The nature of a parabolic antenna's transmission line is",
             "category": "A",
             "options": [
                 "Bidirectional",
@@ -340,7 +340,7 @@
             "ansKey": 2
         },
         {
-            "name": "Which of the following is not a neurological cell?",
+            "name": "Which of the following cannot be considered a neurological cell?",
             "category": "A",
             "options": [
                 "Satellite Cell",
@@ -348,7 +348,7 @@
                 "Schwann's Cell",
                 "Oligodendrocytes"
             ],
-            "ansKey": 2
+            "ansKey": 1
         },
         {
             "name": "The cardiac output is given by",
@@ -384,7 +384,7 @@
             "ansKey": 2
         },
         {
-            "name": "In the statement \"Phagocytes won't eat the pathogens unless the pathogens are nicely buttered for them\",  the term 'buttered' concerns with which of the following",
+            "name": "In the statement \"Phagocytes won't eat the pathogens unless the pathogens are nicely buttered for them\",  the term 'buttered' is concerned with which of the following?",
             "category": "A",
             "options": [
                 "Complement activation",
@@ -395,7 +395,7 @@
             "ansKey": 2
         },
         {
-            "name": "SNR can be increased in MRI by increasing",
+            "name": "Which of the following can be increased to improve the SNR in an MRI?",
             "category": "A",
             "options": [
                 "Gradient strength",
@@ -428,7 +428,7 @@
             "ansKey": 2
         },
         {
-            "name": "Which of the following physiological variables can be determined with thermistors?",
+            "name": "Which of the following physiological variables may be measured with a thermistor?",
             "category": "A",
             "options": [
                 "Chest movement",
@@ -439,7 +439,7 @@
             "ansKey": 2
         },
         {
-            "name": "If tidal volume is 500ml and anatomical dead space is 150ml, and respiration rate is 12 cycles/min, then the aerobic ventillation must be",
+            "name": "If the anatomical dead space is 150 ml, the respiration rate is 12 cycles per minute, and the tidal volume is 500 ml, then the aerobic ventilation must be",
             "category": "A",
             "options": [
                 "7 lt",
@@ -450,7 +450,7 @@
             "ansKey": 2
         },
         {
-            "name": "What is the maximum intake of engineering colleges in Nepal as per NEC Act 2078?",
+            "name": "What is the maximum intake of students engineering colleges in Nepal as per NEC Act 2078?",
             "category": "A",
             "options": [
                 "10,000",
@@ -505,7 +505,7 @@
             "ansKey" : 2 
         },
         {
-            "name" : "If the annual worth of a project is 9000 at 10% discount rate, what will be it's capitalized value?",
+            "name" : "If the annual worth of a project is 9000 at a 10% discount rate, what will be it's capitalized value?",
             "category" : "A",
             "options": [
                 "97,500",
@@ -519,12 +519,12 @@
             "name" : "Which of the following radio isotopes does not emit positron?",
             "category" : "A",
             "options": [
-                "\\(^{92} \\)Rb",
-                "\\(^{12} \\)C",
+                "\\(^{82} \\)Rb",
+                "\\(^{14} \\)C",
                 "\\(^{18} \\)F",
                 "\\(^{15} \\)O"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1 
         },
         {
             "name" : "Which of the following elements is used in heat vulcanizing rubber?",
@@ -538,7 +538,7 @@
             "ansKey" : 2 
         },
         {
-            "name" : "Which of the following is used for cranio-maxillary implants",
+            "name" : "Which of the following biomaterials is used in Cranio-maxillary implants?",
             "category" : "A",
             "options": [
                 "Silicone",
@@ -582,7 +582,7 @@
             "ansKey" : 2 
         },
         {
-            "name" : "In case of oxygen failure in an anesthesia machine, the oxygen valve is blocked to prevent the back flow of, which of the following?",
+            "name" : "In case of oxygen failure in an anesthesia machine, the oxygen valve is blocked to prevent the back flow of which of the following?",
             "category" : "A",
             "options": [
                 "Oxygen",
@@ -659,7 +659,7 @@
             "ansKey" : 2 
         },
         {
-            "name" : "The surface where an enzyme is immobilized in a matrix is called",
+            "name" : "What is the name of the surface on which an enzyme is immboilized withing a matrix?",
             "category" : "A",
             "options": [
                 "Immobilization matrix",
@@ -681,7 +681,7 @@
             "ansKey" : 2 
         },
         {
-            "name" : "What is the frequency range used in pure tone audio meters?",
+            "name" : "What frequency band do pure tone audiometers use?",
             "category" : "A",
             "options": [
                 "0 dB to 100 dB",
@@ -709,7 +709,7 @@
                 "A",
                 "Urea",
                 "Ammonia",
-                "H2O"
+                "H\\(_2\\)O"
             ],
             "ansKey" : 2 
         },
@@ -898,7 +898,7 @@
                 "100%",
                 "83%"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0 
         },
         {
             "name" : "A zener diode is commonly used as a",
@@ -917,9 +917,8 @@
             "options": [
                 "\\(0.2\\mu - 5\\mu\\)",
                 "\\(2\\mu - 5\\mu\\)",
-                "\\(0.2\\mu - 5\\mu\\)",
-                "\\(0.2\\mu - 5\\mu\\)",
-                "D"
+                "X",
+                "Y"
             ],
             "ansKey" : 2 
         },
@@ -938,10 +937,10 @@
             "name" : "The contact angle associated with water for a hydrophobic material is",
             "category" : "A",
             "options": [
-                "0",
-                "120",
-                "90",
-                "45"
+                "\\( 0^\\circ \\)",
+                "\\( 120^\\circ \\)",
+                "\\( 90^\\circ \\)",
+                "\\( 45^\\circ \\)"
             ],
             "ansKey" : 2 
         },
@@ -1001,7 +1000,7 @@
             "ansKey" : 2 
         },
         {
-            "name" : "Which of the following risks is uncontrollable by firm",
+            "name" : "Which of the following risks is beyond a firm's control?",
             "category" : "A",
             "options": [
                 "Production risks",

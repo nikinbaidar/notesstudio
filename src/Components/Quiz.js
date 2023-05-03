@@ -4,7 +4,7 @@ import { SEO } from './seo';
 
 import { loadQuiz } from '../dataLoader'
 
-import Images from './Images';
+import Images from './images';
 
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
@@ -15,33 +15,24 @@ class Quiz extends React.Component {
 
     constructor(props) {
         super(props);
-        const quizData = shuffle(loadQuiz(props.name));
+        const quizData = (loadQuiz(props.name));
         const totalQuestions = quizData.length;
         const questionsPerPage = 20;
         const selectedOptions = Array.from({totalQuestions}, (_, i) => 
             `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
         this.quizData = quizData;
-        this.totalPages = (totalQuestions / questionsPerPage) - 1;
+        this.totalPages = (totalQuestions / questionsPerPage);
         this.questionsPerPage = questionsPerPage;
         this.state = {
-            currentPage: -1,
+            currentPage: 1,
             start: 0,
-            end: 0,
+            end: this.questionsPerPage,
             selOpts: selectedOptions,
             totalQuestions: totalQuestions,
             totalAnswered: 0,
             submitted: false,
         }
     }
-
-    componentDidMount() {
-        this.setState({
-            currentPage: 1,
-            start: 0,
-            end: this.questionsPerPage,
-        });
-        console.log("Component did mount");
-    }; 
 
     componentDidUpdate() {
         window.MathJax.typeset();
@@ -73,6 +64,7 @@ class Quiz extends React.Component {
                 start: end,
                 end: end + this.questionsPerPage,
             })
+            window.scrollTo(0, 0);
         }
         else {
             alert("EON");
@@ -81,12 +73,13 @@ class Quiz extends React.Component {
 
     displayPrevious = () => {
         const { currentPage, start } = this.state;
-        if (currentPage > 0) {
+        if (currentPage > 1) {
             this.setState({
                 currentPage: currentPage - 1,
                 start: start - this.questionsPerPage,
                 end: start,
             });
+            window.scrollTo(0, 0);
         }
         else {
             alert("EOP");
@@ -95,7 +88,6 @@ class Quiz extends React.Component {
 
     handleSubmit = () => {
         this.setState({submitted: true});
-
     };
 
     renderQuestion = (question, questionNumber) => {
