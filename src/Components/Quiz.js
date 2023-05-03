@@ -93,7 +93,7 @@ class Quiz extends React.Component {
         }
     };
 
-    handleSubmission = () => {
+    handleSubmit = () => {
         this.setState({submitted: true});
 
     };
@@ -152,21 +152,31 @@ class Quiz extends React.Component {
     render() {
         const {start, end, totalAnswered, totalQuestions } = this.state;
         const questions = this.quizData.slice(start, end).map(this.renderQuestion);
+        const buttons = (
+            <div id="buttons">
+                <button id="previous" type="submit" onClick={this.displayPrevious}>
+                Previous
+                </button>
+                <button id="next" type="submit" onClick={this.displayNext}>
+                Next
+                </button>
+                <button id="submit" type="submit" onClick={this.handleSubmit}>
+                Submit
+                </button>
+            </div>
+        );
+
         return (
             <>
             <SEO 
             title="NEC Exam 2079" 
             name="Biomedical License"
-            description="Nepal Engineering Council Exam for Biomedical Engineering 2079" 
+            description={this.props.title}
             type="article" 
             />
-            <h1>Nepal Enginnering Coucil License Exam {parseInt(this.props.name)}</h1>
+            <h1>{this.props.title}</h1>
             <ol start={start + 1}>{questions}</ol>
-            <div id="buttons">
-            <button id="previous" type="submit" onClick={this.displayPrevious}>Previous</button>
-            <button id="next" type="submit" onClick={this.displayNext}>Next</button>
-            <button id="submit" type="submit" onClick={this.handleSubmission}>Submit</button>
-            </div>
+            {buttons}
             <h4>Answered: {totalAnswered} / {totalQuestions}</h4>
             </>
         );

@@ -1,6 +1,4 @@
 {
-
-
    "navBarItems": [
         {
             "name": "Home",
@@ -274,92 +272,26 @@
     ],
     "sideBarItems": [
         {
-            "chapter": "Cirriculum",
+            "chapter": "NEC License Exam",
             "lessons" : [
                 {
-                    "title": "Semesters",
+                    "title": "2079 Chaitra",
                     "path": "/"
-                },
-                { 
-                    "title": "Item 2",
-                    "path": "/item2"
-                }
-            ]
-        },
-        {
-            "chapter": "How To",
-            "lessons" : [
-                {
-                    "title": "Arduino",
-                    "path": "/arduino"
-                },
-                {
-                    "title": "ESP32",
-                    "path": "/esp32"
-                },
-                { 
-                    "title": "Rasperry Pi",
-                    "path": "/rpi"
-                }
-            ]
-        },
-        {
-            "chapter": "Nerding Out",
-            "lessons" : [
-                {
-                    "title": "Beizer Curves",
-                    "path": "/beizercurves"
-                }
-            ]
-        },
-        {
-            "chapter": "NEC License Prep",
-            "lessons" : [
-                {
-                    "title": "2079 Exam",
-                    "path": "/quiz"
                 }
             ]
         }
     ],
+
     "2079pastQuestions" : [
 
-        {
-            "name": "Which of the following statements regarding PROM is true?",
-            "figure": "Ladder",
-            "name": "Question 1 \\( \\alpha \\)",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "\\(\\alpha\\)",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 2 \\( \\omega \\)",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
         { 
-            "name": "Question 3 \\( \\alpha \\)",
-            "eqn" : "e^2",
-            "fig": "Ladder",
+            "name": "Which of the following statements regarding PROM is true?",
             "category": "A",
             "options": [
                 "PROM can be programmed unlimited number of times.",
-                "Programming a PROM requires specialized UV rays.",
+                "Programming a PROM requires UV radiation.",
                 "PROM can only be programmed by the user once.",
-                "PROM  a type"
+                "PROM is programmed at the time of manufacture."
             ],
             "ansKey": 2
         },
@@ -375,7 +307,7 @@
             "ansKey": 2
         },
         {
-            "name": "If a 100 C charge flows through a conductor for 2 secs, the current produced is",
+            "name": "If a 100 Coulombs charge flows through a conductor for 2 seconds, the current produced is",
             "category": "A",
             "options": [
                 "200 mA",
@@ -383,7 +315,7 @@
                 "200 A",
                 "50 mA"
             ],
-            "ansKey": 2
+            "ansKey": 1
         },
         {
             "name": "Two generators are connected in parellel for",
@@ -394,7 +326,7 @@
                 "Large DC loads",
                 "Small AC loads"
             ],
-            "ansKey": 2
+            "ansKey": 3
         },
         {
             "name": "A parabolic antenna's transmission line is",
@@ -573,24 +505,24 @@
             "ansKey" : 2 
         },
         {
-            "name" : "If the annual worth of a project is 9000 at 10%, what will be it's capitalized value?",
+            "name" : "If the annual worth of a project is 9000 at 10% discount rate, what will be it's capitalized value?",
             "category" : "A",
             "options": [
                 "97,500",
-                "90,00",
+                "90,000",
                 "91,500",
                 "92,300"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1 
         },
         {
-            "name" : "Which of the following radio isotopes does not emit positron",
+            "name" : "Which of the following radio isotopes does not emit positron?",
             "category" : "A",
             "options": [
-                "92 Rb",
-                "12 C",
-                "18 F",
-                "15 O"
+                "\\(^{92} \\)Rb",
+                "\\(^{12} \\)C",
+                "\\(^{18} \\)F",
+                "\\(^{15} \\)O"
             ],
             "ansKey" : 2 
         },
@@ -600,7 +532,7 @@
             "options": [
                 "S",
                 "Al",
-                "Al2O3",
+                "Al\\(_2\\)O\\(_3\\)",
                 "Zn"
             ],
             "ansKey" : 2 
@@ -721,7 +653,7 @@
             "options": [
                 "Ca ion",
                 "Fe ion",
-                "H20",
+                "H\\(_2\\)O",
                 "D"
             ],
             "ansKey" : 2 
@@ -983,9 +915,10 @@
             "name" : "What is the measurement range of an EMG wave?",
             "category" : "A",
             "options": [
-                "0.2u - 5u",
-                "2u - 5mV",
-                "C",
+                "\\(0.2\\mu - 5\\mu\\)",
+                "\\(2\\mu - 5\\mu\\)",
+                "\\(0.2\\mu - 5\\mu\\)",
+                "\\(0.2\\mu - 5\\mu\\)",
                 "D"
             ],
             "ansKey" : 2 

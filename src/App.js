@@ -1,17 +1,13 @@
-// Dependencies
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Local Imports
 import Navigation from './Components/NavigationBar';
 import Sidebar from './Components/Sidebar';
-import Advertisements  from './Components/Ads';
-import Copyright from './Components/Copyright.js';
-
 import Main from './Components/Main';
+import Advertisements  from './Components/Ads';
+import Copyright from './Components/Copyright';
 
-// CSS Imports
 import './App.css';
 
 class App extends React.Component {
@@ -30,8 +26,8 @@ class App extends React.Component {
             <Sidebar/>
             <div id="main">
             <Routes>
-                <Route path="/" element={<Main.Semesters/>} />
-                <Route path="/quiz" element={<Main.Quiz name="2079pastQuestions"/>} />
+                <Route path="/" element={<Main.Quiz name="2079pastQuestions"
+                    title="Nepal Engineering Council License Exam 2079 Chaitra"/>} />
             </Routes>
             </div>
             </BrowserRouter>

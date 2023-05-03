@@ -15,7 +15,7 @@ class Sidebar extends React.Component {
                     return (
                         <li key={lessonId}>
                         <NavLink to={lesson.path} style={({ isActive }) => ({
-                        textDecoration: isActive ? 'underline' : 'none' })}>
+                        textDecoration: isActive ? 'none' : 'none' })}>
                         {lesson.title}
                         </NavLink>
                         </li>
@@ -24,7 +24,7 @@ class Sidebar extends React.Component {
             };
             return (
                 <React.Fragment key={elem.id}>
-                    <li className="topics">{elem.label}</li>
+                    <li className="topics">{elem.label}:</li>
                     <ul className="subtopics">{elem.lessons}</ul>
                 </React.Fragment>
             )
