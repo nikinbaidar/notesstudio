@@ -23,6 +23,7 @@ class Quiz extends React.Component {
             start: 0,
             end: 0,
             selOpts: selectedOptions,
+            explainedQuestions: selectedOptions,
             totalQuestions: totalQuestions,
             totalAnswered: 0,
             submitted: false,
@@ -35,7 +36,6 @@ class Quiz extends React.Component {
             start: 0,
             end: this.questionsPerPage,
         });
-        console.log("Component did mount");
     }; 
 
     componentDidUpdate() {
@@ -89,17 +89,26 @@ class Quiz extends React.Component {
     };
 
     handleSubmission = () => {
-        this.setState({submitted: true});
-
+        this.setState({ submitted: true });
     };
+
+    showExplanation = (event, questionKey) => {
+        const { explainedQuestions } = this.state;
+        const updateExplainedQuestions = {
+            ...explainedQuestions,
+            [questionKey]: true
+        };
+        this.setState({ explainedQuestions: updateExplainedQuestions });
+    }
+
 
     renderQuestion = (question, questionNumber) => {
 
-        const { currentPage, submitted, selOpts } = this.state;
+        const { currentPage, submitted, selOpts, explainedQuestions } = this.state;
         const questionKey = (questionNumber + 1) 
             + (currentPage * this.questionsPerPage);
         const hasFigure = (question.fig !== undefined);
-
+        const explained = (explainedQuestions[questionKey] === true);
         return (
             <React.Fragment key={questionKey}>
                 <li className="questions"> {question.name} </li>
@@ -140,6 +149,11 @@ class Quiz extends React.Component {
                 })}
                 </ol>
                 </form>
+                {submitted && <button id="expand" type="submit"
+                    onClick={(event) => this.showExplanation(event,
+                        questionKey)}>Explanation</button> }
+                { explained && <p className="explanation"> <strong>Explanation:
+                        </strong>{question.hint}</p> } 
             </React.Fragment>
         );
     };

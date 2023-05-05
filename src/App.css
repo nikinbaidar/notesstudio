@@ -86,7 +86,7 @@ section {
 }
 
 #leftsidebar {
-  width: 15%;
+  width: 25%;
   height: auto;
   background-color: var(--foreground);
   color: var(--white);
@@ -129,7 +129,7 @@ section {
 /* Main */
 
 #main {
-  min-width: 54.0%;
+  width: 80%;
   min-height: 690px;
   display: flex;
   flex-direction: column;
@@ -192,7 +192,7 @@ nav > ul.nav_items {
 /* Advertisements */
 
 #ads {
-  width: 28%;
+  width: 30%;
   height: auto;
   background-color: var(--gray);
 }
@@ -292,6 +292,42 @@ button#submit{
   color: blue;
   font-weight: bold;
 }
+
+#expand {
+  background-color: var(--green);
+  color: white;
+  font-size: 14px;
+  padding: 8px;
+  margin-left: 1.5rem;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+}
+
+#expand::before {
+  content: "\25B6";
+  margin-right: 8px;
+}
+
+#expand.expanded::before {
+  content: "\25BC";
+  margin-right: 8px;
+}
+
+.explanation {
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 10px;
+  margin-left: 1.5rem;
+  width: 90%;
+  /* transform: scale(1); */
+  /* animation: zoomIn 0.5s ease-in-out; */
+ }
+
+/* @keyframes zoomIn { */
+/*   from { transform: scale(0); } */
+/*   to   { transform: scale(1); } */
+/* } */
 
 @media(max-width: 768px) 
 {
