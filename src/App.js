@@ -27,7 +27,8 @@ class App extends React.Component {
             <div id="main">
             <Routes>
                 <Route path="/" element={<Main.Quiz name="2079pastQuestions"
-                    title="Nepal Engineering Council License Exam 2079 Chaitra"/>} />
+                    title="NEC License Exam 2079"
+                    heading="Nepal Engineering Council License Exam 2079 Chaitra"/>} />
             </Routes>
             </div>
             </BrowserRouter>

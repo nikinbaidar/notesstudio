@@ -285,7 +285,7 @@
     "2079pastQuestions" : [
 
         { 
-            "name": "Which of the following statements regarding PROM is true?",
+            "name": "Which of the following statements is true about PROM?",
             "category": "A",
             "options": [
                 "PROM can be programmed unlimited number of times.",
@@ -307,7 +307,7 @@
             "ansKey": 2
         },
         {
-            "name": "If a 100 Coulombs charge flows through a conductor for 2 seconds, then the magnitue of current produced in the coductor is equal to",
+            "name": "If a 100 Coulombs charge flows through a conductor for 2 seconds, then the magnitude of current produced in the conductor is equal to",
             "category": "A",
             "options": [
                 "200 mA",
@@ -318,7 +318,7 @@
             "ansKey": 1
         },
         {
-            "name": "Two generators are connected in parellel for",
+            "name": "Two generators are connected in parallel for",
             "category": "A",
             "options": [
                 "Small DC loads",
@@ -335,9 +335,9 @@
                 "Bidirectional",
                 "Unidirectional",
                 "Omnidirectional",
-                "Reflective"
+                "Multidirectional"
             ],
-            "ansKey": 2
+            "ansKey": 1
         },
         {
             "name": "Which of the following cannot be considered a neurological cell?",
@@ -351,37 +351,40 @@
             "ansKey": 1
         },
         {
-            "name": "The cardiac output is given by",
+            "name": "Which equation is used to calculate cardiac output?",
             "category": "A",
             "options": [
-                "Stroke Volume * Heart Rate",
-                "Stoke Volume / Heart Rate",
-                "(Heart Rate + Stroke Volume) / BPM",
-                "(Heart Rate + Stroke Volume) * BPM"
+                "CO = HR x SV",
+                "CO = HR / SV",
+                "CO = (HR + SV) / BPM",
+                "CO = (HR + SV) * BPM"
             ],
-            "ansKey": 2
+            "ansKey": 0,
+            "hint": "CO = Heart rate (HR) x Stroke volume (SV)"
         },
         {
-            "name": "If total oxygen content in artery is 150 ml/L and mixed vessel concentration of oxygen is 110 ml/L and the amount of absorbed oxygen in 280 ml/min, what is the cardiac output?",
+            "name": "If total oxygen content in artery is 150 ml/L and mixed venous concentration of oxygen is 110 ml/L and the amount of absorbed oxygen in 280 ml/min, what will be the cardiac output?",
             "category": "A",
             "options": [
-                "7L",
-                "8L",
-                "6.5L",
-                "10L"
+                "7 L/min",
+                "8 L/min",
+                "6.5 L/min",
+                "10 L/min"
             ],
-            "ansKey": 2
+            "ansKey": 0,
+            "hint": "Fick's principle"
         },
         {
-            "name": "Which of the following transforms a continous time signal into a discrete time signal?",
+            "name": "Which of the following transforms a continuous time signal into a discrete time signal?",
             "category": "A",
             "options": [
                 "Sampling",
                 "Filtering",
-                "Qunatization",
-                "Endcoding"
+                "Quantization",
+                "Encoding"
             ],
-            "ansKey": 2
+            "ansKey": 0,
+            "hint": "Sampling is a process where the continuous time signal is measured or \"sampled\" at a fixed rate or interval, resulting in a sequence of discrete values. Filtering, quantization, and encoding are subsequent processes that are typically performed on the sampled signal to reduce noise, improve accuracy, and compress the data for storage or transmission."
         },
         {
             "name": "In the statement \"Phagocytes won't eat the pathogens unless the pathogens are nicely buttered for them\",  the term 'buttered' is concerned with which of the following?",
@@ -392,7 +395,8 @@
                 "Chemotaxis",
                 "Capsulization"
             ],
-            "ansKey": 2
+            "ansKey": 1,
+            "hint": "The term 'nicely buttered' in the statement is an analogy that describes the process of opsonization, where the coating of the pathogen with opsonins (e.g., antibodies or complement proteins) is analogous to spreading butter on bread to make it more attractive and easier to eat."
         },
         {
             "name": "Which of the following can be increased to improve the SNR in an MRI?",
@@ -403,10 +407,11 @@
                 "Flip angle",
                 "Echo time"
             ],
-            "ansKey": 2
+            "ansKey": 0,
+            "hint": "The gradient strength can be increased to improve the SNR in an MRI. Repetition time, flip angle, and echo time may affect image contrast and resolution, but they do not directly impact the SNR. Repetition time determines the time between consecutive excitation pulses, flip angle controls the degree of magnetization flip and echo time determines the time between excitation pulse and the detection of the MRI signal."
         },
         {
-            "name": "The tenure of memebers of Nepal Engineering Council is",
+            "name": "The tenure of members of Nepal Engineering Council is",
             "category": "A",
             "options": [
                 "2 years",
@@ -417,7 +422,7 @@
             "ansKey": 2
         },
         {
-            "name": "Modern total hip replacement implants are",
+            "name": "Which of the following is a feature of modern total hip replacements?",
             "category": "A",
             "options": [
                 "Modular",
@@ -425,7 +430,8 @@
                 "Integrated",
                 "Flexible"
             ],
-            "ansKey": 2
+            "ansKey": 0,
+            "hint": "Modular is a feature of modern total hip replacement (THR) implants. Modular THRs are made up of separate components that can be mixed and matched to better fit a patient's individual anatomy. Fixed, integrated, and flexible are not typically used to describe modern THR implants, as they do not accurately reflect the current state of THR technology."
         },
         {
             "name": "Which of the following physiological variables may be measured with a thermistor?",
@@ -436,18 +442,20 @@
                 "Body temperature",
                 "Respiration rate"
             ],
-            "ansKey": 2
+            "ansKey": 3,
+            "hint": "A thermistor can measure changes in temperature that occur with each breath, allowing for the calculation of respiration rate in a non-invasive fashion and can be easily performed in a clinical setting."
         },
         {
             "name": "If the anatomical dead space is 150 ml, the respiration rate is 12 cycles per minute, and the tidal volume is 500 ml, then the aerobic ventilation must be",
             "category": "A",
             "options": [
-                "7 lt",
-                "5.25 lt",
-                "6.5 lt",
-                "6 lt"
+                "7 L/min",
+                "4.2 L/min",
+                "6.5 L/min",
+                "6 L/min"
             ],
-            "ansKey": 2
+            "ansKey": 1,
+            "hint":"Effective ventilation = (Tidal volume - Dead space) x Respiratory rate"
         },
         {
             "name": "What is the maximum intake of students engineering colleges in Nepal as per NEC Act 2078?",
@@ -461,7 +469,7 @@
             "ansKey": 2
         },
         {
-            "name": "An engineer can be defined as",
+            "name": "What is the definition of an engineer?",
             "category": "A",
             "options": [
                 "Skilled engineer with technical skill and knowledge of a subject.",
@@ -472,7 +480,7 @@
             "ansKey": 2
         },
         {
-            "name": "3-phase 4 wire system is used for which of the following?",
+            "name": "In which of the following applications are 3-phase 4 wire systems used?",
             "category": "A",
             "options": [
                 "Primary transmission",
@@ -480,10 +488,11 @@
                 "Primary distribution",
                 "Secondary distribution"
             ],
-            "ansKey": 2
+            "ansKey": 3,
+            "hint": "3-phase 4 wire systems can be used in both primary and secondary distribution applications, depending on the specific requirements of the system. However, they are more commonly used in secondary distribution. Primary transmission and secondary transmission systems typically use higher voltage levels and different configurations, such as 3-phase 3 wire or 1-phase 2 wire, depending on the specific application."
         },
         {
-            "name" : "The XOR gate can be realized using",
+            "name" : "Which of the following can be used to realize an XOR gate?",
             "category" : "A",
             "options": [
                 "OR gates only",
@@ -494,7 +503,7 @@
             "ansKey" : 2 
         },
         {
-            "name" : "Which of the following logic gates is a universal gate?",
+            "name" : "Identify the universal logic gate from the following options.",
             "category" : "A",
             "options": [
                 "AND",
@@ -502,7 +511,8 @@
                 "OR",
                 "XOR"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1,
+            "hint": "NAND is a universal gate. AND and OR are basic logic gates and XOR is a derived gate."
         },
         {
             "name" : "If the annual worth of a project is 9000 at a 10% discount rate, what will be it's capitalized value?",
@@ -513,7 +523,8 @@
                 "91,500",
                 "92,300"
             ],
-            "ansKey" : 1 
+            "ansKey" : 1,
+            "hint": "Capitalized Value = Annual Worth / Discount Rate"
         },
         {
             "name" : "Which of the following radio isotopes does not emit positron?",
@@ -527,7 +538,7 @@
             "ansKey" : 1 
         },
         {
-            "name" : "Which of the following elements is used in heat vulcanizing rubber?",
+            "name" : "Which of the following element is utilized in the heat vulcanization process of rubber?",
             "category" : "A",
             "options": [
                 "S",
@@ -535,32 +546,35 @@
                 "Al\\(_2\\)O\\(_3\\)",
                 "Zn"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint": "The element utilized in the heat vulcanization process of rubber is sulfur. When sulfur is added to natural rubber and heated, it cross-links the polymer chains, making the rubber more durable and resistant to heat and wear."
         },
         {
-            "name" : "Which of the following biomaterials is used in Cranio-maxillary implants?",
+            "name" : "Which biomaterial amongst the following is best suited for cranio-maxillary implants?",
             "category" : "A",
             "options": [
                 "Silicone",
                 "Natural polymer",
-                "Heat vulcanizing rubber",
+                "Heat vulcanized rubber",
                 "Ceramics"
             ],
-            "ansKey" : 2 
+            "ansKey" : 3,
+            "hint": "Ceramics are best suited for cranio-maxillary implants due to their biocompatibility, durability, and ability to mimic the properties of natural bone."
         },
         {
-            "name" : "If an object is suddenly subjected to constant stress, which of the following occurs?",
+            "name" : "Which of the following terms best describes the mechanical deformation that occurs when a viscoelastic object is suddenly subjected to constant stress?",
             "category" : "A",
             "options": [
                 "Hysteresis",
                 "Creep",
-                "Stress relaxation",
-                "D"
+                "Fatigue",
+                "Stress relaxation"
             ],
-            "ansKey" : 2 
+            "ansKey" : 3, 
+            "hint": "The mechanical deformation that occurs when a viscoelastic object is suddenly subjected to constant stress is called stress relaxation. Hysteresis, creep, and fatigue are other types of mechanical deformation that can occur in viscoelastic materials, but they are not specifically related to sudden application of a constant stress."
         },
         {
-            "name" : "Artifical liver manufacturing is challenging to replicate",
+            "name" : "What aspect of the liver is difficult to replicate in the manufacturing of an artificial liver?",
             "category" : "A",
             "options": [
                 "Mass of hepatocytes",
@@ -568,7 +582,7 @@
                 "Density of hepatocytes",
                 "Volume of hepatocytes"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0 
         },
         {
             "name" : "Which of the following kind of membranes does modern dialyzers use?",
@@ -579,7 +593,8 @@
                 "Parallel plate",
                 "Coiled tube"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1,
+            "hint": "Modern dialyzers typically use hollow fiber membranes."
         },
         {
             "name" : "In case of oxygen failure in an anesthesia machine, the oxygen valve is blocked to prevent the back flow of which of the following?",
@@ -590,7 +605,8 @@
                 "Medical Air",
                 "Vacuum"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1,
+            "hint": "In case of oxygen failure in an anesthesia machine, the oxygen valve is blocked to prevent the back flow of nitrous oxide."
         },
         {
             "name" : "Which of the following is a feature of second generation CT scanners?",
@@ -598,10 +614,11 @@
             "options": [
                 "Can image only head",
                 "Can image head and body",
-                "5 mins of scan time",
+                "5 minutes of scan time",
                 "Pencil beam"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1,
+            "hint" : "Second generation CT scanners can image head and body. The scan time of second generation CT scanners is typically longer than 5 minutes and pencil beam is a feature of first generation CT scanners."
         },
         {
             "name" : "Which of the following is not a biological effect of ultrasound?",
@@ -610,67 +627,68 @@
                 "Cavitation",
                 "Electromagnetic radiation",
                 "Physical and chemical properties",
-                "D"
+                "Cell lysis"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1 
         },
         {
-            "name" : "Natural polymers cannot produce which of the following aspects of synthetic polymers?",
+            "name" : "Which of the following aspects of synthetic polymers cannot be replicated by natural polymers?",
             "category" : "A",
             "options": [
-                "Strength",
-                "Host rejection",
-                "C",
-                "D"
+                "Mechanical Strength",
+                "Biocompatibility",
+                "Molecular weight distribution",
+                "Thermal stability"
             ],
             "ansKey" : 2 
         },
         {
-            "name" : "Paracrine enzymes are used for",
+            "name" : "What are paracrine enzymes used for?",
             "category" : "A",
             "options": [
-                "Gap communication between cells",
-                "Short communication between cells",
-                "Long communication between celss",
-                "D"
+                "Gap junction communication between cells",
+                "Short-range communication between cells",
+                "Long communication between cells",
+                "Regulation of gene expression in a single cell"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1,
+            "hint": "Paracrine enzymes are signaling molecules that are secreted by cells to act on nearby cells, usually within the same tissue or organ."
         },
         {
-            "name" : "If pig skin is used to heal burns, it is classified as which of the following?",
+            "name" : "Which of the following categories of biological skin makes use of porcine skin to treat burns?",
             "category" : "A",
             "options": [
                 "Autograft",
-                "Isograft",
+                "Amniotic membrane grafts",
                 "Allograft",
                 "Xenograft"
             ],
-            "ansKey" : 2 
+            "ansKey" : 3 
         },
         {
             "name" : "The 40nm gap when a new bone is being formed is filled with",
             "category" : "A",
             "options": [
-                "Ca ion",
-                "Fe ion",
-                "H\\(_2\\)O",
-                "D"
+                "Ca\\(^{2+}\\)",
+                "Fe\\(^{2+}\\) or Fe\\(^{3+}\\)",
+                "Na\\(^+\\)",
+                "Cl\\(^-\\)"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0 
         },
         {
-            "name" : "What is the name of the surface on which an enzyme is immboilized withing a matrix?",
+            "name" : "What is the term for the surface on which an enzyme is immobilized within a matrix?",
             "category" : "A",
             "options": [
-                "Immobilization matrix",
-                "Enzyme immobilization",
-                "Adsorption",
-                "Entrapment"
+                "Substrate",
+                "Enzyme bed",
+                "Active site",
+                "Support matrix"
             ],
-            "ansKey" : 2 
+            "ansKey" : 3 
         },
         {
-            "name" : "Which of the following compounds absorbs maximum CO2 laser?",
+            "name" : "Which of the following compounds absorbs maximum CO\\(_2\\) laser?",
             "category" : "A",
             "options": [
                 "Blood",
@@ -687,45 +705,46 @@
                 "0 dB to 100 dB",
                 "-100 dB to 100 dB",
                 "-10 dB to 100 dB",
-                "10 dB to 100 dB"
+                "20 dB to 120 dB"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0 
         },
         {
-            "name" : "Which of the following is used to guide a catheter for minimally invasive surgeries?",
+            "name" : "Which of the following is used to guide a catheter for minimally invasive surgery?",
             "category" : "A",
             "options": [
                 "Guide wire",
-                "B",
-                "C",
-                "D"
+                "Catheter wire",
+                "X-ray",
+                "Ultrasound"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0 
         },
         {
             "name" : "Ornithine cycle is recognized for formation of which of the following compounds?",
             "category" : "A",
             "options": [
-                "A",
+                "ATP",
                 "Urea",
                 "Ammonia",
-                "H\\(_2\\)O"
+                "Glycogen"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1,
+            "hint": "The ornithine cycle, also known as the urea cycle, is a metabolic pathway in which nitrogenous waste, in the form of ammonia, is converted into urea for excretion from the body. This cycle takes place primarily in the liver and involves a series of biochemical reactions that ultimately result in the conversion of ammonia to urea."
         },
         {
-            "name" : "A tilting heart valve has ... and ...",
+            "name" : "A tilting heart valve has ___ and ___ components.",
             "category" : "A",
             "options": [
-                "Triangular, metal",
-                "Circular, metal",
-                "Triangular, polymer",
-                "Circular, polymer"
+                "triangular, metal",
+                "circular, metal",
+                "triangular, polymer",
+                "circular, polymer"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1 
         },
         {
-            "name" : "Which of the following is able to heat the greatest surface area of tissues?",
+            "name" : "Among the following options, which has the ability to heat the largest tissue surface area?",
             "category" : "A",
             "options": [
                 "Shortwave diathermy",
@@ -733,29 +752,31 @@
                 "Thermal ultrasound",
                 "Microwave diatherymy"
             ],
-            "ansKey" : 2 
+            "ansKey" : 2,
+            "hint" : "Thermal ultrasound uses high-frequency sound waves to generate heat in the tissues. The heat is distributed evenly throughout the tissues being treated, and can penetrate deep into the tissue, making it effective for heating large areas of tissue."
         },
         {
             "name" : "Which of the following is a feature of PET and SPECT?",
             "category" : "A",
             "options": [
                 "They do not require imaging dyes",
-                "Can image metabolic functions",
-                "Do not use radiation",
-                "Images are more detailed"
+                "Can be used to visualize metabolic functions",
+                "Do not involve exposure to ionizing radiation",
+                "Can be used to produce more detailed image"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1 
         },
         {
-            "name" : "The number of gray shades that appear in a radiograph is called",
+            "name" : "What is the number of gray shades that appear in a radiograph called?",
             "category" : "A",
             "options": [
                 "Spatial resolution",
                 "Contrast",
                 "Spatial frequency",
-                "D"
+                "Dynamic range"
             ],
-            "ansKey" : 2 
+            "ansKey" : 3,
+            "hint": "The number of gray shades that appear in a radiograph is called dynamic range. Spatial resolution refers to the ability to distinguish between small structures in an image, such as tiny features or details. Contrast, on the other hand, refers to the difference in brightness or density between different areas of an image. Spatial frequency is a measure of the number of cycles of a repeating pattern that are present in a given unit of space."
         },
         {
             "name" : "Monitor which is placed at the bedside for monitoring cardiac functions of a patient is known as",
@@ -763,19 +784,20 @@
             "options": [
                 "Patient monitor",
                 "Cardiac monitor",
-                "Dynamic monitor",
-                "D"
+                "Bedside monitor",
+                "Oxygen saturation monitor"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1,
+            "hint": "Cardiac monitor is specifically designed to measure and display information related to heart's activity."
         },
         {
             "name" : "Cardioverter differs from pacemakers in which of the following aspects?",
             "category" : "A",
             "options": [
-                "They are larger an pacemaker",
-                "They provide high energy impulse",
-                "They provide low energy impulse",
-                "D"
+                "Cardioverters are larger in size than pacemakers.",
+                "Cardioverter are implanted in the chest, while pacemakers are worn externally.",
+                "Pacemakers provide a smaller electrical impulse than cardioverters.",
+                "Cardioverters are powered by a battery, while pacemakers are powered by body heat."
             ],
             "ansKey" : 2 
         },
@@ -786,42 +808,46 @@
                 "WiFi",
                 "Satellite",
                 "Bluetooth",
-                "IR"
+                "IR technology"
             ],
-            "ansKey" : 2 
+            "ansKey" : 2,
+            "hint": "Bluetooth technology allows wireless communication between electronic devices over short distances, making it a suitable method for communication between a pacemaker and a cell phone."
         },
         {
-            "name" : "A transmission without a start bit, a stop bit or a parity bit in serial communication is",
+            "name" : "What is a transmission without a start bit, a stop bit or a parity bit in serial communication called?",
             "category" : "A",
             "options": [
-                "Synchronous",
-                "Asynchronous",
-                "Virtual",
-                "D"
+                "Synchronous transmission",
+                "Asynchronous transmission",
+                "Half-duplex transmission",
+                "Continuous transmission"
             ],
-            "ansKey" : 2 
+            "ansKey" : 3,
+            "hint": "In serial communication, continuous transmission refers to a method of transmitting data where there are no start or stop bits, and no parity bit. Instead, data is sent continuously, with each bit being immediately followed by the next bit. This method of transmission is often used for high-speed data transfer and is more efficient than other methods that require start and stop bits."
         },
         {
             "name" : "How many select lines are there in an 8 to 1 MUX?",
             "category" : "A",
             "options": [
+                "3",
                 "8",
                 "2",
-                "3",
                 "1"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint": "In a Multiplexer (MUX), the number of select lines determines the number of input lines and output lines. In an 8-to-1 MUX, there are eight input lines and one output line. The three select lines determine which of the eight input lines is connected to the output line."
         },
         {
             "name" : "Which of the following safety measures can be taken for patient safety regarding leakage current?",
             "category" : "A",
             "options": [
-                "Grounding",
-                "Insulation",
-                "C",
-                "D"
+                "Increasing the insulation",
+                "Reducing the ground resistance to zero",
+                "Changing the entire equipment",
+                "Exposing the equipment to strong electromagnetic fields"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint": "Reducing the ground resistance to zero or exposing the equipment to strong electromagnetic fields is not a safe measure and can actually increase the risk of electrical shock. And although, changing the entire equipment is correct it isn't exactly economical so increasing the insulation is the most appropriate answer." 
         },
         {
             "name" : "In a parallel RLC circuit, the electrical voltage (E) is analogous to which of the following component in a mechanical system?",
@@ -832,18 +858,20 @@
                 "Friction",
                 "Velocity"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint": "The electrical voltage in a parallel RLC circuit and the force in a mechanical system are analogous because they both represent the driving factors that cause the system to operate."
         },
         {
-            "name" : "What is a JK flip flop used to realize when J=K",
+            "name" : "What is a JK flip flop used to realize when J=K?",
             "category" : "A",
             "options": [
+                "T flip-flop",
                 "D flip-flop",
                 "JK flip-flop",
-                "T flip-flop",
                 "SR flip-flop"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint": "When J=K=0, the output state of a JK flip-flop does not change and what J=K=1, the output state is reversed. Effectively, creating a toggle function like the T flip-flop does."
         },
         {
             "name" : "Which of the following in an enlarging scale?",
@@ -854,10 +882,11 @@
                 "5:1",
                 "1:5"
             ],
-            "ansKey" : 2 
+            "ansKey" : 2,
+            "hint" : "A X:Y scale means that Y is the actual measurements of an object and X is the measurement used to represent it. So if the actual measurement of an object is 1 unit then 5:1 means that the object appears five times larger than its original size in the sheet, which makes 5:1 the enlarging scale. 1:10, 1:100, 1:5 are reducing scales."
         },
         {
-            "name" : "A band stop filter is sometimes also called",
+            "name" : "What is another term that can be used for band stop filter?",
             "category" : "A",
             "options": [
                 "Notch filter",
@@ -865,16 +894,17 @@
                 "Band select filter",
                 "Low pass filter"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint": "Snubber is used to supress voltage spikes in electrical circuits. A band select or a low pass filter allows frequencies of a range to pass through while attenuating others. A band stop or a notch filter attenuates frequencies of a range while allows others to pass."
         },
         {
             "name" : "The centrifugal force of a centrifuge depends upon angular velocity and which of the following?",
             "category" : "A",
             "options": [
-                "Head radius",
-                "Diameter of centrifuge tueb",
-                "C",
-                "D"
+                "Head radius.",
+                "Diameter of the centrifuge tube.",
+                "Mass of the object being centrifuged.",
+                "Length of the centrifuge rotor."
             ],
             "ansKey" : 2 
         },
@@ -882,12 +912,13 @@
             "name" : "If the AV node fails to produce impulses, which of the following widens in an ECG reading?",
             "category" : "A",
             "options": [
-                "P wave",
                 "QRS wave",
+                "P wave",
                 "ST wave",
                 "T wave"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint" : "The P wave represents atrial depolarization and the T wave represents ventricular repolarization, so they are not directly affected by the AV node. The QRS complex represents ventricular depolarization and is affected by the delay or blockage of impulses from the AV node to the ventricles. Therefore, if the AV node fails to produce impulses, the duration of the QRS complex will widen."
         },
         {
             "name" : "The maximum efficiency of an AM wave is",
@@ -898,27 +929,29 @@
                 "100%",
                 "83%"
             ],
-            "ansKey" : 0 
+            "ansKey" : 0,
+            "hint" : "In AM (Amplitude Modulation) wave, the amplitude of the carrier wave is varied in proportion to the instantaneous amplitude of the modulating signal (message signal) to transmit information. The modulating signal carries the information, but it also results in the carrier wave's power getting wasted in transmitting the sidebands. As a result, the maximum efficiency of an AM wave is limited to one-third or 33.33%."
         },
         {
             "name" : "A zener diode is commonly used as a",
             "category" : "A",
             "options": [
+                "Voltage regulator",
                 "Rectifier",
                 "Filter",
-                "Amplifier",
-                "Voltage regulator"
+                "Amplifier"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint" : "A zener diode is a special type of diode that is designed to operate in the reverse breakdown region of the diode's characteristic curve. When the reverse voltage applied to the zener diode exceeds the zener voltage, the diode starts conducting and maintains a nearly constant voltage drop across its terminals. This property of the zener diode makes it useful as a voltage regulator in electronic circuits to provide a constant DC voltage output even when the input voltage varies."
         },
         {
             "name" : "What is the measurement range of an EMG wave?",
             "category" : "A",
             "options": [
-                "\\(0.2\\mu - 5\\mu\\)",
-                "\\(2\\mu - 5\\mu\\)",
-                "X",
-                "Y"
+                "\\(0 \\; mV - 10 \\; mV\\)",
+                "\\(0 \\; \\mu V - 100 \\; \\mu V\\)",
+                "\\(0 \\; V - 1 \\; kV\\)",
+                "\\(0.2 \\; \\mu V - 5 \\; \\mu V\\)"
             ],
             "ansKey" : 2 
         },
@@ -926,12 +959,12 @@
             "name" : "The SA node is called the natural pacemaker of the heart because",
             "category" : "A",
             "options": [
-                "it has very low something",
-                "it has very high sympathetic innervations",
-                "it can transfer impulses at a very high rate",
-                "it can generate electrical impulses"
+                "It initiates the heartbeat and sets the rhythm",
+                "It has very high sympathetic innervations",
+                "It is located in the left ventricle",
+                "It is made of natural fibers"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0 
         },
         {
             "name" : "The contact angle associated with water for a hydrophobic material is",
@@ -942,51 +975,55 @@
                 "\\( 90^\\circ \\)",
                 "\\( 45^\\circ \\)"
             ],
-            "ansKey" : 2 
+            "ansKey" : 1,
+            "hint" : "The contact angle is the angle at which a liquid meets a solid surface. In the case of a hydrophobic material (one that repels water), the contact angle of water on the surface of the material is greater than 90 degrees, and typically around 120 degrees"
         },
         {
             "name" : "If a tissue is able to repair itself, then such approach is known as",
             "category" : "A",
             "options": [
-                "Analytical approach",
+                "Regenerative approach",
                 "Reconstructive approach",
-                "C",
-                "D"
+                "Analytical approach",
+                "Therapeutic approach"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0, 
+            "hint" : ""
         },
         {
             "name" : "The resistivity of a dynamic diode is dependent on",
             "category" : "A",
             "options": [
                 "Temperature",
-                "Current",
-                "Both current and temperature",
-                "D"
+                "The doping of the material",
+                "The direction of the applied voltage",
+                "The thickness of the depletion region"
             ],
-            "ansKey" : 2 
+            "ansKey" : 3 
         },
         {
             "name" : "The knee voltage of a germanium diode is",
             "category" : "A",
             "options": [
+                "0.3",
                 "0.1",
                 "0.7",
-                "0.3",
                 "1.0"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint" : "The knee voltage of a germanium diode is approximately 0.3 volts"
         },
         {
             "name" : "A chart showing the key events within the duration of a project is called",
             "category" : "A",
             "options": [
-                "Graph chart",
                 "Milestone chart",
-                "C",
-                "D"
+                "Gantt chart",
+                "Line chart",
+                "Bar graph"
             ],
-            "ansKey" : 2 
+            "ansKey" : 0,
+            "hint" : "A chart showing the key events within the duration of a project is called a milestone chart. It is a graphical representation that illustrates the significant events or milestones of a project in chronological order."
         },
         {
             "name" : "Control system nature of poles",
@@ -1005,32 +1042,102 @@
             "options": [
                 "Production risks",
                 "Operational risks",
-                "Market risks",
-                "Material risks"
+                "Material risks",
+                "Market risks"
             ],
-            "ansKey" : 2 
+            "ansKey" : 3,
+            "hint" : "Market risks are beyond a firm's control. These risks are caused by external factors such as changes in the economy, political instability, and shifts in consumer preferences or behavior"
         },
         {
-            "name" : "Which of the following amino acids does not have an R group?",
+            "name" : "Which of the following amino acids posses a charge?",
             "category" : "A",
             "options": [
-                "Glycin",
+                "Glycine",
+                "Arginine",
+                "Lysine",
+                "Histidine"
+            ],
+            "ansKey" : 0 
+        },
+        {
+            "name" : "Which of the following represents the nature of a circuit in the diagram below?",
+            "fig" : "ActiveLPF",
+            "category" : "A",
+            "options": [
+                "Active band pass filter",
+                "Passive low pass filter",
+                "Passive high pass filter",
+                "Active low pass filter"
+            ],
+            "ansKey" : 3 
+        },
+        {
+            "name": "Find the Nyquist frequency for \\( x(t) = 5 \\cos(200\\pi t) + 5 \\cos(300\\pi t) + 5 \\cos(400\\pi t)+ 5 \\cos(500\\pi t) \\).",
+            "category": "A",
+            "options": [
+                "250 Hz",
+                "200 Hz",
+                "300 Hz",
+                "500 Hz"
+            ],
+            "ansKey": 3 
+        },
+        {
+            "name": "What does Colpitt's oscillator use for signal generation?",
+            "category": "A",
+            "options": [
+                "Piezoelectric crystal",
+                "Thermocouple",
+                "A strain gauge",
+                "A tank circuit"
+            ],
+            "ansKey": 2 
+        },
+        {
+            "name": "What is the SI unit of current?",
+            "category": "A",
+            "options": [
+                "A",
                 "B",
                 "C",
                 "D"
             ],
-            "ansKey" : 2 
+            "ansKey": 2 
+        },
+        {
+            "name": "What does the following picture represent?",
+            "fig" : "Entrapment",
+            "category": "A",
+            "options": [
+                "Adsorption",
+                "Entrapment",
+                "Micro environment",
+                "Macro environment"
+            ],
+            "ansKey": 1 
+        },
+        {
+            "name": "The output of a system represented by the transfer function \\( \\displaystyle \\frac{1}{1+\\omega^2} \\) is ",
+            "category": "A",
+            "options": [
+                "0 until \\( \\omega = 1/T \\) then increases by 40 dB/decade.",
+                "0 until \\( \\omega = 1/T \\) then decreases by 20 dB/decade.",
+                "0 until \\( \\omega = 1/T \\) then increases by 20 dB/decade.",
+                "0 until \\( \\omega = 1/T \\) then decreases by 40 dB/decade."
+            ],
+            "ansKey": 2 
         },
         {
             "name": "Which of the following biomaterials is used in IOL?",
             "category": "A",
             "options": [
-                "PMMA",
+                "Glass",
                 "PHEMA",
                 "Natural Polymer",
-                "Glass"
+                "PMMA"
             ],
-            "ansKey": 2
+            "ansKey": 3,
+            "hint" : "PMMA and silicone are the most commonly used materials for intraocular lenses (IOLs), with PMMA being used more frequently in developing countries. "
         }
     ]
 

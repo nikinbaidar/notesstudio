@@ -228,6 +228,12 @@ div.coffee img {
 
 /* Quiz */
 
+img.figure {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
 li.questions, .choices { 
   font-size: 1.1rem;
 }

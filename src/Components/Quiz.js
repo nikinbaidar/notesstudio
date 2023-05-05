@@ -63,8 +63,9 @@ class Quiz extends React.Component {
                 currentPage: currentPage + 1,
                 start: end,
                 end: end + this.questionsPerPage,
-            })
-            window.scrollTo(0, 0);
+            }, () => {
+                setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 100)
+            });
         }
         else {
             alert("EON");
@@ -78,8 +79,9 @@ class Quiz extends React.Component {
                 currentPage: currentPage - 1,
                 start: start - this.questionsPerPage,
                 end: start,
+            }, () => {
+                setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 100);
             });
-            window.scrollTo(0, 0);
         }
         else {
             alert("EOP");
@@ -87,8 +89,15 @@ class Quiz extends React.Component {
     };
 
     handleSubmit = () => {
-        this.setState({submitted: true});
-    };
+        this.setState({
+            submitted: true,
+            currentPage: 1,
+            start: 0,
+            end: this.questionsPerPage,
+        }, () => {
+            setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 100);
+        });
+    }
 
     renderQuestion = (question, questionNumber) => {
 
@@ -100,7 +109,7 @@ class Quiz extends React.Component {
         return (
             <React.Fragment key={questionKey}>
                 <li className="questions"> {question.name} </li>
-                { hasFigure && <img src={Images[question.fig]} alt={question.fig}/> }
+                { hasFigure && <img class="figure" src={Images[question.fig]} alt={question.fig}/> }
                 <form className="optionGroup">
                 <ol className="choices">
                 {question.options.map((choice, index) => {
@@ -161,12 +170,12 @@ class Quiz extends React.Component {
         return (
             <>
             <SEO 
-            title="NEC Exam 2079" 
+            title={this.props.title}
             name="Biomedical License"
             description={this.props.title}
             type="article" 
             />
-            <h1>{this.props.title}</h1>
+            <h1>{this.props.heading}</h1>
             <ol start={start + 1}>{questions}</ol>
             {buttons}
             <h4>Answered: {totalAnswered} / {totalQuestions}</h4>
