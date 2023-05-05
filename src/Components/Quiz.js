@@ -69,7 +69,7 @@ class Quiz extends React.Component {
             });
         }
         else {
-            alert("EON");
+            alert("That's all folks! You've reached the end of the test.");
         }
     };
 
@@ -85,19 +85,26 @@ class Quiz extends React.Component {
             });
         }
         else {
-            alert("EOP");
+            alert("You're at the start of the road, my friend. There's no going back from here!");
         }
     };
 
     handleSubmit = () => {
-        this.setState({
-            submitted: true,
-            currentPage: 1,
-            start: 0,
-            end: this.questionsPerPage,
-        }, () => {
-            setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 100);
-        });
+        const { submitted } = this.state;
+        if (!submitted) {
+            this.setState({
+                submitted: true,
+                currentPage: 1,
+                start: 0,
+                end: this.questionsPerPage,
+            }, () => {
+                setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 100);
+            });
+        }
+        else
+        {
+            alert("Awkward! Reload and try again later.")
+        }
     }
 
     showExplanation = (event, questionKey) => {
@@ -198,8 +205,7 @@ class Quiz extends React.Component {
             />
             <h1>{this.props.heading}</h1>
             <ol start={start + 1}>{questions}</ol>
-{/* <hr style={{ display: 'block', height: '1px', border: '0', borderTop: '1px solid #ccc', margin: '1em 0', padding: '0' }} /> */}
-<hr/>
+            <hr/>
             {buttons}
             <h4>Answered: {totalAnswered} / {totalQuestions}</h4>
             </>
