@@ -14,6 +14,7 @@
   --purple: #B3A1E6;
   --magenta: #CE6F8F;
   --gray: #E8E8DF;
+  --dark-gray: #CCC;
   --dark-purple: #2E3459;
   --light-purple: #686F9A;
   --white: #ECF0C1;
@@ -29,7 +30,6 @@ body {
   padding: 0;
   margin: 0;
 }
-
 
 /* Navigation Bar */
 
@@ -86,7 +86,7 @@ section {
 }
 
 #leftsidebar {
-  width: 15%;
+  width: 25%;
   height: auto;
   background-color: var(--foreground);
   color: var(--white);
@@ -129,7 +129,7 @@ section {
 /* Main */
 
 #main {
-  min-width: 54.0%;
+  width: 80%;
   min-height: 690px;
   display: flex;
   flex-direction: column;
@@ -192,7 +192,7 @@ nav > ul.nav_items {
 /* Advertisements */
 
 #ads {
-  width: 28%;
+  width: 30%;
   height: auto;
   background-color: var(--gray);
 }
@@ -228,12 +228,6 @@ div.coffee img {
 
 /* Quiz */
 
-img.figure {
-  display: block;
-  margin: auto;
-  width: 60%;
-}
-
 li.questions, .choices { 
   font-size: 1.1rem;
 }
@@ -261,12 +255,21 @@ input[type="radio"] {
 
 #buttons {
   display: flex;
+  flex-direction: row-reverse;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--dark-gray);
+  margin: 4em 0 2em;
+  
 }
 
 button#next {
   margin: 1rem;
   width: 10%;
-  margin-left: 0.3rem;
 }
 
 button#previous {
@@ -277,7 +280,7 @@ button#previous {
 button#submit{
   margin: 1rem;
   width: 10%;
-  margin-left: auto;
+  margin-right: auto;
 }
 
 .feedback {
@@ -295,8 +298,49 @@ button#submit{
 }
 
 .submitted.correct {
-  color: blue;
   font-weight: bold;
+}
+
+
+.buttons {
+  background-color: var(--dark-gray);
+  color: #282828;
+  font-size: 14px;
+  padding: 8px;
+  margin: 0.9rem 1.5rem 0;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+}
+
+.buttons.expand {
+  background-color: var(--green);
+  color: white;
+}
+
+.expand::before {
+  content: "\25B6";
+  margin-right: 8px;
+}
+
+.expand.expanded::before {
+  content: "\25BC";
+  margin-right: 8px;
+}
+
+.explanation {
+  color: gray;
+  border: 1px solid var(--green);
+  padding: 10px;
+  margin-left: 1.5rem;
+  width: 90%;
+  transform: scale(1);
+  animation: zoomIn 200ms ease-in-out;
+ }
+
+@keyframes zoomIn {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
 }
 
 @media(max-width: 768px) 

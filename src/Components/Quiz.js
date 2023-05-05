@@ -28,6 +28,7 @@ class Quiz extends React.Component {
             start: 0,
             end: this.questionsPerPage,
             selOpts: selectedOptions,
+            explainedQuestions: selectedOptions,
             totalQuestions: totalQuestions,
             totalAnswered: 0,
             submitted: false,
@@ -99,17 +100,31 @@ class Quiz extends React.Component {
         });
     }
 
+    showExplanation = (event, questionKey) => {
+        const { explainedQuestions, currentPage } = this.state;
+        const updateExplainedQuestions = {
+            ...explainedQuestions,
+            [questionKey]: true
+        };
+        this.setState({ explainedQuestions: updateExplainedQuestions });
+
+        const button = document.getElementsByClassName('expand');
+        const index = questionKey - (this.questionsPerPage * currentPage) - 1 ;
+        button[index].classList.add("expanded");
+    }
+
     renderQuestion = (question, questionNumber) => {
 
-        const { currentPage, submitted, selOpts } = this.state;
+        const { currentPage, submitted, selOpts, explainedQuestions } = this.state;
         const questionKey = (questionNumber + 1) 
             + (currentPage * this.questionsPerPage);
         const hasFigure = (question.fig !== undefined);
+        const explained = (explainedQuestions[questionKey] === true);
 
         return (
             <React.Fragment key={questionKey}>
                 <li className="questions"> {question.name} </li>
-                { hasFigure && <img class="figure" src={Images[question.fig]} alt={question.fig}/> }
+                { hasFigure && <img className="figure" src={Images[question.fig]} alt={question.fig}/> }
                 <form className="optionGroup">
                 <ol className="choices">
                 {question.options.map((choice, index) => {
@@ -146,6 +161,11 @@ class Quiz extends React.Component {
                 })}
                 </ol>
                 </form>
+                {submitted && <button className="buttons expand" type="submit"
+                    onClick={(event) => this.showExplanation(event,
+                        questionKey)}>Explanation</button> }
+                { explained && <p className="explanation"> 
+                    <strong>Explanation: </strong>{question.hint}</p> } 
             </React.Fragment>
         );
     };
@@ -155,15 +175,16 @@ class Quiz extends React.Component {
         const questions = this.quizData.slice(start, end).map(this.renderQuestion);
         const buttons = (
             <div id="buttons">
-                <button id="previous" type="submit" onClick={this.displayPrevious}>
-                Previous
-                </button>
-                <button id="next" type="submit" onClick={this.displayNext}>
-                Next
-                </button>
-                <button id="submit" type="submit" onClick={this.handleSubmit}>
-                Submit
-                </button>
+            <button id="next" className="buttons" type="submit"
+            onClick={this.displayNext}>
+            Next
+            </button>
+            <button id="previous" className="buttons" type="submit" onClick={this.displayPrevious}>
+            Previous
+            </button>
+            <button id="submit" className="buttons" type="submit" onClick={this.handleSubmit}>
+            Submit
+            </button>
             </div>
         );
 
@@ -177,6 +198,8 @@ class Quiz extends React.Component {
             />
             <h1>{this.props.heading}</h1>
             <ol start={start + 1}>{questions}</ol>
+{/* <hr style={{ display: 'block', height: '1px', border: '0', borderTop: '1px solid #ccc', margin: '1em 0', padding: '0' }} /> */}
+<hr/>
             {buttons}
             <h4>Answered: {totalAnswered} / {totalQuestions}</h4>
             </>
