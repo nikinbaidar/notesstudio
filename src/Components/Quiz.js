@@ -229,7 +229,7 @@ class Quiz extends React.Component {
         this.setState({ explainedQuestions: updateExplainedQuestions });
 
         const button = document.getElementsByClassName('expand');
-        const index = questionKey - (this.quesPerPage * currentPage) - 1 ;
+        const index = (questionKey-1) - ( (currentPage-1) * this.quesPerPage );
         button[index].classList.add("expanded");
     }
 
