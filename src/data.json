@@ -1142,6 +1142,28 @@
                 "hint" : "PMMA and silicone are the most commonly used materials for intraocular lenses (IOLs), with PMMA being used more frequently in developing countries. "
             }
         ]
+    },
+
+    "memos" : {
+        "pass" : [
+            "Congratulations! You've passed",
+            "Awesome work! you've passed",
+            "Victory is yours!",
+            "You can bask in glory now",
+            "Way to go! you've achieved the ultimate goal"
+        ],
+        "fail" : [
+            "Oopsie daisy, looks like you missed the mark",
+            "A for effort, F for execution",
+            "I think the universe is telling you to stick to your day job",
+            "Looks like your crystal ball needs a polish",
+            "That was almost impressive, in a not-at-all impressive kind of way.",
+            "Looks llike you're not quite ready for the big leagues yet",
+            "So close, yet so far!",
+            "Well, that didn't go as planned",
+            "Uh-oh, you'll have to try again",
+            "Not quite the result we were hoping for!"
+        ]
     }
 } 
 

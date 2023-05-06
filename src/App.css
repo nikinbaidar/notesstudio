@@ -11,6 +11,7 @@
   --green: #5CCC96;
   --ivory: #FFFFF0;
   --soft-pink: #FAF0E6;
+  --soft-blue: #F1F1F1;
   --purple: #B3A1E6;
   --magenta: #CE6F8F;
   --gray: #E8E8DF;
@@ -373,13 +374,75 @@ button#submit{
   margin-left: 1.5rem;
   width: 90%;
   transform: scale(1);
-  animation: zoomIn 200ms ease-in-out;
+  animation: zoomIn 500ms ease-in-out;
  }
 
 @keyframes zoomIn {
   from { transform: scale(0); }
   to   { transform: scale(1); }
 }
+
+button#viewUnanswered {
+  /* width: 20%; */
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  color: var(--blue);
+  border: none;
+  cursor: pointer;
+}
+
+.popup {
+  position: relative;
+  z-index: 1;
+  display: none;
+  background-color: var(--soft-blue);
+  width: 50%;
+  height: 300px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 1rem;
+  margin: 1rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup.show {
+  display: block;
+}
+
+.comma-list {
+  list-style-type: none; 
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.comma-list li {
+  display: inline-block;
+  margin: 2px;
+  padding: 8px;
+}
+
+.animate li {
+  animation: zoomIn 500ms ease-in-out;
+}
+
+
+.comma-list li:last-child {
+  margin-right: 0; /* Remove the margin from the last item */
+
+}
+
+.comma-list li::after {
+  content: ","; /* Add empty content after each list item */
+}
+
+.comma-list li:last-child::after {
+  content: ""; /* Add empty content after each list item */
+}
+
+
 
 @media(max-width: 768px) 
 {

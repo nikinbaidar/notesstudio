@@ -2,7 +2,7 @@ import  React from 'react';
 
 import { SEO } from './seo';
 
-import { loadQuiz } from '../dataLoader'
+import { loadQuiz, loadMsg } from '../dataLoader'
 
 import Images from './images';
 
@@ -27,6 +27,7 @@ class Quiz extends React.Component {
         const quesPerPage = 20;
         const answerMap = Array.from({totalQuestions}, (_, i) => 
             `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
+        const memos = loadMsg();
         this.quizData = quizData;
         this.totalPages = (totalQuestions / quesPerPage);
         this.quesPerPage = quesPerPage;
@@ -35,6 +36,7 @@ class Quiz extends React.Component {
         this.totalQuestions = totalQuestions;
         this.totalScore = totalScore;
         this.passMark = (0.5 * totalScore);
+        this.memos = memos;
         this.state = {
             currentPage: 1,
             start: 0,
@@ -42,8 +44,10 @@ class Quiz extends React.Component {
             selOpts: answerMap,
             explainedQuestions: answerMap,
             totalAnswered: 0,
+            unanswered: Array.from({length: totalQuestions}, (_, i) => i+1),
             submitted: false,
             score: 0,
+            animate: true,
         }
     }
 
@@ -51,15 +55,31 @@ class Quiz extends React.Component {
         window.MathJax.typeset();
     }; 
 
-    componentDidUpdate() {
-        window.MathJax.typeset();
-    }; 
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.currentPage !== prevState.currentPage) {
+            window.MathJax.typeset();
+        }
+    }
+
+    handleClick = () => {
+        const popup = document.getElementsByClassName('popup')[0];
+        popup.classList.toggle("show");
+    };
+
+    onAnimationEnd = () => {
+        this.setState({ animate: false})
+    }
 
     renderQues = (question, questionNumber) => {
 
-        const { currentPage, submitted, selOpts, explainedQuestions } = this.state;
+        const {
+            currentPage,
+            submitted,
+            selOpts,
+            explainedQuestions
+        } = this.state;
         const questionKey = (questionNumber + 1) 
-            + (currentPage * this.quesPerPage);
+            + ( (currentPage - 1) * this.quesPerPage );
         const hasFigure = (question.fig !== undefined);
         const explained = (explainedQuestions[questionKey] === true);
         const correctAnswer = question.options[question.ansKey];
@@ -117,7 +137,7 @@ class Quiz extends React.Component {
 
 
     handleRadioChange = (event, questionKey, correctAnswer, points) => {
-        const { selOpts, totalAnswered, score } = this.state;
+        const { selOpts, totalAnswered, score, unanswered } = this.state;
         const selectedValue = event.target.id;
         const selectedValueContent = event.target.value;
         const isCorrect = (selectedValueContent === correctAnswer);
@@ -130,10 +150,15 @@ class Quiz extends React.Component {
             ? totalAnswered 
             : totalAnswered + 1;
         const updatedScore = isCorrect ? score + points : score;
+        const updatedUnanswered = unanswered.filter(
+            qNum => qNum !== questionKey
+        );
+
         this.setState({
             selOpts: updateSelectedOptions,
             totalAnswered: updatedAnsweredCount,
             score: updatedScore,
+            unanswered: updatedUnanswered,
         });
         localStorage.setItem(`myRadioValue-${questionKey}`, selectedValue);
     };
@@ -216,13 +241,16 @@ class Quiz extends React.Component {
             totalAnswered,
             submitted,
             score,
+            unanswered,
+            animate
         } = this.state;
         const questions = this.quizData.slice(start, end).map(this.renderQues);
         const set = (currentPage <= this.sAQCount/this.quesPerPage) ? 'A':'B';
         const marksDistribution = (set === 'A')
             ? `1 x ${this.sAQCount} = ${this.sAQCount}` 
             : `2 x ${this.sBQCount} = ${2 * this.sBQCount}` 
-
+        const indexPassed = Math.floor(Math.random()*(this.memos.pass.length));
+        const indexFailed = Math.floor(Math.random()*(this.memos.fail.length));
         return (
             <>
                 <SEO 
@@ -246,6 +274,22 @@ class Quiz extends React.Component {
                 </div>
                 <hr/>
                 <h4>Answered: {totalAnswered} / {this.totalQuestions}</h4>
+                <div>
+                    <button id="viewUnanswered" type="submit"
+                        onClick={this.handleClick}>{`See what's unanswered`}
+                    </button>
+                    <div className="popup">
+                        <ul className={`comma-list ${animate ? 'animate' :
+                                null}`} onAnimationEnd={this.onAnimationEnd}>
+                        {
+                            unanswered.map(item => {
+                                const key = crypto.randomUUID();
+                                return (<li key={key}>{item}</li>);
+                            })
+                        }
+                        </ul>
+                    </div>
+                </div>
                 <button id="submit" className="buttons" type="submit"
                 onClick={this.handleSubmit}>Submit</button>
                 {
@@ -254,7 +298,8 @@ class Quiz extends React.Component {
                     <h4>
                     Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}
                     <span className={score >= this.passMark ? 'pass' : 'fail'}>
-                        {score >= this.passMark ? 'Pass' : 'Fail'}</span>
+                        {score >= this.passMark ? this.memos.pass[indexPassed] 
+                            : this.memos.fail[indexFailed]}</span>
                     </h4>
                     </div>
                 }

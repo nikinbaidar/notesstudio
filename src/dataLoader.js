@@ -15,3 +15,7 @@ export function loadCurriculum() {
 export function loadQuiz(questionSet) {
   return data[questionSet];
 }
+
+export function loadMsg() {
+  return data.memos;
+}
