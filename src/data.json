@@ -321,129 +321,162 @@
             ]
         }
     ],
-    "questions" : [
-        {
-            "name": "Question 1 \\( \\alpha \\)",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "\\(\\alpha\\)",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2,
-            "hint" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            "name": "Question 2 \\( \\omega \\)",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        { 
-            "name": "Question 3 \\( \\alpha \\)",
-            "eqn" : "e^2",
-            "fig": "Ladder",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 4",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 5",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 6",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 7",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 8",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 9",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        },
-        {
-            "name": "Question 10",
-            "eqn" : "e^2",
-            "category": "A",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-            "ansKey": 2
-        }
-    ]
+    "questions" : {
+
+        "partOne" : [
+
+            {
+                "name": "Question 1 \\( \\alpha \\)",
+                "eqn" : "e^2",
+                "category": "A",
+                "options": [
+                    "\\(\\alpha\\)",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2,
+                "hint" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            },
+            {
+                "name": "Question 2 \\( \\omega \\)",
+                "eqn" : "e^2",
+                "category": "A",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            { 
+                "name": "Question 3 \\( \\alpha \\)",
+                "eqn" : "e^2",
+                "fig": "Ladder",
+                "category": "A",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            {
+                "name": "Question 4",
+                "eqn" : "e^2",
+                "category": "A",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            {
+                "name": "Question 5",
+                "eqn" : "e^2",
+                "category": "A",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            {
+                "name": "Question 6",
+                "eqn" : "e^2",
+                "category": "A",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            {
+                "name": "Question 7",
+                "eqn" : "e^2",
+                "category": "A",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            {
+                "name": "Question 8",
+                "eqn" : "e^2",
+                "category": "A",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            }
+        ],
+
+        "partTwo" : [
+            {
+                "name": "Question 9",
+                "eqn" : "e^2",
+                "category": "B",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            {
+                "name": "Question 10",
+                "eqn" : "e^2",
+                "category": "B",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            {
+                "name": "Question 11",
+                "eqn" : "e^2",
+                "category": "B",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            },
+            {
+                "name": "Question 12",
+                "eqn" : "e^2",
+                "category": "B",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "ansKey": 2
+            }
+        ]
+    }
+
+
 
 }

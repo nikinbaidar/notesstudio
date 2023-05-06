@@ -10,21 +10,26 @@ class Quiz extends React.Component {
 
     constructor(props) {
         super(props);
-        const quizData = loadQuiz(props.name);
-        const totalQuestions = quizData.length;
+        const questionsSets = loadQuiz(props.name);
+        const quizData = [...shuffleArray(questionsSets.partOne),
+            ...shuffleArray(questionsSets.partTwo)];
+        const setAQuestionCount = questionsSets.partOne.length;
+        const setBQuestionCount = questionsSets.partTwo.length;
+        const totalQuestions = setAQuestionCount + setBQuestionCount;
         const questionsPerPage = 2;
         const selectedOptions = Array.from({totalQuestions}, (_, i) => 
             `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
         this.quizData = quizData;
         this.totalPages = (totalQuestions / questionsPerPage) - 1;
         this.questionsPerPage = questionsPerPage;
+        this.setAQuestionCount = setAQuestionCount;
+        this.totalQuestions =  totalQuestions;
         this.state = {
             currentPage: -1,
             start: 0,
             end: 0,
             selOpts: selectedOptions,
             explainedQuestions: selectedOptions,
-            totalQuestions: totalQuestions,
             totalAnswered: 0,
             submitted: false,
         }
@@ -62,7 +67,7 @@ class Quiz extends React.Component {
 
     displayNext = () => {
         const { currentPage, end } = this.state;
-        if (currentPage < this.totalPages) {
+        if (currentPage <= this.totalPages) {
             this.setState({
                 currentPage: currentPage + 1,
                 start: end,
@@ -159,8 +164,11 @@ class Quiz extends React.Component {
     };
 
     render() {
-        const {start, end, totalAnswered, totalQuestions } = this.state;
+        const {start, end, currentPage, totalAnswered } = this.state;
         const questions = this.quizData.slice(start, end).map(this.renderQuestion);
+        const set = ( currentPage <= (this.setAQuestionCount / this.questionsPerPage)) 
+            ? "Set A: (1 point each)" 
+            : "Set B: (2 point each)"
         return (
             <>
             <SEO 
@@ -169,14 +177,16 @@ class Quiz extends React.Component {
             description="Nepal Engineering Council Exam for Biomedical Engineering 2079" 
             type="article" 
             />
-            <h1>Nepal Enginnering Coucil License Exam {parseInt(this.props.name)}</h1>
+            <h1>Nepal Enginnering Coucil License Exam {(this.props.name)}</h1>
+            <h2 className="setInformation">{set}</h2>
             <ol start={start + 1}>{questions}</ol>
             <div id="buttons">
             <button id="previous" type="submit" onClick={this.displayPrevious}>Previous</button>
             <button id="next" type="submit" onClick={this.displayNext}>Next</button>
             <button id="submit" type="submit" onClick={this.handleSubmission}>Submit</button>
             </div>
-            <h4>Answered: {totalAnswered} / {totalQuestions}</h4>
+            <h4>Answered: {totalAnswered} / {this.totalQuestions}</h4>
+            <h4 style={{textDecoration: "underline", color : "var(--blue)"}}>View unanswered questions.</h4>
             </>
         );
     };

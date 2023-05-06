@@ -73,6 +73,14 @@ a:visited {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 1.6rem;
+}
+
+h2.setInformation {
+  margin-top: 2rem 0 1rem;
+}
+
 ul.nav_items li.active {
   color: var(--current-page);
 }
