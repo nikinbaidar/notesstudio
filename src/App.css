@@ -258,8 +258,7 @@ div.coffee img {
 /* Quiz */
 
 li.questions, .choices { 
-  font-size: 1.30rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.1rem;
 }
 
 li.questions { 
@@ -272,19 +271,15 @@ li.questions {
 }
 
 .choices li {
-  margin-left: -30px;
   position: relative;
   padding: 3px;
-  list-style-type: none;
 }
 
 input[type="radio"] {
-  position: relative; 
-  margin-right: 10px;
-  /* top: 40%;  */
-  /* transform: translateY(-50%);  */
-  /* left: -40px;  */
-  /* padding: 10px; */
+  position: absolute; 
+  top: 40%; 
+  transform: translateY(-50%); 
+  left: -40px; 
 }
 
 #buttons {
