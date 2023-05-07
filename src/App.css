@@ -39,8 +39,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation Bar */
 
 nav {
-    width:100%;
-    max-height: auto;
+    width: 100%;
+    height: auto;
     display: inline-flex;
     flex-direction: row-reverse;
     overflow:hidden;
@@ -98,9 +98,6 @@ h3 span {
 }
 
 
-ol#questions{
-  margin: 0;
-}
 
 ul.nav_items li.active {
   color: var(--current-page);
@@ -300,7 +297,7 @@ hr {
 
 button#next {
   margin: 1rem;
-  width: 11%;
+  width: 10%;
 }
 
 button#previous {
@@ -444,22 +441,24 @@ button#viewUnanswered {
 
 
 
-@media(max-width: 768px) 
-{
+@media(max-width: 768px) {
 
   html {
     font-size: 1.75vw;
+    overflow-x: hidden;
+  }
+
+
+  nav img {
+    max-width: 23%;
+    object-fit: cover;
   }
 
   nav {
-    height: 4rem;
+    width: 100%;
+    margin: 0;
+    height: auto;
     justify-content: center;
-    align-item: center
-  }
-
-  nav img {
-    max-width: 40%;
-    object-fit: cover;
   }
 
   /* Show a hamburger menu with the navigation items */
@@ -485,7 +484,6 @@ button#viewUnanswered {
     width: 100%;
     align-items: center;
     justify-content: center;
-    /* margin-top: 7.5rem; */
   }
 
   div.coffee{

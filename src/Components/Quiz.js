@@ -168,7 +168,7 @@ class Quiz extends React.Component {
 
     displayNext = () => {
         const { currentPage, end } = this.state;
-        if (currentPage <= this.totalPages) {
+        if (currentPage < this.totalPages) {
             this.setState({
                 currentPage: currentPage + 1,
                 start: end,
@@ -198,8 +198,7 @@ class Quiz extends React.Component {
             });
         }
         else {
-            alert(`You're at the start of the road, my friend.
-                There's no going back from here!`);
+            alert(`You're at the start of the road, my friend. There's no going back from here!`);
         }
     };
 
