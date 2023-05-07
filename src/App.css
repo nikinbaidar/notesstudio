@@ -39,8 +39,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation Bar */
 
 nav {
-    width:100%;
-    max-height: auto;
+    width: 100%;
+    height: auto;
     display: inline-flex;
     flex-direction: row-reverse;
     overflow:hidden;
@@ -451,15 +451,16 @@ button#viewUnanswered {
     font-size: 1.75vw;
   }
 
-  nav {
-    height: 4rem;
-    justify-content: center;
-    align-item: center
-  }
 
   nav img {
-    max-width: 40%;
+    max-width: 23%;
     object-fit: cover;
+  }
+
+  nav {
+    width: 100%;
+    height: auto;
+    justify-content: center;
   }
 
   /* Show a hamburger menu with the navigation items */
@@ -478,14 +479,13 @@ button#viewUnanswered {
   }
 
   #main {
-    width: 95%;
+    width: 100%;
   }
 
   #ads {
     width: 100%;
     align-items: center;
     justify-content: center;
-    /* margin-top: 7.5rem; */
   }
 
   div.coffee{
