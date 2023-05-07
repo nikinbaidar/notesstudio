@@ -7,8 +7,7 @@ import { loadQuiz, loadMsg } from '../dataLoader'
 import Images from './images';
 
 function shuffleArray(array) {
-    const offset = 0.5;
-    array.sort(() => Math.random() - offset);
+    // array.sort(() => Math.random() - 0.5);
     return array;
 }
 
@@ -28,6 +27,8 @@ class Quiz extends React.Component {
         const answerMap = Array.from({totalQuestions}, (_, i) => 
             `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
         const memos = loadMsg();
+        const indexPassed = Math.floor(Math.random()*(memos.pass.length));
+        const indexFailed = Math.floor(Math.random()*(memos.fail.length));
         this.quizData = quizData;
         this.totalPages = (totalQuestions / quesPerPage);
         this.quesPerPage = quesPerPage;
@@ -37,6 +38,8 @@ class Quiz extends React.Component {
         this.totalScore = totalScore;
         this.passMark = (0.5 * totalScore);
         this.memos = memos;
+        this.indexPassed =  indexPassed;
+        this.indexFailed =  indexFailed;
         this.state = {
             currentPage: 1,
             start: 0,
@@ -249,8 +252,6 @@ class Quiz extends React.Component {
         const marksDistribution = (set === 'A')
             ? `1 x ${this.sAQCount} = ${this.sAQCount}` 
             : `2 x ${this.sBQCount} = ${2 * this.sBQCount}` 
-        const indexPassed = Math.floor(Math.random()*(this.memos.pass.length));
-        const indexFailed = Math.floor(Math.random()*(this.memos.fail.length));
         return (
             <>
                 <SEO 
@@ -298,8 +299,8 @@ class Quiz extends React.Component {
                     <h4>
                     Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}
                     <span className={score >= this.passMark ? 'pass' : 'fail'}>
-                        {score >= this.passMark ? this.memos.pass[indexPassed] 
-                            : this.memos.fail[indexFailed]}</span>
+                        {score >= this.passMark ? this.memos.pass[this.indexPassed] 
+                            : this.memos.fail[this.indexFailed]}</span>
                     </h4>
                     </div>
                 }
