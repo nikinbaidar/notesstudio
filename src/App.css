@@ -458,7 +458,8 @@ button#viewUnanswered {
   }
 
   nav {
-    width: 110%;
+    width: 101%;
+    margin: 0;
     height: auto;
     justify-content: center;
   }
