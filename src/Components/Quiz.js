@@ -7,10 +7,13 @@ import { loadQuiz, loadMsg } from '../dataLoader'
 import Images from './images';
 
 function shuffleArray(array) {
-    // array.sort(() => Math.random() - 0.5);
+    /* Fisher's Algorithm */
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
     return array;
 }
-
 
 class Quiz extends React.Component {
 
@@ -48,7 +51,7 @@ class Quiz extends React.Component {
             explainedQuestions: answerMap,
             totalAnswered: 0,
             unanswered: Array.from({length: totalQuestions}, (_, i) => i+1),
-            submitted: false,
+            submitted: true,
             score: 0,
             animate: true,
         }
@@ -62,15 +65,6 @@ class Quiz extends React.Component {
         if (this.state.currentPage !== prevState.currentPage) {
             window.MathJax.typeset();
         }
-    }
-
-    handleClick = () => {
-        const popup = document.getElementsByClassName('popup')[0];
-        popup.classList.toggle("show");
-    };
-
-    onAnimationEnd = () => {
-        this.setState({ animate: false})
     }
 
     renderQues = (question, questionNumber) => {
@@ -134,15 +128,24 @@ class Quiz extends React.Component {
                 })}
                 </ol>
                 </form>
-                {submitted && <button className="buttons expand" type="submit"
-                    onClick={(event) => this.showExplanation(event,
-                        questionKey)}>Explanation</button> }
-                { explained && <p className="explanation"> 
-                    <strong>Explanation: </strong>{question.hint}</p> } 
+                {
+                    submitted &&
+                        <button className="buttons expand" type="submit"
+                        onClick={
+                            (event) => this.showExplanation(event, questionKey)
+                        }>
+                        Explanation
+                        </button> 
+                }
+                {
+                    explained &&
+                        <p className="explanation">
+                        <strong>Explanation: </strong>
+                        {question.hint}</p> 
+                } 
             </React.Fragment>
         );
     };
-
 
     handleRadioChange = (event, questionKey, correctAnswer, points) => {
         const { selOpts, totalAnswered, score, unanswered } = this.state;
@@ -169,7 +172,18 @@ class Quiz extends React.Component {
             unanswered: updatedUnanswered,
         });
         localStorage.setItem(`myRadioValue-${questionKey}`, selectedValue);
+
     };
+
+    showUnanswered = () => {
+        const popup = document.getElementsByClassName('popup')[0];
+        popup.classList.toggle("show");
+    };
+
+    onAnimationEnd = () => {
+        this.setState({ animate: false})
+    }
+
 
     displayNext = () => {
         const { currentPage, end } = this.state;
@@ -268,12 +282,12 @@ class Quiz extends React.Component {
                 {
                     submitted && 
                     <div className="result">
-                    <h4>
-                    Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}
-                    <span className={score >= this.passMark ? 'pass' : 'fail'}>
-                        {score >= this.passMark ? this.memos.pass[this.indexPassed] 
-                            : this.memos.fail[this.indexFailed]}</span>
-                    </h4>
+                        <h4>
+                        Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}
+                        <span className={score >= this.passMark ? 'pass' : 'fail'}>
+                            {score <= this.passMark ? this.memos.pass[this.indexPassed] 
+                                : this.memos.fail[this.indexFailed]}</span>
+                        </h4>
                     </div>
                 }
                 <h3>
@@ -292,7 +306,7 @@ class Quiz extends React.Component {
                 <h4>Answered: {totalAnswered} / {this.totalQuestions}</h4>
                 <div>
                     <button id="viewUnanswered" type="submit"
-                        onClick={this.handleClick}>{`See what's unanswered`}
+                        onClick={this.showUnanswered}>{`See what's unanswered`}
                     </button>
                     <div className="popup">
                         <ul className={`comma-list ${animate ? 'animate' :

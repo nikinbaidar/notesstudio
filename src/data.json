@@ -1333,8 +1333,11 @@
             "Congratulations! You've passed",
             "Awesome work! you've passed",
             "Victory is yours!",
-            "You can bask in glory now",
-            "Way to go! you've achieved the ultimate goal"
+            "Wow, you passed! Are you sure you're not cheating?",
+            "I'd be impressed if you weren't such a sore winner. Just kidding, congrats!",
+            "I'll let you have this win as long as you promise to buy me a drink.",
+            "You must have cheated because there's no way you passed fairly.",
+            "You're welcom for the pity points"
         ],
         "fail" : [
             "Oopsie daisy, looks like you missed the mark",
@@ -1346,6 +1349,13 @@
             "So close, yet so far!",
             "Well, that didn't go as planned",
             "Uh-oh, you'll have to try again",
+            "You almost had it...almost",
+            "You're doing great... if your goal to to fail",
+            "I'm not saying you're bad, but...",
+            "This quiz was just a warm-up, right?",
+            "Let's hope you don't loose sleep over this one.",
+            "You're not bad... you're just not good enough.",
+            "Don't worry, it's just a quiz... or is it?",
             "Not quite the result we were hoping for!"
         ]
     }
