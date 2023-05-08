@@ -51,7 +51,7 @@ class Quiz extends React.Component {
             explainedQuestions: answerMap,
             totalAnswered: 0,
             unanswered: Array.from({length: totalQuestions}, (_, i) => i+1),
-            submitted: true,
+            submitted: false,
             score: 0,
             animate: true,
         }
