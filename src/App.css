@@ -19,10 +19,15 @@
   --dark-purple: #2E3459;
   --light-purple: #686F9A;
   --white: #ECF0C1;
+  --heading-size: 1.5rem;
+
+
 }
 
-html {
+html, body {
   font-size: 1vw;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -137,7 +142,7 @@ section {
 
 .subtopics {
   color: var(--white);
-  font: lighter 1.08rem 'monospace';
+  font: lighter 1.08rem 'Fira Code', monospace;
   list-style-type: none;
   margin: 0 ;
   margin-bottom: 0.90rem;
@@ -255,32 +260,40 @@ div.coffee img {
 /* Quiz */
 
 li.questions, .choices { 
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
-li.questions { 
+li.questions:not(:first-child) { 
   margin-top: 2rem;
 }
 
 .choices {
-  margin: 5px;
-  list-style-type: lower-alpha;
+  padding: 0 5px;
 }
 
 .choices li {
-  position: relative;
-  padding: 3px;
+  counter-increment: my-counter;
+  padding: 2px;
+  display:flex;
 }
 
+.choices label {
+  /* content: counter(my-counter, lower-alpha) ". "; */
+  display: flex;
+}
+
+
 input[type="radio"] {
-  position: absolute; 
-  top: 40%; 
-  transform: translateY(-50%); 
-  left: -40px; 
+  transform: scale(0.8);
+  align-self: flex-start;
+  margin-top: 0.3rem;
+  margin-right: 5px;
 }
 
 #buttons {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
@@ -297,18 +310,18 @@ hr {
 
 button#next {
   margin: 1rem;
-  width: 10%;
+  min-width: 65px;
 }
 
 button#previous {
   margin: 1rem;
-  width: 11%;
+  min-width: 65px;
 }
 
 button#submit{
   background-color: var(--orange);
   margin: 1rem;
-  width: 15%;
+  width: auto;
   margin-left: auto;
 }
 
@@ -444,10 +457,9 @@ button#viewUnanswered {
 @media(max-width: 768px) {
 
   html {
-    font-size: 1.75vw;
     overflow-x: hidden;
+    /* font-size: 1rem; */
   }
-
 
   nav img {
     max-width: 23%;
@@ -477,7 +489,8 @@ button#viewUnanswered {
   }
 
   #main {
-    width: 100%;
+    width: 95%;
+    font-size: 3.0rem;
   }
 
   #ads {
@@ -495,6 +508,144 @@ button#viewUnanswered {
   div.coffee p {
     display: none;
   }
+
+  /* Quiz */
+
+  ol {
+    padding-left: 8rem;
+  }
+
+  li.questions, .choices
+  { 
+    font-size: 3rem;
+  }
+
+  li.questions { 
+    margin-top: 2rem;
+  }
+
+  li.questions:not(:first-child) { 
+    margin-top: 5rem;
+  }
+
+  input[type="radio"] {
+    margin-top: 1rem;
+  }
+
+  button#submit{
+    background-color: var(--orange);
+    margin: 1rem;
+    width: auto;
+    margin-left: auto;
+  }
+
+
+  .feedback {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-left: 5px;
+  }
+
+
+  #expand {
+    background-color: var(--green);
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    margin-left: 1.5rem;
+  }
+
+  .buttons.expand {
+    background-color: var(--green);
+    color: white;
+  }
+
+  .expand::before {
+    content: "\25B6";
+    margin-right: 8px;
+  }
+
+  .expand.expanded::before {
+    content: "\25BC";
+    margin-right: 8px;
+  }
+
+  .explanation {
+    color: gray;
+    border: 1px solid var(--green);
+    padding: 10px;
+    margin-left: 1.5rem;
+    width: 90%;
+    transform: scale(1);
+    animation: zoomIn 500ms ease-in-out;
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0); }
+    to   { transform: scale(1); }
+  }
+
+  button#viewUnanswered {
+    /* width: 20%; */
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    color: var(--blue);
+    border: none;
+    cursor: pointer;
+  }
+
+  .popup {
+    position: relative;
+    z-index: 1;
+    display: none;
+    background-color: var(--soft-blue);
+    width: 250px;
+    height: 250px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 1rem;
+    margin: 1rem;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .popup.show {
+    display: block;
+  }
+
+  .comma-list {
+    list-style-type: none; 
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  .comma-list li {
+    display: inline-block;
+    margin: 2px;
+    padding: 8px;
+  }
+
+  .animate li {
+    animation: zoomIn 500ms ease-in-out;
+  }
+
+
+  .comma-list li:last-child {
+    margin-right: 0; /* Remove the margin from the last item */
+
+  }
+
+  .comma-list li::after {
+    content: ","; /* Add empty content after each list item */
+  }
+
+  .comma-list li:last-child::after {
+    content: ""; /* Add empty content after each list item */
+  }
+
+
 
 }
 

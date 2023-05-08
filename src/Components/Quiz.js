@@ -86,6 +86,7 @@ class Quiz extends React.Component {
         const hasFigure = (question.fig !== undefined);
         const explained = (explainedQuestions[questionKey] === true);
         const correctAnswer = question.options[question.ansKey];
+        const x = ["a.", "b.", "c.", "d."];
 
         return (
             <React.Fragment key={questionKey}>
@@ -122,8 +123,12 @@ class Quiz extends React.Component {
                                 questionKey, correctAnswer, question.points)}
                             disabled={submitted}
                         />
-                        <label htmlFor={choiceId}><span>{choice}</span>
-                            {submitted && isChecked && <Feedback />}</label>
+                        <label htmlFor={choiceId}>
+                        <span style={{marginRight: '5px' }}>
+                        {x[index]}
+                        </span>
+                        <span>{choice}</span>
+                        {submitted && isChecked && <Feedback />}</label>
                         </li>
                     );
                 })}
@@ -260,6 +265,17 @@ class Quiz extends React.Component {
                     type="article" 
                 />
                 <h1>{this.props.heading}</h1>
+                {
+                    submitted && 
+                    <div className="result">
+                    <h4>
+                    Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}
+                    <span className={score >= this.passMark ? 'pass' : 'fail'}>
+                        {score >= this.passMark ? this.memos.pass[this.indexPassed] 
+                            : this.memos.fail[this.indexFailed]}</span>
+                    </h4>
+                    </div>
+                }
                 <h3>
                     <span>Group {set}</span>
                     <span>({marksDistribution})</span>
@@ -292,17 +308,6 @@ class Quiz extends React.Component {
                 </div>
                 <button id="submit" className="buttons" type="submit"
                 onClick={this.handleSubmit}>Submit</button>
-                {
-                    submitted && 
-                    <div className="result">
-                    <h4>
-                    Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}
-                    <span className={score >= this.passMark ? 'pass' : 'fail'}>
-                        {score >= this.passMark ? this.memos.pass[this.indexPassed] 
-                            : this.memos.fail[this.indexFailed]}</span>
-                    </h4>
-                    </div>
-                }
             </>
         );
     };
