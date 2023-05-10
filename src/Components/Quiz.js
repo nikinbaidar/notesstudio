@@ -121,8 +121,9 @@ class Quiz extends React.Component {
                         <span style={{marginRight: '5px' }}>
                         {x[index]}
                         </span>
-                        <span>{choice}</span>
-                        {submitted && isChecked && <Feedback />}</label>
+                        <span>{choice}
+                        {submitted && isChecked && <Feedback />}</span>
+                        </label>
                         </li>
                     );
                 })}
@@ -281,16 +282,14 @@ class Quiz extends React.Component {
                 <h1>{this.props.heading}</h1>
                 {
                     submitted && 
-                    <div className="result">
-                        <h4>
-                        Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}
+                    <div id="result">
+                        <span id="score">Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}</span>
                         <span className={score >= this.passMark ? 'pass' : 'fail'}>
-                            {score <= this.passMark ? this.memos.pass[this.indexPassed] 
+                            {score >= this.passMark ? this.memos.pass[this.indexPassed] 
                                 : this.memos.fail[this.indexFailed]}</span>
-                        </h4>
                     </div>
                 }
-                <h3>
+                <h3 id="set">
                     <span>Group {set}</span>
                     <span>({marksDistribution})</span>
                 </h3>

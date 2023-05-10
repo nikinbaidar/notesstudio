@@ -83,10 +83,22 @@ a:visited {
   text-decoration: none;
 }
 
-h3, h4 {
+#result{
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 700;
 }
+
+#result span{
+  flex-grow: 5000;
+  flex-basis: 0;
+}
+
+span#score{
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
 
 .pass {
   color: green;
@@ -97,7 +109,12 @@ h3, h4 {
   color: red;
   margin-left: 8px;
 }
-h3 span {
+
+h3#set{
+  display: flex;
+}
+
+h3#set span {
   margin-left: auto;
   text-align: right;
 }
@@ -328,8 +345,9 @@ button#submit{
 
 .feedback {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding-left: 5px;
+  display: inline;
 }
 
 .feedback.correct{

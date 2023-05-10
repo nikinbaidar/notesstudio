@@ -298,7 +298,7 @@
                 "hint": "Paracrine enzymes are signaling molecules that are secreted by cells to act on nearby cells, usually within the same tissue or organ."
             },
             {
-                "name" : "Which of the following amino acids posses a charge?",
+                "name" : "Which of the following amino acids does not posses charge?",
                 "points": 2,
                 "chapter" : "1.2",
                 "options": [
@@ -311,7 +311,7 @@
                 "hint": "Glycine is a non-polar amino acid, meaning that it has a neutral charge and is not attracted to charged molecules. In contrast, Arginine, Lysine, and Histidine are polar amino acids that possess a positive charge at physiological pH."
             },
             {
-                "name": "Which of the following cannot be considered a neuro gial cell?",
+                "name": "Which of the following cannot be considered a neuro glial cell?",
                 "points": 1,
                 "chapter": "1.3",
                 "options": [
