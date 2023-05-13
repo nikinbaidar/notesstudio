@@ -24,6 +24,9 @@ class Navigation extends React.Component {
     showLeftSideBar = () => {
         const leftsidebar = document.getElementById('leftsidebar');
         leftsidebar.classList.toggle('active');
+        leftsidebar.classList.toggle('inactive');
+        const overlay = document.querySelector('section > div.overlay');
+        overlay.classList.toggle('active');
     }
 
     render() {
@@ -32,10 +35,10 @@ class Navigation extends React.Component {
             <ul className="nav_items"
             onClick={this.handleClick}>{this.navBar}</ul>
             <img src={require("../logo.png")} alt="site logo"/>
-            <div class="menu-btn" onClick={this.showLeftSideBar}>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
+            <div className="menu-btn" onClick={this.showLeftSideBar}>
+                <span className="hamburger"></span>
+                <span className="hamburger"></span>
+                <span className="hamburger"></span>
             </div>
             </nav>
         );

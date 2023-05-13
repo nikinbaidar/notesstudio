@@ -5,6 +5,14 @@ import { loadSideBar } from '../dataLoader';
 
 class Sidebar extends React.Component {
 
+    hideLeftSideBar = () => {
+        const leftsidebar = document.getElementById('leftsidebar');
+        const overlay = document.querySelector('section > div.overlay');
+        leftsidebar.classList.toggle('active');
+        leftsidebar.classList.toggle('inactive');
+        overlay.classList.toggle('active');
+    }
+
     render() {
         const chapters = loadSideBar().map((item) => {
             const elem = {
@@ -15,7 +23,8 @@ class Sidebar extends React.Component {
                     return (
                         <li key={lessonId}>
                         <NavLink to={lesson.path} style={({ isActive }) => ({
-                        textDecoration: isActive ? 'none' : 'none' })}>
+                        textDecoration: isActive ? 'none' : 'none' })}
+                        onClick={this.hideLeftSideBar}>
                         {lesson.title}
                         </NavLink>
                         </li>
@@ -30,7 +39,7 @@ class Sidebar extends React.Component {
             )
         });
         return(
-            <div id="leftsidebar">
+            <div id="leftsidebar" className="inactive">
                 <ul className="headings">{chapters}</ul>
             </div>
         );
