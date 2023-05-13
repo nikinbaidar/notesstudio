@@ -20,8 +20,6 @@
   --light-purple: #686F9A;
   --white: #ECF0C1;
   --heading-size: 1.5rem;
-
-
 }
 
 html, body {
@@ -479,13 +477,11 @@ button#viewUnanswered {
 
 .faq {
   list-style-type: none;
-  font: 1.1rem 'Fira Code';
   display: flex;
 }
 
-.disclaimer {
-  font-family: 'Fira Code';
-  font-size: 2.5rem;
+.disclaimer, .faq {
+  font: 1.1rem 'Fira Code';
 }
 
 .faq::before {
@@ -503,8 +499,7 @@ button#viewUnanswered {
 
 
 
-@media(max-width: 768px) 
-{
+@media(max-width: 768px) {
 
   html {
     overflow-x: hidden;
@@ -781,8 +776,8 @@ button#viewUnanswered {
     content: ""; /* Add empty content after each list item */
   }
 
-  .faq {
-    font: 2.5rem 'Fira Code';
+  .faq, .disclaimer {
+    font-size: 2.5rem;
   }
 
 }
