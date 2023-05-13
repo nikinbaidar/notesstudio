@@ -279,6 +279,10 @@
                     "path": "/"
                 },
                 {
+                    "title": "Disclaimer",
+                    "path": "/disclaimer"
+                },
+                {
                     "title": "FAQ",
                     "path": "/faq"
                 }
@@ -1366,12 +1370,12 @@
 
     "faq" : [
         {
-            "question" : "This is a question",
-            "answer" : "This is the answer"
+            "question" : "What is the source of the content of the quizzes?",
+            "answer" : "The original source of the quiz content is based on the input and recollection of individuals who have taken the exam."
         },
         {
-            "question" : "This is a question",
-            "answer" : "This is the answer"
+            "question" : "Is the authenticity of the quizzes verified?",
+            "answer" : "See the question above."
         }
     ]
 } 

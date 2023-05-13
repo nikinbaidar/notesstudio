@@ -472,10 +472,10 @@ button#viewUnanswered {
 
 /* FAQ */
 
-
 .faq {
   list-style-type: none;
-  font: 1.2rem 'Fira Code';
+  font: 1.1rem 'Fira Code';
+  display: flex;
 }
 
 .faq::before {
@@ -492,14 +492,11 @@ button#viewUnanswered {
 
 
 
-/* MEDIA */
-
-
-@media(max-width: 768px) {
+@media(max-width: 768px) 
+{
 
   html {
     overflow-x: hidden;
-    /* font-size: 1rem; */
   }
 
   nav img {
@@ -695,7 +692,9 @@ button#viewUnanswered {
     content: ""; /* Add empty content after each list item */
   }
 
-
+  .faq {
+    font: 2.5rem 'Fira Code';
+  }
 
 }
 
