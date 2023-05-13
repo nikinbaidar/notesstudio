@@ -21,12 +21,22 @@ class Navigation extends React.Component {
         return <li className={elem.class} key={elem.id}>{elem.label}</li>;
     });
 
+    showLeftSideBar = () => {
+        const leftsidebar = document.getElementById('leftsidebar');
+        leftsidebar.classList.toggle('active');
+    }
+
     render() {
         return(
             <nav>
             <ul className="nav_items"
             onClick={this.handleClick}>{this.navBar}</ul>
             <img src={require("../logo.png")} alt="site logo"/>
+            <div class="menu-btn" onClick={this.showLeftSideBar}>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
             </nav>
         );
     }

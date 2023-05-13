@@ -55,6 +55,11 @@ nav {
     padding: 0;
     color: var(--nav-heading);
     background-color: var(--dark-purple);
+
+}
+
+.menu-btn {
+  display: none;
 }
 
 nav img{
@@ -127,11 +132,11 @@ ul.nav_items li.active {
 
 section {
   width: 100%;
-  /* height: auto; */
   display: flex;
   margin: 0;
   padding: 0;
 }
+
 
 #leftsidebar {
   width: 25%;
@@ -459,7 +464,6 @@ button#viewUnanswered {
 
 .comma-list li:last-child {
   margin-right: 0; /* Remove the margin from the last item */
-
 }
 
 .comma-list li::after {
@@ -499,19 +503,39 @@ button#viewUnanswered {
     overflow-x: hidden;
   }
 
-  nav img {
-    max-width: 23%;
-    object-fit: cover;
-  }
-
   nav {
     width: 100%;
     margin: 0;
     height: auto;
-    justify-content: center;
+    align-items: center;
+  }
+
+  nav img {
+    max-width: 23%;
+    object-fit: cover;
+    margin: 0 auto;
   }
 
   /* Show a hamburger menu with the navigation items */
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    width: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    height: 3px;
+    margin-bottom: 4px;
+    background-color: #c7c9d1;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .hamburger:last-child {
+    margin-bottom: 0; /* Remove the margin from the last item */
+  }
 
   nav ul {
     display: none;
@@ -520,13 +544,36 @@ button#viewUnanswered {
   section {
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
 
+  /* LeftSideBar */
+
   section #leftsidebar {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* transform: translateX(-100%); */
+  }
+
+  #leftsidebar.active{
+    display: inline-block;
+    transform: translateX(0);
+    animation: slideInFromLeft 0.5s ease-in-out;
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 
   #main {
+    z-index: 2;
     width: 95%;
     font-size: 3.0rem;
   }
@@ -548,7 +595,7 @@ button#viewUnanswered {
     display: none;
   }
 
-/* Copyright */
+  /* Copyright */
 
   .copyright-info{
     font-size: 2.5rem;
