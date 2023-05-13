@@ -277,6 +277,10 @@
                 {
                     "title": "2079 Chaitra",
                     "path": "/"
+                },
+                {
+                    "title": "FAQ",
+                    "path": "/faq"
                 }
             ]
         }
@@ -1358,7 +1362,18 @@
             "Don't worry, it's just a quiz... or is it?",
             "Not quite the result we were hoping for!"
         ]
-    }
+    },
+
+    "faq" : [
+        {
+            "question" : "This is a question",
+            "answer" : "This is the answer"
+        },
+        {
+            "question" : "This is a question",
+            "answer" : "This is the answer"
+        }
+    ]
 } 
 
 

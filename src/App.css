@@ -470,6 +470,29 @@ button#viewUnanswered {
   content: ""; /* Add empty content after each list item */
 }
 
+/* FAQ */
+
+
+.faq {
+  list-style-type: none;
+  font: 1.2rem 'Fira Code';
+}
+
+.faq::before {
+  margin-right: 5px;
+}
+
+.faq.q::before {
+  content: "Q:";
+}
+
+.faq.a::before {
+  content: "A:";
+}
+
+
+
+/* MEDIA */
 
 
 @media(max-width: 768px) {
@@ -515,16 +538,24 @@ button#viewUnanswered {
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
   }
 
   div.coffee{
-    width: 20%;
-    margin: 1rem;
-    margin: 1rem auto;
+    height: auto;
+    width: 30%;
+    margin: 0 auto;
   }
 
   div.coffee p {
     display: none;
+  }
+
+/* Copyright */
+
+  .copyright-info{
+    font-size: 2.5rem;
+    height: auto;
   }
 
   /* Quiz */
@@ -560,8 +591,8 @@ button#viewUnanswered {
 
   .feedback {
     font-weight: bold;
-    font-size: calc(1.3rem * 2);
-    padding-left: calc(5px *2);
+    font-size: calc(1.3rem * 2.4);
+    padding-left: calc(3px *2);
     margin-top: 0.4rem;
   }
 

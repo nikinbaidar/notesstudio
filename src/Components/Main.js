@@ -1,9 +1,11 @@
-import Quiz from './Quiz.js'
-import Semesters from './Home.js'
+import Quiz from './Quiz'
+import Semesters from './Home'
+import Faq from './FAQ'
 
 const Main = {
     Quiz,
-    Semesters
+    Faq,
+    Semesters,
 }
 
 export default Main;

@@ -19,3 +19,7 @@ export function loadQuiz(questionSet) {
 export function loadMsg() {
   return data.memos;
 }
+
+export function loadFAQ() {
+  return data.faq;
+}
