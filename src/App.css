@@ -166,10 +166,9 @@ section {
 
 #main {
   width: 80%;
-  height: 100%;
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
+  flex: 1 0 100%;
   padding: 3rem;
   margin: 0;
 }
