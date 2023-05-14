@@ -1370,12 +1370,16 @@
 
     "faq" : [
         {
-            "question" : "What is the source of the content of the quizzes?",
-            "answer" : "The content of the quizzes included in the website is based on the input and recollection of individuals who have taken the exam."
+            "question" : "What is the source for the content of the quizzes?",
+            "answer" : "The content of the quizzes included in this site is based on the input and recollection of individuals who have taken the exam."
         },
         {
             "question" : "Is the authenticity of the quizzes verified?",
             "answer" : "See the question above."
+        },
+        {
+            "question" : "How can I contribute?",
+            "answer" : "If you are someone who's appeared in the license exam, you can help by posting questions. See contact information at the bottom of this page."
         }
     ]
 } 

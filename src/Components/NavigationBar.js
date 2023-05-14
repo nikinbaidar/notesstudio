@@ -2,8 +2,34 @@ import  React from 'react';
 
 import { loadNavigationBar } from '../dataLoader';
 
-
 class Navigation extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            showMenu: false,
+        }
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+
+        if (this.state.showMenu !== prevState.showMenu) {
+            const { showMenu } = this.state;
+            const overlay = document.querySelector('section > div.overlay');
+            const leftsidebar = document.getElementById('leftsidebar');
+            if (showMenu === true) {
+                leftsidebar.classList.add('active');
+                overlay.classList.add('active');
+                leftsidebar.classList.remove('inactive');
+            }
+            else {
+                leftsidebar.classList.add('inactive');
+                leftsidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+
+    }; 
 
     handleClick(event) {
         /* Deactive the current active element */
@@ -21,12 +47,11 @@ class Navigation extends React.Component {
         return <li className={elem.class} key={elem.id}>{elem.label}</li>;
     });
 
-    showLeftSideBar = () => {
-        const leftsidebar = document.getElementById('leftsidebar');
-        leftsidebar.classList.toggle('active');
-        leftsidebar.classList.toggle('inactive');
-        const overlay = document.querySelector('section > div.overlay');
-        overlay.classList.toggle('active');
+    handleMenuClick = () => {
+        const { showMenu } = this.state;
+        this.setState({
+            showMenu: !showMenu,
+        });
     }
 
     render() {
@@ -35,7 +60,7 @@ class Navigation extends React.Component {
             <ul className="nav_items"
             onClick={this.handleClick}>{this.navBar}</ul>
             <img src={require("../logo.png")} alt="site logo"/>
-            <div className="menu-btn" onClick={this.showLeftSideBar}>
+            <div className="menu-btn" onClick={this.handleMenuClick}>
                 <span className="hamburger"></span>
                 <span className="hamburger"></span>
                 <span className="hamburger"></span>

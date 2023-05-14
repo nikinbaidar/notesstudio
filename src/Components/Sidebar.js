@@ -39,7 +39,7 @@ class Sidebar extends React.Component {
             )
         });
         return(
-            <div id="leftsidebar" className="inactive">
+            <div id="leftsidebar">
                 <ul className="headings">{chapters}</ul>
             </div>
         );
