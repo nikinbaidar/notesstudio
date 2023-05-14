@@ -556,7 +556,6 @@ button#viewUnanswered {
     flex-direction: column;
     position: relative;
     align-items: center;
-    flex-basis: 100%;
   }
 
   #leftsidebar {
@@ -611,6 +610,7 @@ button#viewUnanswered {
   #main {
     width: 95%;
     font-size: 3.0rem;
+    flex-grow: 1;
   }
 
   #ads {
