@@ -38,6 +38,9 @@
   to { transform: translateX(-100%); }
 }
 
+#root {
+  height: 100vh;
+}
 
 
 
@@ -775,7 +778,10 @@ button#viewUnanswered {
 }
 
 @media only screen and (max-width: 600px) {
-  /* CSS rules for mobile phones */
+
+  .menu-btn {
+    margin: 3rem;
+  }
   #leftsidebar {
     width: 48%;
   }
