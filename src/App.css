@@ -119,7 +119,7 @@ ul.nav_items li.active {
 
 section {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   margin: 0;
   padding: 0;
