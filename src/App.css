@@ -46,7 +46,6 @@ body {
   font-size: 1vw;
   max-width: 100%;
   overflow-x: hidden;
-  height: 100%;
 }
 
 body {
@@ -54,6 +53,11 @@ body {
   background-color: var(--background);
   padding: 0;
   margin: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 h1,
