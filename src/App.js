@@ -17,6 +17,14 @@ class App extends React.Component {
         this.helmetContext = {};
     }
 
+    hideLeftSideBar = () => {
+        const leftsidebar = document.getElementById('leftsidebar');
+        const overlay = document.querySelector('section > div.overlay');
+        leftsidebar.classList.toggle('active');
+        leftsidebar.classList.toggle('inactive');
+        overlay.classList.toggle('active');
+    }
+
     render() {
         return (
             <HelmetProvider context={this.helmetContext}>
@@ -35,7 +43,7 @@ class App extends React.Component {
                 </div>
                 </BrowserRouter>
             <Advertisements/>
-            <div className="overlay"></div>
+            <div className="overlay" onClick={this.hideLeftSideBar}></div>
             </section>
             <Copyright/>
             </HelmetProvider>
