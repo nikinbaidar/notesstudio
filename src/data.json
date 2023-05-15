@@ -279,10 +279,6 @@
                     "path": "/"
                 },
                 {
-                    "title": "Disclaimer",
-                    "path": "/disclaimer"
-                },
-                {
                     "title": "FAQ",
                     "path": "/faq"
                 }

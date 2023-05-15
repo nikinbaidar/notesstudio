@@ -299,7 +299,6 @@ span#score{
   flex-grow: 1;
 }
 
-
 .pass {
   color: green;
   margin-left: 8px;
@@ -333,6 +332,8 @@ li.questions:not(:first-child) {
 .choices {
   padding: 0 5px;
   margin-top: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .choices li {
@@ -348,7 +349,7 @@ div#answers {
 
 input[type="radio"] {
   align-self: baseline;
-  margin: 4px 5px 0 0;
+  margin: 3.50px 5px 0 0;
 }
 
 .choices label {
@@ -659,7 +660,7 @@ button#viewUnanswered {
   }
 
   input[type="radio"] {
-    margin-top: 1rem;
+    margin-top: 1.3rem;
   }
 
   button#submit {
@@ -792,4 +793,9 @@ button#viewUnanswered {
   .subtopics {
     font-size: calc(1vw + 2.5rem);
   }
+
+  input[type="radio"] {
+    margin-top: 2px;
+  }
+
 }
