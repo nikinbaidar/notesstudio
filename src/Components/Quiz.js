@@ -107,23 +107,25 @@ class Quiz extends React.Component {
                     return (
                         <li key={choiceId} className={(isCorrect && submitted) 
                             ? "submitted correct" : null}>
-                        <input 
-                            type="radio" 
-                            name={question.name} 
-                            id={choiceId}
-                            value={choice}
-                            checked={isChecked}
-                            onChange={(event) => this.handleRadioChange(event,
-                                questionKey, correctAnswer, question.points)}
-                            disabled={submitted}
-                        />
-                        <label htmlFor={choiceId}>
-                        <span style={{marginRight: '5px' }}>
-                        {x[index]}
-                        </span>
-                        <span>{choice}
-                        {submitted && isChecked && <Feedback />}</span>
-                        </label>
+                        <div id="answers">
+                            <input 
+                                type="radio" 
+                                name={question.name} 
+                                id={choiceId}
+                                value={choice}
+                                checked={isChecked}
+                                onChange={(event) => this.handleRadioChange(event,
+                                    questionKey, correctAnswer, question.points)}
+                                disabled={submitted}
+                            />
+                            <label htmlFor={choiceId}>
+                            <span style={{marginRight: '5px' }}>
+                            {x[index]}
+                            </span>
+                            <span>{choice}
+                            {submitted && isChecked && <Feedback />}</span>
+                            </label>
+                        </div>
                         </li>
                     );
                 })}
@@ -260,11 +262,10 @@ class Quiz extends React.Component {
             start,
             end,
             currentPage,
-            totalAnswered,
             submitted,
             score,
             unanswered,
-            animate
+            animate,
         } = this.state;
         const questions = this.quizData.slice(start, end).map(this.renderQues);
         const set = (currentPage <= this.sAQCount/this.quesPerPage) ? 'A':'B';
@@ -302,7 +303,7 @@ class Quiz extends React.Component {
                     onClick={this.displayPrevious}>Previous</button>
                 </div>
                 <hr/>
-                <h4>Answered: {totalAnswered} / {this.totalQuestions}</h4>
+                <h4>Answered: {this.totalQuestions - unanswered.length} / {this.totalQuestions}</h4>
                 <div>
                     <button id="viewUnanswered" type="submit"
                         onClick={this.showUnanswered}>{`See what's unanswered`}
