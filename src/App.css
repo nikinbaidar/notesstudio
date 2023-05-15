@@ -547,6 +547,10 @@ button#viewUnanswered {
     transition: transform 0.3s ease-in-out;
   }
 
+  .menu-btn:hover .hamburger {
+    background-color: #fff;
+  }
+
   .hamburger:last-child {
     margin-bottom: 0;
   }
