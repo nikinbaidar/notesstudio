@@ -11,25 +11,21 @@ class Navigation extends React.Component {
         }
     }
 
-    componentDidUpdate(prevProps, prevState) {
-
-        if (this.state.showMenu !== prevState.showMenu) {
-            const { showMenu } = this.state;
-            const overlay = document.querySelector('section > div.overlay');
-            const leftsidebar = document.getElementById('leftsidebar');
-            if (showMenu === true) {
-                leftsidebar.classList.add('active');
-                overlay.classList.add('active');
-                leftsidebar.classList.remove('inactive');
-            }
-            else {
-                leftsidebar.classList.add('inactive');
-                leftsidebar.classList.remove('active');
-                overlay.classList.remove('active');
-            }
+    handleMenuClick = () => {
+        const overlay = document.querySelector('section > div.overlay');
+        const leftsidebar = document.getElementById('leftsidebar');
+        if (leftsidebar.classList.contains('active') !== true) {
+            leftsidebar.classList.add('active');
+            overlay.classList.add('active');
+            leftsidebar.classList.remove('inactive');
+        }
+        else {
+            leftsidebar.classList.add('inactive');
+            leftsidebar.classList.remove('active');
+            overlay.classList.remove('active');
         }
 
-    }; 
+    }
 
     handleClick(event) {
         /* Deactive the current active element */
@@ -46,13 +42,6 @@ class Navigation extends React.Component {
         };
         return <li className={elem.class} key={elem.id}>{elem.label}</li>;
     });
-
-    handleMenuClick = () => {
-        const { showMenu } = this.state;
-        this.setState({
-            showMenu: !showMenu,
-        });
-    }
 
     render() {
         return(

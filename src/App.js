@@ -20,9 +20,9 @@ class App extends React.Component {
     hideLeftSideBar = () => {
         const leftsidebar = document.getElementById('leftsidebar');
         const overlay = document.querySelector('section > div.overlay');
-        leftsidebar.classList.toggle('active');
-        leftsidebar.classList.toggle('inactive');
-        overlay.classList.toggle('active');
+        leftsidebar.classList.remove('active');
+        leftsidebar.classList.add('inactive');
+        overlay.classList.remove('active');
     }
 
     render() {
