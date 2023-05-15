@@ -541,7 +541,9 @@ button#viewUnanswered {
     display: flex;
     flex-direction: column;
     margin: 1.5rem;
-    width: 20px;
+    width: 27px;
+    background-color: transparent;
+    border: none;
   }
 
   .hamburger {

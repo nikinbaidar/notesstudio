@@ -49,11 +49,11 @@ class Navigation extends React.Component {
             <ul className="nav_items"
             onClick={this.handleClick}>{this.navBar}</ul>
             <img src={require("../logo.png")} alt="site logo"/>
-            <div className="menu-btn" onClick={this.handleMenuClick}>
+            <button className="menu-btn" onClick={this.handleMenuClick}>
                 <span className="hamburger"></span>
                 <span className="hamburger"></span>
                 <span className="hamburger"></span>
-            </div>
+            </button>
             </nav>
         );
     }
