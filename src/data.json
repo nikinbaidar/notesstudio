@@ -835,7 +835,7 @@
                     "Large DC loads",
                     "Small AC loads"
                 ],
-                "ansKey": 3,
+                "ansKey": 1,
                 "hint": "Two generators are typically connected in parallel to supply power to large AC loads. This is because large AC loads require high power, and a single generator may not be able to meet the demand alone. By connecting multiple generators in parallel, their power outputs are combined, increasing the overall power capacity of the system. In this way, the generators can work together to supply the large AC loads with the necessary power. It cannot be large DC loads because DC loads are supplied by batterires or inverters not generators."
             },
             {
@@ -1359,7 +1359,7 @@
             "Well, that didn't go as planned",
             "Uh-oh, you'll have to try again",
             "You almost had it...almost",
-            "You're doing great... if your goal to to fail",
+            "You're doing great... if your goal is to fail",
             "I'm not saying you're bad, but...",
             "This quiz was just a warm-up, right?",
             "Let's hope you don't loose sleep over this one.",
