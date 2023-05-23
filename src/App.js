@@ -31,7 +31,7 @@ class App extends React.Component {
             <Navigation/>
             <section>
             <BrowserRouter>
-                <Sidebar/>
+                <Sidebar page="home"/>
                 <div id="main">
                 <Routes>
                     <Route path="/" element={<Main.Quiz name="2079pastQuestions"

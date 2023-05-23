@@ -5,6 +5,11 @@ import { loadSideBar } from '../dataLoader';
 
 class Sidebar extends React.Component {
 
+    constructor(props) { 
+        super(props);
+        this.headings = loadSideBar();
+    }
+
     hideLeftSideBar = () => {
         const leftsidebar = document.getElementById('leftsidebar');
         const overlay = document.querySelector('section > div.overlay');
@@ -14,7 +19,7 @@ class Sidebar extends React.Component {
     }
 
     render() {
-        const chapters = loadSideBar().map((item) => {
+        const chapters = this.headings.map((item) => {
             const elem = {
                 id: crypto.randomUUID(),
                 label: item.chapter,
