@@ -61,7 +61,7 @@ class Quiz extends React.Component {
         window.MathJax.typeset();
     }; 
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevState) {
         if (this.state.currentPage !== prevState.currentPage) {
             window.MathJax.typeset();
         }

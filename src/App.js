@@ -2,12 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-import Navigation from './Components/NavigationBar';
-import Sidebar from './Components/Sidebar';
-import Main from './Components/Main';
-import Advertisements  from './Components/Ads';
-import Copyright from './Components/Copyright';
-
+import  Components  from './Components/MyComponents';
+import { getRoutes } from './dataLoader';
 import './App.css';
 
 class App extends React.Component {
@@ -25,29 +21,72 @@ class App extends React.Component {
         overlay.classList.remove('active');
     }
 
+    mapComponent = (namespace, component, p) => {
+        let Members;
+
+        switch (namespace) {
+            case "Main":
+                {
+                    Members = {
+                        "Faq" : <Components.Faq title={p.title} />,
+                        "Semesters" : <Components.Semesters name={p.name} title={p.title} />,
+                        "Quiz" : <Components.Quiz name={p.name} title={p.title} heading={p.heading} />,
+                    }
+                    break;
+                }
+            case "Copyright":
+                {
+                    Members = {
+                        "Terms" : <h1>Hello, World!</h1>
+                    }
+                    break;
+                }
+            default: 
+                return null;
+        }
+
+        return Members[component];
+
+    }
+
+
+    defineRoutes = (namespace) => {
+        const namespaceRoutes = getRoutes(namespace);
+        const routes = namespaceRoutes.map((item, index) => {
+            const elem = { 
+                id: crypto.randomUUID(),
+                path: item.path,
+                component: this.mapComponent(namespace, item.component, item.props),
+            };
+
+            return (
+                <React.Fragment key={elem.id}>
+                <Route path={elem.path} element={elem.component} />
+                </React.Fragment>
+            )
+        });
+
+        return (
+            <Routes>{routes}</Routes>
+        );
+    }
+
+
     render() {
         return (
             <HelmetProvider context={this.helmetContext}>
-            <Navigation/>
-            <section>
             <BrowserRouter>
-                <Sidebar page="home"/>
-                <div id="main">
-                <Routes>
-                    <Route path="/" element={<Main.Quiz name="2079pastQuestions"
-                        title="NEC License Exam 2079"
-                        heading="Nepal Engineering Council License Exam 2079 Chaitra"/>} />
-                    <Route path="/disclaimer" element={<Main.Disclaimer title="Disclaimer"/>} />
-                    <Route path="/faq" element={<Main.Faq title="FAQ"/>} />
-                </Routes>
-                </div>
-                </BrowserRouter>
-            <Advertisements/>
-            <div className="overlay" onClick={this.hideLeftSideBar}></div>
-            </section>
-            <Copyright/>
+                <Components.Navigation/>
+                <section>
+                    <Components.Sidebar page="home"/>
+                    <div id="main">{this.defineRoutes("Main")}</div>
+                    <Components.Advertisements/>
+                    <div className="overlay" onClick={this.hideLeftSideBar}></div>
+                </section>
+                <Components.Copyright/>
+            </BrowserRouter>
             </HelmetProvider>
-        )
+        );
     }; 
 }
 

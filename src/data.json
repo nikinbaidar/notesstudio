@@ -1,5 +1,72 @@
 {
-   "navBarItems": [
+    "routes" : {
+
+        "Main": [
+            {
+                "path": "/",
+                "component": "Quiz",
+                "props" : {
+                    "name" : "2079pastQuestions",
+                    "heading": "Nepal Engineering Council License Exam 2079 Chaitra",
+                    "title": "NEC License Exam 2079"
+                }
+            },
+            {
+                "path": "/faq",
+                "component": "Faq",
+                "props" : {
+                    "title": "FAQ - Quiz"
+                }
+            },
+            {
+                "path": "/first",
+                "component": "Semesters",
+                "props" : {
+                    "name": "0",
+                    "title": "First"
+                }
+            },
+            {
+                "path": "/second",
+                "component": "Semesters",
+                "props" : {
+                    "name": "1",
+                    "title": "Second"
+                }
+            },
+            {
+                "path": "/third",
+                "component": "Semesters",
+                "props" : {
+                    "name": "2",
+                    "title": "Third"
+                }
+            }
+        ],
+
+        "Copyright": [
+            {
+                "path": "/terms",
+                "component": "Terms",
+                "props" : {
+                    "title": "Terms of use"
+                }
+            }
+        ]
+    },
+
+    "policies": [
+        {
+            "name": "Disclaimer",
+            "path": "/disclaimer"
+        },
+        {
+            "name": "Terms of use",
+            "path": "/terms"
+        }
+    ],
+
+    "navBarItems": [
         {
             "name": "Home",
             "link": "/",
@@ -41,28 +108,28 @@
             "semester": "First",
             "subjects": [
                 {
-                    "name": 1,
-                    "link": "this"
+                    "name": "Engineering Mathematics I",
+                    "path": "/first/maths"
                 },
                 {
-                    "name": 2,
-                    "link": "2"
+                    "name": "Physics",
+                    "path": "/first/physics"
                 },
                 {
-                    "name": 3,
-                    "link": "3"
+                    "name": "Basic Electronics",
+                    "path": "/first/electronics"
                 },
                 {
-                    "name": 4,
-                    "link": "4"
+                    "name": "Computer Programming",
+                    "path": "/first/c"
                 },
                 {
-                    "name": 5,
-                    "link": "5"
+                    "name": "Engineering Drawing",
+                    "path": "/first/drawing"
                 },
                 {
-                    "name": 6,
-                    "link": "6"
+                    "name": "Basic Electrical Engineering",
+                    "path": "/first/electrical"
                 }
             ]
         },
@@ -70,58 +137,58 @@
             "semester": "Second",
             "subjects": [
                 {
-                    "name": 7,
-                    "link": "7"
+                    "name": "Engineering Mathematics II",
+                    "path": "/second/maths"
+                }, 
+                {
+                    "name": "Chemistry",
+                    "path": "/second/chemistry"
                 },
                 {
-                    "name": 8,
-                    "link": "8"
+                    "name": "Basic Mechanical Engineering",
+                    "path": "/second/bme"
                 },
                 {
-                    "name": 9,
-                    "link": "9"
+                    "name": "Electro Engineering Materials",
+                    "path": "/second/eem"
                 },
                 {
-                    "name": 10,
-                    "link": "10"
+                    "name": "Computer Systems & Database",
+                    "path": "/second/matlab"
                 },
                 {
-                    "name": 11,
-                    "link": "11"
-                },
-                {
-                    "name": 12,
-                    "link": "12"
-                } 
+                    "name": "Digital Electronics",
+                    "path": "/second/digitalelectronics"
+                }
             ]
         },
         {
             "semester": "Third",
             "subjects": [
                 {
-                    "name": 13,
-                    "link": "13"
+                    "name": "Engineering Mathematics III",
+                    "path": "/third/maths"
+                }, 
+                {
+                    "name": "Bio-Engineering Materials",
+                    "path": "/third/chemistry"
                 },
                 {
-                    "name": 14,
-                    "link": "14"
+                    "name": "Human Anatomy & Physiology I",
+                    "path": "/third/bme"
                 },
                 {
-                    "name": 15,
-                    "link": "15"
+                    "name": "Fluid Mechanics",
+                    "path": "/third/fluid"
                 },
                 {
-                    "name": 16,
-                    "link": "16"
+                    "name": "Cell Biology and Immunology",
+                    "path": "/third/cell-bio"
                 },
                 {
-                    "name": 17,
-                    "link": "17"
-                },
-                {
-                    "name": 18,
-                    "link": "18"
-                } 
+                    "name": "Microprocessors",
+                    "path": "/third/microprocessor"
+                }
             ]
         },
         {
@@ -129,27 +196,27 @@
             "subjects": [
                 {
                     "name": 19,
-                    "link": "19"
+                    "path": "19"
                 },
                 {
                     "name": 20,
-                    "link": "20"
+                    "path": "20"
                 },
                 {
                     "name": 21,
-                    "link": "21"
+                    "path": "21"
                 },
                 {
                     "name": 22,
-                    "link": "22"
+                    "path": "22"
                 },
                 {
                     "name": 23,
-                    "link": "23"
+                    "path": "23"
                 },
                 {
                     "name": 24,
-                    "link": "24"
+                    "path": "24"
                 } 
             ]
         },
@@ -158,27 +225,27 @@
             "subjects": [
                 {
                     "name": 25,
-                    "link": "25"
+                    "path": "25"
                 },
                 {
                     "name": 26,
-                    "link": "26"
+                    "path": "26"
                 },
                 {
                     "name": 27,
-                    "link": "27"
+                    "path": "27"
                 },
                 {
                     "name": 28,
-                    "link": "28"
+                    "path": "28"
                 },
                 {
                     "name": 29,
-                    "link": "29"
+                    "path": "29"
                 },
                 {
                     "name": 30,
-                    "link": "30"
+                    "path": "30"
                 } 
             ]
         },
@@ -187,27 +254,27 @@
             "subjects": [
                 {
                     "name": 31,
-                    "link": "31"
+                    "path": "31"
                 },
                 {
                     "name": 32,
-                    "link": "32"
+                    "path": "32"
                 },
                 {
                     "name": 33,
-                    "link": "33"
+                    "path": "33"
                 },
                 {
                     "name": 34,
-                    "link": "34"
+                    "path": "34"
                 },
                 {
                     "name": 35,
-                    "link": "35"
+                    "path": "35"
                 },
                 {
                     "name": 36,
-                    "link": "36"
+                    "path": "36"
                 } 
             ]
         },
@@ -216,27 +283,27 @@
             "subjects": [
                 {
                     "name": 37,
-                    "link": "37"
+                    "path": "37"
                 },
                 {
                     "name": 38,
-                    "link": "38"
+                    "path": "38"
                 },
                 {
                     "name": 39,
-                    "link": "39"
+                    "path": "39"
                 },
                 {
                     "name": 40,
-                    "link": "40"
+                    "path": "40"
                 },
                 {
                     "name": 41,
-                    "link": "41"
+                    "path": "41"
                 },
                 {
                     "name": 42,
-                    "link": "42"
+                    "path": "42"
                 } 
             ]
         },
@@ -245,27 +312,27 @@
             "subjects": [
                 {
                     "name": 43,
-                    "link": "43"
+                    "path": "43"
                 },
                 {
                     "name": 44,
-                    "link": "44"
+                    "path": "44"
                 },
                 {
                     "name": 45,
-                    "link": "45"
+                    "path": "45"
                 },
                 {
                     "name": 46,
-                    "link": "46"
+                    "path": "46"
                 },
                 {
                     "name": 47,
-                    "link": "47"
+                    "path": "47"
                 },
                 {
                     "name": 48,
-                    "link": "48"
+                    "path": "48"
                 } 
             ]
         }
@@ -285,6 +352,23 @@
                 {
                     "title": "FAQ",
                     "path": "/faq"
+                }
+            ]
+        },
+        {
+            "chapter": "Core",
+            "lessons" : [
+                {
+                    "title": "First",
+                    "path": "/first"
+                },
+                {
+                    "title": "Second",
+                    "path": "/second"
+                },
+                {
+                    "title": "Third",
+                    "path": "/third"
                 }
             ]
         }
@@ -1384,11 +1468,3 @@
         }
     ]
 } 
-
-
-
-
-
-
-
-

@@ -1,5 +1,9 @@
 import data from './data.json';
 
+export function loadPolicies() {
+  return data.policies;
+}
+
 export function loadNavigationBar() {
   return data.navBarItems;
 }
@@ -23,3 +27,8 @@ export function loadMsg() {
 export function loadFAQ() {
   return data.faq;
 }
+
+export function getRoutes(namespace) {
+    return data.routes[namespace];
+}
+
