@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidebar, Master, Advertisements } from './MyComponents';
+import { Sidebar, Master, Advertisements } from './allComponents';
 
 
 class Wiki extends React.Component {

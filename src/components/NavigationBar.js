@@ -1,15 +1,8 @@
 import  React from 'react';
 import { loadNavigationBar } from '../dataLoader';
+import * as utils from './utils'
 
 class Navigation extends React.Component {
-
-    expandHamburgerMenu = () => {
-        const overlay = document.getElementById('overlay');
-        const leftsidebar = document.getElementById('leftsidebar');   
-        leftsidebar.classList.remove('inactive');
-        leftsidebar.classList.add('active');
-        overlay.classList.add('active');
-    }
 
     handleClick(event) {
         /* Deactivate the current active element */
@@ -31,10 +24,11 @@ class Navigation extends React.Component {
 
         return(
             <nav>
-                <ul className="nav_items"
-                onClick={this.handleClick}>{this.navBar}</ul>
-                <img src={require("../logo.png")} alt="site logo"/>
-                <button className="menu-btn" onClick={this.expandHamburgerMenu}>
+            <ul className="nav_items"
+            onClick={this.handleClick}>{this.navBar}</ul>
+            <img src={require("../logo.png")} alt="site logo"/>
+            <button className="menu-btn" 
+                onClick={utils.expandHamburgerMenu}>
                     <span className="hamburger"></span>
                     <span className="hamburger"></span>
                     <span className="hamburger"></span>

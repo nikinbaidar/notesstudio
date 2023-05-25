@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-
 import { loadSideBar } from '../dataLoader';
+import * as utils from './utils'
+
 
 class Sidebar extends React.Component {
 
@@ -10,12 +11,9 @@ class Sidebar extends React.Component {
         this.headings = loadSideBar();
     }
 
-    hideLeftSideBar = () => {
-        const leftsidebar = document.getElementById('leftsidebar');
-        const overlay = document.querySelector('section > div.overlay');
-        leftsidebar.classList.toggle('active');
-        leftsidebar.classList.toggle('inactive');
-        overlay.classList.toggle('active');
+    handleClick() {
+        utils.movetoTop();
+        utils.collapseHamburgerMenu();
     }
 
     render() {
@@ -29,7 +27,7 @@ class Sidebar extends React.Component {
                         <li key={lessonId}>
                         <NavLink to={lesson.path} style={({ isActive }) => ({
                         textDecoration: isActive ? 'none' : 'none' })}
-                        onClick={this.hideLeftSideBar}>
+                        onClick={this.handleClick}>
                         {lesson.title}
                         </NavLink>
                         </li>

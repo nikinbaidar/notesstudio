@@ -2,9 +2,14 @@ import { Routes, Route } from 'react-router-dom';
 
 import { getRoutes } from '../dataLoader';
 
-/* Import the components */
-
-import { Wiki, Quiz, Semesters, Faq } from './MyComponents';
+import {
+    Faq,
+    Quiz,
+    Semesters,
+    Terms,
+    Wiki,
+} 
+from './allComponents';
 
 
 class Router {
@@ -13,7 +18,7 @@ class Router {
             case 'main': {
                 return {
                     Wiki: <Wiki />,
-                    Terms: <h1>Terms of use</h1>,
+                    Terms: <Terms />,
                 };
             }
             case 'master': {

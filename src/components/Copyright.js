@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import { loadPolicies } from '../dataLoader.js';
+import { movetoTop } from './utils'
 
 class Copyright extends React.Component {
 
@@ -14,9 +15,9 @@ class Copyright extends React.Component {
 
             return(
                 <li key={elem.id}>
-                    <NavLink to={item.path}>
-                    {elem.label}
-                    </NavLink>
+                <NavLink to={item.path} onClick={movetoTop}>
+                {elem.label}
+                </NavLink>
                 </li>
             );
         });

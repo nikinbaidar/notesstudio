@@ -63,7 +63,7 @@ class Semesters extends React.Component {
             <SEO title={this.props.title} name="Biomedical Engineering" type="article"
             description="biomedical engineering, nepal engineering council" />
             <div class="congroup">
-                <h1 id="main_heading">{this.props.title} semester</h1>
+                <h1 className="main_heading">{this.props.title} semester</h1>
                 <hr/>
                 <div className="grid-container">{subjects}</div>
             </div>
