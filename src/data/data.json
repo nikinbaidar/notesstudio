@@ -12,7 +12,7 @@
                 "path": "/terms/*",
                 "component": "Terms",
                 "props" : {
-                    "title": "Terms of use"
+                    "title": "Terms of Service"
                 }
             }
         ],
@@ -61,11 +61,11 @@
     },
     "policies": [
         {
-            "name": "Disclaimer",
-            "path": "/disclaimer"
+            "name": "Privacy Policy",
+            "path": "/privacy"
         },
         {
-            "name": "Terms of use",
+            "name": "Terms",
             "path": "/terms"
         }
     ],
@@ -74,7 +74,7 @@
         {
             "name": "Home",
             "link": "/",
-            "isActive": true
+            "isActive": false
         },
         {
             "name": "Projects",
@@ -89,7 +89,7 @@
         {
             "name": "Wiki",
             "link": "/wiki",
-            "isActive": false
+            "isActive": true
         },
         {
             "name": "Blog",
