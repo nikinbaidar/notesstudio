@@ -1,19 +1,12 @@
-import Navigation from './NavigationBar';
-import Sidebar from './Sidebar';
-import Advertisements  from './Ads';
-import Copyright from './Copyright';
-import Quiz from './Quiz'
-import Semesters from './Semesters.js'
-import Faq from './FAQ'
+export { default as Navigation } from './NavigationBar';
+export { default as Main } from './Main';
+export { default as Copyright } from './Copyright';
 
-const Components = {
-    Quiz,
-    Faq,
-    Semesters,
-    Navigation,
-    Sidebar,
-    Advertisements,
-    Copyright
-};
+/* Main */
+export { default as Sidebar } from './Sidebar';
+export { default as Advertisements } from './Ads';
 
-export default Components;
+/* Master */
+export { default as Quiz } from './Quiz';
+export { default as Faq } from './FAQ';
+export { default as Semesters } from './Semesters';

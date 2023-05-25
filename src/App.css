@@ -115,7 +115,7 @@ ul.nav_items li.active {
 }
 
 
-section {
+section#main {
   width: 100%;
   height: auto;
   position: relative;
@@ -162,7 +162,7 @@ section {
   text-decoration: underline;
 }
 
-#main {
+#master {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -596,7 +596,7 @@ button#viewUnanswered {
     display: none;
   }
 
-  section {
+  section#main {
     flex-direction: column;
     position: relative;
     align-items: center;
@@ -654,7 +654,7 @@ button#viewUnanswered {
     margin-top: calc(-0.05vh - 0.23rem);
   }
 
-  #main {
+  #master {
     width: 95%;
     font-size: 3.0rem;
     flex-grow: 1;

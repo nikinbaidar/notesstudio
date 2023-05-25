@@ -1,7 +1,22 @@
 {
     "routes" : {
-
-        "Main": [
+        "main": [
+            {
+                "path": "/*",
+                "component": "Wiki",
+                "props" : {
+                    "title": "Wiki"
+                }
+            },
+            {
+                "path": "/terms/*",
+                "component": "Terms",
+                "props" : {
+                    "title": "Terms of use"
+                }
+            }
+        ],
+        "master": [
             {
                 "path": "/",
                 "component": "Quiz",
@@ -42,18 +57,11 @@
                     "title": "Third"
                 }
             }
-        ],
-
-        "Copyright": [
-            {
-                "path": "/terms",
-                "component": "Terms",
-                "props" : {
-                    "title": "Terms of use"
-                }
-            }
         ]
     },
+
+
+
 
     "policies": [
         {
