@@ -25,7 +25,7 @@ class App extends React.Component {
         let Members;
 
         switch (namespace) {
-            case "Main":
+            case "wiki":
                 {
                     Members = {
                         "Faq" : <Components.Faq title={p.title} />,
@@ -58,6 +58,7 @@ class App extends React.Component {
                 path: item.path,
                 component: this.mapComponent(namespace, item.component, item.props),
             };
+            console.log(elem.path);
 
             return (
                 <React.Fragment key={elem.id}>
@@ -77,11 +78,22 @@ class App extends React.Component {
             <HelmetProvider context={this.helmetContext}>
             <BrowserRouter>
                 <Components.Navigation/>
-                <section>
-                    <Components.Sidebar page="home"/>
-                    <div id="main">{this.defineRoutes("Main")}</div>
-                    <Components.Advertisements/>
-                    <div className="overlay" onClick={this.hideLeftSideBar}></div>
+                <section id="main">
+                <Routes>
+                    <Route path="/*" element={
+                        <>
+                        <Components.Sidebar page="home"/>
+                        <div id="master">{this.defineRoutes("wiki")}</div>
+                        <Components.Advertisements/>
+                        <div className="overlay" onClick={this.hideLeftSideBar}></div>
+                        </>
+                    } />
+                    <Route path="/terms" element={
+                        <React.Fragment>
+                        <div id="main"><h1>Hello, World!</h1></div>
+                        </React.Fragment>
+                    } />
+                </Routes>
                 </section>
                 <Components.Copyright/>
             </BrowserRouter>
@@ -91,3 +103,17 @@ class App extends React.Component {
 }
 
 export default App;
+
+/*
+ *
+                <section>
+                    <Components.Sidebar page="home"/>
+                    <div id="main">{this.defineRoutes("Main")}</div>
+                    <Components.Advertisements/>
+                    <div className="overlay" onClick={this.hideLeftSideBar}></div>
+                </section>
+                <h1>Hello, World!</h1>
+ *
+ *
+
+ */
