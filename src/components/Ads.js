@@ -1,5 +1,5 @@
 import React from 'react';
-import Images from './images';
+import { ads } from '../dataLoader';
 
 class Advertisements extends React.Component {
     render() {
@@ -7,7 +7,7 @@ class Advertisements extends React.Component {
             <div id="ads">
             <a href="https://bit.ly/3Fw7B3R">
             <div className="coffee">
-            <img src={Images.BuyMeACoffee} alt="BuyMeACoffee"/>
+            <img src={ads.BuyMeACoffee} alt="BuyMeACoffee"/>
             <p>A cup of coffee and your support keeps me fueled!</p> 
             </div>
             </a>

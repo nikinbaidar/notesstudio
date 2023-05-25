@@ -1,6 +1,6 @@
 import  React from 'react';
 import { NavLink } from "react-router-dom";
-import { SEO } from './seo';
+import { SEO } from './Seo';
 
 import { loadCurriculum } from '../dataLoader';
 

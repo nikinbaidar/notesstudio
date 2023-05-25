@@ -1,10 +1,6 @@
 import  React from 'react';
-
-import { SEO } from './seo';
-
-import { loadQuiz, loadMsg } from '../dataLoader'
-
-import Images from './images';
+import { SEO } from './Seo';
+import { loadQuiz, loadMsg, images } from '../dataLoader'
 
 function shuffleArray(array) {
     /* Fisher's Algorithm */
@@ -86,7 +82,7 @@ class Quiz extends React.Component {
             <React.Fragment key={questionKey}>
                 <li className="questions">{question.name}</li>
                 { hasFigure && <img className="figure"
-                    src={Images[question.fig]} alt={question.fig}/> }
+                    src={images[question.fig]} alt={question.fig}/> }
                 <form className="optionGroup">
                 <ol className="choices">
                 {question.options.map((choice, index) => {
