@@ -1,36 +1,20 @@
 import  React from 'react';
-
 import { loadNavigationBar } from '../dataLoader';
 
 class Navigation extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            showMenu: false,
-        }
-    }
-
-    handleMenuClick = () => {
-        const overlay = document.querySelector('section > div.overlay');
-        const leftsidebar = document.getElementById('leftsidebar');
-        if (leftsidebar.classList.contains('active') !== true) {
-            leftsidebar.classList.add('active');
-            overlay.classList.add('active');
-            leftsidebar.classList.remove('inactive');
-        }
-        else {
-            leftsidebar.classList.add('inactive');
-            leftsidebar.classList.remove('active');
-            overlay.classList.remove('active');
-        }
-
+    expandHamburgerMenu = () => {
+        const overlay = document.getElementById('overlay');
+        const leftsidebar = document.getElementById('leftsidebar');   
+        leftsidebar.classList.remove('inactive');
+        leftsidebar.classList.add('active');
+        overlay.classList.add('active');
     }
 
     handleClick(event) {
-        /* Deactive the current active element */
+        /* Deactivate the current active element */
         document.getElementsByClassName('active')[0].className = "inactive";
-        /* Active the element which was clicked */
+        /* Activatee the element which was clicked */
         event.target.className = "active";
     }
 
@@ -44,16 +28,17 @@ class Navigation extends React.Component {
     });
 
     render() {
+
         return(
             <nav>
-            <ul className="nav_items"
-            onClick={this.handleClick}>{this.navBar}</ul>
-            <img src={require("../logo.png")} alt="site logo"/>
-            <button className="menu-btn" onClick={this.handleMenuClick}>
-                <span className="hamburger"></span>
-                <span className="hamburger"></span>
-                <span className="hamburger"></span>
-            </button>
+                <ul className="nav_items"
+                onClick={this.handleClick}>{this.navBar}</ul>
+                <img src={require("../logo.png")} alt="site logo"/>
+                <button className="menu-btn" onClick={this.expandHamburgerMenu}>
+                    <span className="hamburger"></span>
+                    <span className="hamburger"></span>
+                    <span className="hamburger"></span>
+                </button>
             </nav>
         );
     }

@@ -38,7 +38,7 @@ class Sidebar extends React.Component {
             };
             return (
                 <React.Fragment key={elem.id}>
-                    <li className="topics">{elem.label}:</li>
+                    <li className="topics">{elem.label}</li>
                     <ul className="subtopics">{elem.lessons}</ul>
                 </React.Fragment>
             )

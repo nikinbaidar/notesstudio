@@ -114,10 +114,9 @@ ul.nav_items li.active {
   color: var(--current-page);
 }
 
-
 section#main {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   position: relative;
   display: flex;
   margin: 0;
@@ -162,7 +161,7 @@ section#main {
   text-decoration: underline;
 }
 
-#master {
+.master {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -654,7 +653,7 @@ button#viewUnanswered {
     margin-top: calc(-0.05vh - 0.23rem);
   }
 
-  #master {
+  .master {
     width: 95%;
     font-size: 3.0rem;
     flex-grow: 1;

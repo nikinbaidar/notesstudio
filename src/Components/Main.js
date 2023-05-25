@@ -12,72 +12,87 @@ import {
 } from './MyComponents';
 
 
-class Main extends React.Component {
+class Router {
+    static mapComponent(namespace, component, p) {
+        switch (namespace) {
+            case 'main': {
+                return {
+                    Wiki: <Wiki />,
+                    Terms: <h1>Terms of use</h1>,
+                };
+            }
+            case 'master': {
+                return {
+                    Faq: <Faq title={p.title} />,
+                    Semesters: <Semesters name={p.name} title={p.title} />,
+                    Quiz: <Quiz name={p.name} title={p.title} heading={p.heading} />,
+                };
+            }
+            default:
+                return null;
+        }
+    }
 
-    hideLeftSideBar = () => {
+    static defineRoutes(namespace) {
+        const namespaceRoutes = getRoutes(namespace);
+        const routes = namespaceRoutes.map((item, index) => {
+            const elem = {
+                id: crypto.randomUUID(),
+                path: item.path,
+                component: Router.mapComponent(
+                    namespace,
+                    item.component,
+                    item.props
+                )[item.component],
+                /* component: Dynamically load component; */
+            };
+
+            return <Route key={elem.id} path={elem.path} element={elem.component} />;
+        });
+
+        return <Routes>{routes}</Routes>;
+    }
+}
+
+
+class Wiki extends React.Component {
+
+    collapseHamburgerMenu = () => {
         const leftsidebar = document.getElementById('leftsidebar');
         const overlay = document.getElementById('overlay');
         leftsidebar.classList.remove('active');
         leftsidebar.classList.add('inactive');
         overlay.classList.remove('active');
-    }
-
-    mapComponent = (namespace, component, p) => {
-        /* Returns a map of all components in the current namespace. */
-        switch (namespace) {
-            case "main": {
-                return ({
-                    Wiki: <Wiki />,
-                    Terms: <h1>Terms of use</h1>,
-                });
-            }
-            case "master":
-                {
-                    return {
-                        Faq: <Faq title={p.title} />,
-                        Semesters: <Semesters name={p.name} title={p.title} />,
-                        Quiz: <Quiz name={p.name} title={p.title} heading={p.heading} />,
-                    }
-                }
-            default: 
-                return null;
-        }
-    }
-
-    defineRoutes = (namespace) => {
-        const namespaceRoutes = getRoutes(namespace);
-        const routes = namespaceRoutes.map((item, index) => {
-            const elem = { 
-                id: crypto.randomUUID(),
-                path: item.path,
-                component: this.mapComponent(namespace, item.component,
-                    item.props)[item.component],
-                /* component: Dynamiclly load component; */
-            };
-
-            return <Route key={elem.id} path={elem.path}
-                element={elem.component} />;
-        });
-
-        return <Routes>{routes}</Routes>;
-    }
-
-    render() { return <div id="main">{this.defineRoutes("main")}</div>; }; 
-}
-
-
-class Wiki extends Main {
+    };
 
     render() {
         return (
             <>
-            <Sidebar page="home"/>
-            <div id="master">{this.defineRoutes("master")}</div>
-            <Advertisements/>
-            <div id="overlay" className="overlay" onClick={this.hideLeftSideBar}></div>
+            <Sidebar page="home" />
+            <Master name="master" />
+            {/* Right sidebar */}
+            <Advertisements />
+            <div id="overlay" className="overlay"
+            onClick={this.collapseHamburgerMenu}>
+            </div>
             </>
         );
     }
 }
+
+class Master extends React.Component {
+    render() {
+        return <div className="master">{Router.defineRoutes(this.props.name)}</div>;
+    }
+}
+
+
+class Main extends React.Component {
+    render() {
+        return <section id="main">{Router.defineRoutes('main')}</section>;
+    }
+}
+
+
 
 export default Main;
