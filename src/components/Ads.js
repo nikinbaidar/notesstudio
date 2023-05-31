@@ -8,7 +8,7 @@ class Advertisements extends React.Component {
             <a href="https://bit.ly/3Fw7B3R">
             <div className="coffee">
             <img src={ads.BuyMeACoffee} alt="BuyMeACoffee"/>
-            <p>A cup of coffee and your support keeps me fueled!</p> 
+            <p>Or a book...</p> 
             </div>
             </a>
             </div>

@@ -11,7 +11,7 @@ class Sidebar extends React.Component {
         this.headings = loadSideBar();
     }
 
-    handleClick() {
+    handleClick(event) {
         utils.movetoTop();
         utils.collapseHamburgerMenu();
     }
@@ -25,9 +25,7 @@ class Sidebar extends React.Component {
                     const lessonId = crypto.randomUUID();
                     return (
                         <li key={lessonId}>
-                        <NavLink to={lesson.path} style={({ isActive }) => ({
-                        textDecoration: isActive ? 'none' : 'none' })}
-                        onClick={this.handleClick}>
+                        <NavLink to={lesson.path} onClick={this.handleClick}>
                         {lesson.title}
                         </NavLink>
                         </li>

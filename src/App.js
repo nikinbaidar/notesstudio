@@ -18,7 +18,7 @@ class App extends React.Component {
             <HelmetProvider context={this.helmetContext}>
             <BrowserRouter>
                 <Navigation />
-                <Main />
+                <Main id='main' route='main' />
                 <Copyright />
             </BrowserRouter>
             </HelmetProvider>

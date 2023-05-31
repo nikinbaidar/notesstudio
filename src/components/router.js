@@ -1,13 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
-
 import { getRoutes } from '../dataLoader';
 
 import {
     Faq,
+    Home,
     Quiz,
     Semesters,
     Terms,
     Wiki,
+    Philosophy,
+    Privacy,
+    Subject,
 } 
 from './allComponents';
 
@@ -17,8 +20,11 @@ class Router {
         switch (namespace) {
             case 'main': {
                 return {
+                    Home: <Home />,
                     Wiki: <Wiki />,
                     Terms: <Terms />,
+                    Privacy: <Privacy />,
+                    Philosophy: <Philosophy />,
                 };
             }
             case 'master': {
@@ -26,6 +32,7 @@ class Router {
                     Faq: <Faq title={p.title} />,
                     Semesters: <Semesters name={p.name} title={p.title} />,
                     Quiz: <Quiz name={p.name} title={p.title} heading={p.heading} />,
+                    Subject: <Subject name={p.name} bgc={p.bgc} cover={p.cover}/>,
                 };
             }
             default:

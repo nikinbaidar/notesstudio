@@ -1,16 +1,7 @@
 import  React from 'react';
 import { SEO } from './Seo';
 import { loadQuiz, loadMsg, images } from '../dataLoader';
-import { movetoTop } from './utils';
-
-function shuffleArray(array) {
-    /* Fisher's Algorithm */
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
+import { movetoTop, shuffleArray } from './utils';
 
 class Quiz extends React.Component {
 
@@ -221,11 +212,7 @@ class Quiz extends React.Component {
                 currentPage: 1,
                 start: 0,
                 end: this.quesPerPage,
-            }, () => {
-                setTimeout(() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' }); 
-                }, 100);
-            });
+            }, () => { movetoTop() });
         }
         else
         {

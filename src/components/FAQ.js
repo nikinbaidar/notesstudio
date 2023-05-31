@@ -1,6 +1,7 @@
 import  React from 'react';
 
-import { loadFAQ } from '../dataLoader'
+import { loadFAQ } from '../dataLoader';
+import { SEO } from './Seo';
 
 class Faq extends React.Component {
 
@@ -21,6 +22,7 @@ class Faq extends React.Component {
     render() {
         return(
             <>
+            <SEO title={`${this.props.title}`} />
             <h1>FAQ</h1>
             {this.faq}
             </>

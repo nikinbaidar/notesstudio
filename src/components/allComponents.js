@@ -1,21 +1,27 @@
 /* Root */
+export { default as Copyright } from './Copyright';
 export { default as Navigation } from './NavigationBar';
 export { default as Main } from './Main';
-export { default as Copyright } from './Copyright';
+
+/* Copyright */
+export { default as Terms } from './Terms';
+export { default as Privacy } from './Privacy';
+export { default as Philosophy } from './Philosophy';
 
 /* Navigation */
+export { default as Home } from './Landing';
 export { default as Wiki } from './Wiki';
 
+// Main
 
 /* Wiki */
 export { default as Sidebar } from './Sidebar';
-export { default as Master } from './Master';
 export { default as Advertisements } from './Ads';
 
-/* Master */
+// Masters
 export { default as Quiz } from './Quiz';
 export { default as Faq } from './FAQ';
 export { default as Semesters } from './Semesters';
+export { default as Subject } from './Subjects';
 
-/* Terms */
-export { default as Terms } from './Terms';
+

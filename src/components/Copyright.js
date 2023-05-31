@@ -13,7 +13,7 @@ class Copyright extends React.Component {
                 path: item.path,
             };
 
-            return(
+            return (
                 <li key={elem.id}>
                 <NavLink to={item.path} onClick={movetoTop}>
                 {elem.label}
@@ -23,7 +23,6 @@ class Copyright extends React.Component {
         });
 
         return policies;
-
     }
 
 

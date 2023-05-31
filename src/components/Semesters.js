@@ -2,7 +2,10 @@ import  React from 'react';
 import { NavLink } from "react-router-dom";
 import { SEO } from './Seo';
 
-import { loadCurriculum } from '../dataLoader';
+import { loadCurriculum, covers } from '../dataLoader';
+import { getDate } from './utils';
+
+getDate();
 
 class Semesters extends React.Component {
 
@@ -10,16 +13,19 @@ class Semesters extends React.Component {
         super(props);
         const selection = parseInt(props.name);
         const subjects = loadCurriculum().map(({semester, subjects}) => {
-            return subjects.map(({name, path}) => ({name, path}));
+            return subjects.map((
+                {name, path, credit, cover, description}) => ({
+                    name, path, credit, cover, description
+                }));
         });
         this.selection = selection;
         this.allSub = subjects;
         this.state = {
             selection: selection,
             subjects: subjects[selection],
-        }
-
+        };
     }
+
     componentDidUpdate(prevProps) {
         if (prevProps.name !== this.props.name) {
             const newSelection = parseInt(this.props.name);
@@ -30,23 +36,28 @@ class Semesters extends React.Component {
         }
     }
 
-    handleClick = (event) => {
-        alert("You've just clicked " + event.target.textContent);
-    }
-
     generateSubjectElements = () => {
         const subjects = this.state.subjects.map((item, index) => {
             const elem = {
                 id: crypto.randomUUID(),
                 label: item.name,
-                path: item.path
+                path: item.path,
+                cover: (item.cover) ? item.cover : "Escape",
+                description: (item.description) ? item.description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             };
 
             return(
                 <React.Fragment key={elem.id}>
                 <NavLink to={elem.path}>
-                    <div className="options">
-                    <p>{elem.label}</p>
+                    <div className="options card">
+                        <div className="img-container">
+                           <img src={covers[elem.cover]} alt=""/> 
+                        </div>
+                        <p>
+                        {elem.label}
+                        <hr/>
+                        <span className="info">{elem.description}</span>
+                        </p> 
                     </div>
                 </NavLink>
                 </React.Fragment>
@@ -60,13 +71,12 @@ class Semesters extends React.Component {
 
         return (
             <>
-            <SEO title={this.props.title} name="Biomedical Engineering" type="article"
-            description="biomedical engineering, nepal engineering council" />
-            <div class="congroup">
-                <h1 className="main_heading">{this.props.title} semester</h1>
-                <hr/>
-                <div className="grid-container">{subjects}</div>
-            </div>
+            <SEO 
+                title={`${this.props.title} Semester`} 
+                name="Biomedical Engineering" type="article"
+                description="biomedical engineering, nepal engineering council"
+            />
+            <div className="grid-container">{subjects}</div>
             </>
         );
     }

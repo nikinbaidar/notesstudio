@@ -1,42 +1,41 @@
 import  React from 'react';
+import { NavLink } from "react-router-dom";
 import { loadNavigationBar } from '../dataLoader';
-import * as utils from './utils'
+import * as utils from './utils';
 
 class Navigation extends React.Component {
 
-    handleClick(event) {
-        /* Deactivate the current active element */
-        document.getElementsByClassName('active')[0].className = "inactive";
-        /* Activatee the element which was clicked */
-        event.target.className = "active";
-    }
-
-    navBar = loadNavigationBar().map((item, index) => {
+    navBar = loadNavigationBar().map((item) => {
         const elem = {
-            id: crypto.randomUUID(),
+            key: crypto.randomUUID(),
             label: item.name,
-            class: item.isActive ? 'active' : 'inactive'
+            path: item.path,
+            id: item.name,
         };
-        return <li className={elem.class} key={elem.id}>{elem.label}</li>;
+
+        return (
+            <li key={elem.key}>
+                <NavLink to={elem.path} id={elem.id} className="navigatiors">
+                {elem.label}
+                </NavLink>
+            </li>
+        );
     });
 
     render() {
 
         return(
             <nav>
-            <ul className="nav_items"
-            onClick={this.handleClick}>{this.navBar}</ul>
+            <ul className="nav_items"> {this.navBar} </ul>
             <img src={require("../logo.png")} alt="site logo"/>
-            <button className="menu-btn" 
-                onClick={utils.expandHamburgerMenu}>
-                    <span className="hamburger"></span>
-                    <span className="hamburger"></span>
-                    <span className="hamburger"></span>
-                </button>
+            <button className="menu-btn" onClick={utils.expandHamburgerMenu}>
+                <span className="hamburger"></span>
+                <span className="hamburger"></span>
+                <span className="hamburger"></span>
+            </button>
             </nav>
         );
-    }
+    };
 }
-
 
 export default Navigation;

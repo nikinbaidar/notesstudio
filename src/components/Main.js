@@ -3,8 +3,12 @@ import Router from './router'
 
 class Main extends React.Component {
     render() {
-        return <section id="main">{Router.defineRoutes('main')}</section>;
-    }
+        return (
+            <div id={this.props.id} className={this.props.class}>
+            {Router.defineRoutes(this.props.route)}
+            </div>
+        );    
+    };
 }
 
 export default Main;

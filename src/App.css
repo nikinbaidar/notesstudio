@@ -1,7 +1,7 @@
 :root {
   --foreground: #0F111B;
   --nav-heading: #777DA4;
-  --current-page: #C1C3CC;
+  --clickable: #C1C3CC;
   --dark-blue: #0D2235;
   --red: #E33400;
   --yellow: #FD0;
@@ -13,10 +13,13 @@
   --purple: #7A5CCC;
   --magenta: #CE6F8F;
   --gray: #EDEDED;
+  --mid-gray: #D8D8D8;
   --dark-gray: #CCC;
   --dark-purple: #2E3459;
   --light-purple: #686F9A;
   --white: #ECF0C1;
+  --pure-white: #FFF;
+  --bright-white: #FFD95A;
   --heading-size: 1.5rem;
 }
 
@@ -37,6 +40,8 @@
   to { transform: translateX(-100%); }
 }
 
+/* CSS */
+
 html,
 body {
   font-size: 1vw;
@@ -47,7 +52,7 @@ body {
 body {
   color: var(--foreground);
   background-color: var(--background);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Ubuntu' sans-serif; /* Add more alternative fonts */
   padding: 0;
   margin: 0;
 }
@@ -67,6 +72,11 @@ a:active,
 a:visited {
   color: inherit;
   text-decoration: none;
+}
+
+a.need-attention {
+  color: blue;
+  text-decoration: underline;
 }
 
 nav {
@@ -103,18 +113,28 @@ ul.nav_items {
 ul.nav_items li {
   display: inline-block;
   list-style-type: none;
-  padding: 0.9rem;
+  padding: 0.80rem;
   margin: 0;
   font: bold 1.10rem 'Fira Code', monospace;
 }
 
-ul.nav_items li.active {
-  color: var(--current-page);
+ul.nav_items a:hover {
+  color: var(--clickable); 
+
 }
 
-section#main {
+/* ul.nav_items a.active {
+  color: var(--dark-gray); 
+} */
+
+ul.terms a:hover {
+  color: var(--gray); 
+  text-decoration: underline;
+}
+
+div#main {
   width: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -127,8 +147,6 @@ section#main {
   width: 25%;
   height: auto;
   background-color: var(--foreground);
-  color: var(--white);
-  width:30%;
   margin: 0;
   padding: 0;
   padding-top: 1rem;
@@ -137,27 +155,27 @@ section#main {
 
 .headings {
   color: var(--green);
-  font: bold 1.50rem 'Fira Code';
+  font: bold 1.50rem 'Fira Code', monospace;
   list-style-type: none;
   margin:0;
   padding: 0.75rem;
 }
 
 .subtopics {
-  color: var(--white);
-  font: lighter 1.25rem 'Fira Code';
+  color: var(--mid-gray);
+  font: lighter 1.25rem 'Fira Code', monospace;
   list-style-type: none;
   margin: 0 ;
-  margin-bottom: 0.90rem;
   padding: 0.30rem;
 }
 
-.subtopics > li {
+.subtopics li {
   margin-bottom: 0.15rem;
 }
 
-.subtopics > li:hover {
-  text-decoration: underline;
+.subtopics li:hover {
+  color: var(--pure-white);
+  /* text-decoration: underline dashed; */
 }
 
 .master {
@@ -165,9 +183,7 @@ section#main {
   display: flex;
   flex-direction: column;
   width: 80%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 3rem;
+  margin: 3rem;
 }
 
 .master.terms {
@@ -175,17 +191,33 @@ section#main {
   margin-left: -1rem;
 }
 
+.ordered_headings li{
+  margin-left: 2.5rem;
+}
+
+.ordered_headings ol,
+.ordered_subheadings li{
+  margin: 2rem;
+  margin-left: 0;
+}
+
 .ordered_headings ol,
 .master.terms p {
   font-size: 1.30rem;
 }
 
+.ordered_headings {
+  list-style-type: upper-alpha;
+  font-size: 2rem;
+}
 
-
+.ordered_subheadings li {
+  font-size: 1.95rem;
+}
 
 #ads {
   position: relative;
-  width: 30%;
+  width: 25%;
   height: auto;
   background-color: var(--gray);
 }
@@ -203,13 +235,16 @@ div.coffee {
   border-radius: 10px;
 }
 
+div.coffee p {
+  margin: 5px;
+}
+
 div.coffee img {
   max-width: 100%;
   max-height: 100%;
   object-fit: scale-down;
   overflow: scroll;
 }
-
 
 .copyright-info {
   display: flex;
@@ -240,7 +275,7 @@ ul.terms li:first-child {
 }
 
 .faq { 
-  font: 1.1rem 'Fira Code';
+  font: 1.1rem 'Fira Code', monospace;
 }
 
 .faq {
@@ -262,17 +297,7 @@ ul.terms li:first-child {
 
 /* Semesters */
 
-#semesters {
-  width: 50%;
-  height: auto;
-  margin: 0 0 1.8rem;
-  padding: 0.25rem;
-  border: solid 1px var(--foreground);
-  background-color: var(--gray);
-}
-
 .congroup {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -281,7 +306,7 @@ ul.terms li:first-child {
 .grid-container {
   width: auto;
   height: auto;
-  margin: 3rem 1.50rem;
+  /* margin: 3rem 1.50rem; */
   padding: 0;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -295,46 +320,84 @@ ul.terms li:first-child {
   color: var(--dark-purple);
   display: inline-block;
   width: fit-content;
+  margin: 0;
+  padding: 0;
   margin-bottom: 1.5rem;
   position: relative;
 }
 
-
 .main_heading {
-  margin-bottom: 1.5rem;
   font-size: 2.5rem;
 }
 
-.ordered_headings {
-  list-style-type: upper-alpha;
-  font-size: 2rem;
+h2.main_heading {
+  margin-bottom: 0;
 }
 
-.options {
-  height: 6.5rem;
-  width: 5rem;
+.options.card {
+  height: 12rem;
+  width: 7rem;
   margin: 0;
   padding: 5rem;
   border: solid var(--foreground) 1.50px;
   transition-duration: 0.30s;
   position: relative;
+  display: flex;
 }
 
-
-.options:hover {
+.card:hover {
   box-shadow: -5px 5px var(--dark-blue);
   transform: translate(8px, -8px);
-
 }
 
-.options p {
+.card p {
   cursor: default;
   font: normal 1.1rem 'Fira Code', monospace;
   display: inline-block;
   padding: 0.4rem 1rem;
   position: absolute;
+  padding-top: 5rem;
+  min-width: 88%;
+  top: 1;
+  left: 0;
+}
+
+span.info {
+  display: flex;
+  color: black;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: gray;
+}
+
+.card .img-container {
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+}
+
+.card .img-container img {
+  max-width: 100%;
+  min-height: 10rem;
+  object-fit: cover;
+  border-bottom: 1px solid gray;
+}
+
+
+.img-cover {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin: -3rem 3rem 3rem; /* Get this -3rem from .master above */
+  border: 1px solid black;
+  border-top: 0;
+  animation: zoomIn 340ms ease-in-out;
+}
+
+.img-cover img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 
@@ -621,7 +684,7 @@ button#viewUnanswered {
     display: none;
   }
 
-  section#main {
+  div#main {
     flex-direction: column;
     position: relative;
     align-items: center;
@@ -685,6 +748,10 @@ button#viewUnanswered {
     flex-grow: 1;
   }
 
+  .master.terms {
+    width: 80%;
+  }
+
   #ads {
     width: 100%;
     align-items: center;
@@ -703,12 +770,14 @@ button#viewUnanswered {
   }
 
   .copyright-info{
-    font-size: 2.5rem;
+    font-size: 1.7rem;
   }
   /* Semesters */
 
   .congroup {
     margin-top: 5rem;
+    display: flex;
+
   }
 
   .grid-container {
@@ -724,7 +793,6 @@ button#viewUnanswered {
   .options {
     height: 16.5rem;
     width: 16.5rem;
-    margin: 0;
   }
 
 
@@ -732,6 +800,7 @@ button#viewUnanswered {
     font-size: 2rem;
     padding: 2rem;
   }
+
 
   /* Quiz */
 

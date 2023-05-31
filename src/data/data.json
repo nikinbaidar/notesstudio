@@ -2,6 +2,13 @@
     "routes" : {
         "main": [
             {
+                "path": "/home/*",
+                "component": "Home",
+                "props" : {
+                    "title": "Home"
+                }
+            },
+            {
                 "path": "/*",
                 "component": "Wiki",
                 "props" : {
@@ -9,10 +16,24 @@
                 }
             },
             {
-                "path": "/terms/*",
+                "path": "/terms",
                 "component": "Terms",
                 "props" : {
                     "title": "Terms of Service"
+                }
+            },
+            {
+                "path": "/privacy",
+                "component": "Privacy",
+                "props" : {
+                    "title": "Privacy Policy"
+                }
+            },
+            {
+                "path": "/philosophy",
+                "component": "Philosophy",
+                "props" : {
+                    "title": "Philosophy"
                 }
             }
         ],
@@ -30,7 +51,7 @@
                 "path": "/faq",
                 "component": "Faq",
                 "props" : {
-                    "title": "FAQ - Quiz"
+                    "title": "Quiz FAQ"
                 }
             },
             {
@@ -56,10 +77,68 @@
                     "name": "2",
                     "title": "Third"
                 }
+            },
+            {
+                "path": "/first/maths",
+                "component": "Subject",
+                "props" : {
+                    "name": "math_one",
+                    "bgc": "fff",
+                    "cover": "Math1"
+                }
+            },
+            {
+                "path": "/first/physics",
+                "component": "Subject",
+                "props" : {
+                    "name": "phy",
+                    "bgc": "31343d",
+                    "cover": "Physics"
+                }
+            },
+            {
+                "path": "/first/electronics",
+                "component": "Subject",
+                "props" : {
+                    "name": "belectronics",
+                    "bgc": "fff",
+                    "cover": "Belectronics"
+                }
+            },
+            {
+                "path": "/first/c",
+                "component": "Subject",
+                "props" : {
+                    "name": "computer",
+                    "bgc" : "fce07c",
+                    "cover": "computer"
+                }
+            },
+            {
+                "path": "/first/drawing",
+                "component": "Subject",
+                "props" : {
+                    "name": "drawing",
+                    "bgc": "fff",
+                    "cover": "Drawing"
+                }
+            },
+            {
+                "path": "/first/electrical",
+                "component": "Subject",
+                "props" : {
+                    "name": "electrical",
+                    "bgc" : "c34645",
+                    "cover": "Electrical"
+                }
             }
         ]
     },
     "policies": [
+        {
+            "name": "Philosophy",
+            "path": "/philosophy"
+        },
         {
             "name": "Privacy Policy",
             "path": "/privacy"
@@ -73,38 +152,27 @@
     "navBarItems": [
         {
             "name": "Home",
-            "link": "/",
-            "isActive": false
+            "path": "/home"
         },
         {
             "name": "Projects",
-            "link": "/projects",
-            "isActive": false
+            "path": "/projects"
         },
         {
             "name": "Forums",
-            "link": "/forums",
-            "isActive": false
+            "path": "/forums"
         },
         {
             "name": "Wiki",
-            "link": "/wiki",
-            "isActive": true
+            "path": "/"
         },
         {
             "name": "Blog",
-            "link": "/blog",
-            "isActive": false
-        },
-        {
-            "name": "Support",
-            "link": "/support",
-            "isActive": false
+            "path": "/blog"
         },
         {
             "name": "Log In",
-            "link": "/login",
-            "isActive": false
+            "path": "/login"
         }
     ],
     "curriculum": [
@@ -112,27 +180,35 @@
             "semester": "First",
             "subjects": [
                 {
-                    "name": "Engineering Mathematics I",
+                    "name": "Mathematics I",
+                    "cover" : "Math1",
                     "path": "/first/maths"
                 },
                 {
                     "name": "Physics",
+                    "credit" : "4",
+                    "cover" : "Physics",
+                    "description" : "The universe is under no obligation to make sense to you.",
                     "path": "/first/physics"
                 },
                 {
                     "name": "Basic Electronics",
+                    "cover": "Belectronics",
                     "path": "/first/electronics"
                 },
                 {
                     "name": "Computer Programming",
+                    "cover": "computer",
                     "path": "/first/c"
                 },
                 {
                     "name": "Engineering Drawing",
+                    "cover": "Drawing",
                     "path": "/first/drawing"
                 },
                 {
                     "name": "Basic Electrical Engineering",
+                    "cover": "Electrical",
                     "path": "/first/electrical"
                 }
             ]
