@@ -417,42 +417,44 @@
             ]
         }
     ],
-    "sideBarItems": [
-        {
-            "chapter": "NEC License Exam",
-            "lessons" : [
-                {
-                    "title": "2079 Chaitra",
-                    "path": "/"
-                },
-                {
-                    "title": "Syllabus",
-                    "path": "https://nec.gov.np/uploads/brochure/iNhdup4qtg220930061810.pdf"
-                },
-                {
-                    "title": "FAQ",
-                    "path": "/faq"
-                }
-            ]
-        },
-        {
-            "chapter": "Core",
-            "lessons" : [
-                {
-                    "title": "First",
-                    "path": "/first"
-                },
-                {
-                    "title": "Second",
-                    "path": "/second"
-                },
-                {
-                    "title": "Third",
-                    "path": "/third"
-                }
-            ]
-        }
-    ],
+    "sideBarItems": {
+        "wiki" : [
+            {
+                "chapter": "NEC License Exam",
+                "lessons" : [
+                    {
+                        "title": "2079 Chaitra",
+                        "path": "/"
+                    },
+                    {
+                        "title": "Syllabus",
+                        "path": "https://nec.gov.np/uploads/brochure/iNhdup4qtg220930061810.pdf"
+                    },
+                    {
+                        "title": "FAQ",
+                        "path": "/faq"
+                    }
+                ]
+            },
+            {
+                "chapter": "Core",
+                "lessons" : [
+                    {
+                        "title": "First",
+                        "path": "/first"
+                    },
+                    {
+                        "title": "Second",
+                        "path": "/second"
+                    },
+                    {
+                        "title": "Third",
+                        "path": "/third"
+                    }
+                ]
+            }
+        ]
+    },
 
     "2079pastQuestions" : {
         "setA" : [

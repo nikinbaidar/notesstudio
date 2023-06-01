@@ -1,5 +1,6 @@
 import { covers } from '../dataLoader';
 
+
 export function movetoTop () {
     setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' }); 
@@ -33,6 +34,7 @@ export function expandHamburgerMenu () {
     overlay.classList.add('active');
 }
 
+
 export function toggleHamburgerMenu(show) {
     const overlay = document.getElementById('overlay');
     const leftsidebar = document.getElementById('leftsidebar');   
@@ -49,6 +51,7 @@ export function toggleHamburgerMenu(show) {
     }
 }
 
+
 export function toggleAnchorColor(id, color) {
     const element = document.getElementById(id);
     (color === true) 
@@ -56,14 +59,16 @@ export function toggleAnchorColor(id, color) {
         : element.classList.remove('active');
 }
 
+
 export function getDate() {
     const currentDate = new Date().toLocaleDateString('en-US'); 
     const formattedDate = currentDate.split('/').join('/'); 
     return(formattedDate);
 }
 
+
+/* TODO Method overloading*/
 export function showCover(cover, bgc) {
-    /* Use method overloading here */
     const divStyle = {
         backgroundColor: `#${bgc}`,
     };

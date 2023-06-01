@@ -22,8 +22,8 @@ export function loadNavigationBar() {
   return data.navBarItems;
 }
 
-export function loadSideBar() {
-    return data.sideBarItems;
+export function loadSideBar(page) {
+    return data.sideBarItems[page];
 }
 
 export function loadCurriculum() {

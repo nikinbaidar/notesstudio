@@ -8,7 +8,7 @@ class Wiki extends React.Component {
     render() {
         return (
             <>
-            <Sidebar page="home" />
+            <Sidebar page="wiki" />
             <Main class="master" route="master" />
             <Advertisements />
             <div id="overlay" className="overlay" onClick={collapseHamburgerMenu}>

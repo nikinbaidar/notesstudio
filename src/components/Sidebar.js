@@ -8,7 +8,7 @@ class Sidebar extends React.Component {
 
     constructor(props) { 
         super(props);
-        this.headings = loadSideBar();
+        this.headings = loadSideBar(props.page);
     }
 
     handleClick(event) {

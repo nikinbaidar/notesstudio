@@ -25,6 +25,12 @@
 
 /* Define animations */
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 @keyframes zoomIn {
   from { transform: scale(0); }
   to   { transform: scale(1); }
@@ -392,7 +398,7 @@ span.info {
   margin: -3rem 3rem 3rem; /* Get this -3rem from .master above */
   border: 1px solid black;
   border-top: 0;
-  animation: zoomIn 340ms ease-in-out;
+  animation: zoomIn 300ms ease-in-out;
 }
 
 .img-cover img {
@@ -633,6 +639,15 @@ button#viewUnanswered {
   content: "";
 }
 
+.loading {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 4px dotted #f2f2f2;
+  border-top-color: #555;
+  animation: spin 1.5s linear infinite;
+  margin: 20px auto;
+}
 
 @media(max-width: 768px) {
 
