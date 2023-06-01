@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { showCover } from './utils';
-import DynamicComponent from './Dynamic';
+import { DynamicComponent } from './allComponents';
 
 class Subject extends React.Component {
 
@@ -10,7 +10,7 @@ class Subject extends React.Component {
         return (
             <React.Fragment>
             {showCover(`${this.props.cover}`, `${this.props.bgc}`)}
-            <DynamicComponent props={this.props} />
+            <DynamicComponent name={this.props.name} />
             </React.Fragment>
         )
     }
