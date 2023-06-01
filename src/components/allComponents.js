@@ -1,15 +1,14 @@
 import { lazy } from 'react';
 
 /* Components that aren't bound to any routes */
-export { default as Copyright } from './Copyright';
-export { default as Navigation } from './NavigationBar';
-export { default as Main } from './Main';
 
-export { default as ComingSoon } from './ComingSoon';
 export { default as Advertisements } from './Ads';
-
-/* Components that aren't bound to any routes but have props */
+export { default as ComingSoon } from './ComingSoon';
+export { default as Copyright } from './Copyright';
 export { default as DynamicComponent } from './Dynamic';
+export { default as Main } from './Main';
+export { default as Navigation } from './NavigationBar';
+export { default as Router } from './Router';
 
 
 /* Components that are bound to a route and have props 
@@ -17,11 +16,11 @@ export { default as DynamicComponent } from './Dynamic';
  * have more control over dynamic componenets.
  */
  
-export { default as Sidebar } from './Sidebar';
+export { default as Faq } from './Faq';
 export { default as Quiz } from './Quiz';
-export { default as Faq } from './FAQ';
 export { default as Semesters } from './Semesters';
-export { default as Subject } from './Subjects';
+export { default as Sidebar } from './Sidebar';
+export { default as Subject } from './Subject';
 
 /* Components bound to a route */
 
