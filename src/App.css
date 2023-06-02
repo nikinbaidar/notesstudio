@@ -208,8 +208,8 @@ div#main {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 85%;
-  margin: 2rem;
+  width: 80%;
+  margin: 3rem;
 }
 
 .master.terms {

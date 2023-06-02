@@ -76,8 +76,6 @@ class Semesters extends React.Component {
                 name="Biomedical Engineering" type="article"
                 description="biomedical engineering, nepal engineering council"
             />
-            <h1 className="main_heading"
-            style={{ marginLeft: '2rem', marginBottom: '3rem'}}>{this.props.title} Semester</h1>
             <div className="congroup">
             <div className="grid-container">{subjects}</div>
             </div>
