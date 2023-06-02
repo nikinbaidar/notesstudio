@@ -1,6 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Master, Pilot } from './allComponents';
-
 import { getRoutes } from '../dataLoader';
 
 class Router {
@@ -20,19 +19,21 @@ class Router {
         const namespaceRoutes = getRoutes(namespace);
         const routes = namespaceRoutes.map((item, index) => {
             const hasPilot = (item.pilot !== undefined) ? true : false;
-            let x = null; // Declare x with a default value
+            let elem = null; // Declare x with a default value
 
             if (hasPilot === true) {
-                x = this.mapComponent(item.component, item.props, item.pilot);
+                elem = {
+                    id: crypto.randomUUID(),
+                    path: item.path,
+                    component: this.mapComponent(item.component, item.props, item.pilot),
+                };
             } else {
-                x = <Master name={item.component} props={item.props} />;
+                elem = {
+                    id: crypto.randomUUID(),
+                    path: item.path,
+                    component: <Master name={item.component} props={item.props} />,
+                };
             }
-
-            const elem = {
-                id: crypto.randomUUID(),
-                path: item.path,
-                component: x, // Use the updated value of x here
-            };
 
             return <Route key={elem.id} path={elem.path} element={elem.component} />;
         });

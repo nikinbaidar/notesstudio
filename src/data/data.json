@@ -16,7 +16,7 @@
                 }
             },
             {
-                "path": "/projects",
+                "path": "/projects/*",
                 "component": "Projects",
                 "props" : {
                     "title": "Projects"

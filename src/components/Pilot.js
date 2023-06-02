@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { boardPilot } from '../dataLoader';
 import * as utils from './utils'
 
-
 class Pilot extends React.Component {
 
     constructor(props) { 
@@ -13,6 +12,15 @@ class Pilot extends React.Component {
             pageHeadings : pageHeadings,
         };
     }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.page !== this.props.page) {
+            const newPageHeadings = boardPilot(this.props.page);
+            this.setState({
+                pageHeadings: newPageHeadings,
+            });
+        }
+    }; 
 
     handleClick(event) {
         utils.movetoTop();
@@ -37,14 +45,14 @@ class Pilot extends React.Component {
             };
             return (
                 <React.Fragment key={elem.id}>
-                    <li className="topics">{elem.label}</li>
-                    <ul className="subtopics">{elem.lessons}</ul>
+                <li className="topics">{elem.label}</li>
+                <ul className="subtopics">{elem.lessons}</ul>
                 </React.Fragment>
             )
         });
         return(
             <div id="leftsidebar">
-                <ul className="headings">{chapters}</ul>
+            <ul className="headings">{chapters}</ul>
             </div>
         );
     }
