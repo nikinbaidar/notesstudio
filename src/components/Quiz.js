@@ -298,6 +298,7 @@ class Quiz extends React.Component {
                 </div>
                 <button id="submit" className="buttons" type="submit"
                 onClick={this.handleSubmit}>Submit</button>
+                
             </>
         );
     };

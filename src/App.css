@@ -184,6 +184,11 @@ div#main {
   /* text-decoration: underline dashed; */
 }
 
+.pilot-master-wrapper {
+  display: flex;
+  width: 100%;
+}
+
 .master {
   position: relative;
   display: flex;

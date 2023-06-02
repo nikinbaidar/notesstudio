@@ -22,9 +22,11 @@ class Faq extends React.Component {
     render() {
         return(
             <>
+            <div class="master">
             <SEO title={`${this.props.title}`} />
             <h1>FAQ</h1>
             {this.faq}
+            </div>
             </>
         );
     }

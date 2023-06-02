@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { ComingSoon, ComponentRegistry } from './allComponents';
 
-const DynamicComponent = ({ name, props = {} }) => {
+const Master = ({ name, props = {} }) => {
 
   const Component = ComponentRegistry[name];
 
@@ -16,4 +16,4 @@ const DynamicComponent = ({ name, props = {} }) => {
   );
 };
 
-export default DynamicComponent;
+export default Master;

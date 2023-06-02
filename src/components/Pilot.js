@@ -1,14 +1,17 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import { loadSideBar } from '../dataLoader';
+import { boardPilot } from '../dataLoader';
 import * as utils from './utils'
 
 
-class Sidebar extends React.Component {
+class Pilot extends React.Component {
 
     constructor(props) { 
         super(props);
-        this.headings = loadSideBar(props.page);
+        const pageHeadings = boardPilot(props.page);
+        this.state = {
+            pageHeadings : pageHeadings,
+        };
     }
 
     handleClick(event) {
@@ -17,7 +20,7 @@ class Sidebar extends React.Component {
     }
 
     render() {
-        const chapters = this.headings.map((item) => {
+        const chapters = this.state.pageHeadings.map((item) => {
             const elem = {
                 id: crypto.randomUUID(),
                 label: item.chapter,
@@ -47,4 +50,4 @@ class Sidebar extends React.Component {
     }
 }
 
-export default Sidebar;
+export default Pilot;

@@ -16,6 +16,13 @@
                 }
             },
             {
+                "path": "/projects",
+                "component": "Projects",
+                "props" : {
+                    "title": "Projects"
+                }
+            },
+            {
                 "path": "/terms",
                 "component": "Terms",
                 "props" : {
@@ -37,10 +44,110 @@
                 }
             }
         ],
-        "master": [
+        "wikimaster": [
             {
                 "path": "/",
                 "component": "Quiz",
+                "pilot": "wiki",
+                "props" : {
+                    "name" : "2079pastQuestions",
+                    "heading": "Nepal Engineering Council License Exam 2079 Chaitra",
+                    "title": "NEC License Exam 2079"
+                }
+            },
+            {
+                "path": "/faq",
+                "component": "Faq",
+                "props" : {
+                    "title": "Quiz FAQ"
+                }
+            },
+            {
+                "path": "/first",
+                "component": "Semesters",
+                "pilot": "wiki",
+                "props" : {
+                    "name": "0",
+                    "title": "First"
+                }
+            },
+            {
+                "path": "/second",
+                "component": "Semesters",
+                "props" : {
+                    "name": "1",
+                    "title": "Second"
+                }
+            },
+            {
+                "path": "/third",
+                "component": "Semesters",
+                "props" : {
+                    "name": "2",
+                    "title": "Third"
+                }
+            },
+            {
+                "path": "/first/maths",
+                "component": "Subject",
+                "pilot": "math",
+                "props" : {
+                    "name": "math_one",
+                    "bgc": "fff",
+                    "cover": "Math1"
+                }
+            },
+            {
+                "path": "/first/physics",
+                "component": "Subject",
+                "props" : {
+                    "name": "phy",
+                    "bgc": "31343d",
+                    "cover": "Physics"
+                }
+            },
+            {
+                "path": "/first/electronics",
+                "component": "Subject",
+                "props" : {
+                    "name": "belectronics",
+                    "bgc": "fff",
+                    "cover": "Belectronics"
+                }
+            },
+            {
+                "path": "/first/c",
+                "component": "Subject",
+                "props" : {
+                    "name": "computer",
+                    "bgc" : "fce07c",
+                    "cover": "computer"
+                }
+            },
+            {
+                "path": "/first/drawing",
+                "component": "Subject",
+                "props" : {
+                    "name": "drawing",
+                    "bgc": "fff",
+                    "cover": "Drawing"
+                }
+            },
+            {
+                "path": "/first/electrical",
+                "component": "Subject",
+                "props" : {
+                    "name": "electrical",
+                    "bgc" : "c34645",
+                    "cover": "Electrical"
+                }
+            }
+        ],
+        "projectmaster": [
+            {
+                "path": "/",
+                "component": "Quiz",
+                "pilot": "test",
                 "props" : {
                     "name" : "2079pastQuestions",
                     "heading": "Nepal Engineering Council License Exam 2079 Chaitra",
@@ -417,7 +524,45 @@
             ]
         }
     ],
-    "sideBarItems": {
+    "pilot": {
+        "test" : [
+            {
+                "chapter": "NEC License Exam",
+                "lessons" : [
+                    {
+                        "title": "2079 Chaitra",
+                        "path": "/"
+                    },
+                    {
+                        "title": "Syllabus",
+                        "path": "https://nec.gov.np/uploads/brochure/iNhdup4qtg220930061810.pdf"
+                    },
+                    {
+                        "title": "FAQ",
+                        "path": "/faq"
+                    }
+                ]
+            }
+        ],
+        "math" : [
+            {
+                "chapter": "Chapter 1",
+                "lessons" : [
+                    {
+                        "title": "Item 1",
+                        "path": "/"
+                    },
+                    {
+                        "title": "Item 2",
+                        "path": "https://nec.gov.np/uploads/brochure/iNhdup4qtg220930061810.pdf"
+                    },
+                    {
+                        "title": "Item 3",
+                        "path": "/faq"
+                    }
+                ]
+            }
+        ],
         "wiki" : [
             {
                 "chapter": "NEC License Exam",
