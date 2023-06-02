@@ -1,6 +1,5 @@
 import React from 'react';
-import { Main, Advertisements } from './allComponents';
-import { collapseHamburgerMenu } from './utils';
+import { Main } from './allComponents';
 
 
 class Wiki extends React.Component {
@@ -9,9 +8,6 @@ class Wiki extends React.Component {
         return (
             <>
             <Main className="pilot-master-wrapper" pilot="wiki" route="wikimaster" />
-            <Advertisements />
-            <div id="overlay" className="overlay" onClick={collapseHamburgerMenu}>
-            </div>
             </>
         );
     }

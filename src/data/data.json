@@ -43,7 +43,7 @@
                     "title": "Philosophy"
                 }
             }
-        ],
+        ], 
         "wikimaster": [
             {
                 "path": "/",
@@ -57,6 +57,7 @@
             },
             {
                 "path": "/faq",
+                "pilot": "wiki",
                 "component": "Faq",
                 "props" : {
                     "title": "Quiz FAQ"
@@ -74,6 +75,7 @@
             {
                 "path": "/second",
                 "component": "Semesters",
+                "pilot": "wiki",
                 "props" : {
                     "name": "1",
                     "title": "Second"
@@ -82,6 +84,7 @@
             {
                 "path": "/third",
                 "component": "Semesters",
+                "pilot": "wiki",
                 "props" : {
                     "name": "2",
                     "title": "Third"
@@ -90,7 +93,7 @@
             {
                 "path": "/first/maths",
                 "component": "Subject",
-                "pilot": "math",
+                "pilot": "autopilot",
                 "props" : {
                     "name": "math_one",
                     "bgc": "fff",
@@ -100,6 +103,7 @@
             {
                 "path": "/first/physics",
                 "component": "Subject",
+                "pilot": "autopilot",
                 "props" : {
                     "name": "phy",
                     "bgc": "31343d",
@@ -109,6 +113,7 @@
             {
                 "path": "/first/electronics",
                 "component": "Subject",
+                "pilot": "autopilot",
                 "props" : {
                     "name": "belectronics",
                     "bgc": "fff",
@@ -118,6 +123,7 @@
             {
                 "path": "/first/c",
                 "component": "Subject",
+                "pilot": "autopilot",
                 "props" : {
                     "name": "computer",
                     "bgc" : "fce07c",
@@ -127,6 +133,7 @@
             {
                 "path": "/first/drawing",
                 "component": "Subject",
+                "pilot": "autopilot",
                 "props" : {
                     "name": "drawing",
                     "bgc": "fff",
@@ -136,6 +143,7 @@
             {
                 "path": "/first/electrical",
                 "component": "Subject",
+                "pilot": "autopilot",
                 "props" : {
                     "name": "electrical",
                     "bgc" : "c34645",
@@ -146,116 +154,14 @@
         "projectmaster": [
             {
                 "path": "/",
-                "component": "Quiz",
-                "pilot": "test",
+                "component": "Ideas",
+                "pilot": "projectHeads",
                 "props" : {
-                    "name" : "2079pastQuestions",
-                    "heading": "Nepal Engineering Council License Exam 2079 Chaitra",
-                    "title": "NEC License Exam 2079"
-                }
-            },
-            {
-                "path": "/faq",
-                "component": "Faq",
-                "props" : {
-                    "title": "Quiz FAQ"
-                }
-            },
-            {
-                "path": "/first",
-                "component": "Semesters",
-                "props" : {
-                    "name": "0",
-                    "title": "First"
-                }
-            },
-            {
-                "path": "/second",
-                "component": "Semesters",
-                "props" : {
-                    "name": "1",
-                    "title": "Second"
-                }
-            },
-            {
-                "path": "/third",
-                "component": "Semesters",
-                "props" : {
-                    "name": "2",
-                    "title": "Third"
-                }
-            },
-            {
-                "path": "/first/maths",
-                "component": "Subject",
-                "props" : {
-                    "name": "math_one",
-                    "bgc": "fff",
-                    "cover": "Math1"
-                }
-            },
-            {
-                "path": "/first/physics",
-                "component": "Subject",
-                "props" : {
-                    "name": "phy",
-                    "bgc": "31343d",
-                    "cover": "Physics"
-                }
-            },
-            {
-                "path": "/first/electronics",
-                "component": "Subject",
-                "props" : {
-                    "name": "belectronics",
-                    "bgc": "fff",
-                    "cover": "Belectronics"
-                }
-            },
-            {
-                "path": "/first/c",
-                "component": "Subject",
-                "props" : {
-                    "name": "computer",
-                    "bgc" : "fce07c",
-                    "cover": "computer"
-                }
-            },
-            {
-                "path": "/first/drawing",
-                "component": "Subject",
-                "props" : {
-                    "name": "drawing",
-                    "bgc": "fff",
-                    "cover": "Drawing"
-                }
-            },
-            {
-                "path": "/first/electrical",
-                "component": "Subject",
-                "props" : {
-                    "name": "electrical",
-                    "bgc" : "c34645",
-                    "cover": "Electrical"
+                    "title": "Project Ideas"
                 }
             }
         ]
     },
-    "policies": [
-        {
-            "name": "Philosophy",
-            "path": "/philosophy"
-        },
-        {
-            "name": "Privacy Policy",
-            "path": "/privacy"
-        },
-        {
-            "name": "Terms",
-            "path": "/terms"
-        }
-    ],
-
     "navBarItems": [
         {
             "name": "Home",
@@ -282,6 +188,20 @@
             "path": "/login"
         }
     ],
+    "policies": [
+        {
+            "name": "Philosophy",
+            "path": "/philosophy"
+        },
+        {
+            "name": "Privacy Policy",
+            "path": "/privacy"
+        },
+        {
+            "name": "Terms",
+            "path": "/terms"
+        }
+    ],
     "curriculum": [
         {
             "semester": "First",
@@ -289,6 +209,7 @@
                 {
                     "name": "Mathematics I",
                     "cover" : "Math1",
+                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
                     "path": "/first/maths"
                 },
                 {
@@ -306,6 +227,7 @@
                 {
                     "name": "Computer Programming",
                     "cover": "computer",
+                    "description": "The real threat is not that computers will begin to think like men, but that men will begin to think like computers.",
                     "path": "/first/c"
                 },
                 {
@@ -316,6 +238,7 @@
                 {
                     "name": "Basic Electrical Engineering",
                     "cover": "Electrical",
+                    "description": "You can't resist me.",
                     "path": "/first/electrical"
                 }
             ]
@@ -341,6 +264,7 @@
                 },
                 {
                     "name": "Computer Systems & Database",
+                    "description": "Computers have lots of memory but no imagination.",
                     "path": "/second/matlab"
                 },
                 {
@@ -525,40 +449,24 @@
         }
     ],
     "pilot": {
-        "test" : [
+        "autopilot" : [
             {
-                "chapter": "NEC License Exam",
+                "chapter": "Chapter",
                 "lessons" : [
                     {
-                        "title": "2079 Chaitra",
-                        "path": "/"
-                    },
-                    {
-                        "title": "Syllabus",
-                        "path": "https://nec.gov.np/uploads/brochure/iNhdup4qtg220930061810.pdf"
-                    },
-                    {
-                        "title": "FAQ",
-                        "path": "/faq"
+                        "title": "Lesson",
+                        "path": "0.0.0.0"
                     }
                 ]
             }
         ],
-        "math" : [
+        "projectHeads" : [
             {
-                "chapter": "Chapter 1",
+                "chapter": "Projects",
                 "lessons" : [
                     {
-                        "title": "Item 1",
-                        "path": "/"
-                    },
-                    {
-                        "title": "Item 2",
-                        "path": "https://nec.gov.np/uploads/brochure/iNhdup4qtg220930061810.pdf"
-                    },
-                    {
-                        "title": "Item 3",
-                        "path": "/faq"
+                        "title": "Ideas",
+                        "path": "/projects"
                     }
                 ]
             }

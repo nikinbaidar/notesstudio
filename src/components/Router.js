@@ -1,15 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
-import { Master, Pilot } from './allComponents';
+import { Master, Pilot, Promotions } from './allComponents';
 import { getRoutes } from '../dataLoader';
+import { collapseHamburgerMenu } from './utils';
 
 class Router {
-
     static mapComponent(component, props, pilot) {
         return (
             <>
             <Pilot page={pilot} />
             <div className="master">
-                <Master name={component} props={props} />
+            <Master name={component} props={props} />
+            </div>
+            <Promotions />
+            <div id="overlay" className="overlay" onClick={collapseHamburgerMenu}>
             </div>
             </>
         ) ;

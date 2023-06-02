@@ -1,6 +1,5 @@
 import React from 'react';
-import { Main, Advertisements } from './allComponents';
-import { collapseHamburgerMenu } from './utils';
+import { Main } from './allComponents';
 
 class Projects extends React.Component {
 
@@ -8,9 +7,6 @@ class Projects extends React.Component {
         return (
             <>
             <Main className="pilot-master-wrapper" pilot="test" route="projectmaster" />
-            <Advertisements />
-            <div id="overlay" className="overlay" onClick={collapseHamburgerMenu}>
-            </div>
             </>
         );
     }

@@ -1,6 +1,13 @@
 import  React from 'react';
 import { SEO } from './Seo';
-import { loadQuiz, loadMsg, images } from '../dataLoader';
+
+import {
+    loadQuiz,
+    loadMsg,
+    quizQuestionImages as images 
+} 
+from '../dataLoader';
+
 import { movetoTop, shuffleArray } from './utils';
 
 class Quiz extends React.Component {

@@ -2,18 +2,18 @@ import { Suspense } from 'react';
 import { ComingSoon, ComponentRegistry } from './allComponents';
 
 const Master = ({ name, props = {} }) => {
+    /* @module {Component} Master : The main content component. */
+    const Component = ComponentRegistry[name];
 
-  const Component = ComponentRegistry[name];
+    if (!Component) {
+        return <ComingSoon />;
+    }
 
-  if (!Component) {
-    return <ComingSoon />;
-  }
-
-  return (
-    <Suspense fallback={<div className="loading"></div>}>
-      <Component {...props} />
-    </Suspense>
-  );
+    return (
+        <Suspense fallback={<div className="loading"></div>}>
+        <Component {...props} />
+        </Suspense>
+    );
 };
 
 export default Master;

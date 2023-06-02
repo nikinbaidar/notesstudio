@@ -2,7 +2,6 @@ import { lazy } from 'react';
 
 /* Components that aren't bound to any anchors */
 
-export { default as Advertisements } from './Ads';
 export { default as ComingSoon } from './ComingSoon';
 export { default as Copyright } from './Copyright';
 export { default as Master } from './Master';
@@ -10,18 +9,21 @@ export { default as Main } from './Main';
 export { default as Navigation } from './NavigationBar';
 export { default as Router } from './Router';
 export { default as Pilot } from './Pilot';
+export { default as Promotions } from './Promotions';
 
 /* Components bound to anchors. */
 
 const navigationModules = {
     Home       : lazy(() => import('./Landing')),
-    Philosophy : lazy(() => import('./Philosophy')),
-    Privacy    : lazy(() => import('./Privacy')),
     Projects   : lazy(() => import('./Projects')),
-    Terms      : lazy(() => import('./Terms')),
     Wiki       : lazy(() => import('./Wiki')),
 };
 
+const policyModules = {
+    Philosophy : lazy(() => import('./Philosophy')),
+    Privacy    : lazy(() => import('./Privacy')),
+    Terms      : lazy(() => import('./Terms')),
+}
 
 const wikiModules = {
     Faq        : lazy(() => import('./Faq')),
@@ -30,15 +32,18 @@ const wikiModules = {
     Subject    : lazy(() => import('./Subject')),
 };
 
+const projects = {
+    Ideas      : lazy(() => import('./projects/Ideas')),
+}
 
 const wikiFirst = {
     math_one   : lazy(() => import('./first/math')),
     phy        : lazy(() => import('./first/physics')),
 };
 
-
 export const ComponentRegistry = {
-    ...navigationModules,
+    ...navigationModules, ...policyModules,
+    ...projects,
     ...wikiModules,
     ...wikiFirst, 
 };
