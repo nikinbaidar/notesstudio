@@ -15,12 +15,17 @@ class Navigation extends React.Component {
 
         return (
             <li key={elem.key}>
-                <NavLink to={elem.path} id={elem.id} className="navigatiors">
+                <NavLink to={elem.path} id={elem.id} className="navigatiors"
+            onClick={this.handleClick}>
                 {elem.label}
                 </NavLink>
             </li>
         );
     });
+
+    handleClick(event) {
+        utils.movetoTop();
+    }
 
     render() {
 

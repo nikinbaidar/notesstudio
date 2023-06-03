@@ -82,9 +82,9 @@ a:visited {
   text-decoration: none;
 }
 
-.master li, .master p {
+/* .master li, .master p {
   font-size: 1.2rem;
-}
+} */
 
 .difficulty {
   color: var(--red);
@@ -102,6 +102,10 @@ a.need-attention {
 nav {
   width: 100%;
   height: auto;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000; */
   display: inline-flex;
   flex-direction: row-reverse;
   overflow:hidden;
@@ -159,6 +163,7 @@ div#main {
   display: flex;
   justify-content: center;
   margin: 0;
+  /* margin-top: 3.20rem; */
   padding: 0;
 }
 
@@ -414,7 +419,7 @@ span.info {
   display: flex;
   justify-content: center;
   align-items:center;
-  margin: -2rem 3rem 3rem; /* Get this -2rem from .master above */
+  margin: -3rem 3rem 3rem; /* Get this -3rem from .master above */
   border: 1px solid black;
   border-top: 0;
   animation: zoomIn 300ms ease-in-out;

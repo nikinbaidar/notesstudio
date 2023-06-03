@@ -149,6 +149,66 @@
                     "bgc" : "c34645",
                     "cover": "Electrical"
                 }
+            },
+            {
+                "path": "/second/maths",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "math2",
+                    "bgc" : "a2d4f5",
+                    "cover": "Math2"
+                }
+            },
+            {
+                "path": "/second/chemistry",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "chemistry",
+                    "bgc" : "fbf7ec",
+                    "cover": "Chemistry"
+                }
+            },
+            {
+                "path": "/second/bme",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "bme",
+                    "bgc" : "f3fff9",
+                    "cover": "Mechanical"
+                }
+            },
+            {
+                "path": "/second/eem",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "eem",
+                    "bgc" : "f7e7ed",
+                    "cover": "Eem"
+                }
+            },
+            {
+                "path": "/second/matlab",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Matlab",
+                    "bgc" : "fff",
+                    "cover": "Computer2"
+                }
+            },
+            {
+                "path": "/second/digitalelectronics",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "DigitalLogic",
+                    "bgc" : "fff",
+                    "cover": "DigitalLogic"
+                }
             }
         ],
         "projectmaster": [
@@ -247,28 +307,40 @@
             "semester": "Second",
             "subjects": [
                 {
-                    "name": "Engineering Mathematics II",
+                    "name": "Mathematics II",
+                    "cover" : "Math2",
+                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
                     "path": "/second/maths"
                 }, 
                 {
                     "name": "Chemistry",
+                    "cover" : "Chemistry",
+                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
                     "path": "/second/chemistry"
                 },
                 {
                     "name": "Basic Mechanical Engineering",
+                    "cover" : "Mechanical",
+                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
                     "path": "/second/bme"
                 },
                 {
                     "name": "Electro Engineering Materials",
+                    "cover" : "Eem",
+                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
                     "path": "/second/eem"
                 },
                 {
-                    "name": "Computer Systems & Database",
+                    "name": "Computer Systems & Database Concepts",
+                    "cover" : "Computer2",
+                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
                     "description": "Computers have lots of memory but no imagination.",
                     "path": "/second/matlab"
                 },
                 {
                     "name": "Digital Electronics",
+                    "cover" : "DigitalLogic",
+                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
                     "path": "/second/digitalelectronics"
                 }
             ]
@@ -277,28 +349,34 @@
             "semester": "Third",
             "subjects": [
                 {
-                    "name": "Engineering Mathematics III",
+                    "name": "Mathematics III",
+                    "cover": "Math3",
                     "path": "/third/maths"
                 }, 
                 {
-                    "name": "Bio-Engineering Materials",
-                    "path": "/third/chemistry"
-                },
-                {
                     "name": "Human Anatomy & Physiology I",
+                    "cover": "Anatomy1",
                     "path": "/third/bme"
                 },
                 {
                     "name": "Fluid Mechanics",
+                    "cover": "Fluid",
                     "path": "/third/fluid"
                 },
                 {
-                    "name": "Cell Biology and Immunology",
-                    "path": "/third/cell-bio"
+                    "name": "Bio-Engineering Materials",
+                    "cover": "Biomaterials",
+                    "path": "/third/chemistry"
                 },
                 {
                     "name": "Microprocessors",
+                    "cover": "Micro",
                     "path": "/third/microprocessor"
+                },
+                {
+                    "name": "Cell Biology and Immunology",
+                    "cover": "Biochemistry",
+                    "path": "/third/cell-bio"
                 }
             ]
         },

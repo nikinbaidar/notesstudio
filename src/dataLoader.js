@@ -1,50 +1,26 @@
-/** Data Loader Module
- *
- * This module provides functions and data for dynamically loading various
- * information, including policies, navigation bar items, curriculum, quiz
- * questions, memos, FAQs, routes, and images.
- *
- * @module dataLoader
- *
- ** Images Exported by Data Loader
- *
- * The exported images used by the data loader module. The images are provided
- * as named exports and can be used in other parts of the application.
- *
- * @exports {Object} ads
- * @exports {Object} quizQuestionImages
- * @exports {Object} covers
- *
- *
- ** Text Data Exported by Data Loader
- *
- * The exported text data used by the data loader module. The text data
- * includes policies, navigation bar items, curriculum, quiz questions, memos,
- * FAQs, and routes. These data can be accessed through the provided functions.
- *
- * @exports {Function} loadPolicies
- * @exports {Function} loadNavigationBar
- * @exports {Function} boardPilot
- * @exports {Function} loadCurriculum
- * @exports {Function} loadQuiz
- * @exports {Function} loadMsg
- * @exports {Function} loadFAQ
- * @exports {Function} getRoutes 
- *
- */
-
-
 import data from './data/data.json';
 
 import BElectronics  from './data/images/BElectronics.jpg';
+import Biomaterials  from './data/images/biomaterials.jpg';
+import Biochemistry  from './data/images/biochemistry.avif';
 import BuyMeACoffee  from './data/images/BuyMeACoffee.jpg';
 import Computer      from './data/images/computer.jpg';
+import Computer2     from './data/images/computer_system.avif';
+import Chemistry     from './data/images/chemistry.avif';
+import DigitalLogic  from './data/images/digital_logic.jpg';
 import Drawing       from './data/images/drawing.png';
+import Eem           from './data/images/eem.png';
 import Electrical    from './data/images/electrical.jpg';
 import Entrapment    from './data/images/Entrapment.png';
 import Escape        from './data/images/escape.webp';
+import Fluid         from './data/images/fluid.avif';
+import Anatomy1      from './data/images/anatomy1.avif';
 import LowPassFilter from './data/images/Low_pass_filter.jpg';
 import Math1         from './data/images/Math1.jpg';
+import Math2         from './data/images/math2.jpg';
+import Math3         from './data/images/math3.jpg';
+import Mechanical    from './data/images/mechanical.avif';
+import Micro         from './data/images/microprocessors.png';
 import Physics       from './data/images/relativity.jpg';
 
 
@@ -58,13 +34,25 @@ export const quizQuestionImages = {
 }
 
 export const covers = {
+    Anatomy1,
+    Chemistry,
+    DigitalLogic,
+    Biomaterials,
+    Biochemistry,
+    Eem,
     Escape,
+    Fluid,
     Physics,
     Math1,
+    Math2,
+    Math3,
+    Mechanical,    
+    Micro,    
     Belectronics: BElectronics,
     Drawing,
     Electrical,
     computer : Computer,
+    Computer2 : Computer2,
 }
 
 
