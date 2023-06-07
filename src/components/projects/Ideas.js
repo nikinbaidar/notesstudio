@@ -10,14 +10,16 @@ class Ideas extends React.Component {
 
             <h2>Current small tasks</h2>
             <ul>
-            <li>Fix typos and formatting errors on the wiki. </li>
-            <li>Write content for Blog. Maybe start with a bunch of essays.</li>
             <li>A dark theme.</li>
+            <li>Fix typos and formatting errors. </li>
+            {/* <li>Write content for Blog. Maybe start with a bunch of essays.</li> */}
+            {/* <li>A dark theme.</li> */}
             </ul>
 
             <h2>Current major tasks</h2>
             <ul>
-            <li>Write a backend (preferably in go) to connect this site to a database.</li>
+            <li>Write content for the site.</li>
+            <li>Write a backend (preferably in go lang).</li>
             </ul>
 
             <h2>Hardware projects</h2>

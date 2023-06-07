@@ -1,7 +1,6 @@
 import React from 'react';
 import { Main } from './allComponents';
 
-
 class Wiki extends React.Component {
 
     render() {

@@ -6,7 +6,8 @@ class Projects extends React.Component {
     render() {
         return (
             <>
-            <Main className="pilot-master-wrapper" pilot="test" route="projectmaster" />
+            <Main className="pilot-master-wrapper projects" 
+            route="projectmaster" />
             </>
         );
     }

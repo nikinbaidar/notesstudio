@@ -37,7 +37,7 @@ class Pilot extends React.Component {
                     return (
                         <li key={lessonId}>
                         <NavLink to={lesson.path} onClick={this.handleClick}>
-                        {lesson.title}
+                        {(lesson.title).toLowerCase()}
                         </NavLink>
                         </li>
                     );

@@ -69,7 +69,7 @@
                 "pilot": "wiki",
                 "props" : {
                     "name": "0",
-                    "title": "First"
+                    "title": "First sem"
                 }
             },
             {
@@ -78,7 +78,7 @@
                 "pilot": "wiki",
                 "props" : {
                     "name": "1",
-                    "title": "Second"
+                    "title": "Second sem"
                 }
             },
             {
@@ -87,7 +87,52 @@
                 "pilot": "wiki",
                 "props" : {
                     "name": "2",
-                    "title": "Third"
+                    "title": "Third sem"
+                }
+            },
+            {
+                "path": "/fourth",
+                "component": "Semesters",
+                "pilot": "wiki",
+                "props" : {
+                    "name": "3",
+                    "title": "Fourth sem"
+                }
+            },
+            {
+                "path": "fifth",
+                "component": "Semesters",
+                "pilot": "wiki",
+                "props" : {
+                    "name": "4",
+                    "title": "Fifth sem"
+                }
+            },
+            {
+                "path": "/sixth",
+                "component": "Semesters",
+                "pilot": "wiki",
+                "props" : {
+                    "name": "5",
+                    "title": "Sixth sem"
+                }
+            },
+            {
+                "path": "/seventh",
+                "component": "Semesters",
+                "pilot": "wiki",
+                "props" : {
+                    "name": "6",
+                    "title": "Seventh sem"
+                }
+            },
+            {
+                "path": "/eighth",
+                "component": "Semesters",
+                "pilot": "wiki",
+                "props" : {
+                    "name": "7",
+                    "title": "Eighth sem"
                 }
             },
             {
@@ -205,9 +250,79 @@
                 "component": "Subject",
                 "pilot": "autopilot",
                 "props" : {
-                    "name": "DigitalLogic",
+                    "name": "Digital Logic",
                     "bgc" : "fff",
                     "cover": "DigitalLogic"
+                }
+            },
+            {
+                "path": "/sixth/medimg1",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalImaging1",
+                    "bgc" : "393d48",
+                    "cover": "MedImg1"
+                }
+            },
+            {
+                "path": "/sixth/medimg1",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalImaging1",
+                    "bgc" : "393d48",
+                    "cover": "MedImg1"
+                }
+            },
+            {
+                "path": "/sixth/medelx",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalElectronics",
+                    "bgc" : "393d48",
+                    "cover": "MedElx"
+                }
+            },
+            {
+                "path": "/sixth/economics",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Economics",
+                    "bgc" : "393d48",
+                    "cover": "Economics"
+                }
+            },
+            {
+                "path": "/sixth/medimg1",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalImaging1",
+                    "bgc" : "393d48",
+                    "cover": "MedImg1"
+                }
+            },
+            {
+                "path": "/sixth/instrumentation1",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "BioIns1",
+                    "bgc" : "393d48",
+                    "cover": "Instrumentation1"
+                }
+            },
+            {
+                "path": "/sixth/tdi",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Tdi",
+                    "bgc" : "393d48",
+                    "cover": "Tdi"
                 }
             }
         ],
@@ -262,277 +377,299 @@
             "path": "/terms"
         }
     ],
-    "curriculum": [
-        {
-            "semester": "First",
-            "subjects": [
-                {
-                    "name": "Mathematics I",
-                    "cover" : "Math1",
-                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
-                    "path": "/first/maths"
-                },
-                {
-                    "name": "Physics",
-                    "credit" : "4",
-                    "cover" : "Physics",
-                    "description" : "The universe is under no obligation to make sense to you.",
-                    "path": "/first/physics"
-                },
-                {
-                    "name": "Basic Electronics",
-                    "cover": "Belectronics",
-                    "path": "/first/electronics"
-                },
-                {
-                    "name": "Computer Programming",
-                    "cover": "computer",
-                    "description": "The real threat is not that computers will begin to think like men, but that men will begin to think like computers.",
-                    "path": "/first/c"
-                },
-                {
-                    "name": "Engineering Drawing",
-                    "cover": "Drawing",
-                    "path": "/first/drawing"
-                },
-                {
-                    "name": "Basic Electrical Engineering",
-                    "cover": "Electrical",
-                    "description": "You can't resist me.",
-                    "path": "/first/electrical"
-                }
-            ]
-        },
-        {
-            "semester": "Second",
-            "subjects": [
-                {
-                    "name": "Mathematics II",
-                    "cover" : "Math2",
-                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
-                    "path": "/second/maths"
-                }, 
-                {
-                    "name": "Chemistry",
-                    "cover" : "Chemistry",
-                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
-                    "path": "/second/chemistry"
-                },
-                {
-                    "name": "Basic Mechanical Engineering",
-                    "cover" : "Mechanical",
-                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
-                    "path": "/second/bme"
-                },
-                {
-                    "name": "Electro Engineering Materials",
-                    "cover" : "Eem",
-                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
-                    "path": "/second/eem"
-                },
-                {
-                    "name": "Computer Systems & Database Concepts",
-                    "cover" : "Computer2",
-                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
-                    "description": "Computers have lots of memory but no imagination.",
-                    "path": "/second/matlab"
-                },
-                {
-                    "name": "Digital Electronics",
-                    "cover" : "DigitalLogic",
-                    "description": "If you're going to limit your dreams, at least tend them to infinity.",
-                    "path": "/second/digitalelectronics"
-                }
-            ]
-        },
-        {
-            "semester": "Third",
-            "subjects": [
-                {
-                    "name": "Mathematics III",
-                    "cover": "Math3",
-                    "path": "/third/maths"
-                }, 
-                {
-                    "name": "Human Anatomy & Physiology I",
-                    "cover": "Anatomy1",
-                    "path": "/third/bme"
-                },
-                {
-                    "name": "Fluid Mechanics",
-                    "cover": "Fluid",
-                    "path": "/third/fluid"
-                },
-                {
-                    "name": "Bio-Engineering Materials",
-                    "cover": "Biomaterials",
-                    "path": "/third/chemistry"
-                },
-                {
-                    "name": "Microprocessors",
-                    "cover": "Micro",
-                    "path": "/third/microprocessor"
-                },
-                {
-                    "name": "Cell Biology and Immunology",
-                    "cover": "Biochemistry",
-                    "path": "/third/cell-bio"
-                }
-            ]
-        },
-        {
-            "semester": "Fourth",
-            "subjects": [
-                {
-                    "name": 19,
-                    "path": "19"
-                },
-                {
-                    "name": 20,
-                    "path": "20"
-                },
-                {
-                    "name": 21,
-                    "path": "21"
-                },
-                {
-                    "name": 22,
-                    "path": "22"
-                },
-                {
-                    "name": 23,
-                    "path": "23"
-                },
-                {
-                    "name": 24,
-                    "path": "24"
-                } 
-            ]
-        },
-        {
-            "semester": "Fifth",
-            "subjects": [
-                {
-                    "name": 25,
-                    "path": "25"
-                },
-                {
-                    "name": 26,
-                    "path": "26"
-                },
-                {
-                    "name": 27,
-                    "path": "27"
-                },
-                {
-                    "name": 28,
-                    "path": "28"
-                },
-                {
-                    "name": 29,
-                    "path": "29"
-                },
-                {
-                    "name": 30,
-                    "path": "30"
-                } 
-            ]
-        },
-        {
-            "semester": "Sixth",
-            "subjects": [
-                {
-                    "name": 31,
-                    "path": "31"
-                },
-                {
-                    "name": 32,
-                    "path": "32"
-                },
-                {
-                    "name": 33,
-                    "path": "33"
-                },
-                {
-                    "name": 34,
-                    "path": "34"
-                },
-                {
-                    "name": 35,
-                    "path": "35"
-                },
-                {
-                    "name": 36,
-                    "path": "36"
-                } 
-            ]
-        },
-        {
-            "semester": "Seventh",
-            "subjects": [
-                {
-                    "name": 37,
-                    "path": "37"
-                },
-                {
-                    "name": 38,
-                    "path": "38"
-                },
-                {
-                    "name": 39,
-                    "path": "39"
-                },
-                {
-                    "name": 40,
-                    "path": "40"
-                },
-                {
-                    "name": 41,
-                    "path": "41"
-                },
-                {
-                    "name": 42,
-                    "path": "42"
-                } 
-            ]
-        },
-        {
-            "semester": "Eighth",
-            "subjects": [
-                {
-                    "name": 43,
-                    "path": "43"
-                },
-                {
-                    "name": 44,
-                    "path": "44"
-                },
-                {
-                    "name": 45,
-                    "path": "45"
-                },
-                {
-                    "name": 46,
-                    "path": "46"
-                },
-                {
-                    "name": 47,
-                    "path": "47"
-                },
-                {
-                    "name": 48,
-                    "path": "48"
-                } 
-            ]
-        }
-    ],
+    "cards": { 
+        "semesters" : [
+            {
+                "semester": "First",
+                "subjects": [
+                    {
+                        "name": "Mathematics I",
+                        "cover" : "Math1",
+                        "description": "If you're going to limit your dreams, at least tend them to infinity.",
+                        "path": "/first/maths"
+                    },
+                    {
+                        "name": "Physics",
+                        "credit" : "4",
+                        "cover" : "Physics",
+                        "description" : "The universe is under no obligation to make sense to you.",
+                        "path": "/first/physics"
+                    },
+                    {
+                        "name": "Basic Electronics",
+                        "cover": "Belectronics",
+                        "path": "/first/electronics"
+                    },
+                    {
+                        "name": "Computer Programming",
+                        "cover": "computer",
+                        "description": "The real threat is not that computers will begin to think like men, but that men will begin to think like computers.",
+                        "path": "/first/c"
+                    },
+                    {
+                        "name": "Engineering Drawing",
+                        "cover": "Drawing",
+                        "path": "/first/drawing"
+                    },
+                    {
+                        "name": "Basic Electrical Engineering",
+                        "cover": "Electrical",
+                        "description": "You can't resist me.",
+                        "path": "/first/electrical"
+                    }
+                ]
+            },
+            {
+                "semester": "Second",
+                "subjects": [
+                    {
+                        "name": "Mathematics II",
+                        "cover" : "Math2",
+                        "description": "If you're going to limit your dreams, at least tend them to infinity.",
+                        "path": "/second/maths"
+                    }, 
+                    {
+                        "name": "Chemistry",
+                        "cover" : "Chemistry",
+                        "description": "If you're going to limit your dreams, at least tend them to infinity.",
+                        "path": "/second/chemistry"
+                    },
+                    {
+                        "name": "Basic Mechanical Engineering",
+                        "cover" : "Mechanical",
+                        "description": "If you're going to limit your dreams, at least tend them to infinity.",
+                        "path": "/second/bme"
+                    },
+                    {
+                        "name": "Electro Engineering Materials",
+                        "cover" : "Eem",
+                        "description": "If you're going to limit your dreams, at least tend them to infinity.",
+                        "path": "/second/eem"
+                    },
+                    {
+                        "name": "Computer Systems & Database Concepts",
+                        "cover" : "Computer2",
+                        "description": "If you're going to limit your dreams, at least tend them to infinity.",
+                        "description": "Computers have lots of memory but no imagination.",
+                        "path": "/second/matlab"
+                    },
+                    {
+                        "name": "Digital Electronics",
+                        "cover" : "DigitalLogic",
+                        "description": "If you're going to limit your dreams, at least tend them to infinity.",
+                        "path": "/second/digitalelectronics"
+                    }
+                ]
+            },
+            {
+                "semester": "Third",
+                "subjects": [
+                    {
+                        "name": "Mathematics III",
+                        "cover": "Math3",
+                        "path": "/third/maths"
+                    }, 
+                    {
+                        "name": "Human Anatomy & Physiology I",
+                        "cover": "Anatomy1",
+                        "path": "/third/bme"
+                    },
+                    {
+                        "name": "Fluid Mechanics",
+                        "cover": "Fluid",
+                        "path": "/third/fluid"
+                    },
+                    {
+                        "name": "Bio-Engineering Materials",
+                        "cover": "Biomaterials",
+                        "path": "/third/chemistry"
+                    },
+                    {
+                        "name": "Microprocessors",
+                        "cover": "Micro",
+                        "path": "/third/microprocessor"
+                    },
+                    {
+                        "name": "Cell Biology & Immunology",
+                        "cover": "Biochemistry",
+                        "path": "/third/cell-bio"
+                    }
+                ]
+            },
+            {
+                "semester": "Fourth",
+                "subjects": [
+                    {
+                        "name": "Applied Mathematics",
+                        "cover": "Math4",
+                        "path": "23"
+                    },
+                    {
+                        "name": "Human Anatomy & Physiology II",
+                        "cover": "Anatomy2",
+                        "path": "22"
+                    },
+                    {
+                        "name": "Biomechanics",
+                        "cover": "Biomechanics",
+                        "path": "20"
+                    },
+                    {
+                        "name": "Electronics",
+                        "cover": "Electronics",
+                        "path": "21"
+                    },
+                    {
+                        "name": "Sociology",
+                        "cover": "Sociology",
+                        "path": "19"
+                    },
+                    {
+                        "name": "Research Methodology",
+                        "cover": "Research",
+                        "path": "24"
+                    } 
+                ]
+            },
+            {
+                "semester": "Fifth",
+                "subjects": [
+                    {
+                        "name": "Probability & Statistics",
+                        "cover": "Probability",
+                        "path": "25"
+                    },
+                    {
+                        "name": "Biomedical Embeeded System Design",
+                        "cover": "Embedded",
+                        "path": "29"
+                    },
+                    {
+                        "name": "Numerical Methods",
+                        "cover": "Numerical",
+                        "path": "26"
+                    },
+                    {
+                        "name": "Control Systems",
+                        "cover": "Control",
+                        "path": "28"
+                    },
+                    {
+                        "name": "Measurement & Instrumentation",
+                        "cover": "Measurement",
+                        "path": "27"
+                    },
+                    {
+                        "name": "Communication Systems",
+                        "cover": "Communication",
+                        "path": "30"
+                    } 
+                ]
+            },
+            { 
+                "semester": "Sixth",
+                "subjects": [
+                    { "name": "Medical Imaging I",
+                        "cover": "MedImg1",
+                        "path": "/sixth/medimg1"
+                    },
+                    {
+                        "name": "Tissue Device Interactions",
+                        "cover": "Tdi",
+                        "path": "/sixth/tdi"
+                    },
+                    {
+                        "name": "Biomdedical Digital Signal Processing",
+                        "cover": "DigitalSignal",
+                        "path": "/sixth/digitalsignal"
+                    }, 
+                    {
+                        "name": "Engineering Economics",
+                        "cover": "Economics",
+                        "path": "/sixth/economics"
+                    },
+                    {
+                        "name": "Biomedical Instrumentation I",
+                        "cover": "Instrumentation1",
+                        "path": "/sixth/instrumentation1"
+                    },
+                    {
+                        "name": "Medical Electronics",
+                        "cover": "MedElx",
+                        "path": "/sixth/medelx"
+                    }
+                ]
+            },
+            {
+                "semester": "Seventh",
+                "subjects": [
+                    {
+                        "name": "Organization & Project Management",
+                        "path": "37"
+                    },
+                    {
+                        "name": "Biomedical Instrumentation II",
+                        "cover": "Instrumentation2",
+                        "path": "38"
+                    },
+                    {
+                        "name": "Medical Imaging II",
+                        "path": "39"
+                    },
+                    {
+                        "name": "Implantable Devices",
+                        "path": "40"
+                    },
+                    {
+                        "name": "Structural Biomaterials",
+                        "path": "41"
+                    },
+                    {
+                        "name": "Biomedical Equipment Maintenance",
+                        "path": "42"
+                    } 
+                ]
+            },
+            {
+                "semester": "Eighth",
+                "subjects": [
+                    {
+                        "name": "Medical Industry Management",
+                        "path": "43"
+                    },
+                    {
+                        "name": "Engineering Professional Practice",
+                        "cover": "Epp",
+                        "path": "44"
+                    },
+                    {
+                        "name": "Neural Networks",
+                        "cover": "NN",
+                        "path": "45"
+                    },
+                    {
+                        "name": "Medical Image Processing",
+                        "path": "46"
+                    },
+                    {
+                        "name": "Medical Infromatics",
+                        "path": "47"
+                    },
+                    {
+                        "name": "Theory of Medical Robotics",
+                        "path": "48"
+                    } 
+                ]
+            }
+        ]
+    },
     "pilot": {
         "autopilot" : [
             {
-                "chapter": "Chapter",
+                "chapter": "",
                 "lessons" : [
                     {
-                        "title": "Lesson",
+                        "title": "",
                         "path": "0.0.0.0"
                     }
                 ]
@@ -581,6 +718,39 @@
                     {
                         "title": "Third",
                         "path": "/third"
+                    },
+                    {
+                        "title": "Fourth",
+                        "path": "/fourth"
+                    },
+                    {
+                        "title": "Fifth",
+                        "path": "/fifth"
+                    },
+                    {
+                        "title": "Sixth",
+                        "path": "/sixth"
+                    },
+                    {
+                        "title": "Seventh",
+                        "path": "/seventh"
+                    },
+                    {
+                        "title": "Eighth",
+                        "path": "/eighth"
+                    }
+                ]
+            },
+            {
+                "chapter": "Extras",
+                "lessons" : [
+                    {
+                        "title": "Blog",
+                        "path": "/blog"
+                    },
+                    {
+                        "title": "Projects",
+                        "path": "/projects"
                     }
                 ]
             }
