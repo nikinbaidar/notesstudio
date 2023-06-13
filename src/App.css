@@ -1,70 +1,31 @@
 :root {
-  --background:   #FBFCF3;
-  --foreground:   #0F111B;
-  --nav-heading:  #C1C3CC;
-  --dark-blue:    #0D2235;
-  --dark-orange:  #FF6000;
-  --red:          #E33400;
-  --yellow:       #FD0;
-  --orange:       #F2CE00;
-  --blue:         #00A3CC;
-  --green:        #5CCC96;
-  --soft-pink:    #FAF0E6;
-  --soft-blue:    #F1F1F1;
-  --purple:       #7A5CCC;
-  --magenta:      #CE6F8F;
-  --gray:         #EDEDED;
-  --mid-gray:     #ECECEC;
-  --dark-gray:    #CCC;
-  --dark-purple:  #2E3459;
+  --background: #FBFCF3;
+  --foreground: #0F111B;
+  --nav-heading: #C1C3CC;
+  --dark-blue: #0D2235;
+  --dark-orange: #FF6000;
+  --red: #E33400;
+  --yellow: #FD0;
+  --orange: #F2CE00;
+  --cyan: #00A3CC;
+  --blue: #9AC5F4;
+  --green: #5CCC96;
+  --soft-pink: #FAF0E6;
+  --soft-blue: #F1F1F1;
+  --purple: #7A5CCC;
+  --magenta: #CE6F8F;
+  --gray: #EDEDED;
+  --mid-gray: #ECECEC;
+  --dark-gray: #CCC;
+  --dark-purple: #2E3459;
   --light-purple: #686F9A;
-  --white:        #ECF0C1;
-  --pure-white:   #FFF;
-  --pure-black:   #000;
+  --white: #ECF0C1;
+  --pure-white: #FFF;
+  --pure-black: #000;
   --bright-white: #FFD95A;
 }
 
-/* Define animations */
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); 
-  }
-  100% {
-    transform: rotate(360deg); 
-  }
-}
-
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0); 
-  }
-  to   {
-    transform: scale(1); 
-  }
-}
-
-@keyframes slideInFromLeft { 
-  from {
-    transform: translateX(-100%); 
-  } 
-  to {
-    transform: translateX(0); 
-  }
-}
-
-@keyframes slideOutFromRight {
-  from {
-    transform: translateX(0); 
-  }
-  to {
-    transform: translateX(-100%); 
-  }
-}
-
 /* General Styles */
-
 
 html,
 body {
@@ -114,19 +75,16 @@ a.need-attention {
 /* Navigation */
 
 nav {
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000; 
-   */
+  color: var(--nav-heading);
+  background-color: var(--dark-purple);
   width: 100%;
+  min-height: 50px;
+  max-height: 50px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  color: var(--nav-heading);
-  background-color: var(--dark-purple);
   position: sticky;
   top: 0;
   z-index: 10000;
@@ -952,3 +910,43 @@ button#viewUnanswered {
     font-size: 11px;
   }
 }
+
+/* Define animations */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); 
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0); 
+  }
+  to   {
+    transform: scale(1); 
+  }
+}
+
+@keyframes slideInFromLeft { 
+  from {
+    transform: translateX(-100%); 
+  } 
+  to {
+    transform: translateX(0); 
+  }
+}
+
+@keyframes slideOutFromRight {
+  from {
+    transform: translateX(0); 
+  }
+  to {
+    transform: translateX(-100%); 
+  }
+}
+
