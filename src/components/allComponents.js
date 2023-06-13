@@ -10,6 +10,7 @@ export { default as Navigation } from './NavigationBar';
 export { default as Router } from './Router';
 export { default as Pilot } from './Pilot';
 export { default as Promotions } from './Promotions';
+export { default as SEO } from './Seo';
 
 /* Components bound to anchors. */
 
@@ -37,8 +38,8 @@ const projects = {
 }
 
 const wikiFirst = {
-    math_one   : lazy(() => import('./first/math')),
-    phy        : lazy(() => import('./first/physics')),
+    math1   : lazy(() => import('./first/math')),
+    physics       : lazy(() => import('./first/physics')),
 };
 
 export const ComponentRegistry = {

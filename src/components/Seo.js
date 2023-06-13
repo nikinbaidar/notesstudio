@@ -12,3 +12,5 @@ export function SEO({title, description, name, type}) {
         </Helmet>
     );
 }
+
+export default SEO;

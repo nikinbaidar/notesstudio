@@ -1,5 +1,5 @@
 import React from 'react';
-import { Master } from './allComponents';
+import { Master, SEO } from './allComponents';
 
 class Subject extends React.Component {
 
@@ -7,6 +7,7 @@ class Subject extends React.Component {
 
         return (
             <React.Fragment>
+                <SEO title={this.props.name} />
                 <Master name={this.props.name} />
             </React.Fragment>
         );

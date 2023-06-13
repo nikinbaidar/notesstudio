@@ -74,11 +74,8 @@ class Card extends React.Component {
             name="Biomedical Engineering" type="article"
             description="biomedical engineering, nepal engineering council"
             />
-            <h1 style={{ marginLeft: '1rem' }}
-            className="main_heading">{this.props.title.toLowerCase()}</h1>
-            <div className="congroup">
+            <h1 className="main_heading">{this.props.title.toLowerCase()}</h1>
             <div className="grid-container">{subjects}</div>
-            </div>
             </>
         );
     }

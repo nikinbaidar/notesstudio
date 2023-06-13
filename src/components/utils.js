@@ -2,9 +2,16 @@ import { covers } from '../dataLoader';
 
 
 export function movetoTop () {
+    const master = document.getElementsByClassName('master')[0];
     setTimeout(() => {
+        if (master) {
+            master.scrollTo({ top: 0, behavior: 'smooth' }); 
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' }); 
     }, 100)
+}; 
+
+export function movetoTopOfDiv(event) {
 }; 
 
 

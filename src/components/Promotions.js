@@ -6,13 +6,20 @@ class Promotions extends React.Component {
         return (
             <>
             <div id="ads">
+
+            <div className="promotions tux">
+            <img src={ads.Tux} alt="Tux Logo"/>
+            <p>Advertisement Space?</p>
+            </div>
+
+            <div className="promotions coffee">
             <a href="https://bit.ly/3Fw7B3R">
-            <div className="coffee">
             <img src={ads.BuyMeACoffee} alt="BuyMeACoffee"/>
-            <p>Or a book...</p> 
+            <p>Or a book...</p></a>
             </div>
-            </a>
+
             </div>
+
             </>
         );
     }

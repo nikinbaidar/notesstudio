@@ -5,7 +5,7 @@ class Terms extends React.Component {
     render() { 
         return (
             <>
-            <div className="master terms spacebelow">
+            <div className="master no-sidebar terms spacebelow">
             <h1 className="main_heading">Terms of Service</h1>
             <hr/>
 
