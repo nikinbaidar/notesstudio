@@ -15,8 +15,6 @@ class Quiz extends React.Component {
     constructor(props) {
         super(props);
         const questionSets = loadQuiz(props.name);
-        const quizData = [...shuffleArray(questionSets.setA),
-            ...shuffleArray(questionSets.setB)];
         const setAQuestionCount = questionSets.setA.length;
         const setBQuestionCount = questionSets.setB.length;
         const totalQuestions = setAQuestionCount + setBQuestionCount;
@@ -27,7 +25,6 @@ class Quiz extends React.Component {
         const memos = loadMsg();
         const indexPassed = Math.floor(Math.random()*(memos.pass.length));
         const indexFailed = Math.floor(Math.random()*(memos.fail.length));
-        this.quizData = quizData;
         this.totalPages = (totalQuestions / quesPerPage);
         this.quesPerPage = quesPerPage;
         this.sAQCount = setAQuestionCount;
@@ -39,6 +36,7 @@ class Quiz extends React.Component {
         this.indexPassed =  indexPassed;
         this.indexFailed =  indexFailed;
         this.state = {
+            quizData: [...shuffleArray(questionSets.setA), ...shuffleArray(questionSets.setB)],
             currentPage: 1,
             start: 0,
             end: this.quesPerPage,
@@ -56,10 +54,37 @@ class Quiz extends React.Component {
         window.MathJax.typeset();
     }; 
 
-    componentDidUpdate(prevState) {
+    componentDidUpdate(prevProps,prevState) {
+
+        if (this.props.name !== prevProps.name) {
+            const newQuestionSet = loadQuiz(this.props.name);
+            const newQuizData = [...(newQuestionSet.setA),
+                ...(newQuestionSet.setB)];
+            const totalQuestions = 80;
+            const newAnswerMap = Array.from({totalQuestions}, (_, i) => 
+                `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
+            this.setState({
+                quizData: newQuizData,
+                currentPage: 1,
+                start: 0,
+                end: this.quesPerPage,
+                selOpts: newAnswerMap,
+                explainedQuestions: newAnswerMap,
+                totalAnswered: 0,
+                unanswered: Array.from({length: totalQuestions}, (_, i) => i+1),
+                submitted: false,
+                score: 0,
+                animate: true,
+            })
+            movetoTop();
+            const popup = document.getElementById('popup');
+            popup.classList.remove("show");
+        }
+
         if (this.state.currentPage !== prevState.currentPage) {
             window.MathJax.typeset();
         }
+
     }
 
     renderQues = (question, questionNumber) => {
@@ -174,7 +199,7 @@ class Quiz extends React.Component {
     };
 
     showUnanswered = () => {
-        const popup = document.getElementsByClassName('popup')[0];
+        const popup = document.getElementById('popup');
         popup.classList.toggle("show");
     };
 
@@ -242,6 +267,7 @@ class Quiz extends React.Component {
 
     render() {
         const {
+            quizData,
             start,
             end,
             currentPage,
@@ -250,7 +276,7 @@ class Quiz extends React.Component {
             unanswered,
             animate,
         } = this.state;
-        const questions = this.quizData.slice(start, end).map(this.renderQues);
+        const questions = quizData.slice(start, end).map(this.renderQues);
         const set = (currentPage <= this.sAQCount/this.quesPerPage) ? 'A':'B';
         const marksDistribution = (set === 'A')
             ? `1 x ${this.sAQCount} = ${this.sAQCount}` 
@@ -291,7 +317,7 @@ class Quiz extends React.Component {
                     <button id="viewUnanswered" type="submit"
                         onClick={this.showUnanswered}>{`See what's unanswered`}
                     </button>
-                    <div className="popup">
+                    <div id="popup">
                         <ul className={`comma-list ${animate ? 'animate' :
                                 null}`} onAnimationEnd={this.onAnimationEnd}>
                         {

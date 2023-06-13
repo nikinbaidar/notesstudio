@@ -1,4 +1,5 @@
 {
+
     "routes" : {
         "main": [
             {
@@ -53,6 +54,16 @@
                     "name" : "2079pastQuestions",
                     "heading": "Nepal Engineering Council License Exam 2079 Chaitra",
                     "title": "NEC License Exam 2079"
+                }
+            },
+            {
+                "path": "/modelquestion",
+                "component": "Quiz",
+                "pilot": "wiki",
+                "props" : {
+                    "name" : "modelquestion",
+                    "heading": "Model Questions Set 1",
+                    "title": "NEC License Exam Model Questions"
                 }
             },
             {
@@ -250,19 +261,153 @@
                 "component": "Subject",
                 "pilot": "autopilot",
                 "props" : {
-                    "name": "Digital Logic",
+                    "name": "DigitalLogic",
                     "bgc" : "fff",
                     "cover": "DigitalLogic"
                 }
             },
             {
-                "path": "/sixth/medimg1",
+                "path": "/third/maths",
                 "component": "Subject",
                 "pilot": "autopilot",
                 "props" : {
-                    "name": "MedicalImaging1",
-                    "bgc" : "393d48",
-                    "cover": "MedImg1"
+                    "name": "Maths3"
+                }
+            },
+            {
+                "path": "/third/hap1",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "HAP1"
+                }
+            },
+            {
+                "path": "/third/fluid",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Fluid"
+                }
+            },
+            {
+                "path": "/third/biomaterials",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Biomaterials"
+                }
+            },
+            {
+                "path": "/third/microprocessor",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Microprocessor"
+                }
+            },
+            {
+                "path": "/third/cellbio",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "CellBiology"
+                }
+            },
+            {
+                "path": "/fourth/maths4",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Maths4"
+                }
+            },
+            {
+                "path": "/fourth/electronics",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Electronics"
+                }
+            },
+            {
+                "path": "/fourth/hap2",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "HAP2"
+                }
+            },
+            {
+                "path": "/fourth/biomechanics",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Biomechanics"
+                }
+            },
+            {
+                "path": "/fourth/sociology",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Sociology"
+                }
+            },
+            {
+                "path": "/fourth/research",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "ResearchMethodology"
+                }
+            },
+            {
+                "path": "/fifth/probability",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Probability"
+                }
+            },
+            {
+                "path": "/fifth/embedded",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Embedded"
+                }
+            },
+            {
+                "path": "/fifth/numericalmethods",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "NumericalMethods"
+                }
+            },
+            {
+                "path": "/fifth/measurement",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Measurement"
+                }
+            },
+            {
+                "path": "/fifth/communication",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Communication"
+                }
+            },
+            {
+                "path": "/fifth/control",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Control"
                 }
             },
             {
@@ -296,11 +441,11 @@
                 }
             },
             {
-                "path": "/sixth/medimg1",
+                "path": "/sixth/digitalsignal",
                 "component": "Subject",
                 "pilot": "autopilot",
                 "props" : {
-                    "name": "MedicalImaging1",
+                    "name": "DigitalSignalProcessing",
                     "bgc" : "393d48",
                     "cover": "MedImg1"
                 }
@@ -310,7 +455,7 @@
                 "component": "Subject",
                 "pilot": "autopilot",
                 "props" : {
-                    "name": "BioIns1",
+                    "name": "BiomedicalInstrumentationI",
                     "bgc" : "393d48",
                     "cover": "Instrumentation1"
                 }
@@ -323,6 +468,102 @@
                     "name": "Tdi",
                     "bgc" : "393d48",
                     "cover": "Tdi"
+                }
+            },
+            {
+                "path": "/seventh/opm",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Organization"
+                }
+            },
+            {
+                "path": "/seventh/instrumentation2",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Instrumentation2"
+                }
+            },
+            {
+                "path": "/seventh/imagingii",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalImagingII"   
+                }
+            },
+            {
+                "path": "/seventh/implantabledevices",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "ImplatableDevices"
+                }
+            },
+            {
+                "path": "/seventh/structural",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "StructuralBiomaterials"
+                }
+            },
+            {
+                "path": "/seventh/maintenance",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "Maintenance"
+                }
+            },
+            {
+                "path": "/eighth/mim",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalIndustryManagement"
+                }
+            },
+            {
+                "path": "/eighth/epp",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "EngineeringProfessionalPractice"
+                }
+            },
+            {
+                "path": "/eighth/nn",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "NeuralNetworks"   
+                }
+            },
+            {
+                "path": "/eighth/mip",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalImageProcessing"
+                }
+            },
+            {
+                "path": "/eighth/informatics",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalInformatics"
+                }
+            },
+            {
+                "path": "/eighth/robotics",
+                "component": "Subject",
+                "pilot": "autopilot",
+                "props" : {
+                    "name": "MedicalRobotics"
                 }
             }
         ],
@@ -472,7 +713,7 @@
                     {
                         "name": "Human Anatomy & Physiology I",
                         "cover": "Anatomy1",
-                        "path": "/third/bme"
+                        "path": "/third/hap1"
                     },
                     {
                         "name": "Fluid Mechanics",
@@ -482,7 +723,7 @@
                     {
                         "name": "Bio-Engineering Materials",
                         "cover": "Biomaterials",
-                        "path": "/third/chemistry"
+                        "path": "/third/biomaterials"
                     },
                     {
                         "name": "Microprocessors",
@@ -492,7 +733,7 @@
                     {
                         "name": "Cell Biology & Immunology",
                         "cover": "Biochemistry",
-                        "path": "/third/cell-bio"
+                        "path": "/third/cellbio"
                     }
                 ]
             },
@@ -502,32 +743,32 @@
                     {
                         "name": "Applied Mathematics",
                         "cover": "Math4",
-                        "path": "23"
+                        "path": "/fourth/maths4"
                     },
                     {
                         "name": "Human Anatomy & Physiology II",
                         "cover": "Anatomy2",
-                        "path": "22"
+                        "path": "/fourth/hap2"
                     },
                     {
                         "name": "Biomechanics",
                         "cover": "Biomechanics",
-                        "path": "20"
+                        "path": "/fourth/biomechanics"
                     },
                     {
                         "name": "Electronics",
                         "cover": "Electronics",
-                        "path": "21"
+                        "path": "/fourth/electronics"
                     },
                     {
                         "name": "Sociology",
                         "cover": "Sociology",
-                        "path": "19"
+                        "path": "/fourth/sociology"
                     },
                     {
                         "name": "Research Methodology",
                         "cover": "Research",
-                        "path": "24"
+                        "path": "/fourth/research"
                     } 
                 ]
             },
@@ -537,32 +778,32 @@
                     {
                         "name": "Probability & Statistics",
                         "cover": "Probability",
-                        "path": "25"
+                        "path": "/fifth/probability"
                     },
                     {
                         "name": "Biomedical Embeeded System Design",
                         "cover": "Embedded",
-                        "path": "29"
+                        "path": "/fifth/embedded"
                     },
                     {
                         "name": "Numerical Methods",
                         "cover": "Numerical",
-                        "path": "26"
+                        "path": "/fifth/numericalmethods"
                     },
                     {
                         "name": "Control Systems",
                         "cover": "Control",
-                        "path": "28"
+                        "path": "/fifth/control"
                     },
                     {
                         "name": "Measurement & Instrumentation",
                         "cover": "Measurement",
-                        "path": "27"
+                        "path": "/fifth/measurement"
                     },
                     {
                         "name": "Communication Systems",
                         "cover": "Communication",
-                        "path": "30"
+                        "path": "/fifth/communication"
                     } 
                 ]
             },
@@ -604,30 +845,36 @@
                 "semester": "Seventh",
                 "subjects": [
                     {
+                        "name": "Medical Imaging II",
+                        "cover": "MedicalImagingII",
+                        "path": "/seventh/imagingii"
+                    },
+                    {
+                        "name": "Implantable Devices",
+                        "cover": "Implantable",
+                        "path": "/seventh/implantabledevices"
+                    },
+                    {
+                        "name": "Structural Biomaterials",
+                        "cover": "Structural",
+                        "path": "/seventh/structural"
+                    },
+                    {
                         "name": "Organization & Project Management",
-                        "path": "37"
+                        "cover": "Project",
+                        "path": "/seventh/opm"
                     },
                     {
                         "name": "Biomedical Instrumentation II",
                         "cover": "Instrumentation2",
-                        "path": "38"
-                    },
-                    {
-                        "name": "Medical Imaging II",
-                        "path": "39"
-                    },
-                    {
-                        "name": "Implantable Devices",
-                        "path": "40"
-                    },
-                    {
-                        "name": "Structural Biomaterials",
-                        "path": "41"
+                        "path": "/seventh/instrumentation2"
                     },
                     {
                         "name": "Biomedical Equipment Maintenance",
-                        "path": "42"
+                        "cover": "Maintenance",
+                        "path": "/seventh/maintenance"
                     } 
+
                 ]
             },
             {
@@ -635,29 +882,29 @@
                 "subjects": [
                     {
                         "name": "Medical Industry Management",
-                        "path": "43"
+                        "path": "/eighth/mim"
                     },
                     {
                         "name": "Engineering Professional Practice",
                         "cover": "Epp",
-                        "path": "44"
+                        "path": "/eighth/epp"
                     },
                     {
                         "name": "Neural Networks",
                         "cover": "NN",
-                        "path": "45"
+                        "path": "/eighth/nn"
                     },
                     {
                         "name": "Medical Image Processing",
-                        "path": "46"
+                        "path": "/eighth/mip"
                     },
                     {
                         "name": "Medical Infromatics",
-                        "path": "47"
+                        "path": "/eighth/informatics"
                     },
                     {
                         "name": "Theory of Medical Robotics",
-                        "path": "48"
+                        "path": "/eighth/robotics"
                     } 
                 ]
             }
@@ -693,6 +940,10 @@
                     {
                         "title": "2079 Chaitra",
                         "path": "/"
+                    },
+                    {
+                        "title": "Model Questions",
+                        "path": "/modelquestion"
                     },
                     {
                         "title": "Syllabus",
@@ -1804,6 +2055,1054 @@
         ]
     },
 
+    "modelquestion" : {
+        "setA" : [
+            {
+                "name" : "Agglutination reaction is more sensitive than percipitation for the detection of ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Antigens",
+                    "Antibodies",
+                    "Complement",
+                    "Antigen-Antibody complexes"
+                ],
+                "ansKey" : 3,
+                "hint": "Agglutination and precipitation reactions are both commonly used in immunology for the detection and identification of antigens and antibodies. In an agglutination reaction, small particles, such as latex beads or red blood cells, are coated with either antigens or antibodies. When the specific antigen or antibody is present in a sample, it will bind to the corresponding antibody or antigen-coated particles, resulting in visible clumping or agglutination. Agglutination can be observed macroscopically or microscopically."
+            },
+            {
+                "name" : "Haemopoiesis is a process of the production of ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Blood plasma",
+                    "Erythrocytes",
+                    "Bone marrow",
+                    "Haemoglobin"
+                ],
+                "ansKey" : 1,
+                "hint": "Haemopoiesis, also known as hematopoiesis, is the process by which new blood cells are formed. It occurs primarily in the bone marrow, specifically in the red bone marrow found in the spongy portions of certain bones. "
+            },
+            {
+                "name" : "The corpus callosum is a ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Source of hypothalamic hormones",
+                    "Nerual pathway that connects the right and left hemispheres",
+                    "Part of the neocortex",
+                    "Structure in the cerebellum"
+                ],
+                "ansKey" : 1,
+                "hint": "The corpus callosum is a prominent structure in the brain that serves as the main pathway for communication between the two cerebral hemispheres. "
+            },
+            {
+                "name" : "Which is true of the pulmonary circuit?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Blood oxygen content is higher in the pulmonary vein than in the pulmonary artery",
+                    "Blood is pumped through it by the left ventricle",
+                    "Resting blood pressure in the pulmonary artery is normally equal to that in the aorta",
+                    "The cardiac output into the pulmonary circuit is approximately 1/6 of that into the systemic circuit."
+                ],
+                "ansKey" : 0,
+                "hint": "In the pulmonary circuit, deoxygenated blood from the right ventricle is pumped into the pulmonary arteries to reach the lungs for oxygenation. After oxygenation, the blood returns to the heart through the pulmonary veins, and at this point, its oxygen content is higher."
+            },
+            {
+                "name" : "When  substances move from the tubule into the surrounding afferent ateriole, this is known as ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Re-absorption",
+                    "Tubular section",
+                    "Filtration",
+                    "Excretion"
+                ],
+                "ansKey" : 1,
+                "hint": "When substances move from the tubule into the surrounding afferent arteriole, this process is known as tubular secretion."
+            },
+            {
+                "name" : "The greatest source of elasticity in human skeletal muscle tissue is attributed to ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "The parallel elastic component",
+                    "The series elastic component",
+                    "The continuous elastic component",
+                    "The active elastic component"
+                ],
+                "ansKey" : 0,
+                "hint": "The greatest source of elasticity in human skeletal muscle tissue is attributed to the parallel elastic component. It includes structures such as the epimysium, perimysium, and endomysium. The series elastic component refers to the tendons and other structures that transmit the force generated by the muscle to the bones. It does not contribute significantly to muscle elasticity, nor do the continuous elastic component and active elastic components."
+            },
+            {
+                "name" : "Any material that once placed in the human body has minimal interaction with its  surrounding tissue is called as ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Membrane Lamination",
+                    "Polysaccharides",
+                    "Bioinert Materials",
+                    "Biomaterials"
+                ],
+                "ansKey" : 2,
+                "hint": "Bioinert materials are substances that exhibit minimal interaction with the surrounding tissue once placed in the human body. These materials are designed to have high chemical stability and low reactivity, allowing them to remain largely unchanged and non-reactive in the biological environment. Biomaterials is a broader term encompassing all types of materials used in medical and biological applications, including both bioinert and bioactive materials."
+            },
+            {
+                "name" : "Collagen is best described as a ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Helical structural protein  ",
+                    "Coiled-coil found in hair  ",
+                    "Cross-linked globular protein",
+                    "Triple-helical fibrous protein  "
+                ],
+                "ansKey" : 3,
+                "hint": "Collagen is best described as a fibrous structural protein that provides strength, support, and flexibility to various tissues in the body. Collagen is composed of three polypeptide chains called alpha chains, which are tightly coiled together to form a triple helix structure. Therefore, d) is the most appropriate answer."
+            },
+            {
+                "name" : "___ is to obtain a smooth surface that stimulates natural tooth surface.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Condensation",
+                    "Sintering",
+                    "Glazing",
+                    "Degassing"
+                ],
+                "ansKey" : 2,
+                "hint": "Glazing is a dental process that involves applying a layer of ceramic material onto a dental restoration, such as a crown or a veneer, to obtain a smooth and polished surface."
+            },
+            {
+                "name" : "The incorporation of which of the following peptide sequences, during surface  modification, has been shown to specifically increase the attachment of neural cells?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "REDV",
+                    "KRSR and Osteopintin-1",
+                    "VIPGIG and MEPE",
+                    "YIGSR and IKVAV  "
+                ],
+                "ansKey" : 3,
+                "hint": "The peptide sequences YIGSR (Tyr-Ile-Gly-Ser-Arg) and IKVAV (Ile-Lys-Val-Ala-Val) have been shown to specifically increase the attachment of neural cells during surface modification."
+            },
+            {
+                "name" : "In which of the technique enzyme and polymer are bridged by the use of bi-functional reagent?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Covalent cross-linking",
+                    "Adsorption",
+                    "Adsorption",
+                    "Microencapsulation  "
+                ],
+                "ansKey" : 0,
+                "hint": "In the technique of covalent cross-linking, enzymes and polymers are bridged by the use of a bi-functional reagent. The bi-functional reagent contains two functional groups, one that can react with the enzyme and another that can react with the polymer. During the covalent cross-linking process, the first functional group of the bi-functional reagent reacts with specific amino acid residues on the enzyme, forming a covalent bond between the enzyme and the reagent. The second functional group of the reagent then reacts with the polymer, creating a covalent bond between the enzyme and the polymer matrix."
+            },
+            {
+                "name" : "Von Willebrand factor is synthesized by ECs and secreted into sub endothelial matrix,  where it is bound by which of the following?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Collagen I, III, IV, VI",
+                    "Heparin I, III, IV, VI. ",
+                    "Collagen I, III, IV, V",
+                    "Collagen I, II, III, V"
+                ],
+                "ansKey" : 2,
+                "hint": "Once secreted, vWF binds to specific types of collagen present in the subendothelial matrix. These collagen types are collagen I, III, IV, and V."
+            },
+            {
+                "name" : "Which of the following is not an ideal indication for a bioprosthetic valve (compared to a  mechanical prosthetic valve)?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Female planning pregnancy",
+                    "Young adult male",
+                    "Elderly female",
+                    "History of endocarditis"
+                ],
+                "ansKey" : 1,
+                "hint": "A young adult male may not be an ideal candidate for a bioprosthetic valve due to the relatively shorter durability of bioprosthetic valves compared to mechanical valves. Younger patients typically have a longer life expectancy and may require valve replacement surgery in the future if a bioprosthetic valve wears out or degenerates."
+            },
+            {
+                "name" : "What is the disadvantage of ceramic bearings in THR?  ",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Increased Wear",
+                    "Lower Modulus of Elasticity",
+                    "More corrosion",
+                    "High Cost"
+                ],
+                "ansKey" : 0,
+                "hint": "Despite their excellent wear resistance, ceramic bearings may experience a phenomenon called \"third-body wear.\" This occurs when particles, such as debris or fragments from the surrounding tissues or implant components, become trapped between the bearing surfaces and cause abrasive damage. "
+            },
+            {
+                "name" : "Which is a complication associated particularly with a urethral catheter?  ",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "More likely to cause urinary tract infections and bladder stones",
+                    "Difficult to site the catheter for overweight people",
+                    "The catheter site may produce a discharge",
+                    "Mechanical irritation to the urethra provokes an intense, acute, and chronic  inflammatory tissue response  "
+                ],
+                "ansKey" : 0,
+                "hint": "Urethral catheters, when left in place for an extended period, can increase the risk of developing urinary tract infections (UTIs). The presence of a catheter provides a pathway for bacteria to enter the urinary tract, leading to infection. UTIs can cause symptoms such as frequent urination, urgency, pain or burning during urination, cloudy or bloody urine, and lower abdominal discomfort. Additionally, the use of urethral catheters can also contribute to the formation of bladder stones. The catheter can disrupt the normal flow of urine and cause stagnation, leading to the precipitation of mineral deposits and the formation of stones in the bladder."
+            },
+            {
+                "name" : "Which of the following is a limitation of using autologous fat as a biomaterial in plastic  surgery?  ",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "It is expensive  ",
+                    "It is difficult to obtain in sufficient quantities",
+                    "It is prone to resorption and volume loss over time",
+                    "It is associated with a high risk of infection"
+                ],
+                "ansKey" : 2,
+                "hint": "One of the limitations of using autologous fat as a biomaterial in plastic surgery is its tendency to undergo resorption and volume loss over time. After fat grafting, a portion of the transferred fat may not establish a sufficient blood supply and can be reabsorbed by the body. This can result in a reduction in volume and may require additional grafting sessions to achieve the desired outcome."
+            },
+            {
+                "name" : "What is the region enclosed by the optical cavity called in a LASER machine?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Optical region",
+                    "Optical system  ",
+                    "Optical resonator",
+                    "Optical box  "
+                ],
+                "ansKey" : 2,
+                "hint": "An optical resonator refers to the space between the mirrors or reflective surfaces in a LASER machine. The optical resonator consists of two mirrors placed at opposite ends of the laser medium, which could be a solid, liquid, or gas. These mirrors are highly reflective, allowing the light to bounce back and forth between them multiple times. This bouncing of light within the resonator enhances the stimulated emission process and helps to generate a coherent and amplified beam of laser ligh"
+            },
+            {
+                "name" : "Which one of the following statements best defines tissue engineering?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "It is the replacement of tissues using techniques developed from a combination of  biology and engineering principles.",
+                    "It is the growth of tissue components in vitro that can be used to regenerate diseased or damaged tissue.",
+                    "It is the implantation of scaffolds for the in situ repair of diseased or damaged tissue.",
+                    "It is a form of bioactive fixation."
+                ],
+                "ansKey" : 1,
+                "hint": "While options a), c) and d), each describe one aspect of tissue engineering, they do not encopass the full concept of tissue engineering. Tissue engineering involves the application of principles from both biology and engineering to create functional tissue constructs that can replace or restore damaged or diseased tissues in the body. Therefore b) is the most appropriate answer."
+            },
+            {
+                "name" : "Which of the following is a characteristic of the photons produced by the bremsstrahlung  method?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "They have a single discrete energy level",
+                    "They have a continuous range of energy levels",
+                    "They have a negative charge",
+                    "They are absorbed by atoms in the target material"
+                ],
+                "ansKey" : 1,
+                "hint": "The bremsstrahlung method is a process in which photons are generated by the deceleration of charged particles, such as electrons, as they interact with the target material. In this process, the electrons experience acceleration or deceleration due to the electric field of the target atoms, emitting photons in the form of X-rays. Unlike characteristic X-rays, which have discrete energy levels specific to the target material, the photons produced by bremsstrahlung have a continuous range of energy levels. "
+            },
+            {
+                "name" : "Which of the following is NOT true regarding dose in CT imaging?   ",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Reducing slice thickness reduces patient dose.  ",
+                    "Noise reduction often leads to an increased patient dose.  ",
+                    "An obese patient requires an increased dose to produce an image with an acceptable  noise level.  ",
+                    "Good quality control is necessary to ensure the patient dose is as low as possible.  "
+                ],
+                "ansKey" : 0,
+                "hint": "Reducing slice thickness in CT imaging does not directly reduce patient dose. Slice thickness refers to the thickness of the imaging plane or section that is captured during a single rotation of the CT scanner. While reducing slice thickness can improve spatial resolution and image detail, it does not have a direct impact on patient dose. Therefore, the answer is a) Reducing slice thickness reduces patient dose."
+            },
+            {
+                "name" : "Increasing the magnetic field ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Produces less susceptibility artifacts.",
+                    "Reduces the risk of tissue heating.",
+                    "Increase the signal to noise.",
+                    "Reduces the danger from metallic projectiles."
+                ],
+                "ansKey" : 2,
+                "hint": "Increasing the magnetic field strength in MRI (Magnetic Resonance Imaging) has several effects, including an increase in the signal-to-noise ratio (SNR). The SNR is a measure of the strength of the signal relative to the background noise in the image. By increasing the magnetic field strength, the signal produced by the protons in the body is enhanced, resulting in a higher SNR. This leads to improved image quality and better visualization of anatomical structures. a) Susceptibility artifacts are distortions or signal voids in the MRI image caused by magnetic field inhomogeneities, such as those arising from air-tissue interfaces or metallic objects. Increasing the magnetic field strength can exacerbate susceptibility artifacts rather than reduce them."
+            },
+            {
+                "name" : "Arrange from fastest to slowest according to penetration of ultrasound.  ",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Lung, fat, soft tissue, liver, blood, muscle, tendons, bone",
+                    "Bone, tendons, muscles, blood, liver, fat, soft tissue, lung",
+                    "Bone, tendons, muscles, blood, liver, soft tissue, fat, lung",
+                    "Bone, Muscles, tendons, blood, liver, soft tissue, fat, lung"
+                ],
+                "ansKey" : 2,
+                "hint": "Ultrasound waves penetrate different tissues at different speeds based on their acoustic properties. In general, denser and more solid tissues tend to slow down or attenuate ultrasound waves more than less dense and more fluid-like tissues. Therefore, the correct arrangement is c) Bone, tendons, muscles, blood, liver, soft tissue, fat, lung."
+            },
+            {
+                "name" : "What color laser is typically used to stimulate the imaging plate in computed  radiography?  ",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Red",
+                    "Blue-green",
+                    "Yellow",
+                    "Infrared"
+                ],
+                "ansKey" : 0,
+                "hint": "In computed radiography (CR), a red laser is typically used to stimulate the imaging plate. The red laser is chosen because it matches the peak sensitivity of the phosphor material, allowing for efficient and accurate stimulation of the imaging plate."
+            },
+            {
+                "name" : "The branch of radiology in which a chemical or compound containing a radioactive  isotope is called?  ",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Nuclear medicine imaging",
+                    "Ultrasound",
+                    "X-Ray",
+                    "None"
+                ],
+                "ansKey" : 0,
+                "hint": "Nuclear Medicine is a specialized field of radiology that utilizes radioactive substances, known as radiopharmaceuticals, for diagnostic and therapeutic purposes."
+            },
+            {
+                "name" : "Montages refers to ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "A pattern of electrodes on the head and the channels they are connected to  ",
+                    "Asymmetrical electrodes placed on the forehead",
+                    "Symmetrical electrodes placed on cheeks",
+                    "The mathematical formula used to calculate EEG voltage differences"
+                ],
+                "ansKey" : 0,
+                "hint": "In the context of EEG, montages refer to the specific arrangement or combination of electrodes placed on the head and the channels to which they are conneected."
+            },
+            {
+                "name" : "What is the purpose of an ambulatory monitoring system in healthcare?  ",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "To monitor patients in critical care units  ",
+                    "To monitor patient vital signs during surgeries  ",
+                    "To monitor patients who are able to walk and move around  ",
+                    "To monitor patients who are under anesthesia  "
+                ],
+                "ansKey" : 2,
+                "hint": "The purpose of an ambulatory monitoring system in healthcare is to continuously monitor and record a patient's physiological parameters and activities while they go about their daily routines outside of a healthcare facility. This type of monitoring system allows healthcare providers to gather valuable information about the patient's health status over an extended period, beyond the limited time of a conventional clinical visit."
+            },
+            {
+                "name" : "What components are typically included in a wireless biotelemetry system?  ",
+                "points": 0,
+                "chapter" : "1.1",
+                "options": [
+                    "Sensors, transmitters, a radio antenna, and a receiver  ",
+                    "Sensors, transmitters, a wire connection, and a receiver",
+                    "Sensors, transmitters, a camera, and a receiver  ",
+                    "Sensors, transmitters, a satellite dish, and a receiver  "
+                ],
+                "ansKey" : 1,
+                "hint": "If you look closely, the only variable in the given options is the 3rd one. The radio antenna is used to transmit and receive the radiofrequency signals between the transmitter and the receiver. It helps ensure reliable communication by sending and receiving the wireless signals."
+            },
+            {
+                "name" : "Which of the following instrument is most commonly used for measurement of blood  flow?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "NMR Blood Flowmeter",
+                    "Ultrasonic Blood Flowmeter",
+                    "Electromagnetic Blood Flowmeter",
+                    "Laser Doppler Blood Flowmeter  "
+                ],
+                "ansKey" : 2,
+                "hint": "The most commonly used instrument for the measurement of blood flow is of the electromagnetic type. With this type of instrument, blood flow can be measured in intact blood vessels without  cannulation and under conditions which would otherwise be impossible."
+            },
+            {
+                "name" : "Modern day colorimeters and spectrophotmetry instruments use ___ light source.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Tungsten-halogen lamp",
+                    "Xenon-mercury lamp",
+                    "Deuterium discharge lamp",
+                    "Mercury arc"
+                ],
+                "ansKey" : 0,
+                "hint": "Out of the given options Tungesten-halogen lamp is the most appropriate answer."
+            },
+            {
+                "name" : "Which threshold of hearing is measured by a pure-tone audiometer?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "air-conduction thresholds of hearing",
+                    "bone-conduction thresholds of hearing",
+                    "speech reception thresholds for diagnostic purposes",
+                    "air-conduction and bone-conduction thresholds of hearing"
+                ],
+                "ansKey" : 3,
+                "hint": "Audiometers may be divided into two main groups on the basis of the type of stimulus they  provide to elicit auditory response: pure-tone audiometers and speech audiometers. A pure-tone  audiometer is used primarily to obtain both air-conduction and bone-conduction thresholds of hearing. Speech  audiometers are normally used to determine speech reception thresholds for diagnostic purposes  and to assess and evaluate the performance of hearing aids. "
+            },
+            {
+                "name" : "Which wave from ECG waveforms becomes widened when the self-triggering impulse  does not arrive through the AV node?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "P wave",
+                    "ST wave",
+                    "QRS wave",
+                    "T wave"
+                ],
+                "ansKey" : 2,
+                "hint": "When the self-triggering impulse does not arrive through the AV node, it can lead to an abnormal conduction pathway within the ventricles. This abnormal conduction can result in a widened QRS complex on the ECG waveform. The P wave represents atrial depolarization, the ST wave represents the period between ventricular depolarization and repolarization, and the T wave represents ventricular repolarization. These waves are not directly affected by the conduction pathway through the AV node."
+            },
+            {
+                "name" : "What precaution is used in diathermy?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Patient is made to lie on a soft pillow",
+                    "Pads are used for grounding and completing the circuit",
+                    "Patient is made to drink a large number of fluids",
+                    "Wooden blocks are used for grounding"
+                ],
+                "ansKey" : 1,
+                "hint": "Pads or electrodes are used for grounding and completing the circuit in diathermy. These pads are typically placed on the patient's body at specific locations depending on the treatment area. The grounding pads help to ensure that the electrical current flows properly through the tissues being treated, minimizing the risk of electrical shocks or burns."
+            },
+            {
+                "name" : "The types of therapeutic diathermy machines that exist are ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Short wave, microwave, and ultrasound",
+                    "Cold compress, ultrasound, LASER",
+                    "Electrical impulse, microwave, and ultrasound",
+                    "Cold compress, microwave, and electrical impulse"
+                ],
+                "ansKey" : 0,
+                "hint": "a) Short wave, microwave, and ultrasound: These are the three main types of therapeutic diathermy machines."
+            },
+            {
+                "name" : "Hemodialysis machine works on the principle of ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Diffusion and ultrafiltration",
+                    "Osmosis and ultrafiltration",
+                    "Reverse osmosis and ultrafiltration",
+                    "Diffusion and osmosis"
+                ],
+                "ansKey" : 0,
+                "hint": "Diffusion is the process by which solutes (waste products, toxins, and electrolytes) move from an area of higher concentration (blood) to an area of lower concentration (dialysate) across a semipermeable membrane. Ultrafiltration is the process of removing excess fluid from the blood. In hemodialysis, ultrafiltration is achieved by applying a pressure gradient across the semipermeable membrane. Therefore, the correct answer is a) Diffusion and ultrafiltration."
+            },
+            {
+                "name" : "The type of ventilation that enables the patient to breathe on his or her own, at his or her  respiratory rate, and with his or her depth between ventilator breaths is ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Mandatory Ventilation",
+                    "Assist Control Mode",
+                    "Pressure Control Mode",
+                    "Synchronous Intermittent Mandatory Ventilation"
+                ],
+                "ansKey" : 3,
+                "hint": "In SIMV, the ventilator delivers mandatory breaths at set intervals or on a fixed schedule to ensure the minimum required ventilation. However, it also allows the patient to breathe spontaneously between these mandatory breaths."
+            },
+            {
+                "name" : "Which is the “Can’t Let Go” range of current flow?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "3-9 mA  ",
+                    "25-60 mA",
+                    "9-25 mA  ",
+                    "1-3 mA  "
+                ],
+                "ansKey" : 2,
+                "hint": "The \"Can't Let Go\" range of current flow typically refers to the range of current that can cause a person to experience muscle paralysis or the inability to voluntarily release their grip or let go of an object in an electrical shock scenario. The correct answer is c) 9-25 mA. This range is based on the fact that electrical currents in this range can cause muscle contractions, making it difficult or impossible for a person to let go of an electrified object. The exact values may vary depending on factors such as the individual's physiological characteristics and the path of current flow."
+            },
+            {
+                "name" : "The (Id - Vgs) characteristics of a MOSFET in the saturation region is ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Exponential",
+                    "Quadratic",
+                    "Logarithmic",
+                    "Hyperbolic"
+                ],
+                "ansKey" : 1,
+                "hint": "The (Id - Vgs) characteristics of a MOSFET in the saturation region is quadratic in nature. The (Id - Vgs) characteristics plot the drain current (Id) as a function of the gate-source voltage (Vgs) while keeping the drain-source voltage (Vds) constant. The drain current increases with an increasing Vgs, but the rate of increase slows down as Vgs increases further. The quadratic relationship in the saturation region is due to the channel becoming pinch-off and the MOSFET reaching its maximum current-carrying capacity."
+            },
+            {
+                "name" : "In a differentiator circuit, a capacitor is placed in ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Feedback loop",
+                    "Input",
+                    "Output",
+                    "Feedback and input"
+                ],
+                "ansKey" : 1,
+                "hint": "In an op-amp differentiator circuit, a capacitor is connected to the (negative) input."
+            },
+            {
+                "name" : "In a three phase AC circuit, the sum of all three generated voltages is ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Infinite",
+                    "Zero",
+                    "One",
+                    "One third (1/3)  "
+                ],
+                "ansKey" : 1,
+                "hint": "In a three-phase AC circuit, the sum of all three generated voltages is zero. This is due to the nature of the three-phase system, where the voltages are 120 degrees out of phase with each other. As a result, the vector sum of the three voltages at any given instant is equal to zero."
+            },
+            {
+                "name" : "Peak reverse voltage of bridge rectifier for input signal of peak value Vm is ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "2Vm ",
+                    "½ Vm  ",
+                    "Vm  ",
+                    "4Vm  "
+                ],
+                "ansKey" : 0,
+                "hint": "In a bridge rectifier circuit, the input voltage is applied across the bridge, and the diodes conduct in alternating pairs to convert the AC input into a pulsating DC output. During the negative half-cycle of the input signal, the diodes conduct in reverse bias, and the voltage across each diode is equal to the peak value of the input signal. Since there are two diodes in series in the bridge rectifier, the peak reverse voltage across each diode is Vm. Therefore, the total peak reverse voltage across the bridge rectifier is 2Vm."
+            },
+            {
+                "name" : "A sudden increase in the total current into a parallel circuit may indicate ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "A drop-in source voltage",
+                    "An open resistor",
+                    "An increase in source voltage",
+                    "Either a drop in source voltage or an open resistor"
+                ],
+                "ansKey" : 1,
+                "hint": "In a parallel circuit, each branch provides a separate path for current flow. If one of the resistors in a parallel circuit becomes open (i.e., has a break or high resistance), it effectively disconnects from the circuit. This causes the total resistance of the circuit to decrease, resulting in an increase in the total current flowing through the remaining branches. Although, an increase in source voltage will also cause a similar behaviour it is not just specific to parallel circuits."
+            },
+            {
+                "name" : "A good voltage regulation of a transformer means ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Output voltage fluctuation from no load to full load is least",
+                    "Output voltage fluctuation with power factor is least",
+                    "Difference between primary and secondary voltage is least",
+                    "Difference between primary and secondary voltage is maximum"
+                ],
+                "ansKey" : 0,
+                "hint": "Voltage regulation refers to the ability of a transformer to maintain a relatively constant output voltage even when there are changes in the load. A transformer with good voltage regulation will exhibit minimal fluctuations in the output voltage when transitioning from no load to full load conditions. A transformer's voltage regulation is typically expressed as a percentage and is calculated using the formula: Voltage Regulation = ((V_no-load - V_full-load) / V_full-load) * 100%."
+            },
+            {
+                "name" : "For multi-input XNOR gate, the output is Logic High when the total number of Logic  High in the inputs signals is ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Infinity",
+                    "Zero",
+                    "Odd",
+                    "Even"
+                ],
+                "ansKey" : 3,
+                "hint": "The XNOR gate performs an equality comparison on its input signals. It produces a Logic High output when an even number of the input signals are at Logic High (1) state. If an odd number of input signals are at Logic High state, the output of the XNOR gate will be Logic Low (0). Therefore, the output of a multi-input XNOR gate is Logic High when the total number of Logic High signals in the inputs is even."
+            },
+            {
+                "name" : "A full binary subtractor has ___ input lines and ___ output lines.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "2, 2",
+                    "3, 3",
+                    "2, 1",
+                    "3, 2"
+                ],
+                "ansKey" : 3,
+                "hint": "The three input lines of a full binary subtractor are: (i) Minuend, (ii) Subtrahend, (iii) Borrow-in and the two output lines are: (i) Difference and (ii) Borrow Out."
+            },
+            {
+                "name" : "A 10-bit SISO mode needs ___ clock pulses to load an 10-bit number into a register.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "8",
+                    "10",
+                    "8",
+                    "2"
+                ],
+                "ansKey" : 1,
+                "hint": "In a SISO mode, each bit of the input number is serially shifted into the register one at a time. For each clock pulse, one bit is shifted into the register until all 10 bits are loaded. Since we have a 10-bit number, it will take 10 clock pulses to load all 10 bits into the register in a SISO mode. Each clock pulse will shift one bit into the register until the entire 10-bit number is loaded."
+            },
+            {
+                "name" : "Which of the following statement is true regarding PAL (Programmable Array Logic)?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Once a PAL has been programmed it cannot be reprogrammed.",
+                    "Its outputs are only active HIGHs",
+                    "Its outputs are only active LOWs",
+                    "Its logic capacity is lost"
+                ],
+                "ansKey" : 0,
+                "hint": "Once a PAL has been programmed with a specific configuration, the programming is permanent and cannot be changed."
+            },
+            {
+                "name" : "The BCD number 1010111 has ___ priority.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Even",
+                    "Odd",
+                    "Both even and odd",
+                    "Undefined"
+                ],
+                "ansKey" : 1,
+                "hint": "To determine the priority of a BCD (Binary-Coded Decimal) number, we consider the value of the least significant digit (rightmost digit). In binary even numbers end with a 0, and odd numbers end with 1. For example, (even numbers) 0d = 0b, 2d = 10b, 4d = 100b; (and odd numbers) ( 1d = 1b, 3d = 11b, 5d = 101b)."
+            },
+            {
+                "name" : "The centre frequency of a bandpass filter is always equal to ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "The bandwidth",
+                    "Geometric average of the cut-off frequencies",
+                    "Bandwidth divided by Q",
+                    "3-dB frequency"
+                ],
+                "ansKey" : 2,
+                "hint": "The quality factor (Q) of a bandpass filter is a measure of its selectivity and is calculated as the ratio of the center frequency to the bandwidth: Q = fc / BW."
+            },
+            {
+                "name" : "Laplace transform of a step function is ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "1",
+                    "1/s^2",
+                    "0",
+                    "1/s"
+                ],
+                "ansKey" : 3,
+                "hint": "A unit step function is 0 fot t < 0 and 1 for t>=0 .L{step(t)} = ∫[0 to ∞] e^(-st) dt"
+            },
+            {
+                "name" : "A block of mass 10 kg is attached to a spring of stiffness 360 N/m. A velocity of 6 m/s is  given to the mass when the spring is in unstretched condition. The block will come to  rest after moving a distance of ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "0.5m",
+                    "1.25m",
+                    "0.75m",
+                    "1.0m"
+                ],
+                "ansKey" : 3,
+                "hint": "To determine the distance the block will move before coming to rest, we can use the principles of energy conservation. The initial kinetic energy of the block is given by (1/2)mv^2, where m is the mass of the block and v is its initial velocity. The potential energy stored in the spring when it is stretched by a distance x is given by (1/2)kx^2, where k is the spring constant and x is the displacement. Initially, the block has only kinetic energy, and as it comes to rest, all the initial kinetic energy will be converted into potential energy stored in the spring. Therefore, we can equate the initial kinetic energy to the potential energy at maximum displacement. (1/2)mv^2 = (1/2)kx^2. Plug in m = 10 kg, v = 6 m/s and k = 360 N/m to get x."
+            },
+            {
+                "name" : "For a type-I system, the intersection of the initial slope of the bode plot with 0 dB axis  gives ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Steady-state error",
+                    "Error constant",
+                    "Phase margin",
+                    "Cross-over frequency"
+                ],
+                "ansKey" : 1,
+                "hint": "The intersection of the initial slope of the Bode plot with the 0 dB axis occurs at the low-frequency region, where the gain of the system is still increasing. This point corresponds to the steady-state response of the system. By measuring the distance between this intersection point and the 0 dB axis, you can determine the value of the error constant. Therefore, the correct answer is Error constant."
+            },
+            {
+                "name" : "Role of the transmitter in the communication system is to ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Decode a signal to be transmitted",
+                    "Convert one form of energy into other",
+                    "Detect and amplify information signal from the carrier",
+                    "Produce radio waves to transmit data"
+                ],
+                "ansKey" : 3,
+                "hint": "The role of the transmitter in a communication system is to generate and emit electromagnetic signals, such as radio waves, that carry the encoded or modulated information to be transmitted."
+            },
+            {
+                "name" : "Carrier swing is defined as ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Total variation in frequency from the lowest to the highest point",
+                    "Frequency deviation above or below the carrier frequency",
+                    "Width of the sideband",
+                    "None of the above"
+                ],
+                "ansKey" : 3,
+                "hint": "Carrier swing is defined as the maximum extent of variation or deviation in the amplitude or voltage level of the carrier signal in a modulated communication system. Therefore d) None of the above is the correct answer."
+            },
+            {
+                "name" : "A single tone 4 kHz message signal is sampled with 9 kHz, 7 kHz and 5 kHz. The  aliasing effect will be seen in the reconstructed signal when the signal is sampled with ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "9 kHz",
+                    "any of 9 kHz, 7 kHz, or 5 kHz",
+                    "Both 9 kHz and 7 kHz",
+                    "Both 7 kHz and 5 kHz"
+                ],
+                "ansKey" : 3,
+                "hint": "The 4 kHz message signal is sampled with 9 kHz, 7 kHz, and 5 kHz. To avoid aliasing, the sampling frequency should be at least 8 kHz (twice the maximum frequency of the message signal). Therefore, the aliasing effect will be seen in the reconstructed signal when the signal is sampled with a frequency lower than 8 kHz. Therefore, d) both 7 kHz and 5 kHz is the correct answer."
+            },
+            {
+                "name" : "Standard dimensions (mm x mm) of A3 drawing sheet is ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "11.69 × 16.54",
+                    "29.7 × 42",
+                    "297 × 420",
+                    "420 × 280"
+                ],
+                "ansKey" : 3,
+                "hint": "The standard dimensions of an drawing sheet is usually measured in (mm), and A3 sheets have a dimensions of 297 mm x 420 mm."
+            },
+            {
+                "name" : "Which of the following methods of charging depreciation of an asset has increased  amount of depreciation as the age of asset increases?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Sum-of-year digit",
+                    "Sinking fund ",
+                    "Diminishing balance",
+                    "Straight line"
+                ],
+                "ansKey" : 2,
+                "hint": "The method of charging depreciation that has an increased amount of depreciation as the age of the asset increases is the \"Diminishing Balance Method\" or \"Declining Balance Method\"."
+            },
+            {
+                "name" : "The process of optimizing the project’s limited resources without extending the project  duration is known as ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Project crashing",
+                    "Resource levelling",
+                    "Resource smoothing",
+                    "Networking"
+                ],
+                "ansKey" : 1,
+                "hint": "The process of optimizing the project’s limited resources without extending the project  duration is known as   \"Resource Level\"."
+            },
+            {
+                "name" : "The process of composing/raising the required fund from different sources such as  equity, preferred stock, bond and debenture is known as ___.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Capital structure planning",
+                    "Project financing",
+                    "Capital budgeting decision",
+                    "Deducing earning per share"
+                ],
+                "ansKey" : 0,
+                "hint": "The correct answer is \"a) Capital structure planning.\" Capital structure planning involves determining the appropriate mix of equity, preferred stock, bonds, and debentures to raise funds for a project or business. It aims to find the optimal balance between different sources of capital to support the financial needs of the organization."
+            },
+            {
+                "name" : "In which of the following society, people used to seek their existence on growing plants  for their cattle and domestic animals?",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Pastoral society",
+                    "Tribal society",
+                    "Horticultural society",
+                    "Agricultural society"
+                ],
+                "ansKey" : 1,
+                "hint": "In agricultural societies, people primarily rely on the cultivation of crops and the raising of livestock for their sustenance and survival. Agriculture forms the basis of their economy and provides food, materials, and resources for their daily needs. These societies typically have a close connection to the land, engage in farming practices, and have a significant dependence on agricultural activities for their livelihood."
+            },
+            {
+                "name" : "According to Nepal Engineering Council Act, 2055 (Revised, 2079), all engineering  academic institutions shall be ___ in the Council.",
+                "points": 1,
+                "chapter" : "1.1",
+                "options": [
+                    "Affiliated",
+                    "United",
+                    "Recognized",
+                    "Associated"
+                ],
+                "ansKey" : 2,
+                "hint": "According to the Nepal Engineering Council Act, 2055 (Revised, 2079), all engineering academic institutions shall be \"recognized\" by the Council."
+            }        
+        ],
+        "setB" : [
+            {
+                "name" : "In the motor end plate, all the following are TRUE EXCEPT ___.",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "The acetylcholine receptors are similar to those in smooth muscle.",
+                    "Lack of Ca diminishes the release of acetylcholine",
+                    "There is a high concentration of the cholinesterase enzyme",
+                    "There is a delay of neuromuscular transmission of 0.5 millisecond"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "Which of the following statements describe endothelial cells the most accurately?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "Flat, polygonal, elongated in the direction of blood flow",
+                    "Irregular, prone to overlap with other endothelial cells",
+                    "Cuboidal, regular, with radial symmetry",
+                    "Flat, with long processes"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "A patient is scheduled to have a chronic abscess incised and drained. What would you  expect a microscopic examination of the contents of the abscess to most likely show?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "Lymphocytes and macrophages",
+                    "Any area of coagulative necrosis",
+                    "Neutrophils, lymphocytes, & plasma cells",
+                    "An acute inflammatory infiltrate of PMNs"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "Which of the following is the appropriate option?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "1. Differentiated Stem Cells; 2. Biomaterials; 3. Growth Factors; 4. Autologous",
+                    "1. Autologous; 2. Differentiated Stem Cells; 3. Biomaterials; 4. Growth Factors",
+                    "1. Autologous; 2. Differentiated Stem Cells; 3. Growth Factors; 4. Biomaterials",
+                    "1. Autologous; 2. Growth Factors; 3. Differentiated Stem Cells; 1. Autologous"
+                ],
+                "ansKey" : 2,
+                "hint": ""
+            },
+            {
+                "name" : "What is the role of stem cells with regard to the function of adult tissues and organs?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "Stem cells are undifferentiated cells that divide asymmetrically, giving rise to one  daughter that remains a stem cell and one daughter that will differentiate to replace  damaged and worn-out cells in the adult tissue or organ.",
+                    "Stem cells are embryonic cells that persist in the adult, and can give rise to all of the  cell types in the body.",
+                    "Stem cells are embryonic cells that persist in the adult, and can give rise to all of the  cell types in the body.",
+                    "Stem cells are differentiated cells that have yet to express the genes and proteins  characteristic of their differentiated state, and do so when needed for repair of tissues  and organs."
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "What is the difference between a pacemaker and the total artificial heart (TAH)?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "A pacemaker is smaller in size and completely embedded in the body as compared to  TAH in which some system lies outside the body",
+                    "A pacemaker replaces only the ventricles but a TAH replaces the whole heart",
+                    "A pacemaker is an assistive device which helps the original heart to generate impulses  but a TAH completely replaces the heart",
+                    "A pacemaker is made out of organic polymers while the TAH is metallic"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "A 20-year-old man visits his doctor, worried about his worsening diarrhea, abdominal  pain and blood in his stool. The doctor wonders if he may have an inflammatory bowel  disease. Which kind of diagnostic imaging technology should the doctor use first to test  his theory?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "Ultrasound of his abdomen",
+                    "Positron Emission Tomography (PET) scan of his abdominal area",
+                    "MRI three-dimensional reconstruction of his colon",
+                    "Colonoscopy"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "What type of imaging modalities are shown in the following picture?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "T1, DTI, FLAIR",
+                    "T1, DTI, fMRI",
+                    "T1, FLAIR, fMRI",
+                    "FLAIR, DTI, fMRI"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "Which of the following statement is true?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "Impedance pneumography is an indirect technique of measurement which measures  rate through relation between respiratory depth and thoracic impedance change",
+                    "Impedance pneumography is a direct technique of measurement which measures rate  through difference in temperature between inspired and expired air",
+                    "Thermistor method is an indirect technique of measurement which measures rate  through difference in temperature between inspired and expired air",
+                    "Thermistor method is a direct technique of measurement which measures rate through  relation between respiratory depth and thoracic impedance change"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "Which type of lead in the figure below along with its waveform denotes?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "Unipolar limb leads",
+                    "Polar limb leads",
+                    "Augmented chest leads",
+                    "Bipolar limb leads"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "The proper placement of an AED (automated external defibrillator) is ___.",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "One pad on upper right side of the chest, and the other on lower left side of the chest.",
+                    "One pad on lower right side of the chest, and the other on upper left side of the chest",
+                    "One pad on lower right side of the chest, and the other on lower left side of the chest.",
+                    "One pad on upper right side of the chest, and the other on upper left side of the chest."
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "Which statement is true?  ",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "With positive-pressure ventilation (PPV), the transpulmonary pressure is increased by  making the alveolar pressure more positive; in contrast, with negative-pressure  ventilation (NPV), the transpulmonary pressure is increased by making the pleural  pressure more negative",
+                    "With positive-pressure ventilation (PPV), the transpulmonary pressure is decreased by  making the alveolar pressure more negative; in contrast, with negative-pressure ventilation (NPV), the transpulmonary pressure is increased by making the pleural  pressure more negative",
+                    "With positive-pressure ventilation (PPV), the transpulmonary pressure is increased by  making the alveolar pressure more positive; in contrast, with negative-pressure  ventilation (NPV), the transpulmonary pressure is decreased by making the pleural  pressure more positive",
+                    "With positive-pressure ventilation (PPV), the transpulmonary pressure is increased by  making the alveolar pressure more negative; in contrast, with negative-pressure  ventilation (NPV), the transpulmonary pressure is increased by making the pleural  pressure more positive"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "A Norton circuit with 10 A current source and 15 Ω resistance is connected across a  resistance of 5 Ω. The current in 5 Ω resistance will be ___.",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "5 A",
+                    "2.5 A",
+                    "7.5 A",
+                    "10 A"
+                ],
+                "ansKey" : 2,
+                "hint": "Given: Norton current (In) = 10 A Norton resistance (Rn) = 15 Ω Resistance across which current is to be found = 5 Ω. We can calculate the total current flowing through the 5 Ω resistance using Ohm's Law: Total current (I) = In * (Rn / (Rn + Rl))."
+            },
+            {
+                "name" : "In a non-inverting op-amp based amplifier, Rf =10K and R1 = 1K. If Vin is sine wave  with 10 mv amplitude and 100 Hz frequency. The output wave form will be ___.",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "-100 mv, 100 Hz",
+                    "-100mv, 200 Hz",
+                    "110 mv, 100 Hz",
+                    "110mv, 200 Hz"
+                ],
+                "ansKey" : 2,
+                "hint": " To determine the output waveform of a non-inverting op-amp amplifier, we can use the voltage gain equation: Voltage gain (Av) = 1 + (Rf / R1). After we obtain Av, we can multiply it with Vin to get Vout; Vout = Vin * Av. Since the input voltage is a sine wave with, the output waveform will also be a sine wave with the same frequency but amplified the voltage gain."
+            },
+            {
+                "name" : "How many 3 × 8 line decoders with an enable input line are needed to construct a 6 × 64  line decoder without using any other logic gate?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "7",
+                    "8",
+                    "9",
+                    "0"
+                ],
+                "ansKey" : 1,
+                "hint": "We need to construct 6 x 64 decoder using 3 x 8 decoders. Each 3 x 8 line decoder has 3 input lines and can provide provide 8 output lines; we need 8 * x = 64; where x is the number of 3 x 8 line decoders needed."
+            },
+            {
+                "name" : "Which of the following Boolean algebraic expressions is incorrect?",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "A+ A'B=A+B",
+                    "A+AB=B",
+                    "(A+B)(A+C)=A+BC",
+                    "(A+ B')(A+B)=A"
+                ],
+                "ansKey" : 1,
+                "hint": "The expression \"d) (A + B')(A + B)= A\" is incorrect because it violates the complement law in Boolean algebra. The complement law states that A + A' = 1, which means that if a variable A is summed with its complement A', the result is always 1. In the given expression, (A + B')(A + B), if we substitute A = 0 and B = 1, we get (0 + 1')(0 + 1) = (1)(1) = 1, which does not equal A = 0. Therefore, the expression is incorrect."
+            },
+            {
+                "name" : "Find the function f(t) for the following function F(s): F(s) = 1/ [s(s+1)(s+5)]",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "0.25e^-t+0.05e^-5t",
+                    "-0.2-0.25e^-t+0.05e^-5t",
+                    "-0.2+0.25e^-t+0.05e^-5t",
+                    "0.25e^-5t+0.05e^-t"
+                ],
+                "ansKey" : 2,
+                "hint": "Use partial fraction decomposition and perform inverse Laplace transform."
+            },
+            {
+                "name" : "What will be the bandwidth occupied by a DSB signal when the modulating frequency  lies in the range from 100 Hz to 10KHz.",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "28 KHz",
+                    "24.5 KHz",
+                    "38.6 KHz",
+                    "19.8 KHz"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "Effective monthly interest rate will be ___, if nominal interest rate of 10% accounted for continuous compounding.",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "1%",
+                    "0.84%",
+                    "1.2%",
+                    "2%"
+                ],
+                "ansKey" : 1,
+                "hint": ""
+            },
+            {
+                "name" : "By considering following activities of a project, the project duration will be ___.",
+                "points": 2,
+                "chapter" : "1.1",
+                "options": [
+                    "9 days",
+                    "10 days ",
+                    "15 days ",
+                    "24 day"
+                ],
+                "ansKey" : 0,
+                "hint": "Follow this link: https://bit.ly/45TsL7E"
+            }
+        ]
+    },
+
+
     "memos" : {
         "pass" : [
             "Congratulations! You've passed",
@@ -1851,3 +3150,4 @@
         }
     ]
 } 
+
