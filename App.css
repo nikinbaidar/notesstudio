@@ -794,8 +794,6 @@ button#viewUnanswered {
     background-color: rgba(104, 111, 154, 0.85);
   }
 
-
-
   .pilot-master-wrapper {
     flex-direction: column;
   }
@@ -840,7 +838,6 @@ button#viewUnanswered {
   .choices { 
     font-size: 1.5rem;
   }
-
 
 }
 
