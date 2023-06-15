@@ -49,6 +49,10 @@ import Electronics   from './data/images/electronics.jpg';
 import Math4         from './data/images/math4.jpg';
 import Probability   from './data/images/probability.jpg';
 import Numerical     from './data/images/numerical.jpg';
+import TEQues        from './data/images/modelquestion01B64.png';
+import ImagingQues   from './data/images/mri_modalities.png';
+import ECGQues       from './data/images/ecg_lead_attachments.png';
+import PertQues       from './data/images/pertQues.png';
 
 
 export const ads = {
@@ -59,6 +63,10 @@ export const ads = {
 export const quizQuestionImages = {
     ActiveLPF: LowPassFilter,
     Entrapment,
+    TEQues,
+    ImagingQues,
+    ECGQues,
+    PertQues,
 }
 
 export const covers = {

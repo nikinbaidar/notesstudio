@@ -62,8 +62,8 @@
                 "pilot": "wiki",
                 "props" : {
                     "name" : "modelquestion",
-                    "heading": "Model Questions Set 1",
-                    "title": "NEC License Exam Model Questions"
+                    "heading": "Model Questions (Biomedical)",
+                    "title": "NEC License Exam Model Questions (Biomedical)"
                 }
             },
             {
@@ -1007,6 +1007,52 @@
             }
         ]
     },
+    "memos" : {
+        "pass" : [
+            "Congratulations! You've passed",
+            "Awesome work! you've passed",
+            "Victory is yours!",
+            "Wow, you passed! Are you sure you're not cheating?",
+            "I'd be impressed if you weren't such a sore winner. Just kidding, congrats!",
+            "I'll let you have this win as long as you promise to buy me a drink.",
+            "You must have cheated because there's no way you passed fairly.",
+            "You're welcome for the pity points"
+        ],
+        "fail" : [
+            "Oopsie daisy, looks like you missed the mark",
+            "A for effort, F for execution",
+            "I think the universe is telling you to stick to your day job",
+            "Looks like your crystal ball needs a polish",
+            "That was almost impressive, in a not-at-all impressive kind of way.",
+            "Looks like you're not quite ready for the big leagues yet",
+            "So close, yet so far!",
+            "Well, that didn't go as planned",
+            "Uh-oh, you'll have to try again",
+            "You almost had it...almost",
+            "You're doing great... if your goal is to fail",
+            "I'm not saying you're bad, but...",
+            "This quiz was just a warm-up, right?",
+            "Let's hope you don't loose sleep over this one.",
+            "You're not bad... you're just not good enough.",
+            "Don't worry, it's just a quiz... or is it?",
+            "Not quite the result we were hoping for!"
+        ]
+    },
+
+    "faq" : [
+        {
+            "question" : "What is the source for the content of the quizzes?",
+            "answer" : "The content of the quizzes included in this site is based on the input and recollection of individuals who have taken the exam."
+        },
+        {
+            "question" : "Is the authenticity of the quizzes verified?",
+            "answer" : "See the question above."
+        },
+        {
+            "question" : "How can I contribute?",
+            "answer" : "If you are someone who's appeared in the license exam, you can help by posting questions. See contact information at the bottom of this page."
+        }
+    ],
 
     "2079pastQuestions" : {
         "setA" : [
@@ -1975,7 +2021,8 @@
                 "hint" : "The resistivity of a dynamic diode is dependent on the thickness of the depletion region. The depletion region is the region where there are no mobile charge carriers due to the introduction of impurities into the diode material."
             },
             {
-                "name" : "Which of the following represents the nature of a circuit in the diagram below?", "fig" : "ActiveLPF",
+                "name" : "Which of the following represents the nature of a circuit in the diagram below?",
+                "fig" : "ActiveLPF",
                 "points": 2,
                 "chapter": "8",
                 "options": [
@@ -2849,8 +2896,8 @@
                     "There is a high concentration of the cholinesterase enzyme",
                     "There is a delay of neuromuscular transmission of 0.5 millisecond"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 3,
+                "hint": "The statement \"There is a delay of neuromuscular transmission of 0.5 millisecond\" is NOT true for the motor end plate. In the motor end plate, the neuromuscular transmission is very rapid, with a delay of only a few microseconds"
             },
             {
                 "name" : "Which of the following statements describe endothelial cells the most accurately?",
@@ -2875,11 +2922,12 @@
                     "Neutrophils, lymphocytes, & plasma cells",
                     "An acute inflammatory infiltrate of PMNs"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 2,
+                "hint": "As sated in option a), while macrophages may be present in the chronic abscess, they are not the only cell type expected to be seen. Similarly, b) while necrotic tissue may be present in abscesses, it is also not a defining characteristic. d) PMNs (polymorphonuclear leukocytes or neutrophils) are predominantly associated with acute inflammation. In a chronic abscess, there is typically a mixture of inflammatory cells present. Neutrophils are often seen as they are involved in the initial acute inflammatory response. However, as the abscess progresses and becomes chronic, other types of inflammatory cells start to appear, such as lymphocytes and plasma cells. This leaves us with \"c) Neutrophils, lymphocytes, & plasma cells\" as the correct answer."
             },
             {
-                "name" : "Which of the following is the appropriate option?",
+                "name" : "Which of the following is the appropriate option?", 
+                "fig" : "TEQues",
                 "points": 2,
                 "chapter" : "1.1",
                 "options": [
@@ -2889,7 +2937,7 @@
                     "1. Autologous; 2. Growth Factors; 3. Differentiated Stem Cells; 1. Autologous"
                 ],
                 "ansKey" : 2,
-                "hint": ""
+                "hint": " The appropriate option in the context of tissue engineering, involving cells, signals, and biomaterials, would be: \"c) 1. Autologous; 2. Differentiated Stem Cells; 3. Growth Factors; 4. Biomaterials.\" based on the order of importance or preference."
             },
             {
                 "name" : "What is the role of stem cells with regard to the function of adult tissues and organs?",
@@ -2901,8 +2949,8 @@
                     "Stem cells are embryonic cells that persist in the adult, and can give rise to all of the  cell types in the body.",
                     "Stem cells are differentiated cells that have yet to express the genes and proteins  characteristic of their differentiated state, and do so when needed for repair of tissues  and organs."
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 2,
+                "hint": "The most accurate statement regarding the role of stem cells in the function of adult tissues and organs is: \" a) Stem cells are undifferentiated cells that divide asymmetrically, giving rise to one daughter that remains a stem cell and one daughter that will differentiate to replace damaged and worn-out cells in the adult tissue or organ.\" This statement accurately describes the characteristic behavior of stem cells. Stem cells have the ability to divide and produce two different daughter cells through asymmetric division. One daughter cell remains a stem cell, maintaining the stem cell population, while the other daughter cell undergoes differentiation to replace damaged or worn-out cells within adult tissues and organs."
             },
             {
                 "name" : "What is the difference between a pacemaker and the total artificial heart (TAH)?",
@@ -2914,8 +2962,8 @@
                     "A pacemaker is an assistive device which helps the original heart to generate impulses  but a TAH completely replaces the heart",
                     "A pacemaker is made out of organic polymers while the TAH is metallic"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 2,
+                "hint": "A pacemaker monitors the heart's electrical activity and delivers electrical impulses when needed to regulate the heart rate and rhythm. It does not replace the pumping function of the heart. A TAH, on the other hand, completely replaces the native heart's pumping function by mechanically pumping blood throughout the body. It mimics the natural circulation of blood and supports the patient until a suitable donor heart becomes available for transplantation."
             },
             {
                 "name" : "A 20-year-old man visits his doctor, worried about his worsening diarrhea, abdominal  pain and blood in his stool. The doctor wonders if he may have an inflammatory bowel  disease. Which kind of diagnostic imaging technology should the doctor use first to test  his theory?",
@@ -2927,11 +2975,12 @@
                     "MRI three-dimensional reconstruction of his colon",
                     "Colonoscopy"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 3,
+                "hint": "Colonoscopy is the primary diagnostic imaging technology used to evaluate the colon and rectum for inflammatory bowel diseases (IBD) such as Crohn's disease and ulcerative colitis. It involves the insertion of a flexible tube with a camera into the colon to examine the lining of the gastrointestinal tract. With colonoscopy, the doctor can directly visualize the mucosal lining, identify any inflammation, ulcers, or abnormal tissue, and even take biopsies for further analysis."
             },
             {
                 "name" : "What type of imaging modalities are shown in the following picture?",
+                "fig" : "ImagingQues",
                 "points": 2,
                 "chapter" : "1.1",
                 "options": [
@@ -2940,8 +2989,8 @@
                     "T1, FLAIR, fMRI",
                     "FLAIR, DTI, fMRI"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 3,
+                "hint": "The images in the first, second and third rows  in the above picture include T1, DTI and fMRI images respectively."
             },
             {
                 "name" : "Which of the following statement is true?",
@@ -2953,21 +3002,22 @@
                     "Thermistor method is an indirect technique of measurement which measures rate  through difference in temperature between inspired and expired air",
                     "Thermistor method is a direct technique of measurement which measures rate through  relation between respiratory depth and thoracic impedance change"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 0,
+                "hint": "Impedance pneumography is an indirect technique for the measurement of respiration rate. Using externally applied  electrodes on the thorax, the impedance pneumograph measures rate through the relationship between respiratory depth and thoracic impedance change."
             },
             {
-                "name" : "Which type of lead in the figure below along with its waveform denotes?",
+                "name": "Which type of lead in the figure below along with its waveform denotes?",
+                "fig": "ECGQues",
                 "points": 2,
-                "chapter" : "1.1",
+                "chapter": "1.1",
                 "options": [
                     "Unipolar limb leads",
                     "Polar limb leads",
                     "Augmented chest leads",
                     "Bipolar limb leads"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey": 3,
+                "hint": "In bipolar configuration of ECG, Lead I: The positive electrode is placed on the left arm, and the negative electrode (also known as the reference electrode) is placed on the right arm. Lead II: The positive electrode is placed on the left leg, and the negative electrode is placed on the right arm. Lead III: The positive electrode is placed on the left leg, and the negative electrode is placed on the left arm."
             },
             {
                 "name" : "The proper placement of an AED (automated external defibrillator) is ___.",
@@ -3006,7 +3056,7 @@
                     "10 A"
                 ],
                 "ansKey" : 2,
-                "hint": "Given: Norton current (In) = 10 A Norton resistance (Rn) = 15 Ω Resistance across which current is to be found = 5 Ω. We can calculate the total current flowing through the 5 Ω resistance using Ohm's Law: Total current (I) = In * (Rn / (Rn + Rl))."
+                "hint": "Given: Norton current (In) = 10 A Norton resistance (Rn) = 15 Ω Resistance across which current is to be found = 5 Ω. We can calculate the total current flowing through the 5 Ω resistance using Ohm's Law: Total current (I) = In * (Rn / (Rn + 5 Ω))."
             },
             {
                 "name" : "In a non-inverting op-amp based amplifier, Rf =10K and R1 = 1K. If Vin is sine wave  with 10 mv amplitude and 100 Hz frequency. The output wave form will be ___.",
@@ -3031,8 +3081,8 @@
                     "9",
                     "0"
                 ],
-                "ansKey" : 1,
-                "hint": "We need to construct 6 x 64 decoder using 3 x 8 decoders. Each 3 x 8 line decoder has 3 input lines and can provide provide 8 output lines; we need 8 * x = 64; where x is the number of 3 x 8 line decoders needed."
+                "ansKey" : 2,
+                "hint": "Since each 3 × 8 line decoder provides 8 output liness, we will need a total of 8 decoders to cover 64 outputs (8 * 8 = 64). Additionally, you need one more decoder to provide the enable signal. Hence, the total number of 3 × 8 line decoders required is 8 + 1 = 9."
             },
             {
                 "name" : "Which of the following Boolean algebraic expressions is incorrect?",
@@ -3070,8 +3120,8 @@
                     "38.6 KHz",
                     "19.8 KHz"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 3,
+                "hint": "BW = 2 * Fm ; where Fm = Fmax - Fmin."
             },
             {
                 "name" : "Effective monthly interest rate will be ___, if nominal interest rate of 10% accounted for continuous compounding.",
@@ -3088,6 +3138,7 @@
             },
             {
                 "name" : "By considering following activities of a project, the project duration will be ___.",
+                "fig": "PertQues",
                 "points": 2,
                 "chapter" : "1.1",
                 "options": [
@@ -3097,57 +3148,15 @@
                     "24 day"
                 ],
                 "ansKey" : 0,
-                "hint": "Follow this link: https://bit.ly/45TsL7E"
+                "hint": "Follow",
+                "anchor": "this link",
+                "link" : "https://bit.ly/45TsL7E"
             }
         ]
     },
 
 
-    "memos" : {
-        "pass" : [
-            "Congratulations! You've passed",
-            "Awesome work! you've passed",
-            "Victory is yours!",
-            "Wow, you passed! Are you sure you're not cheating?",
-            "I'd be impressed if you weren't such a sore winner. Just kidding, congrats!",
-            "I'll let you have this win as long as you promise to buy me a drink.",
-            "You must have cheated because there's no way you passed fairly.",
-            "You're welcome for the pity points"
-        ],
-        "fail" : [
-            "Oopsie daisy, looks like you missed the mark",
-            "A for effort, F for execution",
-            "I think the universe is telling you to stick to your day job",
-            "Looks like your crystal ball needs a polish",
-            "That was almost impressive, in a not-at-all impressive kind of way.",
-            "Looks like you're not quite ready for the big leagues yet",
-            "So close, yet so far!",
-            "Well, that didn't go as planned",
-            "Uh-oh, you'll have to try again",
-            "You almost had it...almost",
-            "You're doing great... if your goal is to fail",
-            "I'm not saying you're bad, but...",
-            "This quiz was just a warm-up, right?",
-            "Let's hope you don't loose sleep over this one.",
-            "You're not bad... you're just not good enough.",
-            "Don't worry, it's just a quiz... or is it?",
-            "Not quite the result we were hoping for!"
-        ]
-    },
 
-    "faq" : [
-        {
-            "question" : "What is the source for the content of the quizzes?",
-            "answer" : "The content of the quizzes included in this site is based on the input and recollection of individuals who have taken the exam."
-        },
-        {
-            "question" : "Is the authenticity of the quizzes verified?",
-            "answer" : "See the question above."
-        },
-        {
-            "question" : "How can I contribute?",
-            "answer" : "If you are someone who's appeared in the license exam, you can help by posting questions. See contact information at the bottom of this page."
-        }
-    ]
+    "null" : null
 } 
 

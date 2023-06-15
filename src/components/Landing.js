@@ -1,12 +1,12 @@
 import React from 'react';
 
-
-
-class Home extends React.Component {
+class ComingSoon extends React.Component {
     
     render() {
-        return <h1>Landing Page</h1>
+        return (
+            <h2>Hold on tight! We're crafting something amazing. Coming soon!</h2>
+        )
     }
 }
 
-export default Home;
+export default ComingSoon;

@@ -44,7 +44,7 @@ class Quiz extends React.Component {
             explainedQuestions: answerMap,
             totalAnswered: 0,
             unanswered: Array.from({length: totalQuestions}, (_, i) => i+1),
-            submitted: false,
+            submitted: true,
             score: 0,
             animate: true,
         }
@@ -98,6 +98,7 @@ class Quiz extends React.Component {
         const questionKey = (questionNumber + 1) 
             + ( (currentPage - 1) * this.quesPerPage );
         const hasFigure = (question.fig !== undefined);
+        const hasExternalLink = (question.link !== undefined);
         const explained = (explainedQuestions[questionKey] === true);
         const correctAnswer = question.options[question.ansKey];
         const x = ["a.", "b.", "c.", "d."];
@@ -161,10 +162,22 @@ class Quiz extends React.Component {
                         </button> 
                 }
                 {
-                    explained &&
+                    (explained && 
                         <p className="explanation">
                         <strong>Explanation: </strong>
-                        {question.hint}</p> 
+                        {question.hint}
+                        { hasExternalLink &&
+                                <>
+                                <span> </span>
+                                <a className="need-attention"
+                                href={question.link}>
+                                {question.anchor}
+                                </a>
+                                <span>.</span>
+                                </>
+                        }
+                        </p> 
+                    )
                 } 
             </React.Fragment>
         );
