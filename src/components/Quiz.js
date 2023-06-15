@@ -36,7 +36,8 @@ class Quiz extends React.Component {
         this.indexPassed =  indexPassed;
         this.indexFailed =  indexFailed;
         this.state = {
-            quizData: [...shuffleArray(questionSets.setA), ...shuffleArray(questionSets.setB)],
+            // quizData: [...shuffleArray(questionSets.setA), ...shuffleArray(questionSets.setB)],
+            quizData: [...questionSets.setA, ...questionSets.setB],
             currentPage: 1,
             start: 0,
             end: this.quesPerPage,
@@ -98,16 +99,18 @@ class Quiz extends React.Component {
         const questionKey = (questionNumber + 1) 
             + ( (currentPage - 1) * this.quesPerPage );
         const hasFigure = (question.fig !== undefined);
-        const hasExternalLink = (question.link !== undefined);
         const explained = (explainedQuestions[questionKey] === true);
         const correctAnswer = question.options[question.ansKey];
         const x = ["a.", "b.", "c.", "d."];
 
         return (
             <React.Fragment key={questionKey}>
-                <li className="questions">{question.name}</li>
+                <li className="questions">{
+                    question.name || <span dangerouslySetInnerHTML={{ __html: question.namehtml }} />
+                }</li>
                 { hasFigure && <img className="figure"
-                    src={images[question.fig]} alt={question.fig}/> }
+                    src={images[question.fig]} alt={question.fig}/> 
+                }
                 <form className="optionGroup">
                 <ol className="choices">
                 {question.options.map((choice, index) => {
@@ -165,16 +168,7 @@ class Quiz extends React.Component {
                     (explained && 
                         <p className="explanation">
                         <strong>Explanation: </strong>
-                        {question.hint}
-                        { hasExternalLink &&
-                                <>
-                                <span> </span>
-                                <a className="need-attention"
-                                href={question.link}>
-                                {question.anchor}
-                                </a>
-                                <span>.</span>
-                                </>
+                        {question.hint || <span dangerouslySetInnerHTML={{ __html: question.hinthtml }} />
                         }
                         </p> 
                     )

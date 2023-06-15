@@ -22,10 +22,6 @@ class Promotions extends React.Component {
             <p>Or a book...</p></a>
             </div>
 
-            <div className="promotions">
-            <p>Ad space? No.</p>
-            </div>
-
             </div>
 
             </>

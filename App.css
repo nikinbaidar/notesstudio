@@ -83,8 +83,6 @@ nav {
   color: var(--nav-heading);
   background-color: var(--dark-purple);
   width: 100%;
-  min-height: 50px;
-  max-height: 50px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;

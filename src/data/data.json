@@ -2725,8 +2725,8 @@
                     "Bandwidth divided by Q",
                     "3-dB frequency"
                 ],
-                "ansKey" : 2,
-                "hint": "The quality factor (Q) of a bandpass filter is a measure of its selectivity and is calculated as the ratio of the center frequency to the bandwidth: Q = fc / BW."
+                "ansKey" : 1,
+                "hint": "I found a very long and thorough explanation <a class=\"need-attention\" href=\"https://www.insula.com.au/physics/1221/L15.html\" target=\"_blank\">here</a>. TL;DR the geometric mean, ω<sub>c</sub>, of ω<sub>l</sub> and ω<sub>u</sub>, is defined when: ω<sub>u</sub>ω<sub>c</sub>=ω<sub>c</sub>ω<sub>l</sub>, or ω<sub>c</sub><sup>2</sup>=ω<sub>l</sub>ω<sub>u</sub>=1/LC=ω<sub>r</sub><sup>2</sup>. Hence ω<sub>c</sub>=ω<sub>r</sub>. That is, the geometric mean of the corner frequencies is the resonant frequency."
             },
             {
                 "name" : "Laplace transform of a step function is ___.",
@@ -2909,8 +2909,8 @@
                     "Cuboidal, regular, with radial symmetry",
                     "Flat, with long processes"
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 0,
+                "hint": "Endothelial cells are typically flat and form a single layer lining the interior surface of blood vessels. They often have a polygonal shape and are elongated in the direction of blood flow, which allows for the smooth passage of blood through the vessels."
             },
             {
                 "name" : "A patient is scheduled to have a chronic abscess incised and drained. What would you  expect a microscopic examination of the contents of the abscess to most likely show?",
@@ -3029,8 +3029,8 @@
                     "One pad on lower right side of the chest, and the other on lower left side of the chest.",
                     "One pad on upper right side of the chest, and the other on upper left side of the chest."
                 ],
-                "ansKey" : 1,
-                "hint": ""
+                "ansKey" : 0,
+                "hint": "a) One pad on the upper right side of the chest, and the other on the lower left side of the chest. The placement of the pads may vary slightly depending on the specific AED model and manufacturer's instructions. However, in most cases, the upper right and lower left side of the chest are the recommended positions for pad placement to optimize the flow of electrical current through the heart."
             },
             {
                 "name" : "Which statement is true?  ",
@@ -3137,8 +3137,7 @@
                 "hint": ""
             },
             {
-                "name" : "By considering following activities of a project, the project duration will be ___.",
-                "fig": "PertQues",
+                "namehtml" : "<span>By considering following activities of a project, the project duration will be ___.</span> <table class=\"quiz\"><thead><tr><th>Activity</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead><tbody><tr><th>Immediate predecessors</th><td>-</td><td>-</td><td>-</td><td>C</td><td>A, B, D</td></tr><tr><th>Duration (days)</th><td>4</td><td>5</td><td>3</td><td>7</td><td>5</td></tr></tbody></table>",
                 "points": 2,
                 "chapter" : "1.1",
                 "options": [
@@ -3148,9 +3147,7 @@
                     "24 day"
                 ],
                 "ansKey" : 0,
-                "hint": "Follow",
-                "anchor": "this link",
-                "link" : "https://bit.ly/45TsL7E"
+                "hinthtml": "Follow <a href=\"https://bit.ly/45TsL7E\" target=\"_blank\" class=\"need-attention\">this link</a>."
             }
         ]
     },

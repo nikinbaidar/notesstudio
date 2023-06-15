@@ -35,6 +35,8 @@ body {
   font-size: 1vw;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -83,8 +85,8 @@ nav {
   color: var(--nav-heading);
   background-color: var(--dark-purple);
   width: 100%;
-  min-height: 50px;
-  max-height: 50px;
+  min-height: 42px;
+  max-height: 42px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -716,6 +718,31 @@ li + img {
   display: block;
   margin: 0.5rem auto;
   scale: 0.95;
+}
+
+table.quiz {
+  width: 90%;
+  margin: 12px auto;
+  border-collapse: collapse;
+}
+
+table.quiz th {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+table.quiz td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+table.quiz thead th:first-child {
+  text-align: left;
+}
+
+table.quiz thead th:not(:first-child) {
+  text-align: center;
 }
 
 
