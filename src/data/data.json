@@ -3041,7 +3041,7 @@
                     "With positive-pressure ventilation (PPV), the transpulmonary pressure is increased by  making the alveolar pressure more positive; in contrast, with negative-pressure  ventilation (NPV), the transpulmonary pressure is decreased by making the pleural  pressure more positive",
                     "With positive-pressure ventilation (PPV), the transpulmonary pressure is increased by  making the alveolar pressure more negative; in contrast, with negative-pressure  ventilation (NPV), the transpulmonary pressure is increased by making the pleural  pressure more positive"
                 ],
-                "ansKey" : 1,
+                "ansKey" : 0,
                 "hint": "Transpulmonary pressure is simply the difference between alveoli and lungs pressure. This pressure difference is necessary for flow of air into the lungs In PPV,  alveolar pressure is increased by pushing air into lungs. Eg: mechanical ventilatior. This increases transpulmonary pressure and expand lungs and allow air to enter In NPV, negative pressure is created in the lungs by removing air inside the lungs (eg: natural expiration or iron lung machine) creating negative pressure inside the lungs. This increases the transpulmonary pressure allowing the chest to expand and air flow inside the chest. The statement a) is the literal way of defining PPV and NPV "
             },
             {
