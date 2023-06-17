@@ -2988,7 +2988,7 @@
                     "T1, FLAIR, fMRI",
                     "FLAIR, DTI, fMRI"
                 ],
-                "ansKey" : 3,
+                "ansKey" : 1,
                 "hint": "The images in the first, second and third rows  in the above picture include T1, DTI and fMRI images respectively."
             },
             {
