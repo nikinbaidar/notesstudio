@@ -36,8 +36,7 @@ class Quiz extends React.Component {
         this.indexPassed =  indexPassed;
         this.indexFailed =  indexFailed;
         this.state = {
-            // quizData: [...shuffleArray(questionSets.setA), ...shuffleArray(questionSets.setB)],
-            quizData: [...questionSets.setA, ...questionSets.setB],
+            quizData: [...shuffleArray(questionSets.setA), ...shuffleArray(questionSets.setB)],
             currentPage: 1,
             start: 0,
             end: this.quesPerPage,
