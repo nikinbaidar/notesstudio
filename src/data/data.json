@@ -3043,7 +3043,7 @@
                     "With positive-pressure ventilation (PPV), the transpulmonary pressure is increased by  making the alveolar pressure more negative; in contrast, with negative-pressure  ventilation (NPV), the transpulmonary pressure is increased by making the pleural  pressure more positive"
                 ],
                 "ansKey" : 1,
-                "hint": ""
+                "hint": "Transpulmonary pressure is simply the difference between alveoli and lungs pressure. This pressure difference is necessary for flow of air into the lungs In PPV,  alveolar pressure is increased by pushing air into lungs. Eg: mechanical ventilatior. This increases transpulmonary pressure and expand lungs and allow air to enter In NPV, negative pressure is created in the lungs by removing air inside the lungs (eg: natural expiration or iron lung machine) creating negative pressure inside the lungs. This increases the transpulmonary pressure allowing the chest to expand and air flow inside the chest. The statement a) is the literal way of defining PPV and NPV "
             },
             {
                 "name" : "A Norton circuit with 10 A current source and 15 Ω resistance is connected across a  resistance of 5 Ω. The current in 5 Ω resistance will be ___.",
@@ -3134,7 +3134,7 @@
                     "2%"
                 ],
                 "ansKey" : 1,
-                "hint": ""
+                "hint": "Effective interest rate = e^(r*t) - 1; where r is the nominal interest rate expressed as a decimal and t is the time period is years. Therfore, Effective interest rate = e^(0.10*(1/12)) - 1 = 0.84%."
             },
             {
                 "namehtml" : "<span>By considering following activities of a project, the project duration will be ___.</span> <table class=\"quiz\"><thead><tr><th>Activity</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead><tbody><tr><th>Immediate predecessors</th><td>-</td><td>-</td><td>-</td><td>C</td><td>A, B, D</td></tr><tr><th>Duration (days)</th><td>4</td><td>5</td><td>3</td><td>7</td><td>5</td></tr></tbody></table>",
