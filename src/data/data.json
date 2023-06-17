@@ -2726,8 +2726,7 @@
                     "3-dB frequency"
                 ],
                 "ansKey" : 1,
-                "hint": "I found a very long and thorough explanation <a class=\"need-attention\" href=\"https://www.insula.com.au/physics/1221/L15.html\" target=\"_blank\">here</a>. TL;DR the geometric mean, ω<sub>c</sub>, of ω<sub>l</sub> and ω<sub>u</sub>, is defined when: ω<sub>u</sub>ω<sub>c</sub>=ω<sub>c</sub>ω<sub>l</sub>, or ω<sub>c</sub><sup>2</sup>=ω<sub>l</sub>ω<sub>u</sub>=1/LC=ω<sub>r</sub><sup>2</sup>. Hence ω<sub>c</sub>=ω<sub>r</sub>. That is, the geometric mean of the corner frequencies is the resonant frequency."
-            },
+                "hinthtml": "I found a very long and thorough explanation <a class=\"need-attention\" href=\"https://www.insula.com.au/physics/1221/L15.html\" target=\"_blank\">here</a>. TL;DR the geometric mean, ω<sub>c</sub>, of ω<sub>l</sub> and ω<sub>u</sub>, is defined when: ω<sub>u</sub>ω<sub>c</sub>=ω<sub>c</sub>ω<sub>l</sub>, or ω<sub>c</sub><sup>2</sup>=ω<sub>l</sub>ω<sub>u</sub>=1/LC=ω<sub>r</sub><sup>2</sup>. Hence ω<sub>c</sub>=ω<sub>r</sub>. That is, the geometric mean of the corner frequencies is the resonant frequency." },
             {
                 "name" : "Laplace transform of a step function is ___.",
                 "points": 1,
