@@ -49,7 +49,7 @@ class Terms extends React.Component {
             <li><p>A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or law; and</p></li>
             <li><p>A statement, made under penalty of perjury, that the above information is accurate, and that you are the copyright owner or are authorized to act on behalf of the owner.</p></li>
             </ol>
-            <p>The above information must be submitted to the following email: <a className="need-attention" style={{ paddingLeft: "4px" }} href="mailto:nikinbaidarr@gmail.com">nikinbaidaarr@gmail.com</a></p>
+            <p>The above information must be submitted to the following email: <a className="need-attention" style={{ paddingLeft: "4px" }} href="mailto:nikinbaidarr@gmail.com">nikinbaidarr@gmail.com</a></p>
             </li>
 
             <li>

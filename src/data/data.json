@@ -2335,8 +2335,8 @@
                     "It is the implantation of scaffolds for the in situ repair of diseased or damaged tissue.",
                     "It is a form of bioactive fixation."
                 ],
-                "ansKey" : 1,
-                "hint": "While options a), c) and d), each describe one aspect of tissue engineering, they do not encopass the full concept of tissue engineering. Tissue engineering involves the application of principles from both biology and engineering to create functional tissue constructs that can replace or restore damaged or diseased tissues in the body. Therefore b) is the most appropriate answer."
+                "ansKey" : 0,
+                "hint": "While options b), c) and d), each describe one aspect of tissue engineering, they do not encopass the full concept of tissue engineering. Tissue engineering involves the application of principles from both biology and engineering to create functional tissue constructs that can replace or restore damaged or diseased tissues in the body. Therefore a) is the most appropriate answer."
             },
             {
                 "name" : "Which of the following is a characteristic of the photons produced by the bremsstrahlung  method?",
@@ -2452,7 +2452,7 @@
                     "Sensors, transmitters, a camera, and a receiver  ",
                     "Sensors, transmitters, a satellite dish, and a receiver  "
                 ],
-                "ansKey" : 1,
+                "ansKey" : 0,
                 "hint": "If you look closely, the only variable in the given options is the 3rd one. The radio antenna is used to transmit and receive the radiofrequency signals between the transmitter and the receiver. It helps ensure reliable communication by sending and receiving the wireless signals."
             },
             {
