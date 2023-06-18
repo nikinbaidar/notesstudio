@@ -1,13 +1,6 @@
 import  React from 'react';
 import { SEO } from './Seo';
-
-import {
-    loadQuiz,
-    loadMsg,
-    quizQuestionImages as images 
-} 
-from '../dataLoader';
-
+import { loadQuiz, loadMsg, quizQuestionImages as images } from '../dataLoader';
 import { movetoTop, shuffleArray } from './utils';
 
 class Quiz extends React.Component {
@@ -33,10 +26,11 @@ class Quiz extends React.Component {
         this.totalScore = totalScore;
         this.passMark = (0.5 * totalScore);
         this.memos = memos;
-        this.indexPassed =  indexPassed;
-        this.indexFailed =  indexFailed;
+        this.indexPassed = indexPassed;
+        this.indexFailed = indexFailed;
         this.state = {
-            quizData: [...shuffleArray(questionSets.setA), ...shuffleArray(questionSets.setB)],
+            quizData: [...shuffleArray(questionSets.setA),
+                ...shuffleArray(questionSets.setB)],
             currentPage: 1,
             start: 0,
             end: this.quesPerPage,
@@ -105,7 +99,8 @@ class Quiz extends React.Component {
         return (
             <React.Fragment key={questionKey}>
                 <li className="questions">{
-                    question.name || <span dangerouslySetInnerHTML={{ __html: question.namehtml }} />
+                    question.name || <span dangerouslySetInnerHTML={{
+                        __html: question.namehtml }} />
                 }</li>
                 { hasFigure && <img className="figure"
                     src={images[question.fig]} alt={question.fig}/> 
@@ -254,7 +249,7 @@ class Quiz extends React.Component {
         }
         else
         {
-            alert("Awkward! Reload and try again later.")
+            alert("Awkward! Reload and try again?")
         }
     }
 
@@ -337,7 +332,6 @@ class Quiz extends React.Component {
                 </div>
                 <button id="submit" className="buttons" type="submit"
                 onClick={this.handleSubmit}>Submit</button>
-                
             </>
         );
     };

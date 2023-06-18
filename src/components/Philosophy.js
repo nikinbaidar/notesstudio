@@ -23,13 +23,14 @@ class Philosophy extends React.Component {
             software. With complex code, problems can only be solved in
             suboptimal ways, valuable resources are endlessly tied up,
             performance slows to a halt, and vulnerabilitites become a
-            commonplace. Ingenious ideas are simple. Ingenious software is
-            simple. Simplicity of the heart of our philosophy. Our aim is to
-            challenge this trend through our software projects, demonstrating
-            the opposite.</p>
+            commonplace. Our aim is to challenge this trend through our
+            software projects, demonstrating the opposite. Simplicity is the
+            heart of our philosophy. Ingenious ideas are simple. Ingenious
+            software is simple. </p>
 
 
             <p>Creating applications that is simple and elegant proves to be more challenging than allowing ad-hoc or overly ambitious features to clutter the code over time. However, it is a necessary price to pay in order to achieve reliability and maintainability. Additionally, adopting minimalism sets realistic and achievable goals. We are committed to upholding minimalism and clarity in order to drive development towards fruition. The web is a practical example why corportate software development does not work and never will. It only ruins our environment, sanity and many brains which could beused for the better of humanity.</p>
+
             </div>
 
             <div>

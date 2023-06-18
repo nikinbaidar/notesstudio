@@ -2,7 +2,11 @@ import { Suspense } from 'react';
 import { ComingSoon, ComponentRegistry } from './allComponents';
 
 const Master = ({ name, props = {} }) => {
-    /* @module {Component} Master : The main content component. */
+    /*
+     * @module {Component} Master : The main content component. 
+     * 
+     */
+
     const Component = ComponentRegistry[name];
 
     if (!Component) {
