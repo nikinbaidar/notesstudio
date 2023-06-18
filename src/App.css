@@ -22,7 +22,7 @@
   --white: #ECF0C1;
   --pure-white: #FFF;
   --pure-black: #000;
-  --pure-green: #0F0;
+  --pure-green: #080;
   --bright-white: #FFD95A;
 }
 
@@ -614,10 +614,12 @@ button#submit:hover {
 
 .feedback.correct{
   color: var(--pure-green);
+  -webkit-text-fill-color: var(--pure-green);
 }
 
 .feedback.incorrect {
   color: var(--red);
+  -webkit-text-fill-color: var(--red);
 }
 
 .submitted.correct {
