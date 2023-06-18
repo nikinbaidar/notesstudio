@@ -15,9 +15,12 @@ export { default as SEO } from './Seo';
 /* Components bound to anchors. */
 
 const navigationModules = {
-    Home       : lazy(() => import('./Landing')),
+    Home       : lazy(() => import('./ComingSoon')),
     Projects   : lazy(() => import('./Projects')),
     Wiki       : lazy(() => import('./Wiki')),
+    Forums     : lazy(() => import('./ComingSoon')),
+    Blog       : lazy(() => import('./ComingSoon')),
+    LogIn      : lazy(() => import('./ComingSoon')),
 };
 
 const policyModules = {
@@ -39,11 +42,12 @@ const projects = {
 
 const wikiFirst = {
     math1   : lazy(() => import('./first/math')),
-    physics       : lazy(() => import('./first/physics')),
+    physics : lazy(() => import('./first/physics')),
 };
 
 export const ComponentRegistry = {
-    ...navigationModules, ...policyModules,
+    ...navigationModules, 
+    ...policyModules,
     ...projects,
     ...wikiModules,
     ...wikiFirst, 

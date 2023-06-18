@@ -24,6 +24,27 @@
                 }
             },
             {
+                "path": "/forums/*",
+                "component": "Forums",
+                "props" : {
+                    "title": "Forums"
+                }
+            },
+            {
+                "path": "/blog/*",
+                "component": "Blog",
+                "props" : {
+                    "title": "Blog"
+                }
+            },
+            {
+                "path": "/login/*",
+                "component": "LogIn",
+                "props" : {
+                    "title": "Log In"
+                }
+            },
+            {
                 "path": "/terms",
                 "component": "Terms",
                 "props" : {
