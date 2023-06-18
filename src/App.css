@@ -22,6 +22,7 @@
   --white: #ECF0C1;
   --pure-white: #FFF;
   --pure-black: #000;
+  --pure-green: #0F0;
   --bright-white: #FFD95A;
 }
 
@@ -612,7 +613,7 @@ button#submit:hover {
 }
 
 .feedback.correct{
-  color: green;
+  color: var(--pure-green);
 }
 
 .feedback.incorrect {
