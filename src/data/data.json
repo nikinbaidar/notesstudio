@@ -3115,7 +3115,7 @@
                     "(A+ B')(A+B)=A"
                 ],
                 "ansKey" : 1,
-                "hint": "The expression \"d) (A + B')(A + B)= A\" is incorrect because it violates the complement law in Boolean algebra. The complement law states that A + A' = 1, which means that if a variable A is summed with its complement A', the result is always 1. In the given expression, (A + B')(A + B), if we substitute A = 0 and B = 1, we get (0 + 1')(0 + 1) = (1)(1) = 1, which does not equal A = 0. Therefore, the expression is incorrect."
+                "hint": "The expression \"b) (A + AB)= B\" is incorrect."
             },
             {
                 "name" : "Find the function f(t) for the following function F(s): F(s) = 1/ [s(s+1)(s+5)]",
