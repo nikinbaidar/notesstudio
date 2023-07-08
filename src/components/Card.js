@@ -1,4 +1,5 @@
 import  React from 'react';
+import LazyLoad from 'react-lazyload';
 import { NavLink } from "react-router-dom";
 import { SEO } from './Seo';
 
@@ -48,7 +49,9 @@ class Card extends React.Component {
                 <NavLink to={elem.path}>
                 <div className="options card">
                     <div className="img-container">
+                <LazyLoad>
                     <img src={covers[elem.cover]} alt=""/> 
+                </LazyLoad>
                     </div>
                     <p>
                     {elem.label}
