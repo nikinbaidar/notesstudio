@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -6,24 +6,20 @@ import { Navigation, Main, Copyright } from './components/allComponents';
 
 import './App.css';
 
-class App extends React.Component {
+const App = () => {
+  const helmetContext = {};
 
-    constructor() {
-        super();
-        this.helmetContext = {};
-    }
-
-    render() {
-        return (
-            <HelmetProvider context={this.helmetContext}>
-            <BrowserRouter>
-                <Navigation />
-                <Main id='main' route='main' />
-                <Copyright />
-            </BrowserRouter>
-            </HelmetProvider>
-        );
-    }; 
-}
+  return (
+    <HelmetProvider context={helmetContext}>
+      <BrowserRouter>
+        <Suspense fallback={<div className="loading"></div>}>
+          <Navigation />
+          <Main id="main" route="main" />
+          <Copyright />
+        </Suspense>
+      </BrowserRouter>
+    </HelmetProvider>
+  );
+};
 
 export default App;
