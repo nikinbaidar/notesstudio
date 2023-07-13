@@ -782,9 +782,8 @@ table.quiz thead th:not(:first-child) {
 
     /* Navigation */
 
-    .menu-btn,
-    .overlay.active {
-      display: block;
+    nav img {
+      max-width: 9rem;
     }
     /* Layout */
 
@@ -863,7 +862,14 @@ table.quiz thead th:not(:first-child) {
       font-size: 14px;
     }
 
+    .menu-btn,
+    .overlay.active {
+      display: block;
+    }
+
+
     nav img {
+      /* max-width: 9rem; */
       margin: 0.20rem auto;
     }
 
