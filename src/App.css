@@ -894,6 +894,9 @@ table.quiz thead th:not(:first-child) {
     .copyright-info {
       flex-direction: column;
     }
+    .copyright-info p {
+      margin-top: 1rem;
+    }
 
 
   }
