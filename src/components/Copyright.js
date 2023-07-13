@@ -30,10 +30,10 @@ class Copyright extends React.Component {
         const terms = this.generatePolicy();
         return(
             <div className="copyright-info">
-                <p>Copyright © 2023 <a title="Contact Nikin Baidar"
-                href="mailto:nikinbaidarr@gmail.com">nikinbaidar</a>.
-                All Rights Reserved.</p>
-            <ul className="terms nav_items">{terms}</ul>
+            <ul className="terms nav_items" >{terms}</ul>
+            <p>Copyright © 2023 <a title="Contact Nikin Baidar"
+            href="mailto:nikinbaidarr@gmail.com">nikinbaidar</a>.
+            All Rights Reserved.</p>
             </div>
         );
     }

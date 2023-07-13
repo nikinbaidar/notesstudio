@@ -305,40 +305,40 @@ div#ads img {
   height: auto;
   width: 100%;
   margin: 0;
+  padding: auto;
+  padding-top: 1rem;
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
-  color: var(--gray);
   align-items: center;
+  color: var(--dark-gray);
   background-color: var(--dark-blue);
 }
 
-.copyright-info * {
-  padding: auto;
+.copyright-info p {
+  padding-right: 1rem;
+  margin-top: auto;
 }
 
-
-ul.terms a:hover {
-  color: var(--gray); 
-  text-decoration: underline;
+ul.terms li:first-child {
+  padding-left: 1rem;
 }
 
 ul.terms li {
   font: inherit;
+  padding: 0;
+  padding-left: 0.5rem
 }
+
 
 ul.terms li:not(:last-child)::after {
   content: "|";
   width: 1px;
-  margin-left: 10px;
+  margin-left: 0.5rem;
 }
 
-ul.terms li {
-  padding-left: 0;
-}
-
-ul.terms li:first-child {
-  padding-left: 10px;
+ul.terms a:hover {
+  color: var(--gray); 
+  text-decoration: underline;
 }
 
 /* Component Specific CSS */
@@ -891,6 +891,11 @@ table.quiz thead th:not(:first-child) {
       font-size: 14px;
     }
 
+    .copyright-info {
+      flex-direction: column;
+    }
+
+
   }
 
   @media (max-width: 639.97px),
@@ -903,7 +908,6 @@ table.quiz thead th:not(:first-child) {
     .grid-container {
       padding: 0 auto;
     }
-
 
   }
 
@@ -922,9 +926,6 @@ table.quiz thead th:not(:first-child) {
       width: 50%;
     }
 
-    .copyright-info {
-      flex-direction: column-reverse;
-    }
   }
 
   /* Define animations */
