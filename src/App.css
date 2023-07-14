@@ -72,7 +72,7 @@
 html,
 body {
   font-family: 'Open Sans';
-  max-width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
   font-size: 1vw;
   background-color: var(--background);
@@ -125,8 +125,7 @@ nav {
   color: var(--nav-heading);
   background-color: var(--dark-purple);
   width: 100%;
-  min-height: 42px;
-  max-height: 42px;
+  height: auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -134,12 +133,11 @@ nav {
   box-sizing: border-box;
   position: sticky;
   top: 0;
-  z-index: 10000;
+  z-index: 100;
 }
 
-
 nav img {
-  max-width: 10rem;
+  max-width: min(9%, 9rem);
   object-fit: scale-down;
   margin: 0.20rem 1.0rem;
 }
@@ -320,9 +318,6 @@ div#main {
 .promotions.tux {
   background-color: var(--green);
 }
-
-
-
 
 div#ads img {
   max-width: 100%;
@@ -831,7 +826,7 @@ table.quiz thead th:not(:first-child) {
     /* Navigation */
 
     nav img {
-      max-width: 9rem;
+      /* max-width: 9rem; */
     }
 
     /* Layout */
