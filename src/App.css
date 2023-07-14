@@ -125,6 +125,7 @@ nav {
   color: var(--nav-heading);
   background-color: var(--dark-purple);
   width: 100%;
+  min-height: 42px;
   height: auto;
   display: flex;
   flex-direction: row-reverse;
@@ -137,9 +138,9 @@ nav {
 }
 
 nav img {
-  max-width: min(9%, 9rem);
+  max-width: 9rem;
   object-fit: scale-down;
-  margin: 0.20rem 1.0rem;
+  margin-inline: 1.0rem;
 }
 
 nav ul,
@@ -823,12 +824,6 @@ table.quiz thead th:not(:first-child) {
       font-size: 16px;
     }
 
-    /* Navigation */
-
-    nav img {
-      /* max-width: 9rem; */
-    }
-
     /* Layout */
 
     div#main {
@@ -906,10 +901,8 @@ table.quiz thead th:not(:first-child) {
       display: block;
     }
 
-
     nav img {
-      /* max-width: 9rem; */
-      margin: 0.20rem auto;
+      margin-inline: auto;
     }
 
     nav ul {
