@@ -951,22 +951,7 @@ table.quiz thead th:not(:first-child) {
 
   }
 
-  @media (max-width: 639.97px),
-  {
-
-  }
-
-  @media only screen and (max-width: 575.98px) {
-
-    html,
-    body {
-      font-size: 3.0vw;
-    }
-
-    #leftsidebar {
-      width: 50%;
-    }
-
+  @media (max-width: 639.97px) {
     .grid-container {
       grid-row-gap: 3rem;
     }
@@ -987,6 +972,20 @@ table.quiz thead th:not(:first-child) {
       font-size: 1rem;
       padding-top: 0.25rem;
     }
+
+  }
+
+  @media only screen and (max-width: 575.98px) {
+
+    html,
+    body {
+      font-size: 3.0vw;
+    }
+
+    #leftsidebar {
+      width: 50%;
+    }
+
 
 
   }
