@@ -24,20 +24,19 @@
   --pure-black: #000;
   --pure-green: #080;
   --bright-white: #FFD95A;
+
+  --card-span: 15rem;
 }
 
 /* General Styles */
-
 html,
 body {
   font-family: 'Open Sans';
   max-width: 100%;
   overflow-x: hidden;
   font-size: 1vw;
-  /* background-color: var(--background); */
+  background-color: var(--background);
 }
-
-
 
 h1,
 h2,
@@ -62,7 +61,6 @@ a:visited {
   color: inherit;
   text-decoration: none;
 }
-
 
 .difficulty {
   color: var(--red);
@@ -163,15 +161,10 @@ nav ul a:hover {
 
 div#main {
   color: var(--foreground);
-  background-color: var(--background);
-  padding: 0;
-  margin-top: -1.53px;
-  min-height: 95vh;
-  height: 100vh;
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 0;
 }
 
 #leftsidebar {
@@ -184,7 +177,6 @@ div#main {
   padding-top: 1rem;
   cursor: default;
 }
-
 
 .headings,
 .subtopics {
@@ -227,22 +219,24 @@ div#main {
 }
 
 .pilot-master-wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   margin: 0;
 }
 
 .master {
   position: relative;
+  width: clamp(80vw, 80%, 90vw);
   width: 80%;
-  margin: 2rem 0 5rem;
-  padding: 0 5rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   font-size: 1.25rem;
 }
 
 .master.no-sidebar {
-  width: 60%;
+  /* width: 60%; */
   font-size: 1.30rem;
 }
 
@@ -264,14 +258,12 @@ div#main {
 }
 
 .promotions {
-  max-width: 100%;
-  max-height: auto;
-  margin: 2rem;
+  width: clamp(14rem, 20%, 75%);
+  margin: 2rem auto;
   padding: 5px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  /* text-align: center; */
 }
 
 .promotions p {
@@ -341,6 +333,23 @@ ul.terms a:hover {
   text-decoration: underline;
 }
 
+.comingsoon {
+  height: 100vh;
+  text-align: center;
+}
+
+.comingsoon h1 {
+  font-size: 1.75rem;
+  margin-block: 3rem;
+}
+
+.comingsoon img {
+  flex-wrap: wrap;
+  width: 50%;
+  height: 50%;
+}
+
+
 /* Component Specific CSS */
 
 .ordered_headings {
@@ -386,10 +395,11 @@ ul.terms a:hover {
 /* Cards */
 
 .grid-container {
-  margin-top: 2rem;
+  margin: 1rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-span), 1fr));
+  grid-column-gap: 1.0rem;
+  grid-row-gap: 1.5rem;
 }
 
 .options.card {
@@ -785,7 +795,21 @@ table.quiz thead th:not(:first-child) {
     nav img {
       max-width: 9rem;
     }
+
     /* Layout */
+
+    div#main {
+      flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pilot-master-wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
 
     #leftsidebar {
       position: absolute;
@@ -809,39 +833,23 @@ table.quiz thead th:not(:first-child) {
       animation: slideOutFromRight 0.3s ease-in-out;
     }
 
-
-    .pilot-master-wrapper {
-      flex-direction: column;
-    }
-
-    .master {
-      min-height: 90vh;
-    }
-
-    .master.no-sidebar {
-      width: 80%;
-    }
-
     #ads {
       width: 100%;
     }
 
-    .promotions {
-      max-width: 30%;
-      margin: 1rem auto;
-    }
-
     /* Cards */
+
+    /* .grid-container { */
+    /*   width: fit-content; */
+    /*   grid-template-columns: repeat(3, minmax(17rem, 1fr)); */
+    /*   grid-row-gap: 2rem; */
+    /* } */
 
     .options.card {
       width: 8rem;
       height: 12rem;
       margin: -0.25rem;
       padding: 4rem;
-    }
-
-    .card p {
-      padding-top: 6rem;
     }
 
     /* Quiz */

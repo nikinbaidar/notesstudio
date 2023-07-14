@@ -8,6 +8,7 @@ import Biomaterials  from './data/images/biomaterials.jpg';
 import BioMedInsI    from './data/images/biomedical_instrumentation1.jpg'
 import BioMedInsII   from './data/images/biomedical_instrumentation2.jpg'
 import BuyMeACoffee  from './data/images/BuyMeACoffee.jpg';
+import ComingSoon    from './data/images/coming_soon.avif';
 import Communication from './data/images/communication.avif';
 import Computer      from './data/images/computer.jpg';
 import Computer2     from './data/images/computer_system.avif';
@@ -57,6 +58,7 @@ import PertQues       from './data/images/pertQues.png';
 
 export const ads = {
     BuyMeACoffee,
+    ComingSoon,
     Tux,
 }
 

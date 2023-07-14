@@ -6,7 +6,7 @@ import { Navigation, Main, Copyright } from './components/allComponents';
 
 import './App.css';
 
-const App = () => {
+function App() {
   const helmetContext = {};
 
   return (
@@ -20,6 +20,6 @@ const App = () => {
       </BrowserRouter>
     </HelmetProvider>
   );
-};
+}
 
 export default App;
