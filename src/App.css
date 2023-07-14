@@ -844,6 +844,8 @@ table.quiz thead th:not(:first-child) {
 
     .pilot-master-wrapper {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
 
@@ -952,11 +954,6 @@ table.quiz thead th:not(:first-child) {
   @media (max-width: 639.97px),
   {
 
-    .master {
-      margin: 2rem;
-    }
-
-
   }
 
   @media only screen and (max-width: 575.98px) {
@@ -966,12 +963,29 @@ table.quiz thead th:not(:first-child) {
       font-size: 3.0vw;
     }
 
-    .master {
-      padding: 0 2rem;
-    }
-
     #leftsidebar {
       width: 50%;
+    }
+
+    .grid-container {
+      grid-row-gap: 3rem;
+    }
+
+    .options.card {
+      width: 22rem;
+      height: 25rem;
+      padding: 0;
+    }
+
+
+    .card p {
+      font-size: 1.5rem;
+      padding-top: 12.50rem;
+    }
+
+    .card p span {
+      font-size: 1rem;
+      padding-top: 0.25rem;
     }
 
 
