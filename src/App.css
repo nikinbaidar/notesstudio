@@ -205,6 +205,8 @@ div#main {
   position: relative;
   display: flex;
   justify-content: center;
+  /* Uncomment the following line if nav bar position is fixed */
+  /* margin-top: 42px;  */
 }
 
 #leftsidebar {
@@ -842,15 +844,13 @@ table.quiz thead th:not(:first-child) {
     /* Layout */
 
     div#main {
-      /* flex-direction: column; */
-      /* align-items: center; */
-      /* justify-content: center; */
+      flex-direction: column;
+      justify-content: center;
     }
 
     .pilot-master-wrapper {
       flex-direction: column;
-      /* align-items: center; */
-      justify-content: center;
+      align-items: center;
     }
 
 
