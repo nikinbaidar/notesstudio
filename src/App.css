@@ -198,11 +198,12 @@ nav ul a:hover {
 
 /* Layout */
 
+
 div#main {
   color: var(--foreground);
+  height: 100vh;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -266,7 +267,6 @@ div#main {
 
 .master {
   position: relative;
-  width: clamp(80vw, 80%, 90vw);
   width: 80%;
   padding: 2rem 3rem;
   margin: 0;
@@ -280,13 +280,28 @@ div#main {
   font-size: 1.30rem;
 }
 
-/* TODO Fix this */
 #leftsidebar, 
 .overlay.active,
 .master {
   overflow: scroll;
-  scrollbar-width: thick;
-  scrollbar-border: red;
+}
+
+/* WebKit-based browsers (Chrome, Safari) */
+.master::-webkit-scrollbar {
+  width: 1px;
+}
+
+.master::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.master::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Firefox */
+.master {
+  scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
 
@@ -827,14 +842,14 @@ table.quiz thead th:not(:first-child) {
     /* Layout */
 
     div#main {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      /* flex-direction: column; */
+      /* align-items: center; */
+      /* justify-content: center; */
     }
 
     .pilot-master-wrapper {
       flex-direction: column;
-      align-items: center;
+      /* align-items: center; */
       justify-content: center;
     }
 
