@@ -1,6 +1,5 @@
 import { covers } from '../dataLoader';
 
-
 export function movetoTop () {
     const master = document.getElementsByClassName('master')[0];
     setTimeout(() => {
@@ -81,7 +80,7 @@ export function showCover(cover, bgc) {
     };
     return (
         <div className="img-cover" style={divStyle}>
-        <img src={covers[cover]} alt=""/> 
+        <img src={covers[cover]} alt={cover}/> 
         </div>
     );
 }

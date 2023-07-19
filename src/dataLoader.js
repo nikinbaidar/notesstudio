@@ -26,6 +26,7 @@ import Implantable           from './data/images/implantable.avif';
 import MedElx        from './data/images/med_electronics.jpg';
 import MedImg1       from './data/images/imagign1.avif';
 import MedicalImagingII from './data/images/imagign2.avif';
+import MedicalIndustryManagement from './data/images/mim.png';
 import Embedded      from './data/images/embedded.webp';
 import Electrical    from './data/images/electrical.jpg';
 import Entrapment    from './data/images/Entrapment.png';
@@ -104,6 +105,7 @@ export const covers = {
     MedImg1,    
     MedicalImagingII,    
     Micro,    
+    Mim: MedicalIndustryManagement,    
     Belectronics: BElectronics,
     Drawing,
     Electrical,

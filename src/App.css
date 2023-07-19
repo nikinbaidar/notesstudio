@@ -24,8 +24,6 @@
   --pure-black: #000;
   --pure-green: #080;
   --bright-white: #FFD95A;
-
-  --card-span: 15rem;
 }
 
 /* Define animations */
@@ -132,7 +130,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
 }
@@ -205,8 +203,8 @@ div#main {
   position: relative;
   display: flex;
   justify-content: center;
-  /* Uncomment the following line if nav bar position is fixed */
-  /* margin-top: 42px;  */
+  /* Uncomment the following line if nav bar position is sticky */
+  margin-top: 42px; 
 }
 
 #leftsidebar {
@@ -270,15 +268,19 @@ div#main {
 .master {
   position: relative;
   width: 80%;
-  padding: 2rem 3rem;
-  margin: 0;
+  padding: 2rem 3rem 5rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   font-size: 1.25rem;
 }
 
+.master p {
+  margin-inline: 2.54rem;
+}
+
 .master.no-sidebar {
-  /* width: 60%; */
+  width: 55%;
   font-size: 1.30rem;
 }
 
@@ -448,18 +450,54 @@ ul.terms a:hover {
 .grid-container {
   margin: 1rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--card-span), 1fr));
-  grid-column-gap: 1.0rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
+}
+
+.card p {
+  margin-inline: auto;
+}
+
+
+/* Firefox */
+@-moz-document url-prefix() {
+  .grid-container {
+    /* Firefox-specific styles */
+    display: -moz-grid;
+    -moz-grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    -moz-grid-column-gap: 1.0rem;
+    -moz-grid-row-gap: 1.5rem;
+  }
+}
+
+/* Chrome and Safari */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .grid-container {
+    /* WebKit-based browsers (Chrome, Safari) specific styles */
+    display: -webkit-grid;
+    -webkit-grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    -webkit-grid-column-gap: 1.0rem;
+    -webkit-grid-row-gap: 1.5rem;
+  }
+}
+
+/* Edge (Older versions) */
+@supports (-ms-ime-align: auto) {
+  .grid-container {
+    /* Microsoft Edge specific styles */
+    display: -ms-grid;
+    -ms-grid-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    -ms-grid-column-gap: 1.0rem;
+    -ms-grid-row-gap: 1.5rem;
+  }
 }
 
 .options.card {
   position: relative;
-  width: 7rem;
-  height: 10rem;
-  margin: 0;
-  padding: 5rem;
-  display: flex;
+  width: 100%;
+  height: calc(100% + 2px);
+  /* min-height: 20rem; */
   border: solid var(--foreground) 1.50px;
   transition-duration: 0.30s;
 }
@@ -469,16 +507,23 @@ ul.terms a:hover {
   transform: translate(8px, -8px);
 }
 
-.card p {
+.card .img-container {
+  /* TODO Make all images to be 600x400 */
+  position: relative;
+}
+
+.card .img-container img {
+  max-width: 100%;
+  /* height: minmax(10rem, 10rem); */
+  object-fit: cover;
+  border-bottom: 1px solid gray;
+}
+
+.card .card-description {
+  position: relative;
   cursor: default;
   font: normal 1.1rem 'Fira Code', monospace;
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  position: absolute;
-  padding-top: 5rem;
-  min-width: 88%;
-  top: 1;
-  left: 0;
+  margin: 1rem;
 }
 
 #rule {
@@ -494,20 +539,6 @@ span.info {
   color: var(--pure-black);
   font-size: 0.8rem;
   margin-top: 1rem;
-}
-
-.card .img-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.card .img-container img {
-  max-width: 100%;
-  min-height: 10rem;
-  object-fit: cover;
-  border-bottom: 1px solid gray;
 }
 
 .main_heading,
@@ -529,8 +560,6 @@ span.info {
 h2.main_heading {
   margin-bottom: 0;
 }
-
-
 
 .img-cover {
   display: flex;
@@ -880,6 +909,15 @@ table.quiz thead th:not(:first-child) {
       min-height: inherit;
     }
 
+    .master.no-sidebar {
+      width: 55%;
+      font-size: 1.30rem;
+    }
+
+    .master p {
+      margin-inline: 1%;
+    }
+
     #ads {
       width: 100%;
     }
@@ -887,10 +925,7 @@ table.quiz thead th:not(:first-child) {
     /* Cards */
 
     .options.card {
-      width: 8rem;
-      height: 12rem;
-      margin: -0.25rem;
-      padding: 4rem;
+      height: calc(100% + 2%);
     }
 
     /* Quiz */
@@ -946,6 +981,7 @@ table.quiz thead th:not(:first-child) {
 
     .copyright-info {
       flex-direction: column;
+
     }
     .copyright-info p {
       margin-top: 1rem;
@@ -954,27 +990,34 @@ table.quiz thead th:not(:first-child) {
 
   }
 
+
   @media (max-width: 639.97px) {
     .grid-container {
-      grid-row-gap: 3rem;
+      grid-gap: 3rem;
     }
 
-    .options.card {
-      width: 22rem;
-      height: 25rem;
-      padding: 0;
+    .img-cover {
+      margin-inline: 0;
     }
 
+  }
 
-    .card p {
-      font-size: 1.5rem;
-      padding-top: 12.50rem;
-    }
+  @media (max-width: 610.97px) {
 
-    .card p span {
-      font-size: 1rem;
-      padding-top: 0.25rem;
-    }
+
+    /* .options.card { */
+    /*   height: 100%; */
+    /* } */
+
+
+    /* .card p { */
+    /*   font-size: 1.5rem; */
+    /*   padding-top: auto; */
+    /* } */
+    /* .card p span { */
+    /*   font-size: 1rem; */
+    /*   padding-top: 0.25rem; */
+    /* } */
 
   }
 

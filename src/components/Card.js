@@ -49,10 +49,11 @@ class Card extends React.Component {
                 <NavLink to={elem.path}>
                 <div className="options card">
                     <div className="img-container">
-                <LazyLoad>
+                    <LazyLoad>
                     <img src={covers[elem.cover]} alt=""/> 
-                </LazyLoad>
+                    </LazyLoad>
                     </div>
+                    <div className="card-description">
                     <p>
                     {elem.label}
                     <span id="rule"></span>
@@ -60,6 +61,7 @@ class Card extends React.Component {
                     {elem.description}</span>
                     </p> 
                     </div>
+                </div>
                 </NavLink>
                 </React.Fragment>
             );

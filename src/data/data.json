@@ -168,13 +168,19 @@
                 }
             },
             {
-                "path": "/first/maths",
+                "path": "/first/math",
                 "component": "Subject",
-                "pilot": "autopilot",
+                "pilot": "mathFirst",
                 "props" : {
-                    "name": "math_one",
-                    "bgc": "fff",
-                    "cover": "Math1"
+                    "name": "introMath"
+                }
+            },
+            {
+                "path": "/first/math/leibniz",
+                "component": "Subject",
+                "pilot": "mathFirst",
+                "props" : {
+                    "name": "leibniz"
                 }
             },
             {
@@ -182,9 +188,7 @@
                 "component": "Subject",
                 "pilot": "autopilot",
                 "props" : {
-                    "name": "phy",
-                    "bgc": "31343d",
-                    "cover": "Physics"
+                    "name": "introPhy"
                 }
             },
             {
@@ -605,16 +609,16 @@
             "path": "/home"
         },
         {
+            "name": "Wiki",
+            "path": "/"
+        },
+        {
             "name": "Projects",
             "path": "/projects"
         },
         {
             "name": "Forums",
             "path": "/forums"
-        },
-        {
-            "name": "Wiki",
-            "path": "/"
         },
         {
             "name": "Blog",
@@ -648,7 +652,7 @@
                         "name": "Mathematics I",
                         "cover" : "Math1",
                         "description": "If you're going to limit your dreams, at least tend them to infinity.",
-                        "path": "/first/maths"
+                        "path": "/first/math"
                     },
                     {
                         "name": "Physics",
@@ -903,6 +907,7 @@
                 "subjects": [
                     {
                         "name": "Medical Industry Management",
+                        "cover": "Mim",
                         "path": "/eighth/mim"
                     },
                     {
@@ -1023,6 +1028,17 @@
                     {
                         "title": "Projects",
                         "path": "/projects"
+                    }
+                ]
+            }
+        ],
+        "mathFirst" : [
+            {
+                "chapter": "Calculus",
+                "lessons" : [
+                    {
+                        "title": "Leibniz Theorem",
+                        "path": "/first/math/leibniz"
                     }
                 ]
             }

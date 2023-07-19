@@ -33,15 +33,20 @@ const wikiModules = {
     Faq        : lazy(() => import('./Faq')),
     Quiz       : lazy(() => import('./Quiz')),
     Semesters  : lazy(() => import('./Card')),
-    Subject    : lazy(() => import('./Subject')),
+    Subject    : lazy(() => import('./Master')),
 };
 
 const projects = {
     Ideas      : lazy(() => import('./projects/Ideas')),
 }
 
+const intros = {
+    introMath  : lazy(() => import('./Subject').then( module => ({ default: module.MathFirst }))),
+    introPhy   : lazy(() => import('./Subject').then(module =>  ({ default: module.Physics }))),
+};
+
 const wikiFirst = {
-    math1   : lazy(() => import('./first/math')),
+    leibniz : lazy(() => import('./first/maths/math')),
     physics : lazy(() => import('./first/physics')),
 };
 
@@ -50,5 +55,6 @@ export const ComponentRegistry = {
     ...policyModules,
     ...projects,
     ...wikiModules,
+    ...intros,
     ...wikiFirst, 
 };

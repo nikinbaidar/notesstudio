@@ -7,7 +7,7 @@ class ComingSoon extends React.Component {
     render() {
         return (
             <div className="comingsoon" >
-            <h1>Hold on tight! We're crafting something amazing.</h1>
+            <h1>Hold on tight! We're in development.</h1>
             <LazyLoad>
             <img src={ads.ComingSoon} alt="Coming Soon"/>
             </LazyLoad>
