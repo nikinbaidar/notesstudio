@@ -41,13 +41,35 @@ const projects = {
 }
 
 const intros = {
-    introMath  : lazy(() => import('./Subject').then( module => ({ default: module.MathFirst }))),
-    introPhy   : lazy(() => import('./Subject').then(module =>  ({ default: module.Physics }))),
+    introMath : lazy(() =>
+        import('./Subject').then(module => ({
+            default: () => <module.Intro name="introMath" />,
+        }))
+    ),
+    Physics : lazy(() =>
+        import('./Subject').then(module => ({
+            default: () => <module.Intro name="physics" />,
+        }))
+    ),
+    MedicalIndustryManagement : lazy(() =>
+        import('./Subject').then(module => ({
+            default: () => <module.Intro name="medicalIndustryManagement" />,
+        }))
+    ),
 };
 
 const wikiFirst = {
     leibniz : lazy(() => import('./first/maths/math')),
     physics : lazy(() => import('./first/physics')),
+};
+
+const wikiEighth = {
+    intro : lazy(() => import('./eighth/mim/intro')),
+    medindustry : lazy(() => import('./eighth/mim/medical_industry')),
+    classification : lazy(() => import('./eighth/mim/classification')),
+    reclassification: lazy(() => import('./eighth/mim/reclassification')),
+    cemarking: lazy(() => import('./eighth/mim/cemarking')),
+    general_requirements: lazy(() => import('./eighth/mim/requirements')),
 };
 
 export const ComponentRegistry = {
@@ -57,4 +79,5 @@ export const ComponentRegistry = {
     ...wikiModules,
     ...intros,
     ...wikiFirst, 
+    ...wikiEighth,
 };

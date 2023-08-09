@@ -258,12 +258,28 @@ div#main {
   background-color: rgba(104, 111, 154, 0.85);
 }
 
+.content figure {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+figcaption {
+  text-align: justify;
+  margin-inline: auto;
+}
+
+figcaption::before {
+    content: "Figure ";
+}
+
 .pilot-master-wrapper {
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
   margin: 0;
 }
+
 
 .master {
   position: relative;
@@ -445,6 +461,16 @@ ul.terms a:hover {
   content: "A:";
 }
 
+blockquote {
+  background-color: #D8D9DA;
+  padding: 5px;
+}
+
+blockquote.info {
+  padding: 10px 20px;
+  border-radius: 5px
+}
+
 /* Cards */
 
 .grid-container {
@@ -534,10 +560,14 @@ ul.terms a:hover {
   margin: 2px;
 }
 
+.card p {
+  font-size: 105%;
+}
+
 span.info {
   display: flex;
-  color: var(--pure-black);
-  font-size: 0.8rem;
+  color: #080808;
+  font-size: 80%;
   margin-top: 1rem;
 }
 
@@ -844,6 +874,10 @@ table.quiz thead th:not(:first-child) {
   width: 12%;
 }
 
+mark{
+  background-color: rgba(256, 256, 0, 0.5)
+}
+
 
 .loading {
   width: 35px;
@@ -857,9 +891,19 @@ table.quiz thead th:not(:first-child) {
 
 /* Responsive Styles */
 
-/* @media (max-width: 1399.98px) {
+@media (max-width: 1399.98px) {
 
-} */
+  .content > ol > li, 
+  .content > ul > li {
+    margin-left: 2.40rem;
+  }
+  
+  .sep li {
+    padding: 10px 0px;
+  }
+
+
+} 
 
 
   @media (max-width: 1199.98px) {

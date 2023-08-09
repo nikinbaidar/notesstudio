@@ -1,5 +1,4 @@
 {
-
     "routes" : {
         "main": [
             {
@@ -176,6 +175,54 @@
                 }
             },
             {
+                "path": "/eighth/mim/intro",
+                "component": "Subject",
+                "pilot": "mim",
+                "props" : {
+                    "name": "intro"
+                }
+            },
+            {
+                "path": "/eighth/mim/general_requirements",
+                "component": "Subject",
+                "pilot": "mim",
+                "props" : {
+                    "name": "general_requirements"
+                }
+            },
+            {
+                "path": "/eighth/mim/cemarking",
+                "component": "Subject",
+                "pilot": "mim",
+                "props" : {
+                    "name": "cemarking"
+                }
+            },
+            {
+                "path": "/eighth/mim/classification",
+                "component": "Subject",
+                "pilot": "mim",
+                "props" : {
+                    "name": "classification"
+                }
+            },
+            {
+                "path": "/eighth/mim/reclassification",
+                "component": "Subject",
+                "pilot": "mim",
+                "props" : {
+                    "name": "reclassification"
+                }
+            },
+            {
+                "path": "/eighth/mim/medindustry",
+                "component": "Subject",
+                "pilot": "mim",
+                "props" : {
+                    "name": "medindustry"
+                }
+            },
+            {
                 "path": "/first/math/leibniz",
                 "component": "Subject",
                 "pilot": "mathFirst",
@@ -188,7 +235,7 @@
                 "component": "Subject",
                 "pilot": "autopilot",
                 "props" : {
-                    "name": "introPhy"
+                    "name": "Physics"
                 }
             },
             {
@@ -546,7 +593,7 @@
             {
                 "path": "/eighth/mim",
                 "component": "Subject",
-                "pilot": "autopilot",
+                "pilot": "mim",
                 "props" : {
                     "name": "MedicalIndustryManagement"
                 }
@@ -1039,6 +1086,37 @@
                     {
                         "title": "Leibniz Theorem",
                         "path": "/first/math/leibniz"
+                    }
+                ]
+            }
+        ],
+        "mim" : [
+            {
+                "chapter": "Introduction",
+                "lessons" : [
+                    {
+                        "title": "Medical Device",
+                        "path": "/eighth/mim/intro"
+                    },
+                    {
+                        "title": "Medical Industries",
+                        "path": "/eighth/mim/medindustry"
+                    },
+                    {
+                        "title": "Classification",
+                        "path": "/eighth/mim/classification"
+                    },
+                    {
+                        "title": "Re-Classification",
+                        "path": "/eighth/mim/reclassification"
+                    },
+                    {
+                        "title": "Conformity Assessment",
+                        "path": "/eighth/mim/cemarking"
+                    },
+                    {
+                        "title": "Safety Requirements",
+                        "path": "/eighth/mim/general_requirements"
                     }
                 ]
             }
