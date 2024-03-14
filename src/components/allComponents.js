@@ -11,6 +11,7 @@ export { default as Router } from './Router';
 export { default as Pilot } from './Pilot';
 export { default as Promotions } from './Promotions';
 export { default as SEO } from './Seo';
+export { default as Fonepay } from './Fonepay.js';
 
 /* Components bound to anchors. */
 

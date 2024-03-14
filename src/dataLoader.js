@@ -19,6 +19,7 @@ import DigitalSignal from './data/images/digital_signal.jpg';
 import Drawing       from './data/images/drawing.png';
 import Economics     from './data/images/economics.avif';
 import Epp     from './data/images/epp.avif';
+import Fonepay       from './data/images/fonepay.jpg';
 import Tdi           from './data/images/tdi.jpg';
 import Nn            from './data/images/nn.avif';
 import Eem           from './data/images/eem.png';
@@ -61,6 +62,7 @@ export const ads = {
     BuyMeACoffee,
     ComingSoon,
     Tux,
+    Fonepay,
 }
 
 export const quizQuestionImages = {

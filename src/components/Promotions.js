@@ -1,8 +1,9 @@
-import React  from 'react';
+import React from 'react';
 import LazyLoad from 'react-lazy-load';
 import { ads } from '../dataLoader.js';
 
 class Promotions extends React.Component {
+
     render() {
         return (
             <>
@@ -19,15 +20,16 @@ class Promotions extends React.Component {
             Here's why.</a></p>
             </div>
 
-
             <div className="promotions coffee">
-            <a href="https://bit.ly/3Fw7B3R">
             <LazyLoad>
-            <img src={ads.BuyMeACoffee} alt="BuyMeACoffee"/>
+            <img src={ads.BuyMeACoffee} alt="Tux Logo"/>
             </LazyLoad>
-            <p>Or a book...</p></a>
+            <p>Or a book</p>
             </div>
 
+            <div className="promotions tux">
+            <p>We accept phone pay</p>
+            </div>
             </div>
 
             </>

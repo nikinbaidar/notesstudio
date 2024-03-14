@@ -460,6 +460,18 @@ ul.terms a:hover {
   text-align: center;
 }
 
+.fonepay {
+  position: absolute;
+  top: 12%;
+  left:37%;
+  z-index: 5;
+}
+
+.fonepay img {
+  height: 80vh;
+  border: 2px solid #000;
+}
+
 .comingsoon h1 {
   font-size: 1.75rem;
   margin-block: 3rem;

@@ -1,9 +1,10 @@
-import { Route, Routes } from 'react-router-dom';
-import { Master, Pilot, Promotions } from './allComponents';
+import { Route, Routes} from 'react-router-dom';
+import { Pilot, Master, Promotions } from './allComponents';
 import { getRoutes } from '../dataLoader';
 import { collapseHamburgerMenu } from './utils';
 
 class Router {
+
     static mapComponent(component, props, pilot) {
         return (
             <>
@@ -11,14 +12,15 @@ class Router {
             <div className="master">
             <Master name={component} props={props} />
             </div>
-            <Promotions />
+            <Promotions/>
             <div id="overlay" className="overlay" onClick={collapseHamburgerMenu}>
             </div>
             </>
-        ) ;
+        );
     }
 
-    static defineRoutes(namespace) {
+    static defineRoutes(namespace, toggleParentState) {
+        // toggleParentState();
         const namespaceRoutes = getRoutes(namespace);
         const routes = namespaceRoutes.map((item, index) => {
             const hasPilot = (item.pilot !== undefined) ? true : false;
