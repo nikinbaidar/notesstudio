@@ -32,6 +32,7 @@ export function collapseHamburgerMenu () {
     overlay.classList.remove('active');
 }
 
+
 export function expandHamburgerMenu () {
     const overlay = document.getElementById('overlay');
     const leftsidebar = document.getElementById('leftsidebar');   
@@ -56,7 +57,6 @@ export function toggleHamburgerMenu(show) {
         overlay.classList.remove('active');
     }
 }
-
 
 export function toggleAnchorColor(id, color) {
     const element = document.getElementById(id);

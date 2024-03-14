@@ -56,6 +56,7 @@ import TEQues        from './data/images/modelquestion01B64.png';
 import ImagingQues   from './data/images/mri_modalities.png';
 import ECGQues       from './data/images/ecg_lead_attachments.png';
 import PertQues       from './data/images/pertQues.png';
+import WeAcceptFonePay from './data/images/weacceptfonepay.png';
 
 
 export const ads = {
@@ -63,6 +64,7 @@ export const ads = {
     ComingSoon,
     Tux,
     Fonepay,
+    WeAcceptFonePay,
 }
 
 export const quizQuestionImages = {

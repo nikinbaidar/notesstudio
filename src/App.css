@@ -132,7 +132,7 @@ nav {
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 4;
 }
 
 nav img {
@@ -395,10 +395,23 @@ transition: transform 0.3s ease;
   margin: 5px;
 }
 
-.promotions.coffee {
-  text-align: center;
-  border-radius: 10px;
+.promotions.donation {
   background-color: var(--yellow);
+}
+
+
+.promotions.donation img {
+  border-radius: 5px;
+}
+#fonepay {
+  border: none;
+  background: none;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .promotions.tux {
@@ -462,14 +475,30 @@ ul.terms a:hover {
 
 .fonepay {
   position: absolute;
-  top: 12%;
-  left:37%;
-  z-index: 5;
+  top: 20%;
+  left:30%;
+  z-index: 10;
 }
 
 .fonepay img {
-  height: 80vh;
-  border: 2px solid #000;
+  height: 50vh;
+  border-radius: 20px;
+}
+
+.fpoverlay.hidden {
+  display: none;
+}
+
+.fpoverlay.visible {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
+  backdrop-filter: blur(5px);
 }
 
 .comingsoon h1 {

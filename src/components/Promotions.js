@@ -20,16 +20,22 @@ class Promotions extends React.Component {
             Here's why.</a></p>
             </div>
 
-            <div className="promotions coffee">
+            <div className="promotions donation">
+            <button id="fonepay" onClick={this.props.togglefunc}>
             <LazyLoad>
-            <img src={ads.BuyMeACoffee} alt="Tux Logo"/>
+            <img src={ads.WeAcceptFonePay} alt="Tux Logo"/>
             </LazyLoad>
-            <p>Or a book</p>
+            <p>Support me in staying motivated on this project.</p>
+            </button>
             </div>
 
-            <div className="promotions tux">
-            <p>We accept phone pay</p>
-            </div>
+            {/* <div className="promotions coffee"> */}
+            {/* <LazyLoad> */}
+            {/* <img src={ads.BuyMeACoffee} alt="Tux Logo"/> */}
+            {/* </LazyLoad> */}
+            {/* <p>Or a book</p> */}
+            {/* </div> */}
+
             </div>
 
             </>
