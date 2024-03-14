@@ -19,7 +19,7 @@ const navigationModules = {
     Projects   : lazy(() => import('./Projects')),
     Wiki       : lazy(() => import('./Wiki')),
     Forums     : lazy(() => import('./ComingSoon')),
-    Blog       : lazy(() => import('./ComingSoon')),
+    Blog       : lazy(() => import('./BlogMaser')),
     LogIn      : lazy(() => import('./ComingSoon')),
 };
 
@@ -38,6 +38,10 @@ const wikiModules = {
 
 const projects = {
     Ideas      : lazy(() => import('./projects/Ideas')),
+}
+
+const blogs = {
+    PackageManagement : lazy(() => import ('./blog/package_management'))
 }
 
 const intros = {
@@ -76,6 +80,7 @@ export const ComponentRegistry = {
     ...navigationModules, 
     ...policyModules,
     ...projects,
+    ...blogs,
     ...wikiModules,
     ...intros,
     ...wikiFirst, 

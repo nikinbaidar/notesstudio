@@ -183,33 +183,6 @@ class Lesson extends React.Component {
             </figure>
             </LazyLoad>
 
-            <h1>Essential Principles &amp; Safety of Medical Device</h1>
-
-            <h2>Harmonization of safety and performance criteria</h2>
-            <p>Great need to harmonize essential safety and performance criteria for a medical device that allows the manufacturer to demonstrate that their product is suitable for its intended purpose. This goal was achieved through the publication of guidance on the subject entitled <em>Essential Principles of Safety and Performance of Medical Devices</em> in 2005. It applied to the majority of medical devices and also to in vitro diagnostic devices.</p>
-            <p><strong>Why was it necessary to harmonize safety and performance criteria of medical devices?</strong></p>
-            <p>Harmonization, i.e. consistent identification, selection and application of safety and performance principles to a medical device offers significant benefits to the manufacturer, retailer or supplier, surgeon, patient, and also to regulatory authorities because it allows its manufacturer to design, manufacture and demonstrate that the device is suitable for its intended use. Moreover, eliminating differences between jurisdictions decreases the cost of gaining regulatory compliance, which in turn allows earlier access to new technologies and treatment procedures.</p>
-
-            <h1>Essential Requirements for Medical Devices</h1>
-
-            <h2>General Requirements for Safety and Performance of Particular Medical Devices</h2>
-
-            <h3>General Requirement 1</h3>
-            <p>The device must be designed and manufactured in such a way that, when used under conditions and for the purposes intended and where applicable by virtue of the technical knowledge, experience, education or training of intended users, they will not compromise the clinical condition or the safety of patients, or the safety and health of users or where applicable other persons provided that any risks which may be associated with their use constitute acceptable risks when weighed against the benefits to the patients and are compatible with a high level of protection of health and safety.</p>
-
-            <h3>General Requirement 2</h3>
-            <p>The solutions adopted by the manufacturer for the design and manufacture of the devices should conform to safety principles, taking account of the generally acknowledged state-of-the-art. When risk reduction is required, the manufacturer should control the risks so that the residual risks associated with each hazard is judged acceptable.</p>
-            <p>The manufacturer should apply the following principles in the priority order listed:</p>
-            <ol>
-            <li>Identify known or foreseeable hazards and estimate the associated risks arising from the intended use and foreseeable misuse.</li>
-            <li>Eliminate risks as far as reasonably practicable through inherently safe design and manufacture.</li>
-            <li>Reduce the remaining risks as far as is reasonably practicable by taking adequate protection measures, including alarms.</li>
-            <li>Inform users of any residual risks due to any shortcomings of the protection measures adopted.</li>
-            </ol>
-
-
-
-
             </div> {/* Content */}
             </>
         )

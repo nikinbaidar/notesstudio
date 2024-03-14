@@ -44,6 +44,13 @@
                 }
             },
             {
+                "path": "/blog/package_management",
+                "component": "PackageManagement",
+                "props" : {
+                    "title": "Blog"
+                }
+            },
+            {
                 "path": "/terms",
                 "component": "Terms",
                 "props" : {
@@ -639,6 +646,15 @@
                 }
             }
         ],
+        "blogMaster": [
+            {
+                "path": "/",
+                "component": "ProjectManagement",
+                "props" : {
+                    "title": "Project Ideas"
+                }
+            }
+        ],
         "projectmaster": [
             {
                 "path": "/",
@@ -955,16 +971,19 @@
                     {
                         "name": "Medical Industry Management",
                         "cover": "Mim",
+                        "description": "Unlock the Secrets to Thriving in the Booming Medical Industry - Master the Art of Healthcare Management Today!",
                         "path": "/eighth/mim"
                     },
                     {
                         "name": "Engineering Professional Practice",
                         "cover": "Epp",
+                        "description": "Elevate Your Engineering Career to New Heights with Expertise in Professional Practice - Discover the Key to Success Now!",
                         "path": "/eighth/epp"
                     },
                     {
                         "name": "Neural Networks",
                         "cover": "NN",
+                        "description": "Unleash the Power of Neural Networks:",
                         "path": "/eighth/nn"
                     },
                     {
@@ -981,7 +1000,15 @@
                     } 
                 ]
             }
+        ],
+        "blogs" : [
+            {
+                "name": "PackageManagment",
+                "path": "/blog/package_management"
+            }
+
         ]
+
     },
     "pilot": {
         "autopilot" : [
