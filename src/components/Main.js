@@ -10,15 +10,17 @@ class Main extends React.Component {
         };
     }
 
+
     toggleFonepay = () => {
         this.setState(prevState => ({
             showFonepay: !prevState.showFonepay
-        }))
+        }), () => {
+            document.documentElement.classList.toggle('no-scroll', this.state.showFonepay);
+        })
     };
 
 
     render() {
-
         return (
             <React.Fragment>
              <div id="whiteblur" className={`fpoverlay ${this.state.showFonepay ? 'visible' : 'hidden'}`} onClick={this.toggleFonepay}></div>

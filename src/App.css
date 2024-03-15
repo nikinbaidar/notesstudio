@@ -100,13 +100,11 @@ a:visited {
   text-decoration: none;
 }
 
-.difficulty {
-  color: var(--red);
+.no-scroll {
+  overflow-y : hidden;
 }
 
-.difficulty::before {
-  content: " Level: ";
-}
+/* Links */
 
 a.need-attention:link {
   color: blue;
@@ -115,6 +113,16 @@ a.need-attention:link {
 
 a.need-attention:visited {
   color: purple;
+}
+
+/* Projects */
+
+.difficulty {
+  color: var(--red);
+}
+
+.difficulty::before {
+  content: " Level: ";
 }
 
 /* Navigation */
@@ -403,6 +411,7 @@ transition: transform 0.3s ease;
 .promotions.donation img {
   border-radius: 5px;
 }
+
 #fonepay {
   border: none;
   background: none;
@@ -474,9 +483,10 @@ ul.terms a:hover {
 }
 
 .fonepay {
-  position: absolute;
-  top: 20%;
-  left:30%;
+  position: fixed;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
 }
 
@@ -1070,6 +1080,9 @@ mark{
     font-size: 1.5rem;
   }
 
+.fonepay img {
+  height: 40vh;
+}
 
 
 }
@@ -1105,8 +1118,12 @@ mark{
   #leftsidebar {
     width: 30%;
   }
-}
 
+  .fonepay img {
+    height: 35vh;
+  }
+
+}
 
 @media(max-width: 727.98px) {
   html,
