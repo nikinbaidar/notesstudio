@@ -1858,7 +1858,7 @@
                     "0 until \\( \\omega = 1/T \\) then increases by 20 dB/decade.",
                     "0 until \\( \\omega = 1/T \\) then decreases by 40 dB/decade."
                 ],
-                "ansKey": 0,
+                "ansKey": 3,
                 "hint" : "The transfer function of the system is 1/(1 + ω^2). This is a second-order system with a single pole at ω = j and no zeros."
             },
             {
