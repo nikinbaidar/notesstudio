@@ -45,7 +45,9 @@ class Quiz extends React.Component {
     }
 
     componentDidMount() {
-        window.MathJax.typeset();
+        if (window.MathJax) {
+            window.MathJax.typeset();
+        } 
     }; 
 
     componentDidUpdate(prevProps,prevState) {
