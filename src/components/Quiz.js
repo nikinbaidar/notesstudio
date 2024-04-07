@@ -77,9 +77,7 @@ class Quiz extends React.Component {
             popup.classList.remove("show");
         }
 
-        if (this.state.currentPage !== prevState.currentPage) {
-            window.MathJax.typeset();
-        }
+        window.MathJax.typeset();
 
     }
 
