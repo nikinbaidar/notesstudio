@@ -75,10 +75,15 @@ class Quiz extends React.Component {
             movetoTop();
             const popup = document.getElementById('popup');
             popup.classList.remove("show");
+
+            if (window.MathJax) {
+                window.MathJax.typeset();
+            }
         }
 
-        window.MathJax.typeset();
-
+        if (this.state.currentPage !== prevState.currentPage) {
+            window.MathJax.typeset();
+        }
     }
 
     renderQues = (question, questionNumber) => {
