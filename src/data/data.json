@@ -1585,8 +1585,8 @@
                     "-10 dB to 100 dB",
                     "20 dB to 120 dB"
                 ],
-                "ansKey" : 0,
-                "hint" : "Pure tone audiometers typically use a normal intensity range of 0 dB to 100 dB."
+                "ansKey" : 2,
+                "hint" : "Pure-tone audiometers usually generate test tones in octave steps  from 125 to 8000 Hz, the signal intensity ranging from –10 dB to +100 dB."
             },
             {
                 "name" : "Cardioverter differs from pacemakers in which of the following aspects?",
