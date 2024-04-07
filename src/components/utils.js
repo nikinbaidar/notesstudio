@@ -1,3 +1,4 @@
+import React  from 'react';
 import { covers } from '../dataLoader';
 
 export function movetoTop () {

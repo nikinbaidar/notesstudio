@@ -106,4 +106,4 @@ class BlogMaster extends React.Component {
 }
 
 export default BlogMaster;
-<a href="https://www.flaticon.com/free-icons/software-development" title="software development icons">Software development icons created by Freepik - Flaticon</a>
+// <a href="https://www.flaticon.com/free-icons/software-development" title="software development icons">Software development icons created by Freepik - Flaticon</a>

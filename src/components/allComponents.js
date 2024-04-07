@@ -1,3 +1,4 @@
+import React  from 'react';
 import { lazy } from 'react';
 
 /* Components that aren't bound to any anchors */

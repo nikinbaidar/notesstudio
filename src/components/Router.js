@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Pilot, Fonepay, Promotions, Master } from './allComponents';
 import { getRoutes } from '../dataLoader';
