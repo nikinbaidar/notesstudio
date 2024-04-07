@@ -45,12 +45,12 @@ class Quiz extends React.Component {
     }
 
     componentDidMount() {
-        if (window.MathJax) {
-            window.MathJax.typeset();
-        } 
+        if(typeof window?.MathJax !== "undefined"){
+            window.MathJax.typeset()
+        }
     }; 
 
-    componentDidUpdate(prevProps,prevState) {
+    componentDidUpdate(prevProps, prevState) {
 
         if (this.props.name !== prevProps.name) {
             const newQuestionSet = loadQuiz(this.props.name);
@@ -77,17 +77,10 @@ class Quiz extends React.Component {
             popup.classList.remove("show");
         }
 
-        if (this.state.currentPage !== prevState.currentPage) {
-            if (window.MathJax) {
-                window.MathJax.typeset();
-            } else {
-                window.MathJax = {
-                    startup: {
-                        ready: () => { window.MathJax.typeset(); }
-                    }
-                }
-            }
+        if ( this.state.currentPage !== prevState.currentPage ) {
+            window.MathJax.typeset();
         }
+
     }
 
     renderQues = (question, questionNumber) => {
