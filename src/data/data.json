@@ -85,7 +85,7 @@
             },
             {
                 "path": "/modelquestion",
-                "component": "Quiz",
+                "component": "Quiz2",
                 "pilot": "wiki",
                 "props" : {
                     "name" : "modelquestion",
@@ -1205,19 +1205,6 @@
     "2079pastQuestions" : {
         "setA" : [
             {
-                "name": "The output of a system represented by the transfer function \\( \\displaystyle \\frac{1}{1+\\omega^2} \\) is",
-                "points": 1,
-                "chapter" : "9.3",
-                "options": [
-                    "0 until \\( \\omega = 1/T \\) then increases by 40 dB/decade.",
-                    "0 until \\( \\omega = 1/T \\) then decreases by 20 dB/decade.",
-                    "0 until \\( \\omega = 1/T \\) then increases by 20 dB/decade.",
-                    "0 until \\( \\omega = 1/T \\) then decreases by 40 dB/decade."
-                ],
-                "ansKey": 3,
-                "hint" : "The transfer function of the system is 1/(1 + ω^2). This is a second-order system with a single pole at ω = j and no zeros."
-            },
-            {
                 "name" : "What are paracrine enzymes used for?",
                 "points": 1,
                 "chapter" : "1.1",
@@ -1866,6 +1853,19 @@
                 ],
                 "ansKey" : 0,
                 "hint": "The electrical voltage in a parallel RLC circuit and the force in a mechanical system are analogous because they both represent the driving factors that cause the system to operate."
+            },
+            {
+                "name": "The output of a system represented by the transfer function $\\displaystyle \\frac{1}{1+\\omega^2}$ is",
+                "points": 1,
+                "chapter" : "9.3",
+                "options": [
+                    "0 until $\\omega = 1/T$ then increases by 40 dB/decade.",
+                    "0 until $\\omega = 1/T$ then decreases by 20 dB/decade.",
+                    "0 until $\\omega = 1/T$ then increases by 20 dB/decade.",
+                    "0 until $\\omega = 1/T$ then decreases by 40 dB/decade."
+                ],
+                "ansKey": 3,
+                "hint" : "The transfer function of the system is 1/(1 + ω^2). This is a second-order system with a single pole at ω = j and no zeros."
             },
             {
                 "name": "The nature of a parabolic antenna's transmission line is",

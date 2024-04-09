@@ -34,6 +34,7 @@ const policyModules = {
 const wikiModules = {
     Faq        : lazy(() => import('./Faq')),
     Quiz       : lazy(() => import('./Quiz')),
+    Quiz2      : lazy(() => import('./Quiz2')),
     Semesters  : lazy(() => import('./Card')),
     Subject    : lazy(() => import('./Master')),
 };
