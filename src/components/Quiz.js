@@ -1,7 +1,8 @@
-import  React from 'react';
+import React from 'react';
 import { SEO } from './Seo';
 import { loadQuiz, loadMsg, quizQuestionImages as images } from '../dataLoader';
-import { movetoTop, shuffleArray } from './utils';
+// import { movetoTop, shuffleArray } from './utils';
+import { movetoTop } from './utils';
 
 class Quiz extends React.Component {
 
@@ -29,8 +30,7 @@ class Quiz extends React.Component {
         this.indexPassed = indexPassed;
         this.indexFailed = indexFailed;
         this.state = {
-            quizData: [...shuffleArray(questionSets.setA),
-                ...shuffleArray(questionSets.setB)],
+            quizData: [...(questionSets.setA), ...(questionSets.setB)],
             currentPage: 1,
             start: 0,
             end: this.quesPerPage,
@@ -45,13 +45,14 @@ class Quiz extends React.Component {
     }
 
     componentDidMount() {
-        if(typeof window?.MathJax !== "undefined"){
-            window.MathJax.typesetClear();
+        if(window.MathJax) {
             window.MathJax.typeset();
         }
     }; 
 
     componentDidUpdate(prevProps, prevState) {
+
+        window.MathJax.typeset();
 
         if (this.props.name !== prevProps.name) {
             const newQuestionSet = loadQuiz(this.props.name);
@@ -60,6 +61,7 @@ class Quiz extends React.Component {
             const totalQuestions = 80;
             const newAnswerMap = Array.from({totalQuestions}, (_, i) => 
                 `${i+1}`).reduce((acc, key) => ({ ...acc, [key]: null }), {});
+
             this.setState({
                 quizData: newQuizData,
                 currentPage: 1,
@@ -72,17 +74,14 @@ class Quiz extends React.Component {
                 submitted: false,
                 score: 0,
                 animate: true,
+            }, () => {
+                window.location.reload();
             })
+
             movetoTop();
             const popup = document.getElementById('popup');
             popup.classList.remove("show");
         }
-
-        if ( this.state.currentPage !== prevState.currentPage ) {
-            window.MathJax.typesetClear();
-            window.MathJax.typeset();
-        }
-
     }
 
     renderQues = (question, questionNumber) => {
@@ -102,75 +101,73 @@ class Quiz extends React.Component {
 
         return (
             <React.Fragment key={questionKey}>
-                <li className="questions">{
-                    question.name || <span dangerouslySetInnerHTML={{
-                        __html: question.namehtml }} />
-                }</li>
-                { hasFigure && <img className="figure"
-                    src={images[question.fig]} alt={question.fig}/> 
-                }
-                <form className="optionGroup">
-                <ol className="choices">
-                {question.options.map((choice, index) => {
-                    const choiceId = `${currentPage}${questionNumber}${index}`;
-                    const isChecked = selOpts[questionKey] === choiceId;
-                    const isCorrect = choice === correctAnswer;
-                    const Feedback = () => {
-                        const tick = '\u2714';
-                        const cross = '\u2716';
-                        const { feedback, feedbackSymbol } = isCorrect
-                            ? { feedback: 'correct', feedbackSymbol: tick }
-                            : { feedback: 'incorrect', feedbackSymbol: cross };
-                        return (
-                            <span className={`feedback ${feedback}`}>
-                                {feedbackSymbol}</span>
-                        );
-                    }; 
+            <li className="questions">
+                {question.name || <span dangerouslySetInnerHTML={{
+                    __html: question.namehtml }} />}
+            </li>
+            { hasFigure && <img className="figure"
+                src={images[question.fig]} alt={question.fig}/> }
+            <form className="optionGroup">
+            <ol className="choices">
+            {question.options.map((choice, index) => {
+                const choiceId = `${currentPage}${questionNumber}${index}`;
+                const isChecked = selOpts[questionKey] === choiceId;
+                const isCorrect = choice === correctAnswer;
+                const Feedback = () => {
+                    const tick = '\u2714';
+                    const cross = '\u2716';
+                    const { feedback, feedbackSymbol } = isCorrect
+                        ? { feedback: 'correct', feedbackSymbol: tick }
+                        : { feedback: 'incorrect', feedbackSymbol: cross };
                     return (
-                        <li key={choiceId} className={(isCorrect && submitted) 
-                            ? "submitted correct" : null}>
-                        <div id="answers">
-                            <input 
-                                type="radio" 
-                                name={question.name} 
-                                id={choiceId}
-                                value={choice}
-                                checked={isChecked}
-                                onChange={(event) => this.handleRadioChange(event,
-                                    questionKey, correctAnswer, question.points)}
-                                disabled={submitted}
-                            />
-                            <label htmlFor={choiceId}>
-                            <span style={{marginRight: '5px' }}>
-                            {x[index]}
-                            </span>
-                            <span>{choice}
-                            {submitted && isChecked && <Feedback />}</span>
-                            </label>
-                        </div>
-                        </li>
+                        <span className={`feedback ${feedback}`}>
+                        {feedbackSymbol}</span>
                     );
-                })}
-                </ol>
-                </form>
-                {
-                    submitted &&
-                        <button className="buttons expand" type="submit"
-                        onClick={
-                            (event) => this.showExplanation(event, questionKey)
-                        }>
-                        Explanation
-                        </button> 
-                }
-                {
-                    (explained && 
-                        <p className="explanation">
-                        <strong>Explanation: </strong>
-                        {question.hint || <span dangerouslySetInnerHTML={{ __html: question.hinthtml }} />
-                        }
-                        </p> 
-                    )
-                } 
+                }; 
+                return (
+                    <li key={choiceId} className={(isCorrect && submitted) 
+                        ? "submitted correct" : null}>
+                    <div id="answers">
+                    <input 
+                        type="radio" 
+                        name={question.name} 
+                        id={choiceId}
+                        value={choice}
+                        checked={isChecked}
+                        onChange={(event) => this.handleRadioChange(event,
+                            questionKey, correctAnswer, question.points)}
+                        disabled={submitted}
+                    />
+                    <label htmlFor={choiceId}>
+                    <span style={{marginRight: '5px' }}>
+                    {x[index]}
+                    </span>
+                    <span>{choice} {submitted && isChecked && <Feedback />}</span>
+                    </label>
+                    </div>
+                    </li>
+                );
+            })}
+            </ol>
+            </form>
+            {
+                submitted &&
+                <button className="buttons expand" type="submit"
+                onClick={
+                    (event) => this.showExplanation(event, questionKey)
+                }>
+                Explanation
+                </button> 
+            }
+            {
+                (explained && 
+                    <p className="explanation">
+                    <strong>Explanation: </strong>
+                    {question.hint || <span dangerouslySetInnerHTML={{ __html: question.hinthtml }} />
+                    }
+                    </p> 
+                )
+            } 
             </React.Fragment>
         );
     };
@@ -288,54 +285,54 @@ class Quiz extends React.Component {
             : `2 x ${this.sBQCount} = ${2 * this.sBQCount}` 
         return (
             <>
-                <SEO 
-                    title={this.props.title}
-                    name="Biomedical License"
-                    description={this.props.title}
-                    type="article" 
-                />
-                <h1>{this.props.heading}</h1>
-                {
-                    submitted && 
-                    <div id="result">
-                        <span id="score">Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}</span>
-                        <span className={score >= this.passMark ? 'pass' : 'fail'}>
-                            {score >= this.passMark ? this.memos.pass[this.indexPassed] 
-                                : this.memos.fail[this.indexFailed]}</span>
-                    </div>
-                }
-                <h3 id="set">
-                    <span>Group {set}</span>
-                    <span>({marksDistribution})</span>
-                </h3>
-                <ol start={start + 1} id="questions">{questions}</ol>
-                <hr style={{marginTop: "5rem"}}/>
-                <div id="buttons">
-                    <button id="next" className="buttons" type="submit"
-                    onClick={this.displayNext}>Next</button>
-                    <button id="previous" className="buttons" type="submit" 
-                    onClick={this.displayPrevious}>Previous</button>
+            <SEO 
+            title={this.props.title}
+            name="Biomedical License"
+            description={this.props.title}
+            type="article" 
+            />
+            <h1>{this.props.heading}</h1>
+            {
+                submitted && 
+                <div id="result">
+                <span id="score">Your score: {`${(score/this.totalScore*100).toFixed(2)}%`}</span>
+                <span className={score >= this.passMark ? 'pass' : 'fail'}>
+                {score >= this.passMark ? this.memos.pass[this.indexPassed] 
+                    : this.memos.fail[this.indexFailed]}</span>
                 </div>
-                <hr/>
-                <h4>Answered: {this.totalQuestions - unanswered.length} / {this.totalQuestions}</h4>
-                <div>
-                    <button id="viewUnanswered" type="submit"
-                        onClick={this.showUnanswered}>{`See what's unanswered`}
-                    </button>
-                    <div id="popup">
-                        <ul className={`comma-list ${animate ? 'animate' :
-                                null}`} onAnimationEnd={this.onAnimationEnd}>
-                        {
-                            unanswered.map(item => {
-                                const key = crypto.randomUUID();
-                                return (<li key={key}>{item}</li>);
-                            })
-                        }
-                        </ul>
-                    </div>
-                </div>
-                <button id="submit" className="buttons" type="submit"
-                onClick={this.handleSubmit}>Submit</button>
+            }
+            <h3 id="set">
+            <span>Group {set}</span>
+            <span>({marksDistribution})</span>
+            </h3>
+            <ol start={start + 1} id="questions">{questions}</ol>
+            <hr style={{marginTop: "5rem"}}/>
+            <div id="buttons">
+            <button id="next" className="buttons" type="submit"
+            onClick={this.displayNext}>Next</button>
+            <button id="previous" className="buttons" type="submit" 
+            onClick={this.displayPrevious}>Previous</button>
+            </div>
+            <hr/>
+            <h4>Answered: {this.totalQuestions - unanswered.length} / {this.totalQuestions}</h4>
+            <div>
+            <button id="viewUnanswered" type="submit"
+            onClick={this.showUnanswered}>{`See what's unanswered`}
+            </button>
+            <div id="popup">
+            <ul className={`comma-list ${animate ? 'animate' :
+                    null}`} onAnimationEnd={this.onAnimationEnd}>
+            {
+                unanswered.map(item => {
+                    const key = crypto.randomUUID();
+                    return (<li key={key}>{item}</li>);
+                })
+            }
+            </ul>
+            </div>
+            </div>
+            <button id="submit" className="buttons" type="submit"
+            onClick={this.handleSubmit}>Submit</button>
             </>
         );
     };
