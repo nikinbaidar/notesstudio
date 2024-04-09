@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import  { MathJaxContext } from 'better-react-mathjax';
 
 import { Navigation, Main, Copyright} from './components/allComponents';
 
@@ -14,7 +15,9 @@ const App = () => {
         <BrowserRouter>
         <Suspense fallback={<div className="loading"></div>}>
         <Navigation />
-        <Main id="main" route="main"/>
+        <MathJaxContext>
+            <Main id="main" route="main"/>
+        </MathJaxContext>
         <Copyright />
         </Suspense>
         </BrowserRouter>
